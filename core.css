@@ -1,0 +1,7467 @@
+/* =========================================================
+   AGRIVISION KARNATAKA
+   CORE DESIGN SYSTEM
+   PREMIUM ECOSYSTEM UI
+   ========================================================= */
+
+:root {
+
+    --av-bg: #06130b;
+    --av-panel: rgba(4, 24, 14, .68);
+    --av-panel-strong: rgba(3, 20, 12, .88);
+
+    --av-white: #f4fff8;
+    --av-text: #eafff1;
+    --av-muted: #a7bcaf;
+
+    --av-green: #00ff91;
+    --av-green-soft: #55ffae;
+    --av-cyan: #00dcff;
+    --av-violet: #a983ff;
+    --av-gold: #ffd166;
+
+    --av-border: rgba(175, 255, 210, .15);
+    --av-border-hover: rgba(175, 255, 210, .38);
+
+    --av-radius: 24px;
+    --av-radius-small: 14px;
+
+    --av-container: 1440px;
+
+    --av-shadow:
+        0 25px 80px rgba(0,0,0,.32);
+
+    --av-glass-blur: 22px;
+
+    --av-transition:
+        320ms cubic-bezier(.2,.75,.2,1);
+}
+
+
+/* =========================================================
+   RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    min-height: 100vh;
+
+    color: var(--av-text);
+
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+    background:
+        #06130b;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   BACKGROUND
+   IMPORTANT:
+   NO DARK OVERLAY
+   ========================================================= */
+
+.background-image {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -20;
+
+    background-image:
+        url("background.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+    transform: scale(1.035);
+
+    will-change: transform;
+
+}
+
+
+/*
+   There is intentionally NO
+   .background-overlay element.
+*/
+
+
+/* =========================================================
+   AMBIENT LIGHT
+   ========================================================= */
+
+.ambient-glow {
+
+    position: fixed;
+
+    width: 520px;
+    height: 520px;
+
+    border-radius: 50%;
+
+    pointer-events: none;
+
+    z-index: -15;
+
+    filter: blur(100px);
+
+    opacity: .22;
+
+}
+
+.ambient-glow-one {
+
+    top: -220px;
+    left: -180px;
+
+    background:
+        rgba(0,255,145,.20);
+
+}
+
+.ambient-glow-two {
+
+    right: -240px;
+    bottom: -200px;
+
+    background:
+        rgba(0,220,255,.15);
+
+}
+
+
+/* =========================================================
+   MOUSE GLOW
+   ========================================================= */
+
+.mouse-glow {
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 380px;
+    height: 380px;
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    pointer-events: none;
+
+    z-index: -8;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(0,255,145,.12) 0%,
+            rgba(0,255,145,.045) 28%,
+            transparent 70%
+        );
+
+    mix-blend-mode:
+        screen;
+
+}
+
+
+/* =========================================================
+   PARTICLES
+   ========================================================= */
+
+.particle-field {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: -7;
+
+    overflow: hidden;
+
+}
+
+.particle {
+
+    position: absolute;
+
+    width: 2px;
+    height: 2px;
+
+    border-radius: 50%;
+
+    background: rgba(210,255,230,.6);
+
+    box-shadow:
+        0 0 7px rgba(130,255,190,.5);
+
+    animation:
+        particleFloat
+        linear infinite;
+
+}
+
+@keyframes particleFloat {
+
+    0% {
+        transform:
+            translate3d(0, 40px, 0);
+
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .7;
+    }
+
+    85% {
+        opacity: .45;
+    }
+
+    100% {
+        transform:
+            translate3d(
+                30px,
+                -110px,
+                0
+            );
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   FIREFLIES
+   ========================================================= */
+
+.fireflies {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: -6;
+
+}
+
+.firefly {
+
+    position: absolute;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background:
+        #b7ffd6;
+
+    box-shadow:
+        0 0 6px #00ff91,
+        0 0 15px rgba(0,255,145,.75),
+        0 0 28px rgba(0,255,145,.38);
+
+    animation:
+        fireflyMove
+        ease-in-out infinite alternate;
+
+}
+
+@keyframes fireflyMove {
+
+    0% {
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            scale(.5);
+
+        opacity: .1;
+
+    }
+
+    35% {
+        opacity: .85;
+    }
+
+    65% {
+        opacity: .35;
+    }
+
+    100% {
+
+        transform:
+            translate3d(
+                55px,
+                -70px,
+                0
+            )
+            scale(1.35);
+
+        opacity: .75;
+
+    }
+
+}
+
+
+/* =========================================================
+   FLOATING LEAVES
+   ========================================================= */
+
+.floating-leaves {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: -5;
+
+}
+
+.leaf {
+
+    position: absolute;
+
+    top: -100px;
+
+    width: 17px;
+    height: 30px;
+
+    border-radius:
+        100% 0 100% 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(107,255,174,.82),
+            rgba(0,145,72,.55)
+        );
+
+    box-shadow:
+        0 0 12px rgba(0,255,145,.13);
+
+    opacity: .55;
+
+    transform-origin:
+        center;
+
+    animation:
+        leafFall
+        linear infinite;
+
+}
+
+.leaf::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 1px;
+
+    height: 27px;
+
+    left: 50%;
+    top: 2px;
+
+    transform:
+        rotate(28deg);
+
+    background:
+        rgba(220,255,230,.35);
+
+}
+
+@keyframes leafFall {
+
+    0% {
+
+        transform:
+            translate3d(
+                0,
+                -120px,
+                0
+            )
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    10% {
+        opacity: .55;
+    }
+
+    45% {
+
+        transform:
+            translate3d(
+                80px,
+                48vh,
+                0
+            )
+            rotate(150deg);
+
+    }
+
+    75% {
+
+        transform:
+            translate3d(
+                -70px,
+                78vh,
+                0
+            )
+            rotate(270deg);
+
+    }
+
+    100% {
+
+        transform:
+            translate3d(
+                100px,
+                115vh,
+                0
+            )
+            rotate(410deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =========================================================
+   CURSOR STAR TRAIL
+   ========================================================= */
+
+.cursor-stars {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 9999;
+
+    overflow: hidden;
+
+}
+
+.cursor-star {
+
+    position: fixed;
+
+    width: 7px;
+    height: 7px;
+
+    pointer-events: none;
+
+    transform:
+        translate(-50%, -50%)
+        rotate(45deg);
+
+    background:
+        #ffffff;
+
+    box-shadow:
+        0 0 5px #ffffff,
+        0 0 12px #00ff91,
+        0 0 22px rgba(0,255,145,.75);
+
+    animation:
+        cursorStarFade
+        .7s ease-out
+        forwards;
+
+}
+
+.cursor-star::before,
+.cursor-star::after {
+
+    content: "";
+
+    position: absolute;
+
+    background:
+        currentColor;
+
+}
+
+.cursor-star::before {
+
+    width: 1px;
+    height: 15px;
+
+    left: 3px;
+    top: -4px;
+
+}
+
+.cursor-star::after {
+
+    width: 15px;
+    height: 1px;
+
+    left: -4px;
+    top: 3px;
+
+}
+
+@keyframes cursorStarFade {
+
+    0% {
+
+        opacity: 1;
+
+        transform:
+            translate(-50%, -50%)
+            rotate(45deg)
+            scale(.8);
+
+    }
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+            translate(-50%, -75px)
+            rotate(145deg)
+            scale(.05);
+
+    }
+
+}
+
+
+/* =========================================================
+   APP
+   ========================================================= */
+
+.av-app {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    isolation: isolate;
+
+}
+
+
+/* =========================================================
+   PAGE
+   ========================================================= */
+
+.av-page {
+
+    width:
+        min(
+            calc(100% - 40px),
+            var(--av-container)
+        );
+
+    margin:
+        auto;
+
+}
+
+.av-section {
+
+    padding:
+        95px 0;
+
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.av-header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    min-height: 78px;
+
+    border-bottom:
+        1px solid rgba(220,255,235,.14);
+
+    background:
+        rgba(3,20,11,.36);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+}
+
+.av-header-inner {
+
+    width:
+        min(
+            calc(100% - 40px),
+            var(--av-container)
+        );
+
+    min-height: 78px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        auto
+        minmax(240px, 620px)
+        auto;
+
+    align-items: center;
+
+    gap: 30px;
+
+}
+
+.av-brand {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    white-space: nowrap;
+
+}
+
+.av-brand-name {
+
+    font-size: 1rem;
+
+    font-weight: 950;
+
+    letter-spacing: .17em;
+
+}
+
+.av-brand-region {
+
+    color:
+        rgba(230,255,240,.65);
+
+    font-size: .64rem;
+
+    font-weight: 800;
+
+    letter-spacing: .15em;
+
+}
+
+.av-status-dot {
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background:
+        var(--av-green);
+
+    box-shadow:
+        0 0 9px rgba(0,255,145,.9);
+
+    animation:
+        statusPulse
+        2.2s ease-in-out infinite;
+
+}
+
+@keyframes statusPulse {
+
+    0%,
+    100% {
+        opacity: .55;
+        transform: scale(.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.25);
+    }
+
+}
+
+
+/* =========================================================
+   SEARCH
+   ========================================================= */
+
+.av-search {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        10px 17px;
+
+    border:
+        1px solid var(--av-border);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    transition:
+        var(--av-transition);
+
+}
+
+.av-search:focus-within {
+
+    border-color:
+        rgba(0,255,145,.4);
+
+    box-shadow:
+        0 0 30px rgba(0,255,145,.08);
+
+}
+
+.av-search-icon {
+
+    color:
+        rgba(220,255,235,.6);
+
+    font-size:
+        1.3rem;
+
+}
+
+.av-search input {
+
+    width: 100%;
+
+    border: 0;
+
+    outline: 0;
+
+    background: transparent;
+
+    color:
+        var(--av-text);
+
+}
+
+.av-search input::placeholder {
+    color:
+        rgba(220,255,235,.5);
+}
+
+
+/* =========================================================
+   HEADER ACTIONS
+   ========================================================= */
+
+.av-header-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 8px;
+
+}
+
+.av-icon-button {
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border:
+        1px solid var(--av-border);
+
+    border-radius: 50%;
+
+    color:
+        var(--av-white);
+
+    background:
+        rgba(255,255,255,.045);
+
+    transition:
+        var(--av-transition);
+
+}
+
+.av-icon-button:hover {
+
+    transform:
+        translateY(-3px)
+        rotate(3deg);
+
+    border-color:
+        var(--av-border-hover);
+
+    background:
+        rgba(0,255,145,.09);
+
+    box-shadow:
+        0 0 24px rgba(0,255,145,.1);
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.av-welcome {
+
+    min-height:
+        650px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    text-align:
+        center;
+
+    padding:
+        100px 0 80px;
+
+}
+
+.av-welcome-content {
+
+    max-width:
+        1050px;
+
+}
+
+.av-eyebrow {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        10px;
+
+    color:
+        rgba(226,255,238,.72);
+
+    font-size:
+        .72rem;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .17em;
+
+}
+
+.av-welcome-title {
+
+    margin:
+        24px 0 0;
+
+    font-size:
+        clamp(3rem, 7vw, 6.7rem);
+
+    line-height:
+        .96;
+
+    letter-spacing:
+        -.06em;
+
+    font-weight:
+        950;
+
+    text-shadow:
+        0 12px 55px rgba(0,0,0,.18);
+
+}
+
+.av-gradient-text {
+
+    background:
+        linear-gradient(
+            100deg,
+            #00ff91,
+            #00dcff,
+            #b28aff
+        );
+
+    -webkit-background-clip:
+        text;
+
+    background-clip:
+        text;
+
+    color:
+        transparent;
+
+    background-size:
+        200% auto;
+
+    animation:
+        gradientMove
+        6s linear infinite;
+
+}
+
+@keyframes gradientMove {
+
+    to {
+        background-position:
+            200% center;
+    }
+
+}
+
+.av-welcome-description {
+
+    max-width:
+        780px;
+
+    margin:
+        30px auto 0;
+
+    color:
+        rgba(226,245,234,.78);
+
+    font-size:
+        clamp(1rem, 1.5vw, 1.2rem);
+
+}
+
+
+/* =========================================================
+   CENTER
+   ========================================================= */
+
+.av-center {
+    justify-content: center;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+.av-page-kicker {
+
+    color:
+        var(--av-green);
+
+    font-size:
+        .68rem;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        .18em;
+
+}
+
+.av-section-title {
+
+    margin:
+        8px 0 0;
+
+    font-size:
+        clamp(2rem, 3.5vw, 3.3rem);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.04em;
+
+}
+
+.av-section-description {
+
+    max-width:
+        760px;
+
+    margin:
+        16px 0 0;
+
+    color:
+        var(--av-muted);
+
+}
+
+.av-title {
+
+    margin:
+        0;
+
+    font-size:
+        clamp(2rem, 4vw, 3.6rem);
+
+    line-height:
+        1.04;
+
+    letter-spacing:
+        -.04em;
+
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.av-grid {
+
+    display:
+        grid;
+
+    gap:
+        22px;
+
+}
+
+.av-grid-2 {
+    grid-template-columns:
+        repeat(2, minmax(0,1fr));
+}
+
+.av-grid-3 {
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+}
+
+.av-grid-4 {
+    grid-template-columns:
+        repeat(4, minmax(0,1fr));
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.av-card {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid var(--av-border);
+
+    border-radius:
+        var(--av-radius);
+
+    background:
+        var(--av-panel);
+
+    backdrop-filter:
+        blur(var(--av-glass-blur));
+
+    -webkit-backdrop-filter:
+        blur(var(--av-glass-blur));
+
+    box-shadow:
+        var(--av-shadow);
+
+    transition:
+        transform var(--av-transition),
+        border-color var(--av-transition),
+        box-shadow var(--av-transition),
+        background var(--av-transition);
+
+}
+
+.av-card::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    inset: 0;
+
+    pointer-events:
+        none;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.075),
+            transparent 34%,
+            transparent 70%,
+            rgba(0,255,145,.025)
+        );
+
+}
+
+.av-card::after {
+
+    content: "";
+
+    position:
+        absolute;
+
+    left: -30%;
+
+    top: -100%;
+
+    width: 45%;
+
+    height: 300%;
+
+    pointer-events:
+        none;
+
+    transform:
+        rotate(22deg);
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.055),
+            transparent
+        );
+
+    transition:
+        left .9s ease;
+
+}
+
+.av-card:hover::after {
+    left: 125%;
+}
+
+.av-card:hover {
+
+    border-color:
+        var(--av-border-hover);
+
+    box-shadow:
+        var(--av-shadow),
+        0 0 50px rgba(0,255,145,.075);
+
+}
+
+.av-card-body {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    padding:
+        28px;
+
+}
+
+.av-card-glow {
+
+    position:
+        absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -90px;
+    right: -80px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(0,255,145,.09);
+
+    filter:
+        blur(45px);
+
+    opacity:
+        0;
+
+    transition:
+        opacity var(--av-transition);
+
+}
+
+.av-card:hover .av-card-glow {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   ROLE CARDS
+   ========================================================= */
+
+.av-role-card {
+
+    min-height:
+        420px;
+
+}
+
+.av-role-icon {
+
+    width:
+        66px;
+
+    height:
+        66px;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    margin-bottom:
+        22px;
+
+    border:
+        1px solid var(--av-border);
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255,255,255,.05);
+
+    font-size:
+        1.8rem;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.06);
+
+    transition:
+        var(--av-transition);
+
+}
+
+.av-role-card:hover .av-role-icon {
+
+    transform:
+        translateY(-4px)
+        rotate(-3deg)
+        scale(1.06);
+
+    border-color:
+        rgba(0,255,145,.28);
+
+    box-shadow:
+        0 0 30px rgba(0,255,145,.11);
+
+}
+
+.av-card-title {
+
+    margin:
+        8px 0 12px;
+
+    font-size:
+        1.45rem;
+
+    line-height:
+        1.15;
+
+}
+
+.av-card-description {
+
+    margin:
+        0;
+
+    color:
+        var(--av-muted);
+
+    font-size:
+        .94rem;
+
+}
+
+
+/* =========================================================
+   CHIPS
+   ========================================================= */
+
+.av-chip-row {
+
+    display:
+        flex;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        8px;
+
+}
+
+.av-chip {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    padding:
+        6px 10px;
+
+    border:
+        1px solid var(--av-border);
+
+    border-radius:
+        999px;
+
+    color:
+        rgba(220,255,235,.67);
+
+    background:
+        rgba(255,255,255,.035);
+
+    font-size:
+        .69rem;
+
+    font-weight:
+        750;
+
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.av-status {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    padding:
+        7px 11px;
+
+    border:
+        1px solid var(--av-border);
+
+    border-radius:
+        999px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    font-size:
+        .67rem;
+
+    font-weight:
+        850;
+
+}
+
+.av-status-active,
+.av-status-green {
+    color:
+        var(--av-green);
+}
+
+.av-status-info {
+    color:
+        var(--av-cyan);
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.av-button {
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        9px;
+
+    min-height:
+        47px;
+
+    padding:
+        11px 17px;
+
+    border:
+        1px solid var(--av-border);
+
+    border-radius:
+        13px;
+
+    color:
+        var(--av-white);
+
+    background:
+        rgba(255,255,255,.05);
+
+    font-size:
+        .74rem;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .025em;
+
+    transition:
+        var(--av-transition);
+
+}
+
+.av-button:hover {
+
+    transform:
+        translateY(-3px);
+
+    background:
+        rgba(255,255,255,.09);
+
+    border-color:
+        var(--av-border-hover);
+
+}
+
+.av-button-primary {
+
+    border-color:
+        rgba(0,255,145,.38);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,255,145,.17),
+            rgba(0,220,255,.07)
+        );
+
+}
+
+.av-button-cyan {
+    border-color:
+        rgba(0,220,255,.35);
+}
+
+.av-button-green {
+    border-color:
+        rgba(0,255,145,.35);
+}
+
+.av-button-violet {
+    border-color:
+        rgba(169,131,255,.38);
+}
+
+.av-button-gold {
+    border-color:
+        rgba(255,209,102,.38);
+}
+
+.av-button-secondary {
+    border-color:
+        rgba(255,255,255,.2);
+}
+
+
+/* =========================================================
+   FLOW
+   ========================================================= */
+
+.av-flow {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-wrap:
+        wrap;
+
+    gap:
+        13px;
+
+}
+
+.av-flow-item {
+
+    min-width:
+        110px;
+
+    padding:
+        15px 12px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    gap:
+        7px;
+
+    border:
+        1px solid var(--av-border);
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    font-size:
+        .74rem;
+
+    font-weight:
+        800;
+
+    transition:
+        var(--av-transition);
+
+}
+
+.av-flow-item:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(0,255,145,.32);
+
+    box-shadow:
+        0 0 25px rgba(0,255,145,.08);
+
+}
+
+.av-flow-icon {
+    font-size:
+        1.35rem;
+}
+
+.av-flow-arrow {
+
+    color:
+        var(--av-green);
+
+    font-size:
+        1.2rem;
+
+    text-shadow:
+        0 0 12px rgba(0,255,145,.5);
+
+}
+
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.av-timeline {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    gap:
+        18px;
+
+}
+
+.av-timeline::before {
+
+    content: "";
+
+    position:
+        absolute;
+
+    left:
+        7px;
+
+    top:
+        8px;
+
+    bottom:
+        8px;
+
+    width:
+        1px;
+
+    background:
+        linear-gradient(
+            var(--av-green),
+            transparent
+        );
+
+    opacity:
+        .35;
+
+}
+
+.av-timeline-item {
+
+    position:
+        relative;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        16px 1fr;
+
+    gap:
+        14px;
+
+}
+
+.av-timeline-dot {
+
+    width:
+        15px;
+
+    height:
+        15px;
+
+    border:
+        3px solid var(--av-bg);
+
+    border-radius:
+        50%;
+
+    background:
+        var(--av-green);
+
+    box-shadow:
+        0 0 14px rgba(0,255,145,.55);
+
+}
+
+.av-timeline-time {
+
+    color:
+        var(--av-muted);
+
+    font-size:
+        .7rem;
+
+}
+
+.av-timeline-title {
+
+    margin-top:
+        3px;
+
+    font-weight:
+        800;
+
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.av-empty-state {
+
+    padding:
+        35px 18px;
+
+    text-align:
+        center;
+
+    border:
+        1px dashed var(--av-border);
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255,255,255,.02);
+
+}
+
+.av-empty-icon {
+
+    margin-bottom:
+        10px;
+
+    font-size:
+        1.8rem;
+
+    color:
+        var(--av-green);
+
+}
+
+.av-empty-state h3 {
+
+    margin:
+        0 0 6px;
+
+}
+
+.av-empty-state p {
+
+    max-width:
+        520px;
+
+    margin:
+        auto;
+
+    color:
+        var(--av-muted);
+
+}
+
+
+/* =========================================================
+   STATS
+   ========================================================= */
+
+.av-stat-card {
+
+    padding:
+        20px;
+
+    border:
+        1px solid var(--av-border);
+
+    border-radius:
+        18px;
+
+    background:
+        rgba(255,255,255,.035);
+
+}
+
+.av-stat-label {
+
+    color:
+        var(--av-muted);
+
+    font-size:
+        .64rem;
+
+    font-weight:
+        850;
+
+    letter-spacing:
+        .13em;
+
+}
+
+.av-stat-value {
+
+    margin-top:
+        8px;
+
+    font-size:
+        1.05rem;
+
+    font-weight:
+        800;
+
+}
+
+.av-text-green {
+    color:
+        var(--av-green);
+}
+
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.av-final-section {
+
+    min-height:
+        58vh;
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    text-align:
+        center;
+
+}
+
+.av-final-content {
+    max-width:
+        900px;
+}
+
+.av-final-title {
+
+    margin:
+        20px 0 0;
+
+    font-size:
+        clamp(2.8rem, 6vw, 5.8rem);
+
+    line-height:
+        .97;
+
+    letter-spacing:
+        -.055em;
+
+}
+
+.av-final-description {
+
+    margin:
+        25px auto 0;
+
+    color:
+        var(--av-muted);
+
+}
+
+
+/* =========================================================
+   MODALS
+   ========================================================= */
+
+.av-modal-backdrop {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        5000;
+
+    display:
+        none;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        24px;
+
+    background:
+        rgba(0,0,0,.42);
+
+    backdrop-filter:
+        blur(9px);
+
+}
+
+.av-modal-backdrop.av-modal-open {
+
+    display:
+        flex;
+
+    animation:
+        modalIn .22s ease;
+
+}
+
+.av-modal {
+
+    width:
+        min(850px, 100%);
+
+    max-height:
+        calc(100vh - 48px);
+
+    overflow:
+        auto;
+
+    border:
+        1px solid var(--av-border-hover);
+
+    border-radius:
+        26px;
+
+    background:
+        var(--av-panel-strong);
+
+    box-shadow:
+        0 30px 100px rgba(0,0,0,.5),
+        0 0 45px rgba(0,255,145,.08);
+
+    backdrop-filter:
+        blur(28px);
+
+}
+
+.av-panel-content {
+    padding:
+        32px;
+}
+
+@keyframes modalIn {
+
+    from {
+        opacity: 0;
+        transform: scale(.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.av-footer {
+
+    border-top:
+        1px solid var(--av-border);
+
+    background:
+        rgba(3,18,10,.38);
+
+    backdrop-filter:
+        blur(15px);
+
+}
+
+.av-footer-inner {
+
+    width:
+        min(
+            calc(100% - 40px),
+            var(--av-container)
+        );
+
+    margin:
+        auto;
+
+    padding:
+        42px 0;
+
+    text-align:
+        center;
+
+}
+
+.av-footer-brand {
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
+
+}
+
+.av-footer-note {
+
+    margin:
+        9px 0 0;
+
+    color:
+        var(--av-muted);
+
+    font-size:
+        .75rem;
+
+}
+
+
+/* =========================================================
+   UTILITIES
+   ========================================================= */
+
+.av-between {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        20px;
+
+}
+
+.av-mt-2 {
+    margin-top: 8px;
+}
+
+.av-mt-3 {
+    margin-top: 12px;
+}
+
+.av-mt-5 {
+    margin-top: 20px;
+}
+
+.av-mt-6 {
+    margin-top: 28px;
+}
+
+
+/* =========================================================
+   REVEAL
+   ========================================================= */
+
+.av-reveal {
+
+    opacity:
+        0;
+
+    transform:
+        translateY(28px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.2,.7,.2,1);
+
+}
+
+.av-reveal.av-visible {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+}
+
+.av-page-enter {
+
+    animation:
+        pageEnter
+        .8s ease both;
+
+}
+
+@keyframes pageEnter {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+/* =========================================================
+   RIPPLE
+   ========================================================= */
+
+.av-ripple {
+
+    position:
+        absolute;
+
+    border-radius:
+        50%;
+
+    pointer-events:
+        none;
+
+    background:
+        rgba(255,255,255,.22);
+
+    transform:
+        scale(0);
+
+    animation:
+        ripple .65s ease-out;
+
+}
+
+@keyframes ripple {
+
+    to {
+
+        transform:
+            scale(2);
+
+        opacity:
+            0;
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1180px) {
+
+    .av-grid-4 {
+        grid-template-columns:
+            repeat(2, minmax(0,1fr));
+    }
+
+}
+
+@media (max-width: 820px) {
+
+    .av-header-inner {
+
+        grid-template-columns:
+            1fr auto;
+
+        padding:
+            12px 0;
+
+    }
+
+    .av-header {
+        position:
+            relative;
+    }
+
+    .av-search {
+
+        grid-column:
+            1 / -1;
+
+        grid-row:
+            2;
+
+    }
+
+    .av-grid-2,
+    .av-grid-3 {
+        grid-template-columns:
+            1fr;
+    }
+
+    .av-welcome {
+        min-height:
+            550px;
+    }
+
+    .av-flow-arrow {
+        display:
+            none;
+    }
+
+}
+
+@media (max-width: 620px) {
+
+    .av-page,
+    .av-header-inner,
+    .av-footer-inner {
+
+        width:
+            calc(100% - 28px);
+
+    }
+
+    .av-grid-4 {
+        grid-template-columns:
+            1fr;
+    }
+
+    .av-section {
+        padding:
+            65px 0;
+    }
+
+    .av-welcome-title {
+        font-size:
+            clamp(2.65rem, 14vw, 4.2rem);
+    }
+
+    .av-card-body {
+        padding:
+            22px;
+    }
+
+    .av-panel-content {
+        padding:
+            22px;
+    }
+
+    .av-brand-region {
+        display:
+            none;
+    }
+
+    .av-flow {
+
+        display:
+            grid;
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration:
+            .01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            .01ms !important;
+
+        scroll-behavior:
+            auto !important;
+
+    }
+
+    .cursor-stars,
+    .fireflies,
+    .floating-leaves,
+    .particle-field,
+    .mouse-glow {
+
+        display:
+            none;
+
+    }
+
+}
+/* ============================================================
+   AGRIVISION KARNATAKA
+   FARMER PORTAL
+   PORTAL-SPECIFIC CORE EXTENSION
+   ============================================================ */
+
+
+/* ============================================================
+   PORTAL MAIN
+   ============================================================ */
+
+.farmer-portal-main{
+
+    position:relative;
+
+    width:100%;
+
+    overflow:hidden;
+
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.farmer-portal-hero{
+
+    min-height:
+        calc(100vh - 82px);
+
+    display:grid;
+
+    grid-template-columns:
+        minmax(0,1.08fr)
+        minmax(420px,.92fr);
+
+    align-items:center;
+
+    gap:40px;
+
+    padding-top:90px;
+
+    padding-bottom:80px;
+
+}
+
+
+.farmer-portal-hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+.farmer-portal-title{
+
+    margin:16px 0 22px;
+
+    max-width:850px;
+
+    font-size:
+        clamp(
+            48px,
+            6vw,
+            86px
+        );
+
+    line-height:.98;
+
+    letter-spacing:-3px;
+
+}
+
+
+.farmer-portal-title span{
+
+    display:block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #16f39a,
+            #00eaff,
+            #ad8cff,
+            #ffd85c
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.farmer-portal-description{
+
+    max-width:760px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:
+        rgba(255,255,255,.72);
+
+}
+
+
+/* ============================================================
+   USER STRIP
+   ============================================================ */
+
+.farmer-portal-user-strip{
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    margin-top:35px;
+
+    padding:18px 20px;
+
+    width:max-content;
+
+    max-width:100%;
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:22px;
+
+    background:
+        rgba(5,22,17,.48);
+
+    backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+        0 20px 70px
+        rgba(0,0,0,.18);
+
+}
+
+
+.farmer-user-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:11px;
+
+}
+
+
+.farmer-user-icon{
+
+    width:42px;
+
+    height:42px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:13px;
+
+    background:
+        rgba(22,243,154,.09);
+
+    border:
+        1px solid
+        rgba(22,243,154,.18);
+
+}
+
+
+.farmer-user-item small{
+
+    display:block;
+
+    margin-bottom:3px;
+
+    font-size:9px;
+
+    letter-spacing:1.7px;
+
+    color:
+        rgba(255,255,255,.43);
+
+}
+
+
+.farmer-user-item strong{
+
+    display:block;
+
+    font-size:13px;
+
+    color:#fff;
+
+}
+
+
+.farmer-user-divider{
+
+    width:1px;
+
+    height:35px;
+
+    background:
+        rgba(255,255,255,.12);
+
+}
+
+
+/* ============================================================
+   HERO VISUAL
+   ============================================================ */
+
+.farmer-portal-hero-visual{
+
+    position:relative;
+
+    min-height:530px;
+
+    display:grid;
+
+    place-items:center;
+
+}
+
+
+.farmer-core-emblem{
+
+    position:relative;
+
+    z-index:5;
+
+    width:190px;
+
+    height:190px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(22,243,154,.22),
+            rgba(3,22,15,.92) 68%
+        );
+
+    border:
+        1px solid
+        rgba(22,243,154,.38);
+
+    box-shadow:
+        0 0 80px
+        rgba(22,243,154,.16),
+        inset 0 0 45px
+        rgba(22,243,154,.08);
+
+    animation:
+        farmerCoreFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.farmer-core-emblem-glow{
+
+    position:absolute;
+
+    inset:-25px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,243,154,.16),
+            transparent 68%
+        );
+
+    filter:blur(12px);
+
+    z-index:-1;
+
+}
+
+
+.farmer-core-emblem span{
+
+    font-size:54px;
+
+    line-height:1;
+
+}
+
+
+.farmer-core-emblem strong{
+
+    margin-top:9px;
+
+    font-size:15px;
+
+    letter-spacing:4px;
+
+}
+
+
+.farmer-core-emblem small{
+
+    margin-top:5px;
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    color:
+        rgba(255,255,255,.48);
+
+}
+
+
+/* ============================================================
+   ORBITS
+   ============================================================ */
+
+.farmer-orbit{
+
+    position:absolute;
+
+    border:
+        1px solid
+        rgba(22,243,154,.12);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+}
+
+
+.orbit-one{
+
+    width:280px;
+
+    height:280px;
+
+    animation:
+        farmerOrbit
+        22s
+        linear
+        infinite;
+
+}
+
+
+.orbit-two{
+
+    width:410px;
+
+    height:410px;
+
+    border-color:
+        rgba(0,234,255,.09);
+
+    animation:
+        farmerOrbitReverse
+        30s
+        linear
+        infinite;
+
+}
+
+
+.orbit-three{
+
+    width:540px;
+
+    height:540px;
+
+    border-color:
+        rgba(173,140,255,.07);
+
+    animation:
+        farmerOrbit
+        42s
+        linear
+        infinite;
+
+}
+
+
+/* ============================================================
+   FLOATING NODES
+   ============================================================ */
+
+.farmer-floating-node{
+
+    position:absolute;
+
+    z-index:8;
+
+    min-width:110px;
+
+    padding:12px 14px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:7px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    border-radius:15px;
+
+    background:
+        rgba(4,20,14,.72);
+
+    backdrop-filter:
+        blur(16px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.20);
+
+    font-size:15px;
+
+    animation:
+        farmerNodeFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.farmer-floating-node span{
+
+    font-size:10px;
+
+    color:
+        rgba(255,255,255,.68);
+
+}
+
+
+.node-crop{
+
+    top:13%;
+
+    left:7%;
+
+}
+
+
+.node-market{
+
+    top:20%;
+
+    right:2%;
+
+    animation-delay:
+        -.8s;
+
+}
+
+
+.node-service{
+
+    bottom:17%;
+
+    left:2%;
+
+    animation-delay:
+        -1.7s;
+
+}
+
+
+.node-logistics{
+
+    bottom:11%;
+
+    right:7%;
+
+    animation-delay:
+        -2.5s;
+
+}
+
+
+.node-finance{
+
+    top:48%;
+
+    right:-4%;
+
+    animation-delay:
+        -3.3s;
+
+}
+
+
+/* ============================================================
+   SECTION HEADINGS
+   ============================================================ */
+
+.farmer-intro-section,
+.farmer-workflow-section,
+.farmer-network-section{
+
+    position:relative;
+
+}
+
+
+.farmer-intro-section{
+
+    padding-top:60px;
+
+}
+
+
+.core-section-heading{
+
+    max-width:850px;
+
+    margin-bottom:45px;
+
+}
+
+
+.core-section-heading h2{
+
+    margin:10px 0 16px;
+
+    font-size:
+        clamp(
+            34px,
+            4vw,
+            58px
+        );
+
+    line-height:1.05;
+
+    letter-spacing:-1.7px;
+
+}
+
+
+.core-section-heading h2 span{
+
+    background:
+        linear-gradient(
+            90deg,
+            #16f39a,
+            #00eaff,
+            #ad8cff
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.core-section-heading p{
+
+    max-width:720px;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:
+        rgba(255,255,255,.62);
+
+}
+
+
+/* ============================================================
+   MODULE GRID
+   ============================================================ */
+
+.farmer-portal-modules{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0,1fr)
+        );
+
+    gap:22px;
+
+}
+
+
+/* ============================================================
+   MODULE CARD
+   ============================================================ */
+
+.farmer-portal-card{
+
+    position:relative;
+
+    min-height:470px;
+
+    overflow:hidden;
+
+    padding:32px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(10,31,22,.78),
+            rgba(3,16,12,.58)
+        );
+
+    backdrop-filter:
+        blur(22px);
+
+    box-shadow:
+        0 25px 90px
+        rgba(0,0,0,.20);
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.farmer-portal-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-120px;
+
+    right:-100px;
+
+    width:260px;
+
+    height:260px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,243,154,.13),
+            transparent 68%
+        );
+
+    pointer-events:none;
+
+}
+
+
+.farmer-portal-card:hover{
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(255,255,255,.22);
+
+    box-shadow:
+        0 35px 110px
+        rgba(0,0,0,.28);
+
+}
+
+
+.farmer-card-number{
+
+    position:absolute;
+
+    top:22px;
+
+    right:25px;
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    color:
+        rgba(255,255,255,.23);
+
+}
+
+
+.farmer-card-icon{
+
+    width:65px;
+
+    height:65px;
+
+    display:grid;
+
+    place-items:center;
+
+    margin-bottom:28px;
+
+    border-radius:19px;
+
+    font-size:31px;
+
+    background:
+        rgba(255,255,255,.055);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+        inset 0 0 30px
+        rgba(255,255,255,.025);
+
+}
+
+
+.farmer-card-kicker{
+
+    margin-bottom:8px;
+
+    font-size:10px;
+
+    letter-spacing:2.5px;
+
+    color:
+        #16f39a;
+
+}
+
+
+.farmer-card-cyan
+.farmer-card-kicker{
+
+    color:#00eaff;
+
+}
+
+
+.farmer-card-gold
+.farmer-card-kicker{
+
+    color:#ffd85c;
+
+}
+
+
+.farmer-card-violet
+.farmer-card-kicker{
+
+    color:#ad8cff;
+
+}
+
+
+.farmer-card-blue
+.farmer-card-kicker{
+
+    color:#48a9ff;
+
+}
+
+
+.farmer-card-emerald
+.farmer-card-kicker{
+
+    color:#16f39a;
+
+}
+
+
+.farmer-portal-card h3{
+
+    margin:0 0 14px;
+
+    font-size:28px;
+
+    line-height:1.15;
+
+}
+
+
+.farmer-portal-card p{
+
+    max-width:620px;
+
+    min-height:90px;
+
+    margin:0;
+
+    font-size:15px;
+
+    line-height:1.75;
+
+    color:
+        rgba(255,255,255,.64);
+
+}
+
+
+/* ============================================================
+   CARD FEATURES
+   ============================================================ */
+
+.farmer-card-features{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    margin:22px 0 28px;
+
+}
+
+
+.farmer-card-features span{
+
+    padding:8px 11px;
+
+    border-radius:10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        rgba(255,255,255,.035);
+
+    font-size:11px;
+
+    color:
+        rgba(255,255,255,.66);
+
+}
+
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+
+.core-button{
+
+    position:relative;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+    min-height:48px;
+
+    padding:0 18px;
+
+    border-radius:13px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.15);
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:1.2px;
+
+    color:#fff;
+
+    overflow:hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+
+}
+
+
+.core-button span{
+
+    font-size:17px;
+
+    transition:
+        transform .25s ease;
+
+}
+
+
+.core-button:hover{
+
+    transform:
+        translateY(-2px);
+
+}
+
+
+.core-button:hover span{
+
+    transform:
+        translateX(4px);
+
+}
+
+
+.core-button-primary{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22,243,154,.20),
+            rgba(22,243,154,.07)
+        );
+
+    border-color:
+        rgba(22,243,154,.36);
+
+    box-shadow:
+        0 10px 35px
+        rgba(22,243,154,.09);
+
+}
+
+
+.core-button-cyan{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(0,234,255,.17),
+            rgba(0,234,255,.06)
+        );
+
+    border-color:
+        rgba(0,234,255,.34);
+
+}
+
+
+.core-button-gold{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,216,92,.17),
+            rgba(255,216,92,.05)
+        );
+
+    border-color:
+        rgba(255,216,92,.34);
+
+}
+
+
+.core-button-violet{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(173,140,255,.18),
+            rgba(173,140,255,.05)
+        );
+
+    border-color:
+        rgba(173,140,255,.34);
+
+}
+
+
+.core-button-blue{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(72,169,255,.18),
+            rgba(72,169,255,.05)
+        );
+
+    border-color:
+        rgba(72,169,255,.34);
+
+}
+
+
+.core-button-emerald{
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22,243,154,.20),
+            rgba(22,243,154,.05)
+        );
+
+    border-color:
+        rgba(22,243,154,.34);
+
+}
+
+
+/* ============================================================
+   WORKFLOW
+   ============================================================ */
+
+.farmer-workflow-section{
+
+    padding-top:100px;
+
+}
+
+
+.farmer-workflow{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            6,
+            minmax(0,1fr)
+        );
+
+    gap:12px;
+
+}
+
+
+.farmer-workflow-line{
+
+    position:absolute;
+
+    top:38px;
+
+    left:8%;
+
+    right:8%;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(22,243,154,.45),
+            rgba(0,234,255,.45),
+            rgba(173,140,255,.4),
+            transparent
+        );
+
+}
+
+
+.farmer-workflow-step{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+.farmer-workflow-icon{
+
+    width:76px;
+
+    height:76px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:22px;
+
+    background:
+        rgba(4,22,15,.84);
+
+    border:
+        1px solid
+        rgba(22,243,154,.22);
+
+    box-shadow:
+        0 15px 45px
+        rgba(0,0,0,.2);
+
+    font-size:28px;
+
+    margin-bottom:15px;
+
+}
+
+
+.farmer-workflow-step strong{
+
+    font-size:10px;
+
+    letter-spacing:1.7px;
+
+}
+
+
+.farmer-workflow-step small{
+
+    margin-top:7px;
+
+    font-size:10px;
+
+    color:
+        rgba(255,255,255,.43);
+
+}
+
+
+/* ============================================================
+   NETWORK
+   ============================================================ */
+
+.farmer-network-section{
+
+    padding-top:110px;
+
+}
+
+
+.farmer-network-card{
+
+    position:relative;
+
+    min-height:470px;
+
+    display:grid;
+
+    grid-template-columns:
+        1.1fr
+        .9fr;
+
+    gap:40px;
+
+    align-items:center;
+
+    padding:50px;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        rgba(22,243,154,.13);
+
+    border-radius:35px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8,34,23,.72),
+            rgba(5,17,13,.53)
+        );
+
+    backdrop-filter:
+        blur(25px);
+
+}
+
+
+.farmer-network-content{
+
+    position:relative;
+
+    z-index:3;
+
+}
+
+
+.farmer-network-content h2{
+
+    max-width:620px;
+
+    margin:14px 0 18px;
+
+    font-size:
+        clamp(
+            35px,
+            4vw,
+            60px
+        );
+
+    line-height:1.03;
+
+    letter-spacing:-2px;
+
+}
+
+
+.farmer-network-content h2 span{
+
+    background:
+        linear-gradient(
+            90deg,
+            #16f39a,
+            #00eaff,
+            #ad8cff
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.farmer-network-content p{
+
+    max-width:650px;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    color:
+        rgba(255,255,255,.63);
+
+}
+
+
+.farmer-network-tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:25px;
+
+}
+
+
+.farmer-network-tags span{
+
+    padding:9px 13px;
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.04);
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    font-size:11px;
+
+    color:
+        rgba(255,255,255,.7);
+
+}
+
+
+/* ============================================================
+   NETWORK VISUAL
+   ============================================================ */
+
+.farmer-network-visual{
+
+    position:relative;
+
+    min-height:330px;
+
+    display:grid;
+
+    place-items:center;
+
+}
+
+
+.network-ring{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(22,243,154,.15);
+
+}
+
+
+.ring-one{
+
+    width:190px;
+
+    height:190px;
+
+    animation:
+        farmerOrbit
+        18s
+        linear
+        infinite;
+
+}
+
+
+.ring-two{
+
+    width:290px;
+
+    height:290px;
+
+    border-color:
+        rgba(0,234,255,.09);
+
+    animation:
+        farmerOrbitReverse
+        26s
+        linear
+        infinite;
+
+}
+
+
+.network-center{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100px;
+
+    height:100px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    font-size:40px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,243,154,.18),
+            rgba(4,20,14,.95)
+        );
+
+    border:
+        1px solid
+        rgba(22,243,154,.35);
+
+    box-shadow:
+        0 0 65px
+        rgba(22,243,154,.12);
+
+}
+
+
+.network-node{
+
+    position:absolute;
+
+    z-index:6;
+
+    width:48px;
+
+    height:48px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:15px;
+
+    background:
+        rgba(4,20,14,.9);
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.25);
+
+    animation:
+        farmerNodeFloat
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+.n1{
+
+    top:18%;
+
+    left:23%;
+
+}
+
+
+.n2{
+
+    top:20%;
+
+    right:21%;
+
+    animation-delay:-1s;
+
+}
+
+
+.n3{
+
+    bottom:17%;
+
+    left:25%;
+
+    animation-delay:-2s;
+
+}
+
+
+.n4{
+
+    bottom:16%;
+
+    right:24%;
+
+    animation-delay:-3s;
+
+}
+
+
+/* ============================================================
+   PORTAL NOTE
+   ============================================================ */
+
+.farmer-portal-footer-section{
+
+    padding-top:70px;
+
+    padding-bottom:100px;
+
+}
+
+
+.farmer-portal-note{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    padding:24px 27px;
+
+    border:
+        1px solid
+        rgba(22,243,154,.14);
+
+    border-radius:20px;
+
+    background:
+        rgba(22,243,154,.035);
+
+}
+
+
+.farmer-note-icon{
+
+    width:40px;
+
+    height:40px;
+
+    flex:0 0 auto;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:12px;
+
+    background:
+        rgba(22,243,154,.10);
+
+    color:#16f39a;
+
+}
+
+
+.farmer-portal-note strong{
+
+    display:block;
+
+    margin-bottom:6px;
+
+    font-size:14px;
+
+}
+
+
+.farmer-portal-note p{
+
+    margin:0;
+
+    font-size:13px;
+
+    line-height:1.7;
+
+    color:
+        rgba(255,255,255,.54);
+
+}
+
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes farmerCoreFloat{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-12px);
+
+    }
+
+}
+
+
+@keyframes farmerNodeFloat{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-9px);
+
+    }
+
+}
+
+
+@keyframes farmerOrbit{
+
+    from{
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes farmerOrbitReverse{
+
+    from{
+
+        transform:
+            rotate(360deg);
+
+    }
+
+    to{
+
+        transform:
+            rotate(0deg);
+
+    }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media(
+    max-width:1100px
+){
+
+    .farmer-portal-hero{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .farmer-portal-hero-visual{
+
+        min-height:460px;
+
+    }
+
+
+    .farmer-floating-node{
+
+        transform:scale(.9);
+
+    }
+
+
+    .farmer-workflow{
+
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0,1fr)
+            );
+
+        row-gap:35px;
+
+    }
+
+
+    .farmer-workflow-line{
+
+        display:none;
+
+    }
+
+
+    .farmer-network-card{
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media(
+    max-width:760px
+){
+
+    .farmer-portal-hero{
+
+        min-height:auto;
+
+        padding-top:60px;
+
+    }
+
+
+    .farmer-portal-title{
+
+        font-size:
+            clamp(
+                42px,
+                12vw,
+                64px
+            );
+
+        letter-spacing:-2px;
+
+    }
+
+
+    .farmer-portal-description{
+
+        font-size:15px;
+
+    }
+
+
+    .farmer-portal-user-strip{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+
+    .farmer-user-divider{
+
+        width:100%;
+
+        height:1px;
+
+    }
+
+
+    .farmer-portal-hero-visual{
+
+        min-height:400px;
+
+    }
+
+
+    .orbit-three{
+
+        width:420px;
+
+        height:420px;
+
+    }
+
+
+    .farmer-portal-modules{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .farmer-portal-card{
+
+        min-height:auto;
+
+    }
+
+
+    .farmer-workflow{
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0,1fr)
+            );
+
+    }
+
+
+    .farmer-network-card{
+
+        padding:30px 22px;
+
+    }
+
+
+    .farmer-network-visual{
+
+        min-height:300px;
+
+    }
+
+
+    .node-finance{
+
+        right:0;
+
+    }
+
+}
+
+
+@media(
+    max-width:480px
+){
+
+    .farmer-floating-node{
+
+        min-width:auto;
+
+        padding:9px;
+
+    }
+
+
+    .farmer-floating-node span{
+
+        display:none;
+
+    }
+
+
+    .node-crop{
+
+        left:0;
+
+    }
+
+
+    .node-market{
+
+        right:0;
+
+    }
+
+
+    .node-service{
+
+        left:0;
+
+    }
+
+
+    .node-logistics{
+
+        right:0;
+
+    }
+
+
+    .farmer-workflow{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+
+    .farmer-workflow-icon{
+
+        width:62px;
+
+        height:62px;
+
+        font-size:23px;
+
+    }
+
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media(
+    prefers-reduced-motion:reduce
+){
+
+    .farmer-core-emblem,
+    .farmer-floating-node,
+    .farmer-orbit,
+    .network-ring,
+    .network-node{
+
+        animation:none !important;
+
+    }
+
+}
+/* ============================================================
+   AGRIVISION KARNATAKA
+   FARMER PORTAL — PREMIUM VISUAL SYSTEM
+   APPEND TO CORE.CSS
+   ============================================================ */
+
+
+/* ============================================================
+   BACKGROUND
+   ============================================================ */
+
+.farmer-portal-page{
+
+    position:relative;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    background:#020b08;
+
+}
+
+
+.farmer-ambient{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-10;
+
+    background-image:
+        url("background.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
+
+.farmer-grid{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-9;
+
+    pointer-events:none;
+
+    opacity:.14;
+
+    background-image:
+        linear-gradient(
+            rgba(22,243,154,.09)
+            1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(22,243,154,.09)
+            1px,
+            transparent 1px
+        );
+
+    background-size:
+        55px 55px;
+
+}
+
+
+.farmer-mouse-glow{
+
+    position:fixed;
+
+    width:420px;
+
+    height:420px;
+
+    left:
+        var(--farmer-mouse-x,50%);
+
+    top:
+        var(--farmer-mouse-y,50%);
+
+    transform:
+        translate(-50%,-50%);
+
+    z-index:-5;
+
+    pointer-events:none;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,243,154,.11),
+            rgba(0,234,255,.035) 30%,
+            transparent 70%
+        );
+
+    filter:blur(15px);
+
+    transition:
+        left .08s linear,
+        top .08s linear;
+
+}
+
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+.farmer-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        rgba(2,12,9,.62);
+
+    backdrop-filter:
+        blur(22px);
+
+}
+
+
+.farmer-header-inner{
+
+    width:
+        min(
+            1450px,
+            calc(100% - 50px)
+        );
+
+    min-height:78px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:25px;
+
+}
+
+
+.farmer-brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#fff;
+
+    text-decoration:none;
+
+}
+
+
+.farmer-brand-symbol{
+
+    width:44px;
+
+    height:44px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:14px;
+
+    border:
+        1px solid
+        rgba(22,243,154,.3);
+
+    background:
+        rgba(22,243,154,.08);
+
+    box-shadow:
+        0 0 30px
+        rgba(22,243,154,.08);
+
+    font-size:22px;
+
+}
+
+
+.farmer-brand-text strong{
+
+    display:block;
+
+    font-size:14px;
+
+    letter-spacing:2px;
+
+}
+
+
+.farmer-brand-text span{
+
+    display:block;
+
+    margin-top:3px;
+
+    font-size:8px;
+
+    letter-spacing:3px;
+
+    color:
+        rgba(255,255,255,.45);
+
+}
+
+
+.farmer-navigation{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+.farmer-navigation a{
+
+    padding:
+        10px 15px;
+
+    border-radius:11px;
+
+    text-decoration:none;
+
+    font-size:11px;
+
+    color:
+        rgba(255,255,255,.55);
+
+    transition:.25s ease;
+
+}
+
+
+.farmer-navigation a:hover,
+.farmer-navigation a.active{
+
+    color:#fff;
+
+    background:
+        rgba(22,243,154,.08);
+
+}
+
+
+.farmer-header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.farmer-notification-button{
+
+    position:relative;
+
+    width:43px;
+
+    height:43px;
+
+    display:grid;
+
+    place-items:center;
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:13px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
+
+
+.farmer-notification-button span{
+
+    position:absolute;
+
+    top:8px;
+
+    right:8px;
+
+    width:6px;
+
+    height:6px;
+
+    border-radius:50%;
+
+    background:#16f39a;
+
+    box-shadow:
+        0 0 10px
+        #16f39a;
+
+}
+
+
+.farmer-user-chip{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:
+        7px 11px 7px 7px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    border-radius:15px;
+
+    text-decoration:none;
+
+    background:
+        rgba(255,255,255,.035);
+
+    color:#fff;
+
+}
+
+
+.farmer-avatar{
+
+    width:34px;
+
+    height:34px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:11px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #16f39a,
+            #00bfa0
+        );
+
+    color:#02120c;
+
+    font-size:13px;
+
+    font-weight:900;
+
+}
+
+
+.farmer-user-chip strong{
+
+    display:block;
+
+    font-size:11px;
+
+}
+
+
+.farmer-user-chip small{
+
+    display:block;
+
+    margin-top:3px;
+
+    font-size:7px;
+
+    letter-spacing:1.5px;
+
+    color:
+        rgba(255,255,255,.4);
+
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.farmer-hero{
+
+    width:
+        min(
+            1450px,
+            calc(100% - 50px)
+        );
+
+    min-height:
+        calc(100vh - 78px);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        1.08fr
+        .92fr;
+
+    align-items:center;
+
+    gap:30px;
+
+    padding:
+        85px 0 100px;
+
+}
+
+
+.farmer-hero-content{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+.farmer-eyebrow{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-size:9px;
+
+    font-weight:800;
+
+    letter-spacing:2.8px;
+
+    color:#16f39a;
+
+}
+
+
+.farmer-eyebrow span{
+
+    width:25px;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #16f39a,
+            transparent
+        );
+
+}
+
+
+.farmer-hero h1{
+
+    max-width:900px;
+
+    margin:
+        22px 0 25px;
+
+    font-size:
+        clamp(
+            54px,
+            7vw,
+            94px
+        );
+
+    line-height:.94;
+
+    letter-spacing:-4px;
+
+    color:#fff;
+
+}
+
+
+.farmer-hero h1 span{
+
+    display:inline;
+
+    background:
+        linear-gradient(
+            90deg,
+            #16f39a,
+            #00eaff,
+            #ad8cff,
+            #ffd85c
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.farmer-hero-description{
+
+    max-width:720px;
+
+    margin:0;
+
+    font-size:17px;
+
+    line-height:1.9;
+
+    color:
+        rgba(255,255,255,.68);
+
+}
+
+
+.farmer-hero-actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:13px;
+
+    margin-top:35px;
+
+}
+
+
+.farmer-premium-button{
+
+    min-height:53px;
+
+    padding:
+        0 20px;
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:20px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1.4px;
+
+    color:#fff;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+
+}
+
+
+.farmer-premium-button b{
+
+    font-size:18px;
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.farmer-premium-button:hover{
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.farmer-premium-button:hover b{
+
+    transform:
+        translateX(5px);
+
+}
+
+
+.farmer-button-primary{
+
+    border:
+        1px solid
+        rgba(22,243,154,.42);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22,243,154,.20),
+            rgba(0,234,255,.07)
+        );
+
+    box-shadow:
+        0 15px 45px
+        rgba(22,243,154,.10);
+
+}
+
+
+.farmer-button-outline{
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    background:
+        rgba(255,255,255,.035);
+
+}
+
+
+/* ============================================================
+   IDENTITY
+   ============================================================ */
+
+.farmer-identity-panel{
+
+    width:max-content;
+
+    max-width:100%;
+
+    margin-top:38px;
+
+    display:flex;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    padding:
+        17px 20px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    border-radius:19px;
+
+    background:
+        rgba(2,18,12,.46);
+
+    backdrop-filter:
+        blur(18px);
+
+}
+
+
+.farmer-identity-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+
+.identity-icon{
+
+    width:39px;
+
+    height:39px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:11px;
+
+    background:
+        rgba(22,243,154,.08);
+
+}
+
+
+.farmer-identity-item small{
+
+    display:block;
+
+    margin-bottom:3px;
+
+    font-size:7px;
+
+    letter-spacing:1.7px;
+
+    color:
+        rgba(255,255,255,.4);
+
+}
+
+
+.farmer-identity-item strong{
+
+    display:block;
+
+    font-size:11px;
+
+    color:#fff;
+
+}
+
+
+.identity-separator{
+
+    width:1px;
+
+    height:31px;
+
+    background:
+        rgba(255,255,255,.12);
+
+}
+
+
+/* ============================================================
+   HERO VISUAL
+   ============================================================ */
+
+.farmer-hero-visual{
+
+    position:relative;
+
+    min-height:570px;
+
+    display:grid;
+
+    place-items:center;
+
+}
+
+
+.farmer-central-farm{
+
+    position:relative;
+
+    z-index:10;
+
+    width:190px;
+
+    height:190px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(22,243,154,.4);
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(22,243,154,.18),
+            rgba(2,17,11,.91) 67%
+        );
+
+    box-shadow:
+        0 0 80px
+        rgba(22,243,154,.12),
+        inset 0 0 45px
+        rgba(22,243,154,.08);
+
+    animation:
+        farmerFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.central-glow{
+
+    position:absolute;
+
+    inset:-40px;
+
+    z-index:-1;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,243,154,.20),
+            transparent 68%
+        );
+
+    filter:blur(18px);
+
+}
+
+
+.farmer-central-farm span{
+
+    font-size:52px;
+
+}
+
+
+.farmer-central-farm strong{
+
+    margin-top:9px;
+
+    font-size:16px;
+
+    letter-spacing:4px;
+
+}
+
+
+.farmer-central-farm small{
+
+    margin-top:5px;
+
+    font-size:7px;
+
+    letter-spacing:2.4px;
+
+    color:
+        rgba(255,255,255,.42);
+
+}
+
+
+.farmer-orbit{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(22,243,154,.14);
+
+}
+
+
+.orbit-a{
+
+    width:280px;
+
+    height:280px;
+
+    animation:
+        farmerRotate
+        20s
+        linear
+        infinite;
+
+}
+
+
+.orbit-b{
+
+    width:405px;
+
+    height:405px;
+
+    border-color:
+        rgba(0,234,255,.11);
+
+    animation:
+        farmerRotateReverse
+        28s
+        linear
+        infinite;
+
+}
+
+
+.orbit-c{
+
+    width:535px;
+
+    height:535px;
+
+    border-color:
+        rgba(173,140,255,.09);
+
+    animation:
+        farmerRotate
+        38s
+        linear
+        infinite;
+
+}
+
+
+.farmer-orbit-node{
+
+    position:absolute;
+
+    z-index:20;
+
+    min-width:80px;
+
+    min-height:54px;
+
+    padding:
+        8px 12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:6px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    border-radius:14px;
+
+    background:
+        rgba(2,17,12,.76);
+
+    backdrop-filter:
+        blur(18px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,.25);
+
+    font-size:18px;
+
+    animation:
+        nodeFloat
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.farmer-orbit-node small{
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+    color:
+        rgba(255,255,255,.55);
+
+}
+
+
+.node-one{
+
+    top:7%;
+
+    left:11%;
+
+}
+
+
+.node-two{
+
+    top:13%;
+
+    right:2%;
+
+    animation-delay:-1s;
+
+}
+
+
+.node-three{
+
+    bottom:15%;
+
+    left:0;
+
+    animation-delay:-2s;
+
+}
+
+
+.node-four{
+
+    bottom:7%;
+
+    right:8%;
+
+    animation-delay:-3s;
+
+}
+
+
+.node-five{
+
+    top:47%;
+
+    right:-2%;
+
+    animation-delay:-4s;
+
+}
+
+
+/* ============================================================
+   ENERGY
+   ============================================================ */
+
+.farmer-energy{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    border:
+        1px solid
+        rgba(22,243,154,.08);
+
+}
+
+
+.energy-one{
+
+    width:460px;
+
+    height:460px;
+
+    animation:
+        pulseEnergy
+        5s
+        ease-in-out
+        infinite;
+
+}
+
+
+.energy-two{
+
+    width:620px;
+
+    height:620px;
+
+    border-color:
+        rgba(0,234,255,.05);
+
+    animation:
+        pulseEnergy
+        7s
+        ease-in-out
+        infinite;
+
+}
+
+
+.energy-three{
+
+    width:750px;
+
+    height:750px;
+
+    border-color:
+        rgba(173,140,255,.04);
+
+    animation:
+        pulseEnergy
+        9s
+        ease-in-out
+        infinite;
+
+}
+
+
+/* ============================================================
+   SECTIONS
+   ============================================================ */
+
+.farmer-section{
+
+    width:
+        min(
+            1450px,
+            calc(100% - 50px)
+        );
+
+    margin:auto;
+
+    padding:
+        110px 0;
+
+}
+
+
+.farmer-section-heading{
+
+    max-width:850px;
+
+    margin-bottom:52px;
+
+}
+
+
+.farmer-section-heading h2{
+
+    margin:
+        14px 0 18px;
+
+    font-size:
+        clamp(
+            37px,
+            5vw,
+            65px
+        );
+
+    line-height:1.02;
+
+    letter-spacing:-2.5px;
+
+    color:#fff;
+
+}
+
+
+.farmer-section-heading h2 span{
+
+    display:block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #16f39a,
+            #00eaff,
+            #ad8cff
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.farmer-section-heading p{
+
+    max-width:760px;
+
+    margin:0;
+
+    font-size:16px;
+
+    line-height:1.85;
+
+    color:
+        rgba(255,255,255,.61);
+
+}
+
+
+/* ============================================================
+   PRINCIPLES
+   ============================================================ */
+
+.farmer-principles{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+
+.farmer-principle-card{
+
+    position:relative;
+
+    padding:32px;
+
+    min-height:285px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    border-radius:26px;
+
+    background:
+        rgba(3,22,15,.52);
+
+    backdrop-filter:
+        blur(20px);
+
+    overflow:hidden;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease;
+
+}
+
+
+.farmer-principle-card:hover{
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(22,243,154,.24);
+
+}
+
+
+.farmer-principle-card > span{
+
+    position:absolute;
+
+    top:22px;
+
+    right:24px;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    color:
+        rgba(255,255,255,.22);
+
+}
+
+
+.principle-icon{
+
+    width:58px;
+
+    height:58px;
+
+    display:grid;
+
+    place-items:center;
+
+    margin-bottom:22px;
+
+    border-radius:17px;
+
+    background:
+        rgba(22,243,154,.08);
+
+    border:
+        1px solid
+        rgba(22,243,154,.16);
+
+    font-size:27px;
+
+}
+
+
+.farmer-principle-card h3{
+
+    margin:
+        0 0 11px;
+
+    font-size:21px;
+
+}
+
+
+.farmer-principle-card p{
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.75;
+
+    color:
+        rgba(255,255,255,.57);
+
+}
+
+
+/* ============================================================
+   SYSTEM GRID
+   ============================================================ */
+
+.farmer-system-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:23px;
+
+}
+
+
+.farmer-system-card{
+
+    position:relative;
+
+    min-height:510px;
+
+    padding:34px;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,.10);
+
+    border-radius:30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(7,30,20,.72),
+            rgba(2,15,10,.52)
+        );
+
+    backdrop-filter:
+        blur(22px);
+
+    transition:
+        transform .4s ease,
+        border-color .4s ease,
+        box-shadow .4s ease;
+
+}
+
+
+.farmer-system-card:hover{
+
+    transform:
+        translateY(-9px);
+
+    box-shadow:
+        0 35px 100px
+        rgba(0,0,0,.28);
+
+}
+
+
+.farmer-system-card::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:230px;
+
+    height:230px;
+
+    top:-100px;
+
+    right:-80px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,243,154,.12),
+            transparent 68%
+        );
+
+    pointer-events:none;
+
+}
+
+
+.system-number{
+
+    position:absolute;
+
+    top:25px;
+
+    right:27px;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    color:
+        rgba(255,255,255,.20);
+
+}
+
+
+.system-icon{
+
+    width:68px;
+
+    height:68px;
+
+    display:grid;
+
+    place-items:center;
+
+    margin-bottom:27px;
+
+    border-radius:20px;
+
+    background:
+        rgba(255,255,255,.045);
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    font-size:32px;
+
+}
+
+
+.system-label{
+
+    margin-bottom:9px;
+
+    font-size:9px;
+
+    font-weight:900;
+
+    letter-spacing:2.4px;
+
+}
+
+
+.system-green .system-label{
+    color:#16f39a;
+}
+
+.system-cyan .system-label{
+    color:#00eaff;
+}
+
+.system-gold .system-label{
+    color:#ffd85c;
+}
+
+.system-violet .system-label{
+    color:#ad8cff;
+}
+
+.system-blue .system-label{
+    color:#48a9ff;
+}
+
+.system-emerald .system-label{
+    color:#16f39a;
+}
+
+
+.farmer-system-card h3{
+
+    margin:
+        0 0 14px;
+
+    font-size:29px;
+
+    line-height:1.1;
+
+}
+
+
+.farmer-system-card > p{
+
+    min-height:84px;
+
+    margin:0;
+
+    font-size:14px;
+
+    line-height:1.75;
+
+    color:
+        rgba(255,255,255,.59);
+
+}
+
+
+/* ============================================================
+   SYSTEM FEATURES
+   ============================================================ */
+
+.system-feature-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:9px;
+
+    margin:
+        24px 0 29px;
+
+}
+
+
+.system-feature-list span{
+
+    padding:
+        8px 10px;
+
+    border-radius:10px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        rgba(255,255,255,.035);
+
+    font-size:10px;
+
+    color:
+        rgba(255,255,255,.64);
+
+}
+
+
+.system-button{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    min-height:49px;
+
+    padding:
+        0 16px;
+
+    border-radius:13px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    background:
+        rgba(255,255,255,.035);
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1.2px;
+
+    transition:
+        .3s ease;
+
+}
+
+
+.system-button b{
+
+    font-size:18px;
+
+    transition:
+        transform .3s ease;
+
+}
+
+
+.system-button:hover{
+
+    border-color:
+        rgba(22,243,154,.32);
+
+    background:
+        rgba(22,243,154,.07);
+
+}
+
+
+.system-button:hover b{
+
+    transform:
+        translateX(5px);
+
+}
+
+
+/* ============================================================
+   WORKFLOW
+   ============================================================ */
+
+.farmer-flow-container{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(6,1fr);
+
+    gap:15px;
+
+}
+
+
+.farmer-flow-line{
+
+    position:absolute;
+
+    left:7%;
+
+    right:7%;
+
+    top:41px;
+
+    height:1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #16f39a,
+            #00eaff,
+            #ad8cff,
+            transparent
+        );
+
+    opacity:.45;
+
+}
+
+
+.farmer-flow-step{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+
+.flow-number{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:12%;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+    color:
+        rgba(255,255,255,.25);
+
+}
+
+
+.flow-icon{
+
+    width:82px;
+
+    height:82px;
+
+    margin:
+        0 auto 18px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:24px;
+
+    background:
+        rgba(3,21,14,.86);
+
+    border:
+        1px solid
+        rgba(22,243,154,.20);
+
+    box-shadow:
+        0 15px 45px
+        rgba(0,0,0,.2);
+
+    font-size:28px;
+
+}
+
+
+.farmer-flow-step h3{
+
+    margin:
+        0 0 8px;
+
+    font-size:13px;
+
+}
+
+
+.farmer-flow-step p{
+
+    margin:0;
+
+    font-size:10px;
+
+    line-height:1.65;
+
+    color:
+        rgba(255,255,255,.45);
+
+}
+
+
+/* ============================================================
+   NETWORK
+   ============================================================ */
+
+.farmer-network-card{
+
+    position:relative;
+
+    min-height:550px;
+
+    display:grid;
+
+    grid-template-columns:
+        1.05fr
+        .95fr;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:55px;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        rgba(22,243,154,.14);
+
+    border-radius:36px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(6,32,21,.70),
+            rgba(2,16,11,.55)
+        );
+
+    backdrop-filter:
+        blur(25px);
+
+}
+
+
+.farmer-network-content{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+
+.farmer-network-content h2{
+
+    margin:
+        14px 0 18px;
+
+    max-width:700px;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            65px
+        );
+
+    line-height:1;
+
+    letter-spacing:-2.5px;
+
+}
+
+
+.farmer-network-content h2 span{
+
+    background:
+        linear-gradient(
+            90deg,
+            #16f39a,
+            #00eaff,
+            #ad8cff
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.farmer-network-content p{
+
+    max-width:650px;
+
+    margin:0;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:
+        rgba(255,255,255,.59);
+
+}
+
+
+.farmer-network-list{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:28px;
+
+}
+
+
+.farmer-network-list div{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:
+        9px 12px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:12px;
+
+    background:
+        rgba(255,255,255,.035);
+
+    font-size:12px;
+
+}
+
+
+.farmer-network-list span{
+
+    color:
+        rgba(255,255,255,.65);
+
+}
+
+
+/* ============================================================
+   NETWORK VISUAL
+   ============================================================ */
+
+.farmer-network-visual{
+
+    position:relative;
+
+    min-height:400px;
+
+    display:grid;
+
+    place-items:center;
+
+}
+
+
+.network-glow{
+
+    position:absolute;
+
+    width:230px;
+
+    height:230px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,243,154,.16),
+            transparent 68%
+        );
+
+    filter:blur(18px);
+
+}
+
+
+.network-circle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:
+        1px solid
+        rgba(22,243,154,.13);
+
+}
+
+
+.circle-one{
+
+    width:150px;
+
+    height:150px;
+
+    animation:
+        farmerRotate
+        16s
+        linear
+        infinite;
+
+}
+
+
+.circle-two{
+
+    width:270px;
+
+    height:270px;
+
+    border-color:
+        rgba(0,234,255,.10);
+
+    animation:
+        farmerRotateReverse
+        24s
+        linear
+        infinite;
+
+}
+
+
+.circle-three{
+
+    width:370px;
+
+    height:370px;
+
+    border-color:
+        rgba(173,140,255,.08);
+
+    animation:
+        farmerRotate
+        32s
+        linear
+        infinite;
+
+}
+
+
+.network-centre{
+
+    position:relative;
+
+    z-index:5;
+
+    width:94px;
+
+    height:94px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,243,154,.20),
+            rgba(2,17,11,.94)
+        );
+
+    border:
+        1px solid
+        rgba(22,243,154,.32);
+
+    font-size:38px;
+
+    box-shadow:
+        0 0 65px
+        rgba(22,243,154,.12);
+
+}
+
+
+.network-point{
+
+    position:absolute;
+
+    z-index:8;
+
+    width:47px;
+
+    height:47px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:14px;
+
+    background:
+        rgba(2,17,12,.9);
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,.25);
+
+    animation:
+        nodeFloat
+        4s
+        ease-in-out
+        infinite;
+
+}
+
+
+.point-a{
+
+    top:11%;
+
+    left:23%;
+
+}
+
+
+.point-b{
+
+    top:12%;
+
+    right:22%;
+
+    animation-delay:-1s;
+
+}
+
+
+.point-c{
+
+    bottom:13%;
+
+    left:21%;
+
+    animation-delay:-2s;
+
+}
+
+
+.point-d{
+
+    bottom:12%;
+
+    right:22%;
+
+    animation-delay:-3s;
+
+}
+
+
+.point-e{
+
+    top:46%;
+
+    right:4%;
+
+    animation-delay:-4s;
+
+}
+
+
+/* ============================================================
+   INTELLIGENCE
+   ============================================================ */
+
+.farmer-intelligence-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:18px;
+
+}
+
+
+.farmer-intelligence-card{
+
+    padding:29px;
+
+    min-height:260px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    border-radius:24px;
+
+    background:
+        rgba(3,21,14,.48);
+
+    backdrop-filter:
+        blur(18px);
+
+    transition:
+        transform .3s ease,
+        border-color .3s ease;
+
+}
+
+
+.farmer-intelligence-card:hover{
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(22,243,154,.20);
+
+}
+
+
+.intelligence-icon{
+
+    width:55px;
+
+    height:55px;
+
+    display:grid;
+
+    place-items:center;
+
+    margin-bottom:20px;
+
+    border-radius:16px;
+
+    background:
+        rgba(22,243,154,.08);
+
+    font-size:25px;
+
+}
+
+
+.farmer-intelligence-card h3{
+
+    margin:
+        0 0 10px;
+
+    font-size:19px;
+
+}
+
+
+.farmer-intelligence-card p{
+
+    margin:0;
+
+    font-size:13px;
+
+    line-height:1.75;
+
+    color:
+        rgba(255,255,255,.54);
+
+}
+
+
+/* ============================================================
+   FINAL
+   ============================================================ */
+
+.farmer-final-section{
+
+    position:relative;
+
+    width:
+        min(
+            1450px,
+            calc(100% - 50px)
+        );
+
+    min-height:480px;
+
+    margin:
+        50px auto 110px;
+
+    display:grid;
+
+    place-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    border:
+        1px solid
+        rgba(22,243,154,.14);
+
+    border-radius:36px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(7,34,22,.65),
+            rgba(2,16,11,.52)
+        );
+
+}
+
+
+.farmer-final-glow{
+
+    position:absolute;
+
+    width:600px;
+
+    height:600px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(22,243,154,.10),
+            transparent 67%
+        );
+
+    filter:blur(25px);
+
+}
+
+
+.farmer-final-content{
+
+    position:relative;
+
+    z-index:3;
+
+    max-width:850px;
+
+    padding:60px 25px;
+
+}
+
+
+.farmer-final-content h2{
+
+    margin:
+        14px 0 18px;
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            68px
+        );
+
+    line-height:1;
+
+    letter-spacing:-2.5px;
+
+}
+
+
+.farmer-final-content h2 span{
+
+    display:block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #16f39a,
+            #00eaff,
+            #ad8cff,
+            #ffd85c
+        );
+
+    -webkit-background-clip:text;
+
+    background-clip:text;
+
+    color:transparent;
+
+}
+
+
+.farmer-final-content p{
+
+    max-width:690px;
+
+    margin:
+        0 auto;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:
+        rgba(255,255,255,.57);
+
+}
+
+
+.farmer-final-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:13px;
+
+    margin-top:31px;
+
+}
+
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.farmer-footer{
+
+    border-top:
+        1px solid
+        rgba(255,255,255,.08);
+
+    background:
+        rgba(1,9,6,.70);
+
+}
+
+
+.farmer-footer-inner{
+
+    width:
+        min(
+            1450px,
+            calc(100% - 50px)
+        );
+
+    min-height:100px;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    color:
+        rgba(255,255,255,.45);
+
+    font-size:9px;
+
+    letter-spacing:1.8px;
+
+}
+
+
+.farmer-footer-inner strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:11px;
+
+}
+
+
+.farmer-footer-inner span{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:
+        rgba(255,255,255,.35);
+
+}
+
+
+/* ============================================================
+   LEAVES
+   ============================================================ */
+
+.farmer-leaf{
+
+    position:fixed;
+
+    z-index:100;
+
+    top:-80px;
+
+    pointer-events:none;
+
+    user-select:none;
+
+    opacity:.68;
+
+    filter:
+        drop-shadow(
+            0 0 8px
+            rgba(22,243,154,.25)
+        );
+
+    animation:
+        farmerLeafFall
+        linear
+        forwards;
+
+}
+
+
+@keyframes farmerLeafFall{
+
+    0%{
+
+        transform:
+            translate3d(
+                0,
+                -70px,
+                0
+            )
+            rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:.75;
+
+    }
+
+    50%{
+
+        transform:
+            translate3d(
+                80px,
+                50vh,
+                0
+            )
+            rotate(180deg);
+
+    }
+
+    100%{
+
+        transform:
+            translate3d(
+                -90px,
+                110vh,
+                0
+            )
+            rotate(420deg);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* ============================================================
+   FIREFLIES
+   ============================================================ */
+
+.farmer-firefly{
+
+    position:fixed;
+
+    z-index:2;
+
+    width:4px;
+
+    height:4px;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    background:#dffff0;
+
+    box-shadow:
+        0 0 8px
+        #16f39a,
+        0 0 20px
+        rgba(22,243,154,.8);
+
+    animation:
+        fireflyMove
+        linear
+        infinite;
+
+}
+
+
+@keyframes fireflyMove{
+
+    0%{
+
+        transform:
+            translate3d(
+                0,
+                0,
+                0
+            )
+            scale(.5);
+
+        opacity:0;
+
+    }
+
+    15%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:
+            translate3d(
+                40px,
+                -90px,
+                0
+            )
+            scale(1.3);
+
+        opacity:.85;
+
+    }
+
+    85%{
+
+        opacity:.7;
+
+    }
+
+    100%{
+
+        transform:
+            translate3d(
+                -60px,
+                -190px,
+                0
+            )
+            scale(.3);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+
+.farmer-before-reveal{
+
+    opacity:0;
+
+    transform:
+        translateY(35px);
+
+}
+
+
+.farmer-revealed{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes farmerFloat{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-13px);
+
+    }
+
+}
+
+
+@keyframes nodeFloat{
+
+    0%,
+    100%{
+
+        transform:
+            translateY(0);
+
+    }
+
+    50%{
+
+        transform:
+            translateY(-9px);
+
+    }
+
+}
+
+
+@keyframes farmerRotate{
+
+    from{
+
+        transform:
+            rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+            rotate(360deg);
+
+    }
+
+}
+
+
+@keyframes farmerRotateReverse{
+
+    from{
+
+        transform:
+            rotate(360deg);
+
+    }
+
+    to{
+
+        transform:
+            rotate(0deg);
+
+    }
+
+}
+
+
+@keyframes pulseEnergy{
+
+    0%,
+    100%{
+
+        transform:scale(.95);
+
+        opacity:.35;
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+        opacity:.7;
+
+    }
+
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media(max-width:1150px){
+
+    .farmer-hero{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .farmer-hero-content{
+
+        text-align:center;
+
+    }
+
+
+    .farmer-eyebrow{
+
+        justify-content:center;
+
+    }
+
+
+    .farmer-hero-description{
+
+        margin:auto;
+
+    }
+
+
+    .farmer-hero-actions{
+
+        justify-content:center;
+
+    }
+
+
+    .farmer-identity-panel{
+
+        margin-left:auto;
+
+        margin-right:auto;
+
+    }
+
+
+    .farmer-system-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .farmer-flow-container{
+
+        grid-template-columns:
+            repeat(3,1fr);
+
+        row-gap:45px;
+
+    }
+
+
+    .farmer-flow-line{
+
+        display:none;
+
+    }
+
+
+    .farmer-network-card{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .farmer-intelligence-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+
+@media(max-width:760px){
+
+    .farmer-header-inner{
+
+        width:
+            calc(100% - 28px);
+
+    }
+
+
+    .farmer-navigation{
+
+        display:none;
+
+    }
+
+
+    .farmer-user-chip div:last-child{
+
+        display:none;
+
+    }
+
+
+    .farmer-hero,
+    .farmer-section,
+    .farmer-final-section{
+
+        width:
+            calc(100% - 28px);
+
+    }
+
+
+    .farmer-hero{
+
+        padding-top:65px;
+
+    }
+
+
+    .farmer-hero h1{
+
+        font-size:
+            clamp(
+                45px,
+                13vw,
+                67px
+            );
+
+        letter-spacing:-2.5px;
+
+    }
+
+
+    .farmer-hero-description{
+
+        font-size:14px;
+
+    }
+
+
+    .farmer-identity-panel{
+
+        width:100%;
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+
+    .identity-separator{
+
+        width:100%;
+
+        height:1px;
+
+    }
+
+
+    .farmer-hero-visual{
+
+        min-height:440px;
+
+    }
+
+
+    .orbit-c,
+    .energy-three{
+
+        width:430px;
+
+        height:430px;
+
+    }
+
+
+    .orbit-b,
+    .energy-two{
+
+        width:330px;
+
+        height:330px;
+
+    }
+
+
+    .farmer-central-farm{
+
+        width:155px;
+
+        height:155px;
+
+    }
+
+
+    .farmer-orbit-node{
+
+        transform:scale(.85);
+
+    }
+
+
+    .farmer-principles{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .farmer-system-card{
+
+        min-height:auto;
+
+        padding:28px;
+
+    }
+
+
+    .farmer-flow-container{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+
+    .farmer-network-card{
+
+        padding:30px 23px;
+
+    }
+
+
+    .farmer-network-visual{
+
+        min-height:330px;
+
+    }
+
+
+    .farmer-intelligence-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+
+    .farmer-footer-inner{
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        text-align:center;
+
+        padding:25px 0;
+
+    }
+
+}
+
+
+@media(max-width:480px){
+
+    .farmer-hero-actions{
+
+        flex-direction:column;
+
+    }
+
+
+    .farmer-premium-button{
+
+        width:100%;
+
+    }
+
+
+    .farmer-hero-visual{
+
+        min-height:360px;
+
+    }
+
+
+    .farmer-central-farm{
+
+        width:135px;
+
+        height:135px;
+
+    }
+
+
+    .farmer-central-farm span{
+
+        font-size:40px;
+
+    }
+
+
+    .farmer-orbit-node{
+
+        min-width:50px;
+
+        min-height:43px;
+
+        padding:5px;
+
+    }
+
+
+    .farmer-orbit-node small{
+
+        display:none;
+
+    }
+
+
+    .node-five{
+
+        right:0;
+
+    }
+
+
+    .farmer-flow-container{
+
+        grid-template-columns:1fr 1fr;
+
+    }
+
+
+    .flow-icon{
+
+        width:65px;
+
+        height:65px;
+
+    }
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+    .farmer-central-farm,
+    .farmer-orbit,
+    .farmer-orbit-node,
+    .farmer-energy,
+    .network-circle,
+    .network-point,
+    .farmer-leaf,
+    .farmer-firefly{
+
+        animation:none !important;
+
+    }
+
+}

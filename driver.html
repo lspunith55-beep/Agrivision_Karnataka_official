@@ -1,0 +1,3137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Driver Module — manage transportation assignments, trips, routes, delivery status and agricultural vehicle activity."
+    >
+
+    <title>
+        AgriVision Karnataka | Driver Module
+    </title>
+
+
+    <!-- =====================================================
+         FONTS
+         ===================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         ICONS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         AGRIVISION SHARED CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body class="driver-module-page">
+
+
+    <!-- =====================================================
+         LIVING BACKGROUND
+         ===================================================== -->
+
+    <div
+        class="background-image"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="aurora"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="particles"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="fireflies"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="light-trails"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="floating-leaves"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="mouse-glow"
+        aria-hidden="true"
+    ></div>
+
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header id="header">
+
+
+        <a
+            href="index.html"
+            class="logo"
+            aria-label="AgriVision Karnataka Home"
+        >
+
+            <span>
+                AgriVision Karnataka
+            </span>
+
+        </a>
+
+
+        <nav aria-label="Primary navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ecosystem.html">
+                        Ecosystem
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#module"
+                        class="active"
+                    >
+                        Driver
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#capabilities">
+                        Capabilities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#journey">
+                        Journey
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#advantages">
+                        Advantages
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+        <div class="header-actions">
+
+            <a
+                href="login.html"
+                class="secondary-button"
+            >
+                Login
+            </a>
+
+            <a
+                href="register.html"
+                class="primary-button"
+            >
+                Register
+            </a>
+
+        </div>
+
+
+        <button
+            class="mobile-menu"
+            type="button"
+            aria-label="Open navigation"
+        >
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             01 — HERO
+             ================================================= -->
+
+        <section
+            class="hero driver-module-hero"
+            id="module"
+        >
+
+            <div class="hero-content">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-steering-wheel"></i>
+
+                    DRIVER MODULE
+
+                </div>
+
+
+                <h1>
+
+                    Drive the
+                    <br>
+
+                    <span class="gradient-text">
+                        Agricultural Journey.
+                    </span>
+
+                </h1>
+
+
+                <h2>
+
+                    A connected workspace for drivers
+                    handling agricultural transportation,
+                    assignments, trips, routes and
+                    delivery activity.
+
+                </h2>
+
+
+                <p>
+
+                    The AgriVision Driver Module connects
+                    drivers with logistics operations,
+                    transportation assignments and
+                    agricultural deliveries so every trip
+                    can become part of one connected
+                    journey.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+
+                    <a
+                        href="#capabilities"
+                        class="primary-button"
+                    >
+
+                        <i class="fa-solid fa-road"></i>
+
+                        Explore Driver Module
+
+                    </a>
+
+
+                    <a
+                        href="#journey"
+                        class="secondary-button"
+                    >
+
+                        <i class="fa-solid fa-route"></i>
+
+                        View Driver Journey
+
+                    </a>
+
+
+                </div>
+
+
+                <div class="hero-stats">
+
+
+                    <div class="hero-stat">
+
+                        <strong>
+                            RECEIVE
+                        </strong>
+
+                        <span>
+                            Assignment
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>
+                            PREPARE
+                        </strong>
+
+                        <span>
+                            Trip
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>
+                            DRIVE
+                        </strong>
+
+                        <span>
+                            Consignment
+                        </span>
+
+                    </div>
+
+
+                    <div class="hero-stat">
+
+                        <strong>
+                            COMPLETE
+                        </strong>
+
+                        <span>
+                            Delivery
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             02 — WHAT IS THE DRIVER MODULE?
+             ================================================= -->
+
+        <section class="about">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    WHAT IS IT?
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    The Driver's Digital Workspace
+
+                </h2>
+
+
+                <p>
+
+                    The Driver Module is designed around
+                    the person executing transportation
+                    assignments within the agricultural
+                    logistics network.
+
+                    It connects assignments, vehicles,
+                    routes, trips, consignments and
+                    delivery status into one organized
+                    journey.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-clipboard-check"></i>
+
+                    <h3>
+                        Assignments
+                    </h3>
+
+                    <p>
+
+                        Receive and understand transportation
+                        assignments connected to agricultural
+                        deliveries.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h3>
+                        Vehicle Activity
+                    </h3>
+
+                    <p>
+
+                        Keep transportation activity connected
+                        with the vehicle being used for
+                        agricultural movement.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-route"></i>
+
+                    <h3>
+                        Trips
+                    </h3>
+
+                    <p>
+
+                        Organize individual transportation
+                        journeys from pickup through
+                        destination.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h3>
+                        Delivery Status
+                    </h3>
+
+                    <p>
+
+                        Maintain visibility around the
+                        progress of agricultural delivery
+                        activity.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             03 — THE DRIVER CHALLENGE
+             ================================================= -->
+
+        <section class="feature-section">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    THE CHALLENGE
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    Every Delivery Depends on Execution
+
+                </h2>
+
+
+                <p>
+
+                    Transportation planning creates a
+                    logistics assignment, but the driver
+                    is responsible for executing the
+                    physical journey.
+
+                    The right information needs to reach
+                    the right person at the right stage.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <h3>
+                        Assignment Awareness
+                    </h3>
+
+                    <p>
+
+                        Drivers need clear information
+                        about the transportation work
+                        assigned to them.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-map"></i>
+                    </div>
+
+                    <h3>
+                        Route Understanding
+                    </h3>
+
+                    <p>
+
+                        A trip requires awareness of
+                        pickup points, destinations and
+                        the intended movement.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <h3>
+                        Consignment Context
+                    </h3>
+
+                    <p>
+
+                        Transportation activity needs
+                        to remain connected with the
+                        agricultural consignment.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <h3>
+                        Trip Timing
+                    </h3>
+
+                    <p>
+
+                        Pickup and delivery activities
+                        require coordination around
+                        schedules.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-signal"></i>
+                    </div>
+
+                    <h3>
+                        Status Updates
+                    </h3>
+
+                    <p>
+
+                        Logistics participants need to
+                        understand how the delivery
+                        journey is progressing.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-flag-checkered"></i>
+                    </div>
+
+                    <h3>
+                        Completion
+                    </h3>
+
+                    <p>
+
+                        The journey needs a clear transition
+                        from transportation activity to
+                        completed delivery.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             04 — COMPLETE CAPABILITY MAP
+             ================================================= -->
+
+        <section
+            class="support-section"
+            id="capabilities"
+        >
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-layer-group"></i>
+
+                    COMPLETE CAPABILITY MAP
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    Everything Around the Driver
+
+                </h2>
+
+
+                <p>
+
+                    The Driver Module brings together
+                    the information and capabilities needed
+                    to execute agricultural transportation
+                    assignments.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="support-grid">
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-inbox"></i>
+                    </div>
+
+                    <h3>
+                        Assignments
+                    </h3>
+
+                    <p>
+
+                        Receive and organize transportation
+                        assignments.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <h3>
+                        Consignments
+                    </h3>
+
+                    <p>
+
+                        Understand the agricultural
+                        consignment connected to a trip.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <h3>
+                        Pickup Information
+                    </h3>
+
+                    <p>
+
+                        Understand where agricultural
+                        produce needs to be collected.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-location-crosshairs"></i>
+                    </div>
+
+                    <h3>
+                        Destination
+                    </h3>
+
+                    <p>
+
+                        Maintain visibility around the
+                        intended delivery location.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+
+                    <h3>
+                        Routes
+                    </h3>
+
+                    <p>
+
+                        Access route information relevant
+                        to the assigned transportation trip.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+
+                    <h3>
+                        Vehicle
+                    </h3>
+
+                    <p>
+
+                        Connect the driver's activity
+                        with transportation vehicle
+                        information.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+
+                    <h3>
+                        Schedule
+                    </h3>
+
+                    <p>
+
+                        Understand when transportation
+                        activities need to occur.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+
+                    <h3>
+                        Trip Management
+                    </h3>
+
+                    <p>
+
+                        Organize individual transportation
+                        journeys.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-location-arrow"></i>
+                    </div>
+
+                    <h3>
+                        Movement
+                    </h3>
+
+                    <p>
+
+                        Keep track of the transportation
+                        stage of the journey.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-signal"></i>
+                    </div>
+
+                    <h3>
+                        Status
+                    </h3>
+
+                    <p>
+
+                        Communicate the current stage of
+                        transportation activity.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-check-circle"></i>
+                    </div>
+
+                    <h3>
+                        Delivery Completion
+                    </h3>
+
+                    <p>
+
+                        Bring the transportation assignment
+                        toward completed delivery.
+
+                    </p>
+
+                </article>
+
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+                        <i class="fa-solid fa-file-lines"></i>
+                    </div>
+
+                    <h3>
+                        Trip Records
+                    </h3>
+
+                    <p>
+
+                        Maintain useful information around
+                        transportation activity and trips.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             05 — DRIVER INTELLIGENCE
+             ================================================= -->
+
+        <section class="vision">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    DRIVER INTELLIGENCE
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    The Right Information for the Road
+
+                </h2>
+
+
+                <p>
+
+                    A driver needs practical information
+                    that connects the assignment with
+                    the actual journey being executed.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="vision-grid">
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-clipboard-list"></i>
+
+                    <h3>
+                        Assignment Context
+                    </h3>
+
+                    <p>
+
+                        Understand the transportation
+                        requirement before beginning the trip.
+
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-map-location-dot"></i>
+
+                    <h3>
+                        Location Context
+                    </h3>
+
+                    <p>
+
+                        Understand pickup and destination
+                        locations associated with the journey.
+
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h3>
+                        Vehicle Context
+                    </h3>
+
+                    <p>
+
+                        Keep transportation activity
+                        connected with the vehicle.
+
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-signal"></i>
+
+                    <h3>
+                        Journey Context
+                    </h3>
+
+                    <p>
+
+                        Understand the current stage of
+                        the delivery journey.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             06 — DRIVER WORKFLOW
+             ================================================= -->
+
+        <section class="feature-section">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-diagram-project"></i>
+
+                    DRIVER WORKFLOW
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    Assignment → Trip → Delivery
+
+                </h2>
+
+
+                <p>
+
+                    The Driver Module follows the practical
+                    sequence through which a transportation
+                    assignment becomes a completed journey.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <h3>
+                        01 — Receive
+                    </h3>
+
+                    <p>
+
+                        Receive a transportation assignment
+                        connected to agricultural logistics.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+
+                    <h3>
+                        02 — Review
+                    </h3>
+
+                    <p>
+
+                        Review the consignment, pickup,
+                        destination and trip requirements.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+
+                    <h3>
+                        03 — Prepare
+                    </h3>
+
+                    <p>
+
+                        Prepare the transportation journey
+                        and associated vehicle activity.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-road"></i>
+                    </div>
+
+                    <h3>
+                        04 — Start Trip
+                    </h3>
+
+                    <p>
+
+                        Begin the assigned transportation
+                        journey.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-location-arrow"></i>
+                    </div>
+
+                    <h3>
+                        05 — Transport
+                    </h3>
+
+                    <p>
+
+                        Move the agricultural consignment
+                        toward its destination.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <h3>
+                        06 — Complete
+                    </h3>
+
+                    <p>
+
+                        Complete the delivery and update
+                        the transportation journey.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             07 — DRIVER JOURNEY
+             ================================================= -->
+
+        <section
+            class="support-section"
+            id="journey"
+        >
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-route"></i>
+
+                    DRIVER JOURNEY
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    From Assignment to Destination
+
+                </h2>
+
+
+                <p>
+
+                    The driver journey connects the digital
+                    assignment with the physical movement
+                    of agricultural produce.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="workflow">
+
+
+                <div class="workflow-step">
+
+                    <i class="fa-solid fa-clipboard-check"></i>
+
+                    <h3>
+                        Assignment
+                    </h3>
+
+                    <p>
+                        Transportation work is assigned.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h3>
+                        Pickup
+                    </h3>
+
+                    <p>
+                        Reach the agricultural pickup point.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <i class="fa-solid fa-box"></i>
+
+                    <h3>
+                        Load
+                    </h3>
+
+                    <p>
+                        Agricultural produce begins the trip.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <i class="fa-solid fa-road"></i>
+
+                    <h3>
+                        Travel
+                    </h3>
+
+                    <p>
+                        Move the consignment toward its destination.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <i class="fa-solid fa-location-crosshairs"></i>
+
+                    <h3>
+                        Destination
+                    </h3>
+
+                    <p>
+                        Reach the intended delivery point.
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-arrow">
+                    →
+                </div>
+
+
+                <div class="workflow-step">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <h3>
+                        Complete
+                    </h3>
+
+                    <p>
+                        Complete the delivery journey.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             08 — LOGISTICS CONNECTION
+             ================================================= -->
+
+        <section class="about">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-network-wired"></i>
+
+                    LOGISTICS CONNECTION
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    The Driver Is the Execution Layer
+
+                </h2>
+
+
+                <p>
+
+                    The Logistics Provider coordinates
+                    transportation, while the Driver
+                    executes the assigned trip.
+
+                    AgriVision connects both sides of
+                    that operational relationship.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <h3>
+                        Logistics Provider
+                    </h3>
+
+                    <p>
+
+                        Coordinates transportation requests,
+                        routes and assignments.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-steering-wheel"></i>
+
+                    <h3>
+                        Driver
+                    </h3>
+
+                    <p>
+
+                        Executes the transportation journey
+                        connected to the assignment.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-boxes-stacked"></i>
+
+                    <h3>
+                        Consignment
+                    </h3>
+
+                    <p>
+
+                        Represents the agricultural
+                        produce being transported.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h3>
+                        Destination
+                    </h3>
+
+                    <p>
+
+                        Represents where the agricultural
+                        movement needs to conclude.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             09 — TRIP MANAGEMENT
+             ================================================= -->
+
+        <section class="feature-section">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-road"></i>
+
+                    TRIP MANAGEMENT
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    One Assignment. One Connected Trip.
+
+                </h2>
+
+
+                <p>
+
+                    A transportation assignment can be
+                    understood as a complete trip with
+                    its own route, vehicle, consignment
+                    and delivery context.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-clipboard"></i>
+                    </div>
+
+                    <h3>
+                        Assignment Details
+                    </h3>
+
+                    <p>
+
+                        Keep the purpose and requirements
+                        of the assigned trip visible.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <h3>
+                        Consignment Details
+                    </h3>
+
+                    <p>
+
+                        Keep the agricultural load connected
+                        with the transportation journey.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-map"></i>
+                    </div>
+
+                    <h3>
+                        Route Details
+                    </h3>
+
+                    <p>
+
+                        Maintain the movement path between
+                        pickup and destination.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-truck"></i>
+                    </div>
+
+                    <h3>
+                        Vehicle Details
+                    </h3>
+
+                    <p>
+
+                        Keep the transportation vehicle
+                        connected with the trip.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             10 — DELIVERY STATUS
+             ================================================= -->
+
+        <section class="vision">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-signal"></i>
+
+                    DELIVERY STATUS
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    Make the Journey Visible
+
+                </h2>
+
+
+                <p>
+
+                    A connected status journey helps the
+                    logistics network understand where
+                    transportation activity currently
+                    stands.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="vision-grid">
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-hourglass-start"></i>
+
+                    <h3>
+                        Assigned
+                    </h3>
+
+                    <p>
+
+                        A transportation assignment has
+                        been received.
+
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-truck-ramp-box"></i>
+
+                    <h3>
+                        Pickup
+                    </h3>
+
+                    <p>
+
+                        The driver is handling the
+                        pickup stage.
+
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-truck-moving"></i>
+
+                    <h3>
+                        In Transit
+                    </h3>
+
+                    <p>
+
+                        The agricultural consignment
+                        is moving toward its destination.
+
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <h3>
+                        Delivered
+                    </h3>
+
+                    <p>
+
+                        The transportation assignment
+                        has reached completion.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             11 — COMMUNICATION
+             ================================================= -->
+
+        <section class="feature-section">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    CONNECTED COMMUNICATION
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    Keep the Road Connected
+
+                </h2>
+
+
+                <p>
+
+                    Transportation does not happen in
+                    isolation. Drivers may need to remain
+                    connected with the logistics operation
+                    and the delivery context around them.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+
+                    <h3>
+                        Logistics Coordination
+                    </h3>
+
+                    <p>
+
+                        Keep communication connected with
+                        the logistics provider responsible
+                        for the assignment.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <h3>
+                        Location Context
+                    </h3>
+
+                    <p>
+
+                        Keep important location information
+                        connected with the transportation
+                        activity.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bell"></i>
+                    </div>
+
+                    <h3>
+                        Updates
+                    </h3>
+
+                    <p>
+
+                        Keep relevant transportation
+                        updates connected with the
+                        delivery journey.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+
+                    <h3>
+                        Exceptions
+                    </h3>
+
+                    <p>
+
+                        Provide a connected path for
+                        communicating important trip
+                        situations.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             12 — RECORDS
+             ================================================= -->
+
+        <section class="about">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-file-lines"></i>
+
+                    DRIVER RECORDS
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    Every Trip Builds Operational Context
+
+                </h2>
+
+
+                <p>
+
+                    Organized transportation records can
+                    help preserve the context of assignments,
+                    trips and completed delivery activity.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-clipboard-check"></i>
+
+                    <h3>
+                        Assignments
+                    </h3>
+
+                    <p>
+
+                        Keep a record of transportation
+                        assignments received by the driver.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-road"></i>
+
+                    <h3>
+                        Trips
+                    </h3>
+
+                    <p>
+
+                        Organize information around
+                        individual transportation journeys.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h3>
+                        Vehicle Activity
+                    </h3>
+
+                    <p>
+
+                        Keep vehicle-related transportation
+                        activity connected with trips.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-check-double"></i>
+
+                    <h3>
+                        Completed Deliveries
+                    </h3>
+
+                    <p>
+
+                        Preserve useful context around
+                        completed transportation activity.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             13 — ADVANTAGES
+             ================================================= -->
+
+        <section
+            class="about"
+            id="advantages"
+        >
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-gem"></i>
+
+                    ADVANTAGES
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    Why the Driver Module Matters
+
+                </h2>
+
+
+                <p>
+
+                    A driver-focused digital layer helps
+                    connect transportation execution with
+                    the larger agricultural logistics
+                    operation.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="about-grid">
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-bullseye"></i>
+
+                    <h3>
+                        Clear Assignments
+                    </h3>
+
+                    <p>
+
+                        Keep transportation work organized
+                        around defined assignments.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-route"></i>
+
+                    <h3>
+                        Connected Trips
+                    </h3>
+
+                    <p>
+
+                        Keep routes, vehicles, consignments
+                        and destinations connected.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-eye"></i>
+
+                    <h3>
+                        Better Visibility
+                    </h3>
+
+                    <p>
+
+                        Help the wider logistics network
+                        understand transportation progress.
+
+                    </p>
+
+                </article>
+
+
+                <article class="about-card">
+
+                    <i class="fa-solid fa-network-wired"></i>
+
+                    <h3>
+                        Ecosystem Integration
+                    </h3>
+
+                    <p>
+
+                        Connect the driver's work with
+                        farmers, buyers and logistics
+                        providers.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             14 — WHAT MAKES IT DIFFERENT
+             ================================================= -->
+
+        <section class="vision">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    THE DIFFERENCE
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    The Driver Is Not Outside the Ecosystem
+
+                </h2>
+
+
+                <p>
+
+                    The Driver Module makes the person
+                    executing the physical transportation
+                    journey part of the same digital
+                    agricultural network.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="vision-grid">
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-tractor"></i>
+
+                    <h3>
+                        Farmer Connected
+                    </h3>
+
+                    <p>
+
+                        Pickup activity can remain connected
+                        with the agricultural source.
+
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-store"></i>
+
+                    <h3>
+                        Buyer Connected
+                    </h3>
+
+                    <p>
+
+                        Delivery activity can remain
+                        connected with buyer requirements.
+
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <h3>
+                        Logistics Connected
+                    </h3>
+
+                    <p>
+
+                        Driver execution remains connected
+                        with logistics coordination.
+
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-network-wired"></i>
+
+                    <h3>
+                        Ecosystem Connected
+                    </h3>
+
+                    <p>
+
+                        Physical transportation becomes
+                        part of one agricultural network.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             15 — FUTURE
+             ================================================= -->
+
+        <section class="feature-section">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-microchip"></i>
+
+                    FUTURE OF DRIVER OPERATIONS
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    Toward Smarter Transportation
+
+                </h2>
+
+
+                <p>
+
+                    Future development can make driver
+                    operations increasingly connected
+                    with intelligent logistics systems,
+                    route intelligence and ecosystem
+                    information.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <h3>
+                        Intelligent Assignment
+                    </h3>
+
+                    <p>
+
+                        Future systems can help connect
+                        suitable transportation work with
+                        available drivers.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-route"></i>
+                    </div>
+
+                    <h3>
+                        Route Intelligence
+                    </h3>
+
+                    <p>
+
+                        Increasingly intelligent routing
+                        can support agricultural transportation
+                        journeys.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-location-arrow"></i>
+                    </div>
+
+                    <h3>
+                        Journey Intelligence
+                    </h3>
+
+                    <p>
+
+                        Future systems can provide stronger
+                        context around transportation progress.
+
+                    </p>
+
+                </article>
+
+
+                <article class="feature-card">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+
+                    <h3>
+                        Ecosystem Intelligence
+                    </h3>
+
+                    <p>
+
+                        Driver operations can become more
+                        deeply connected with agricultural
+                        supply and demand.
+
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             16 — FINAL VISION
+             ================================================= -->
+
+        <section class="vision">
+
+
+            <div class="section-title">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-steering-wheel"></i>
+
+                    THE VISION
+
+                </div>
+
+
+                <h2 class="gradient-heading">
+
+                    Every Journey Has a Purpose
+
+                </h2>
+
+
+                <p>
+
+                    AgriVision Karnataka envisions a
+                    transportation network where every
+                    driver assignment is connected with
+                    the agricultural supply, logistics
+                    operation and destination behind it.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="vision-grid">
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-clipboard-check"></i>
+
+                    <h3>
+                        Receive
+                    </h3>
+
+                    <p>
+                        Understand the assignment.
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h3>
+                        Prepare
+                    </h3>
+
+                    <p>
+                        Prepare the vehicle and journey.
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-road"></i>
+
+                    <h3>
+                        Drive
+                    </h3>
+
+                    <p>
+                        Move agricultural produce.
+                    </p>
+
+                </div>
+
+
+                <div class="vision-item">
+
+                    <i class="fa-solid fa-circle-check"></i>
+
+                    <h3>
+                        Deliver
+                    </h3>
+
+                    <p>
+                        Complete the transportation journey.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             17 — FINAL CTA
+             ================================================= -->
+
+        <section class="ecosystem-cta">
+
+
+            <div class="cta-box">
+
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-steering-wheel"></i>
+
+                    DRIVER MODULE
+
+                </div>
+
+
+                <h2 class="gradient-text">
+
+                    Receive.
+                    Drive.
+                    Deliver.
+
+                </h2>
+
+
+                <p>
+
+                    The AgriVision Driver Module connects
+                    transportation assignments with the
+                    people executing agricultural journeys.
+
+                    <br><br>
+
+                    From assignment and pickup to travel,
+                    delivery status and completion —
+                    the driver's journey becomes part of
+                    one connected agricultural ecosystem.
+
+                </p>
+
+
+                <div class="ecosystem-buttons">
+
+
+                    <a
+                        href="login.html"
+                        class="primary-btn"
+                    >
+
+                        <i class="fa-solid fa-right-to-bracket"></i>
+
+                        Enter Driver Workspace
+
+                    </a>
+
+
+                    <a
+                        href="ecosystem.html"
+                        class="secondary-button"
+                    >
+
+                        <i class="fa-solid fa-network-wired"></i>
+
+                        Back to Ecosystem
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+
+        <div class="footer-container">
+
+
+            <div class="footer-logo">
+
+                <h3>
+                    AgriVision Karnataka
+                </h3>
+
+                <p>
+
+                    Connected Today •
+                    Sustainable Tomorrow •
+                    Prosperous Forever
+
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Driver
+                </h3>
+
+                <a href="#module">
+                    Module
+                </a>
+
+                <a href="#capabilities">
+                    Capabilities
+                </a>
+
+                <a href="#journey">
+                    Journey
+                </a>
+
+                <a href="#advantages">
+                    Advantages
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    Workspace
+                </h3>
+
+                <a href="driver-portal.html">
+                    Driver Workspace
+                </a>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h3>
+                    AgriVision
+                </h3>
+
+                <a href="ecosystem.html">
+                    Ecosystem
+                </a>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="login.html">
+                    Login
+                </a>
+
+                <a href="register.html">
+                    Register
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                ©
+                <span id="year"></span>
+                AgriVision Karnataka.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         SCROLL TOP
+         ===================================================== -->
+
+    <button
+        class="scroll-top"
+        type="button"
+        aria-label="Scroll to top"
+    >
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+
+    <!-- =====================================================
+         SHARED JAVASCRIPT
+         ===================================================== -->
+
+    <script src="script.js"></script>
+
+
+
+    <!-- =====================================================
+         DRIVER PAGE JAVASCRIPT
+         ===================================================== -->
+
+    <script>
+
+        "use strict";
+
+
+        /* =====================================================
+           CURRENT YEAR
+           ===================================================== */
+
+        const yearElement =
+            document.getElementById("year");
+
+        if (yearElement) {
+
+            yearElement.textContent =
+                new Date().getFullYear();
+
+        }
+
+
+
+        /* =====================================================
+           INTERNAL NAVIGATION
+           ===================================================== */
+
+        document
+            .querySelectorAll('a[href^="#"]')
+            .forEach(link => {
+
+                link.addEventListener(
+                    "click",
+                    event => {
+
+                        const selector =
+                            link.getAttribute("href");
+
+
+                        if (
+                            !selector ||
+                            selector === "#"
+                        ) {
+                            return;
+                        }
+
+
+                        const target =
+                            document.querySelector(
+                                selector
+                            );
+
+
+                        if (!target) {
+                            return;
+                        }
+
+
+                        event.preventDefault();
+
+
+                        target.scrollIntoView({
+
+                            behavior: "smooth",
+
+                            block: "start"
+
+                        });
+
+                    }
+                );
+
+            });
+
+
+
+        /* =====================================================
+           REVEAL ANIMATION
+           ===================================================== */
+
+        const driverRevealElements =
+            document.querySelectorAll(
+
+                ".about-card, " +
+                ".feature-card, " +
+                ".support-card, " +
+                ".vision-item, " +
+                ".workflow-step"
+
+            );
+
+
+        if (
+            "IntersectionObserver" in window
+        ) {
+
+
+            const driverObserver =
+                new IntersectionObserver(
+
+                    entries => {
+
+                        entries.forEach(
+                            entry => {
+
+                                if (
+                                    !entry.isIntersecting
+                                ) {
+                                    return;
+                                }
+
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+
+                                driverObserver.unobserve(
+                                    entry.target
+                                );
+
+                            }
+                        );
+
+                    },
+
+                    {
+                        threshold: 0.12
+                    }
+
+                );
+
+
+            driverRevealElements.forEach(
+                element => {
+
+                    driverObserver.observe(
+                        element
+                    );
+
+                }
+            );
+
+        }
+
+
+
+        /* =====================================================
+           HERO STAT INTERACTION
+           ===================================================== */
+
+        document
+            .querySelectorAll(".hero-stat")
+            .forEach(stat => {
+
+
+                stat.addEventListener(
+                    "mouseenter",
+                    () => {
+
+                        stat.classList.add(
+                            "stat-highlight"
+                        );
+
+                    }
+                );
+
+
+                stat.addEventListener(
+                    "mouseleave",
+                    () => {
+
+                        stat.classList.remove(
+                            "stat-highlight"
+                        );
+
+                    }
+                );
+
+
+            });
+
+
+
+        /* =====================================================
+           CARD MOUSE LIGHT POSITION
+           ===================================================== */
+
+        document
+            .querySelectorAll(
+
+                ".about-card, " +
+                ".feature-card, " +
+                ".support-card, " +
+                ".vision-item"
+
+            )
+            .forEach(card => {
+
+
+                card.addEventListener(
+                    "mousemove",
+                    event => {
+
+
+                        const rect =
+                            card.getBoundingClientRect();
+
+
+                        const x =
+                            event.clientX -
+                            rect.left;
+
+
+                        const y =
+                            event.clientY -
+                            rect.top;
+
+
+                        card.style.setProperty(
+                            "--mouse-x",
+                            `${x}px`
+                        );
+
+
+                        card.style.setProperty(
+                            "--mouse-y",
+                            `${y}px`
+                        );
+
+
+                    }
+                );
+
+
+            });
+
+
+
+        /* =====================================================
+           SCROLL TOP
+           ===================================================== */
+
+        const scrollTopButton =
+            document.querySelector(
+                ".scroll-top"
+            );
+
+
+        if (scrollTopButton) {
+
+
+            window.addEventListener(
+                "scroll",
+                () => {
+
+
+                    if (
+                        window.scrollY > 600
+                    ) {
+
+                        scrollTopButton.classList.add(
+                            "show"
+                        );
+
+                    } else {
+
+                        scrollTopButton.classList.remove(
+                            "show"
+                        );
+
+                    }
+
+                },
+                {
+                    passive: true
+                }
+            );
+
+
+            scrollTopButton.addEventListener(
+                "click",
+                () => {
+
+                    window.scrollTo({
+
+                        top: 0,
+
+                        behavior: "smooth"
+
+                    });
+
+                }
+            );
+
+
+        }
+
+
+
+        /* =====================================================
+           BUTTON RIPPLE
+           ===================================================== */
+
+        document
+            .querySelectorAll(
+
+                ".primary-button, " +
+                ".secondary-button, " +
+                ".primary-btn"
+
+            )
+            .forEach(button => {
+
+
+                button.addEventListener(
+                    "click",
+                    function(event) {
+
+
+                        const ripple =
+                            document.createElement(
+                                "span"
+                            );
+
+
+                        const rect =
+                            this.getBoundingClientRect();
+
+
+                        const diameter =
+                            Math.max(
+
+                                this.clientWidth,
+
+                                this.clientHeight
+
+                            );
+
+
+                        ripple.style.width =
+                            `${diameter}px`;
+
+
+                        ripple.style.height =
+                            `${diameter}px`;
+
+
+                        ripple.style.left =
+                            `${
+                                event.clientX -
+                                rect.left -
+                                diameter / 2
+                            }px`;
+
+
+                        ripple.style.top =
+                            `${
+                                event.clientY -
+                                rect.top -
+                                diameter / 2
+                            }px`;
+
+
+                        ripple.className =
+                            "ripple";
+
+
+                        this.appendChild(
+                            ripple
+                        );
+
+
+                        setTimeout(
+                            () => {
+
+                                ripple.remove();
+
+                            },
+                            650
+                        );
+
+
+                    }
+                );
+
+
+            });
+
+
+    </script>
+
+
+</body>
+
+</html>

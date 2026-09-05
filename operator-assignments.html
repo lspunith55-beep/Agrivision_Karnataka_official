@@ -1,0 +1,3273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka — Machine Operator Assignments"
+    >
+
+    <title>
+        Operator Assignments | AgriVision Karnataka
+    </title>
+
+
+    <!-- =====================================================
+         AGRIVISION SHARED CORE
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+
+    <!-- =====================================================
+         PAGE-SPECIFIC STYLES
+         Only for structures unique to this page.
+         ===================================================== -->
+
+    <style>
+
+        /* =====================================================
+           PAGE BASE
+           ===================================================== */
+
+        body[data-page="operator-assignments"] {
+            overflow-x: hidden;
+        }
+
+
+        body[data-page="operator-assignments"] .av-page {
+            width: min(94%, 1500px);
+            margin-inline: auto;
+        }
+
+
+        body[data-page="operator-assignments"] .av-section {
+            padding-top: clamp(70px, 8vw, 105px);
+            padding-bottom: clamp(70px, 8vw, 105px);
+        }
+
+
+        /* =====================================================
+           TYPOGRAPHY
+           ===================================================== */
+
+        .assignment-page-title {
+
+            font-size:
+                clamp(3rem, 6vw, 6rem);
+
+            line-height: .98;
+
+            letter-spacing: -.045em;
+
+            max-width: 1000px;
+
+        }
+
+
+        .assignment-description {
+
+            max-width: 790px;
+
+            margin-top: 25px;
+
+            font-size:
+                clamp(1rem, 1.15vw, 1.18rem);
+
+            line-height: 1.8;
+
+        }
+
+
+        .assignment-section-title {
+
+            font-size:
+                clamp(2rem, 3.5vw, 3.8rem);
+
+            line-height: 1.08;
+
+            letter-spacing: -.035em;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .assignment-hero {
+
+            min-height: 610px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding-top: 125px !important;
+
+        }
+
+
+        .assignment-hero-actions {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 13px;
+
+            margin-top: 34px;
+
+        }
+
+
+        /* =====================================================
+           SUMMARY
+           ===================================================== */
+
+        .assignment-summary-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 20px;
+
+        }
+
+
+        .assignment-summary-card {
+
+            min-height: 205px;
+
+        }
+
+
+        .assignment-summary-card
+        .av-stat-value {
+
+            font-size:
+                clamp(2.4rem, 4vw, 4rem);
+
+            line-height: 1;
+
+            margin-top: 13px;
+
+        }
+
+
+        .assignment-summary-card
+        .av-stat-foot {
+
+            margin-top: 12px;
+
+            line-height: 1.55;
+
+        }
+
+
+        /* =====================================================
+           FILTERS
+           ===================================================== */
+
+        .assignment-filter {
+
+            margin-top: 30px;
+
+        }
+
+
+        .assignment-filter-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(220px, 1.6fr)
+                minmax(170px, 1fr)
+                minmax(170px, 1fr)
+                auto;
+
+            gap: 15px;
+
+            align-items: end;
+
+        }
+
+
+        .assignment-field {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 8px;
+
+        }
+
+
+        .assignment-field label {
+
+            font-size: .72rem;
+
+            font-weight: 850;
+
+            letter-spacing: .1em;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .assignment-field input,
+        .assignment-field select {
+
+            width: 100%;
+
+            min-height: 50px;
+
+            padding:
+                11px 14px;
+
+            border:
+                1px solid var(--av-border);
+
+            border-radius: 13px;
+
+            background:
+                rgba(255,255,255,.045);
+
+            color:
+                var(--av-white);
+
+            outline: none;
+
+            font: inherit;
+
+        }
+
+
+        .assignment-field input:focus,
+        .assignment-field select:focus {
+
+            border-color:
+                rgba(0,255,145,.45);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(0,255,145,.06);
+
+        }
+
+
+        /* =====================================================
+           REQUEST LIST
+           ===================================================== */
+
+        .assignment-list {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 18px;
+
+            margin-top: 25px;
+
+        }
+
+
+        .assignment-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .assignment-card-main {
+
+            display: grid;
+
+            grid-template-columns:
+                76px minmax(0,1fr) auto;
+
+            gap: 24px;
+
+            align-items: start;
+
+        }
+
+
+        .assignment-number {
+
+            width: 68px;
+
+            height: 68px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 18px;
+
+            background:
+                rgba(255,255,255,.055);
+
+            border:
+                1px solid var(--av-border);
+
+            font-size: 1.35rem;
+
+            font-weight: 900;
+
+        }
+
+
+        .assignment-card-title-row {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            align-items: center;
+
+            gap: 12px;
+
+            margin-bottom: 9px;
+
+        }
+
+
+        .assignment-card-title {
+
+            margin: 0;
+
+            font-size:
+                clamp(1.3rem, 2vw, 1.7rem);
+
+            line-height: 1.25;
+
+        }
+
+
+        .assignment-card-description {
+
+            margin: 0;
+
+            max-width: 820px;
+
+            line-height: 1.65;
+
+        }
+
+
+        .assignment-meta {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 17px;
+
+        }
+
+
+        .assignment-meta-item {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            min-height: 34px;
+
+            padding:
+                7px 10px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(255,255,255,.045);
+
+            border:
+                1px solid
+                rgba(255,255,255,.07);
+
+            font-size: .73rem;
+
+            font-weight: 750;
+
+        }
+
+
+        .assignment-card-actions {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: flex-end;
+
+            gap: 10px;
+
+            min-width: 150px;
+
+        }
+
+
+        /* =====================================================
+           DETAIL
+           ===================================================== */
+
+        .assignment-detail {
+
+            display: none;
+
+            margin-top: 27px;
+
+            padding-top: 25px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.08);
+
+        }
+
+
+        .assignment-card.expanded
+        .assignment-detail {
+
+            display: block;
+
+        }
+
+
+        .assignment-detail-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0,1fr));
+
+            gap: 13px;
+
+        }
+
+
+        .assignment-detail-box {
+
+            padding: 17px;
+
+            border-radius: 14px;
+
+            background:
+                rgba(255,255,255,.035);
+
+            border:
+                1px solid
+                rgba(255,255,255,.07);
+
+        }
+
+
+        .assignment-detail-label {
+
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: .68rem;
+
+            font-weight: 850;
+
+            letter-spacing: .1em;
+
+            opacity: .6;
+
+        }
+
+
+        .assignment-detail-value {
+
+            font-size: .95rem;
+
+            font-weight: 750;
+
+            line-height: 1.45;
+
+            overflow-wrap: anywhere;
+
+        }
+
+
+        /* =====================================================
+           EMPTY STATE
+           ===================================================== */
+
+        .assignment-empty {
+
+            min-height: 350px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 45px;
+
+        }
+
+
+        .assignment-empty-icon {
+
+            font-size: 3.4rem;
+
+            margin-bottom: 17px;
+
+        }
+
+
+        .assignment-empty h3 {
+
+            margin-bottom: 10px;
+
+            font-size: 1.5rem;
+
+        }
+
+
+        .assignment-empty p {
+
+            max-width: 650px;
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================================
+           WORKFLOW
+           ===================================================== */
+
+        .assignment-workflow {
+
+            margin-top: 28px;
+
+        }
+
+
+        /* =====================================================
+           QUOTE
+           ===================================================== */
+
+        .assignment-quote {
+
+            min-height: 290px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 45px;
+
+        }
+
+
+        .assignment-quote blockquote {
+
+            max-width: 900px;
+
+            margin: 0;
+
+            font-size:
+                clamp(1.55rem, 3vw, 2.8rem);
+
+            line-height: 1.4;
+
+            font-weight: 750;
+
+            letter-spacing: -.02em;
+
+        }
+
+
+        .assignment-quote cite {
+
+            display: block;
+
+            margin-top: 22px;
+
+            font-size: .75rem;
+
+            font-style: normal;
+
+            font-weight: 850;
+
+            letter-spacing: .13em;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .assignment-summary-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+
+            }
+
+
+            .assignment-filter-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+
+            }
+
+
+            .assignment-card-main {
+
+                grid-template-columns:
+                    68px minmax(0,1fr);
+
+            }
+
+
+            .assignment-card-actions {
+
+                grid-column: 2;
+
+                flex-direction: row;
+
+                align-items: center;
+
+            }
+
+
+            .assignment-detail-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            body[data-page="operator-assignments"]
+            .av-page {
+
+                width: min(92%,1500px);
+
+            }
+
+
+            body[data-page="operator-assignments"]
+            .av-section {
+
+                padding-top: 58px;
+
+                padding-bottom: 58px;
+
+            }
+
+
+            .assignment-hero {
+
+                min-height: auto;
+
+                padding-top: 110px !important;
+
+            }
+
+
+            .assignment-summary-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .assignment-filter-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .assignment-card-main {
+
+                grid-template-columns: 1fr;
+
+                gap: 16px;
+
+            }
+
+
+            .assignment-card-actions {
+
+                grid-column: auto;
+
+                align-items: stretch;
+
+                flex-direction: column;
+
+            }
+
+
+            .assignment-detail-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .assignment-hero-actions {
+
+                flex-direction: column;
+
+            }
+
+
+            .assignment-hero-actions
+            .av-button {
+
+                width: 100%;
+
+                justify-content: center;
+
+            }
+
+
+            .assignment-quote {
+
+                padding: 30px 22px;
+
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .assignment-card
+            .av-card-body {
+
+                padding: 22px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body
+    data-page="operator-assignments"
+    data-role="operator"
+>
+
+
+    <!-- =====================================================
+         AGRIVISION SHARED VISUAL LAYERS
+         ===================================================== -->
+
+    <div class="background-image" aria-hidden="true"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="particle-field" aria-hidden="true"></div>
+    <div class="fireflies" aria-hidden="true"></div>
+    <div class="floating-leaves" aria-hidden="true"></div>
+    <div class="cursor-stars" aria-hidden="true"></div>
+    <div class="mouse-glow" aria-hidden="true"></div>
+
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <!-- LEFT -->
+
+            <div class="av-header-title">
+
+                <span class="av-status-dot"></span>
+
+                <span>
+                    AGRIVISION
+                </span>
+
+                <span class="av-header-divider">
+                    /
+                </span>
+
+                <span class="av-text-muted">
+                    MACHINE OPERATOR
+                </span>
+
+            </div>
+
+
+
+            <!-- CENTER -->
+
+            <div class="av-search">
+
+                <span aria-hidden="true">
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search your ecosystem..."
+                    aria-label="Search AgriVision ecosystem"
+                    data-global-search
+                >
+
+            </div>
+
+
+
+            <!-- RIGHT -->
+
+            <div class="av-header-actions">
+
+
+                <button
+                    class="av-icon-button"
+                    type="button"
+                    data-notification
+                    aria-label="Notifications"
+                    title="Notifications"
+                >
+                    ◉
+                </button>
+
+
+                <button
+                    class="av-icon-button"
+                    type="button"
+                    data-modal-open="messagesModal"
+                    aria-label="Messages"
+                    title="Messages"
+                >
+                    ◌
+                </button>
+
+
+                <button
+                    class="av-icon-button"
+                    type="button"
+                    data-modal-open="profileModal"
+                    aria-label="Profile"
+                    title="Profile"
+                >
+                    ◎
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="av-page av-page-enter">
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal assignment-hero"
+        >
+
+            <div>
+
+
+                <div class="av-eyebrow">
+
+                    <span class="av-status-dot"></span>
+
+                    AGRIVISION KARNATAKA
+
+                    <span>·</span>
+
+                    OPERATOR ASSIGNMENTS
+
+                </div>
+
+
+                <h1 class="assignment-page-title">
+
+                    Turn every
+
+                    <span class="av-gradient-text">
+                        assignment
+                    </span>
+
+                    into field work.
+
+                </h1>
+
+
+                <p class="assignment-description">
+
+                    Review agricultural machine-operation
+                    requests connected to the AgriVision
+                    ecosystem. Understand the requirement,
+                    equipment, location and schedule before
+                    moving the operation forward.
+
+                </p>
+
+
+                <div class="assignment-hero-actions">
+
+
+                    <a
+                        href="machine-operator-portal.html"
+                        class="av-button av-button-secondary"
+                    >
+                        ←
+                        OPERATOR PORTAL
+                    </a>
+
+
+                    <a
+                        href="operator-availability.html"
+                        class="av-button av-button-cyan"
+                    >
+                        AVAILABILITY →
+                    </a>
+
+
+                    <a
+                        href="operator-machines.html"
+                        class="av-button av-button-green"
+                    >
+                        MACHINES →
+                    </a>
+
+                </div>
+
+
+                <div class="av-flex av-wrap av-gap-3 av-mt-6">
+
+                    <span class="av-status av-status-active">
+
+                        <span class="av-status-dot"></span>
+
+                        OPERATOR SYSTEM ACTIVE
+
+                    </span>
+
+
+                    <span class="av-status av-status-info">
+
+                        ASSIGNMENTS
+
+                    </span>
+
+
+                    <span class="av-status av-status-info">
+
+                        KARNATAKA
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUMMARY
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="av-section-heading">
+
+
+                <div>
+
+                    <div class="av-eyebrow">
+                        ASSIGNMENT OVERVIEW
+                    </div>
+
+
+                    <h2 class="assignment-section-title">
+
+                        Know your
+
+                        <span class="av-gradient-text">
+                            workload.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="av-subtitle">
+
+                        A live summary of the Operator requests
+                        stored in the shared AgriVision data layer.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="assignment-summary-grid">
+
+
+                <!-- TOTAL -->
+
+                <article class="av-stat-card assignment-summary-card">
+
+                    <div class="av-stat-label">
+                        TOTAL REQUESTS
+                    </div>
+
+                    <div
+                        class="av-stat-value av-gradient-text"
+                        id="totalRequests"
+                    >
+                        0
+                    </div>
+
+                    <div class="av-stat-foot">
+                        All operator requests currently
+                        available in the system.
+                    </div>
+
+                </article>
+
+
+
+                <!-- PENDING -->
+
+                <article class="av-stat-card assignment-summary-card">
+
+                    <div class="av-stat-label">
+                        PENDING
+                    </div>
+
+                    <div
+                        class="av-stat-value"
+                        id="pendingRequests"
+                    >
+                        0
+                    </div>
+
+                    <div class="av-stat-foot">
+                        Requests waiting for operator
+                        action or assignment.
+                    </div>
+
+                </article>
+
+
+
+                <!-- ACTIVE -->
+
+                <article class="av-stat-card assignment-summary-card">
+
+                    <div class="av-stat-label">
+                        ACTIVE
+                    </div>
+
+                    <div
+                        class="av-stat-value"
+                        id="activeRequests"
+                    >
+                        0
+                    </div>
+
+                    <div class="av-stat-foot">
+                        Accepted, assigned or ongoing
+                        operations.
+                    </div>
+
+                </article>
+
+
+
+                <!-- COMPLETED -->
+
+                <article class="av-stat-card assignment-summary-card">
+
+                    <div class="av-stat-label">
+                        COMPLETED
+                    </div>
+
+                    <div
+                        class="av-stat-value"
+                        id="completedRequests"
+                    >
+                        0
+                    </div>
+
+                    <div class="av-stat-foot">
+                        Operations recorded as completed.
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REQUESTS
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+            id="requests"
+        >
+
+            <div class="av-section-heading">
+
+
+                <div>
+
+                    <div class="av-eyebrow">
+                        MACHINE OPERATION REQUESTS
+                    </div>
+
+
+                    <h2 class="assignment-section-title">
+
+                        Your
+
+                        <span class="av-gradient-text">
+                            assignments.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="av-subtitle">
+
+                        Search, filter and inspect each request
+                        before proceeding with field operations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FILTER PANEL -->
+
+            <div class="av-panel assignment-filter">
+
+                <div class="av-panel-content">
+
+                    <div class="assignment-filter-grid">
+
+
+                        <div class="assignment-field">
+
+                            <label
+                                for="assignmentSearch"
+                            >
+                                SEARCH
+                            </label>
+
+                            <input
+                                id="assignmentSearch"
+                                type="search"
+                                placeholder="Machine, location, crop, operation..."
+                            >
+
+                        </div>
+
+
+                        <div class="assignment-field">
+
+                            <label
+                                for="assignmentStatus"
+                            >
+                                STATUS
+                            </label>
+
+                            <select
+                                id="assignmentStatus"
+                            >
+
+                                <option value="all">
+                                    All statuses
+                                </option>
+
+                                <option value="pending">
+                                    Pending
+                                </option>
+
+                                <option value="accepted">
+                                    Accepted
+                                </option>
+
+                                <option value="assigned">
+                                    Assigned
+                                </option>
+
+                                <option value="ongoing">
+                                    Ongoing
+                                </option>
+
+                                <option value="completed">
+                                    Completed
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="assignment-field">
+
+                            <label
+                                for="assignmentSort"
+                            >
+                                SORT
+                            </label>
+
+                            <select
+                                id="assignmentSort"
+                            >
+
+                                <option value="default">
+                                    Default
+                                </option>
+
+                                <option value="title">
+                                    Operation
+                                </option>
+
+                                <option value="status">
+                                    Status
+                                </option>
+
+                                <option value="location">
+                                    Location
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            id="resetFilters"
+                        >
+                            RESET
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- REQUEST LIST -->
+
+            <div
+                id="assignmentList"
+                class="assignment-list"
+            >
+
+                <div class="av-panel">
+
+                    <div class="assignment-empty">
+
+                        <div class="assignment-empty-icon">
+                            ⚙
+                        </div>
+
+                        <h3>
+                            Loading assignments
+                        </h3>
+
+                        <p>
+                            Reading machine-operation requests
+                            from the AgriVision data layer.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WORKFLOW
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="av-section-heading">
+
+
+                <div>
+
+                    <div class="av-eyebrow">
+                        OPERATION WORKFLOW
+                    </div>
+
+
+                    <h2 class="assignment-section-title">
+
+                        From request
+
+                        <span class="av-gradient-text">
+                            to completion.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="av-subtitle">
+
+                        The Operator sits inside a connected
+                        workflow linking agricultural needs,
+                        machinery and field execution.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="av-panel assignment-workflow">
+
+                <div class="av-panel-content">
+
+                    <div class="av-flow">
+
+
+                        <div class="av-flow-item">
+
+                            <span class="av-flow-icon">
+                                🌾
+                            </span>
+
+                            <strong>
+                                FIELD NEED
+                            </strong>
+
+                            <small>
+                                Agricultural operation required
+                            </small>
+
+                        </div>
+
+
+                        <span class="av-flow-arrow">
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <span class="av-flow-icon">
+                                📋
+                            </span>
+
+                            <strong>
+                                REQUEST
+                            </strong>
+
+                            <small>
+                                Machine service requested
+                            </small>
+
+                        </div>
+
+
+                        <span class="av-flow-arrow">
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <span class="av-flow-icon">
+                                🚜
+                            </span>
+
+                            <strong>
+                                MACHINE
+                            </strong>
+
+                            <small>
+                                Suitable equipment
+                            </small>
+
+                        </div>
+
+
+                        <span class="av-flow-arrow">
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <span class="av-flow-icon">
+                                ⚙
+                            </span>
+
+                            <strong>
+                                OPERATOR
+                            </strong>
+
+                            <small>
+                                Skilled execution
+                            </small>
+
+                        </div>
+
+
+                        <span class="av-flow-arrow">
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <span class="av-flow-icon">
+                                ✓
+                            </span>
+
+                            <strong>
+                                COMPLETION
+                            </strong>
+
+                            <small>
+                                Work recorded
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUOTE
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="av-panel">
+
+                <div class="assignment-quote">
+
+                    <div>
+
+                        <div
+                            class="av-eyebrow"
+                            style="margin-bottom:20px;"
+                        >
+                            AGRIVISION PRINCIPLE
+                        </div>
+
+
+                        <blockquote>
+
+                            “The right operation begins with
+                            the right machine, the right
+                            operator and the right moment.”
+
+                        </blockquote>
+
+
+                        <cite>
+                            AGRIVISION KARNATAKA
+                        </cite>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NAVIGATION
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="av-grid">
+
+
+                <div class="av-panel">
+
+                    <div class="av-panel-content">
+
+                        <div class="av-eyebrow">
+                            OPERATOR MODULE
+                        </div>
+
+
+                        <h2 class="av-title">
+
+                            Continue managing your
+
+                            <span class="av-gradient-text">
+                                operations.
+                            </span>
+
+                        </h2>
+
+
+                        <p class="av-subtitle">
+
+                            Move between assignments,
+                            availability and machine capability
+                            without leaving the Operator system.
+
+                        </p>
+
+
+                        <div
+                            class="av-flex av-wrap av-gap-3 av-mt-6"
+                        >
+
+                            <a
+                                href="machine-operator-portal.html"
+                                class="av-button av-button-secondary"
+                            >
+                                ← PORTAL
+                            </a>
+
+
+                            <a
+                                href="operator-availability.html"
+                                class="av-button av-button-cyan"
+                            >
+                                AVAILABILITY →
+                            </a>
+
+
+                            <a
+                                href="operator-machines.html"
+                                class="av-button av-button-green"
+                            >
+                                MACHINES →
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         PROFILE MODAL
+         ===================================================== -->
+
+    <div
+        class="av-modal-backdrop"
+        id="profileModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="profileModalTitle"
+    >
+
+        <div class="av-modal">
+
+            <div class="av-panel-content">
+
+                <div class="av-eyebrow">
+
+                    <span class="av-status-dot"></span>
+
+                    ACCOUNT
+
+                </div>
+
+
+                <h2
+                    class="av-title"
+                    id="profileModalTitle"
+                >
+
+                    Your
+
+                    <span class="av-gradient-text">
+                        AgriVision identity
+                    </span>
+
+                </h2>
+
+
+                <div
+                    class="av-grid"
+                    style="margin-top:28px;"
+                >
+
+
+                    <div class="av-stat-card">
+
+                        <div class="av-stat-label">
+                            NAME
+                        </div>
+
+                        <div
+                            class="av-stat-value"
+                            data-user-name
+                        >
+                            AgriVision Member
+                        </div>
+
+                    </div>
+
+
+                    <div class="av-stat-card">
+
+                        <div class="av-stat-label">
+                            ROLE
+                        </div>
+
+                        <div
+                            class="av-stat-value"
+                            data-user-role
+                        >
+                            Machine Operator
+                        </div>
+
+                    </div>
+
+
+                    <div class="av-stat-card">
+
+                        <div class="av-stat-label">
+                            EMAIL
+                        </div>
+
+                        <div
+                            class="av-stat-value"
+                            data-user-email
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="av-flex av-gap-3 av-mt-6">
+
+                    <button
+                        type="button"
+                        class="av-button av-button-secondary"
+                        data-modal-close
+                    >
+                        CLOSE
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MESSAGES MODAL
+         ===================================================== -->
+
+    <div
+        class="av-modal-backdrop"
+        id="messagesModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="messagesModalTitle"
+    >
+
+        <div class="av-modal">
+
+            <div class="av-panel-content">
+
+                <div class="av-between">
+
+                    <div>
+
+                        <div class="av-eyebrow">
+                            COMMUNICATION
+                        </div>
+
+
+                        <h2
+                            class="av-title"
+                            id="messagesModalTitle"
+                        >
+                            Messages
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="av-icon-button"
+                        data-modal-close
+                        aria-label="Close"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="operatorMessages"
+                    class="av-mt-6"
+                >
+
+                    <div class="av-empty-state">
+
+                        <div class="av-empty-icon">
+                            ◌
+                        </div>
+
+                        <h3>
+                            No messages
+                        </h3>
+
+                        <p>
+                            Operator communication will
+                            appear here when available.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="av-footer">
+
+        <div class="av-footer-inner">
+
+            <p class="av-footer-note">
+
+                Agricultural Intelligence Infrastructure
+                · Connected Systems · Karnataka
+
+            </p>
+
+
+            <p
+                class="av-footer-note"
+                style="margin-top:7px;"
+            >
+
+                ©
+                <span data-year>
+                    2026
+                </span>
+
+                AgriVision Karnataka
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         AGRIVISION CORE JAVASCRIPT
+         ===================================================== -->
+
+    <script src="core.js"></script>
+
+
+
+    <!-- =====================================================
+         ASSIGNMENT PAGE LOGIC
+         ===================================================== -->
+
+    <script>
+
+        "use strict";
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            () => {
+
+
+                /* =================================================
+                   CORE INITIALIZATION
+                   ================================================= */
+
+                if (
+                    window.AgriVisionCore
+                ) {
+
+                    const core =
+                        window.AgriVisionCore;
+
+
+                    const methods = [
+
+                        "populateUser",
+                        "initializeModals",
+                        "initializeSearch",
+                        "initializeReveal",
+                        "initialize3D",
+                        "initializeRipple",
+                        "initializeMouseGlow",
+                        "initializeCursorStars",
+                        "createFireflies",
+                        "createLeaves",
+                        "createParticles",
+                        "initializeParallax",
+                        "initializeNotifications",
+                        "loadActivity"
+
+                    ];
+
+
+                    methods.forEach(
+                        method => {
+
+                            if (
+                                typeof core[method] ===
+                                "function"
+                            ) {
+
+                                core[method]();
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   YEAR
+                   ================================================= */
+
+                document
+                    .querySelectorAll(
+                        "[data-year]"
+                    )
+                    .forEach(
+                        element => {
+
+                            element.textContent =
+                                new Date()
+                                    .getFullYear();
+
+                        }
+                    );
+
+
+
+                /* =================================================
+                   DATA
+                   ================================================= */
+
+                function getData() {
+
+                    if (
+                        !window.AgriVisionCore ||
+                        typeof AgriVisionCore.getData !==
+                        "function"
+                    ) {
+
+                        return {
+
+                            operatorRequests: []
+
+                        };
+
+                    }
+
+
+                    return (
+                        AgriVisionCore.getData() ||
+                        {
+                            operatorRequests: []
+                        }
+                    );
+
+                }
+
+
+
+                function getRequests() {
+
+                    const data =
+                        getData();
+
+
+                    return Array.isArray(
+                        data.operatorRequests
+                    )
+                        ? data.operatorRequests
+                        : [];
+
+                }
+
+
+
+                /* =================================================
+                   SAFE VALUE
+                   ================================================= */
+
+                function value(
+                    object,
+                    keys,
+                    fallback = "—"
+                ) {
+
+                    for (
+                        const key of keys
+                    ) {
+
+                        if (
+                            object &&
+                            object[key] !== undefined &&
+                            object[key] !== null &&
+                            String(object[key]).trim() !== ""
+                        ) {
+
+                            return object[key];
+
+                        }
+
+                    }
+
+
+                    return fallback;
+
+                }
+
+
+
+                /* =================================================
+                   NORMALIZE STATUS
+                   ================================================= */
+
+                function normalizeStatus(
+                    request
+                ) {
+
+                    return String(
+                        value(
+                            request,
+                            [
+                                "status",
+                                "state"
+                            ],
+                            "pending"
+                        )
+                    )
+                    .trim()
+                    .toLowerCase()
+                    .replace(
+                        /_/g,
+                        "-"
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   STATUS LABEL
+                   ================================================= */
+
+                function statusLabel(
+                    status
+                ) {
+
+                    return String(status)
+                        .replace(
+                            /[-_]/g,
+                            " "
+                        )
+                        .toUpperCase();
+
+                }
+
+
+
+                /* =================================================
+                   STATUS CLASS
+                   ================================================= */
+
+                function statusClass(
+                    status
+                ) {
+
+                    if (
+                        status === "completed" ||
+                        status === "complete" ||
+                        status === "done"
+                    ) {
+
+                        return "av-status-green";
+
+                    }
+
+
+                    if (
+                        status === "accepted" ||
+                        status === "assigned" ||
+                        status === "ongoing" ||
+                        status === "active" ||
+                        status === "in-progress"
+                    ) {
+
+                        return "av-status-active";
+
+                    }
+
+
+                    return "av-status-info";
+
+                }
+
+
+
+                /* =================================================
+                   ESCAPE HTML
+                   ================================================= */
+
+                function escapeHTML(
+                    input
+                ) {
+
+                    return String(input)
+
+                        .replace(
+                            /&/g,
+                            "&amp;"
+                        )
+
+                        .replace(
+                            /</g,
+                            "&lt;"
+                        )
+
+                        .replace(
+                            />/g,
+                            "&gt;"
+                        )
+
+                        .replace(
+                            /"/g,
+                            "&quot;"
+                        )
+
+                        .replace(
+                            /'/g,
+                            "&#039;"
+                        );
+
+                }
+
+
+
+                /* =================================================
+                   SUMMARY
+                   ================================================= */
+
+                function renderSummary(
+                    requests
+                ) {
+
+                    let pending = 0;
+
+                    let active = 0;
+
+                    let completed = 0;
+
+
+                    requests.forEach(
+                        request => {
+
+                            const status =
+                                normalizeStatus(
+                                    request
+                                );
+
+
+                            if (
+
+                                status === "completed" ||
+                                status === "complete" ||
+                                status === "done"
+
+                            ) {
+
+                                completed++;
+
+                            }
+
+                            else if (
+
+                                status === "accepted" ||
+                                status === "assigned" ||
+                                status === "ongoing" ||
+                                status === "active" ||
+                                status === "in-progress"
+
+                            ) {
+
+                                active++;
+
+                            }
+
+                            else {
+
+                                pending++;
+
+                            }
+
+                        }
+                    );
+
+
+                    document
+                        .getElementById(
+                            "totalRequests"
+                        )
+                        .textContent =
+                        requests.length;
+
+
+                    document
+                        .getElementById(
+                            "pendingRequests"
+                        )
+                        .textContent =
+                        pending;
+
+
+                    document
+                        .getElementById(
+                            "activeRequests"
+                        )
+                        .textContent =
+                        active;
+
+
+                    document
+                        .getElementById(
+                            "completedRequests"
+                        )
+                        .textContent =
+                        completed;
+
+                }
+
+
+
+                /* =================================================
+                   FILTER
+                   ================================================= */
+
+                function getFilteredRequests() {
+
+                    let requests =
+                        [...getRequests()];
+
+
+                    const search =
+                        document
+                            .getElementById(
+                                "assignmentSearch"
+                            )
+                            .value
+                            .trim()
+                            .toLowerCase();
+
+
+                    const selectedStatus =
+                        document
+                            .getElementById(
+                                "assignmentStatus"
+                            )
+                            .value
+                            .toLowerCase();
+
+
+                    const selectedSort =
+                        document
+                            .getElementById(
+                                "assignmentSort"
+                            )
+                            .value;
+
+
+                    if (search) {
+
+                        requests =
+                            requests.filter(
+                                request => {
+
+                                    const searchable = [
+
+                                        request.id,
+
+                                        request.requestId,
+
+                                        request.title,
+
+                                        request.name,
+
+                                        request.operation,
+
+                                        request.description,
+
+                                        request.details,
+
+                                        request.machine,
+
+                                        request.equipment,
+
+                                        request.location,
+
+                                        request.village,
+
+                                        request.district,
+
+                                        request.crop,
+
+                                        request.cropType,
+
+                                        request.date,
+
+                                        request.scheduledDate
+
+                                    ]
+                                    .filter(Boolean)
+                                    .join(" ")
+                                    .toLowerCase();
+
+
+                                    return searchable
+                                        .includes(search);
+
+                                }
+                            );
+
+                    }
+
+
+                    if (
+                        selectedStatus !==
+                        "all"
+                    ) {
+
+                        requests =
+                            requests.filter(
+                                request => {
+
+                                    return (
+                                        normalizeStatus(
+                                            request
+                                        ) ===
+                                        selectedStatus
+                                    );
+
+                                }
+                            );
+
+                    }
+
+
+                    if (
+                        selectedSort ===
+                        "title"
+                    ) {
+
+                        requests.sort(
+                            (a,b) => {
+
+                                const aTitle =
+                                    value(
+                                        a,
+                                        [
+                                            "title",
+                                            "operation",
+                                            "name"
+                                        ],
+                                        ""
+                                    );
+
+
+                                const bTitle =
+                                    value(
+                                        b,
+                                        [
+                                            "title",
+                                            "operation",
+                                            "name"
+                                        ],
+                                        ""
+                                    );
+
+
+                                return String(
+                                    aTitle
+                                ).localeCompare(
+                                    String(
+                                        bTitle
+                                    )
+                                );
+
+                            }
+                        );
+
+                    }
+
+
+                    if (
+                        selectedSort ===
+                        "status"
+                    ) {
+
+                        requests.sort(
+                            (a,b) => {
+
+                                return normalizeStatus(
+                                    a
+                                ).localeCompare(
+                                    normalizeStatus(
+                                        b
+                                    )
+                                );
+
+                            }
+                        );
+
+                    }
+
+
+                    if (
+                        selectedSort ===
+                        "location"
+                    ) {
+
+                        requests.sort(
+                            (a,b) => {
+
+                                const aLocation =
+                                    value(
+                                        a,
+                                        [
+                                            "location",
+                                            "village",
+                                            "district"
+                                        ],
+                                        ""
+                                    );
+
+
+                                const bLocation =
+                                    value(
+                                        b,
+                                        [
+                                            "location",
+                                            "village",
+                                            "district"
+                                        ],
+                                        ""
+                                    );
+
+
+                                return String(
+                                    aLocation
+                                ).localeCompare(
+                                    String(
+                                        bLocation
+                                    )
+                                );
+
+                            }
+                        );
+
+                    }
+
+
+                    return requests;
+
+                }
+
+
+
+                /* =================================================
+                   REQUEST CARD
+                   ================================================= */
+
+                function createRequestCard(
+                    request,
+                    index
+                ) {
+
+                    const title =
+                        value(
+                            request,
+                            [
+                                "title",
+                                "operation",
+                                "name",
+                                "machine"
+                            ],
+                            "Machine Operation Request"
+                        );
+
+
+                    const description =
+                        value(
+                            request,
+                            [
+                                "description",
+                                "details",
+                                "requirement"
+                            ],
+                            "Agricultural machine-operation request."
+                        );
+
+
+                    const status =
+                        normalizeStatus(
+                            request
+                        );
+
+
+                    const machine =
+                        value(
+                            request,
+                            [
+                                "machine",
+                                "equipment",
+                                "machineName",
+                                "equipmentName"
+                            ]
+                        );
+
+
+                    const location =
+                        value(
+                            request,
+                            [
+                                "location",
+                                "village",
+                                "district"
+                            ]
+                        );
+
+
+                    const date =
+                        value(
+                            request,
+                            [
+                                "date",
+                                "scheduledDate",
+                                "startDate",
+                                "serviceDate"
+                            ]
+                        );
+
+
+                    const crop =
+                        value(
+                            request,
+                            [
+                                "crop",
+                                "cropType"
+                            ]
+                        );
+
+
+                    const requestId =
+                        value(
+                            request,
+                            [
+                                "id",
+                                "requestId"
+                            ]
+                        );
+
+
+                    const duration =
+                        value(
+                            request,
+                            [
+                                "duration",
+                                "estimatedDuration"
+                            ]
+                        );
+
+
+                    const area =
+                        value(
+                            request,
+                            [
+                                "area",
+                                "acreage",
+                                "landArea"
+                            ]
+                        );
+
+
+                    const requester =
+                        value(
+                            request,
+                            [
+                                "farmerName",
+                                "requesterName",
+                                "farmer",
+                                "requestedBy"
+                            ]
+                        );
+
+
+                    const card =
+                        document.createElement(
+                            "article"
+                        );
+
+
+                    card.className =
+                        "av-panel assignment-card";
+
+
+                    card.innerHTML = `
+
+                        <div class="av-panel-content">
+
+                            <div class="assignment-card-main">
+
+
+                                <div class="assignment-number">
+
+                                    ${String(
+                                        index + 1
+                                    ).padStart(
+                                        2,
+                                        "0"
+                                    )}
+
+                                </div>
+
+
+                                <div>
+
+
+                                    <div
+                                        class="assignment-card-title-row"
+                                    >
+
+                                        <h3
+                                            class="assignment-card-title"
+                                        >
+                                            ${escapeHTML(title)}
+                                        </h3>
+
+
+                                        <span
+                                            class="av-status ${statusClass(status)}"
+                                        >
+                                            ${escapeHTML(
+                                                statusLabel(
+                                                    status
+                                                )
+                                            )}
+                                        </span>
+
+                                    </div>
+
+
+                                    <p
+                                        class="assignment-card-description"
+                                    >
+                                        ${escapeHTML(
+                                            description
+                                        )}
+                                    </p>
+
+
+                                    <div
+                                        class="assignment-meta"
+                                    >
+
+                                        <span
+                                            class="assignment-meta-item"
+                                        >
+                                            🚜
+                                            ${escapeHTML(machine)}
+                                        </span>
+
+
+                                        <span
+                                            class="assignment-meta-item"
+                                        >
+                                            📍
+                                            ${escapeHTML(location)}
+                                        </span>
+
+
+                                        <span
+                                            class="assignment-meta-item"
+                                        >
+                                            📅
+                                            ${escapeHTML(date)}
+                                        </span>
+
+
+                                        <span
+                                            class="assignment-meta-item"
+                                        >
+                                            🌱
+                                            ${escapeHTML(crop)}
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div
+                                    class="assignment-card-actions"
+                                >
+
+                                    <button
+                                        type="button"
+                                        class="av-button av-button-secondary assignment-details-button"
+                                    >
+                                        VIEW DETAILS
+                                    </button>
+
+
+                                    ${
+                                        status ===
+                                        "pending"
+                                            ? `
+                                                <button
+                                                    type="button"
+                                                    class="av-button av-button-primary assignment-action-button"
+                                                >
+                                                    REVIEW REQUEST
+                                                </button>
+                                              `
+                                            : ""
+                                    }
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="assignment-detail"
+                            >
+
+                                <div
+                                    class="assignment-detail-grid"
+                                >
+
+
+                                    <div
+                                        class="assignment-detail-box"
+                                    >
+
+                                        <span
+                                            class="assignment-detail-label"
+                                        >
+                                            REQUEST ID
+                                        </span>
+
+                                        <div
+                                            class="assignment-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                requestId
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="assignment-detail-box"
+                                    >
+
+                                        <span
+                                            class="assignment-detail-label"
+                                        >
+                                            REQUESTER
+                                        </span>
+
+                                        <div
+                                            class="assignment-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                requester
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="assignment-detail-box"
+                                    >
+
+                                        <span
+                                            class="assignment-detail-label"
+                                        >
+                                            OPERATION
+                                        </span>
+
+                                        <div
+                                            class="assignment-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                value(
+                                                    request,
+                                                    [
+                                                        "operation",
+                                                        "title"
+                                                    ],
+                                                    "—"
+                                                )
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="assignment-detail-box"
+                                    >
+
+                                        <span
+                                            class="assignment-detail-label"
+                                        >
+                                            MACHINE
+                                        </span>
+
+                                        <div
+                                            class="assignment-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                machine
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="assignment-detail-box"
+                                    >
+
+                                        <span
+                                            class="assignment-detail-label"
+                                        >
+                                            LOCATION
+                                        </span>
+
+                                        <div
+                                            class="assignment-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                location
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="assignment-detail-box"
+                                    >
+
+                                        <span
+                                            class="assignment-detail-label"
+                                        >
+                                            SCHEDULE
+                                        </span>
+
+                                        <div
+                                            class="assignment-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                date
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="assignment-detail-box"
+                                    >
+
+                                        <span
+                                            class="assignment-detail-label"
+                                        >
+                                            CROP
+                                        </span>
+
+                                        <div
+                                            class="assignment-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                crop
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="assignment-detail-box"
+                                    >
+
+                                        <span
+                                            class="assignment-detail-label"
+                                        >
+                                            AREA
+                                        </span>
+
+                                        <div
+                                            class="assignment-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                area
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="assignment-detail-box"
+                                    >
+
+                                        <span
+                                            class="assignment-detail-label"
+                                        >
+                                            DURATION
+                                        </span>
+
+                                        <div
+                                            class="assignment-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                duration
+                                            )}
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    `;
+
+
+                    const detailsButton =
+                        card.querySelector(
+                            ".assignment-details-button"
+                        );
+
+
+                    detailsButton.addEventListener(
+                        "click",
+                        () => {
+
+                            card.classList.toggle(
+                                "expanded"
+                            );
+
+
+                            detailsButton.textContent =
+                                card.classList.contains(
+                                    "expanded"
+                                )
+                                    ? "HIDE DETAILS"
+                                    : "VIEW DETAILS";
+
+                        }
+                    );
+
+
+                    const actionButton =
+                        card.querySelector(
+                            ".assignment-action-button"
+                        );
+
+
+                    if (actionButton) {
+
+                        actionButton.addEventListener(
+                            "click",
+                            () => {
+
+                                if (
+                                    window.AgriVisionCore &&
+                                    typeof
+                                    AgriVisionCore.showToast ===
+                                    "function"
+                                ) {
+
+                                    AgriVisionCore.showToast(
+                                        "Review the request details before proceeding with the operation.",
+                                        "info"
+                                    );
+
+                                }
+
+                            }
+                        );
+
+                    }
+
+
+                    return card;
+
+                }
+
+
+
+                /* =================================================
+                   RENDER LIST
+                   ================================================= */
+
+                function renderRequests() {
+
+                    const container =
+                        document.getElementById(
+                            "assignmentList"
+                        );
+
+
+                    if (!container) {
+
+                        return;
+
+                    }
+
+
+                    const requests =
+                        getFilteredRequests();
+
+
+                    container.innerHTML =
+                        "";
+
+
+                    if (!requests.length) {
+
+                        container.innerHTML = `
+
+                            <div class="av-panel">
+
+                                <div class="assignment-empty">
+
+                                    <div
+                                        class="assignment-empty-icon"
+                                    >
+                                        📋
+                                    </div>
+
+                                    <h3>
+                                        No matching assignments
+                                    </h3>
+
+                                    <p>
+                                        No machine-operation
+                                        requests match the current
+                                        search and status filters.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        `;
+
+                        return;
+
+                    }
+
+
+                    requests.forEach(
+                        (
+                            request,
+                            index
+                        ) => {
+
+                            container.appendChild(
+                                createRequestCard(
+                                    request,
+                                    index
+                                )
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   FULL REFRESH
+                   ================================================= */
+
+                function refresh() {
+
+                    const requests =
+                        getRequests();
+
+
+                    renderSummary(
+                        requests
+                    );
+
+
+                    renderRequests();
+
+                }
+
+
+
+                /* =================================================
+                   FILTER EVENTS
+                   ================================================= */
+
+                document
+                    .getElementById(
+                        "assignmentSearch"
+                    )
+                    .addEventListener(
+                        "input",
+                        renderRequests
+                    );
+
+
+                document
+                    .getElementById(
+                        "assignmentStatus"
+                    )
+                    .addEventListener(
+                        "change",
+                        renderRequests
+                    );
+
+
+                document
+                    .getElementById(
+                        "assignmentSort"
+                    )
+                    .addEventListener(
+                        "change",
+                        renderRequests
+                    );
+
+
+
+                /* =================================================
+                   RESET
+                   ================================================= */
+
+                document
+                    .getElementById(
+                        "resetFilters"
+                    )
+                    .addEventListener(
+                        "click",
+                        () => {
+
+                            document
+                                .getElementById(
+                                    "assignmentSearch"
+                                )
+                                .value =
+                                "";
+
+
+                            document
+                                .getElementById(
+                                    "assignmentStatus"
+                                )
+                                .value =
+                                "all";
+
+
+                            document
+                                .getElementById(
+                                    "assignmentSort"
+                                )
+                                .value =
+                                "default";
+
+
+                            renderRequests();
+
+                        }
+                    );
+
+
+
+                /* =================================================
+                   INITIAL
+                   ================================================= */
+
+                refresh();
+
+
+
+                /* =================================================
+                   AGRIVISION EVENTS
+                   ================================================= */
+
+                document.addEventListener(
+                    "agrivision:event",
+                    refresh
+                );
+
+
+                document.addEventListener(
+                    "agrivision:data-updated",
+                    refresh
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

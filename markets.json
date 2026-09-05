@@ -1,0 +1,188 @@
+[
+  {
+    "id": 1,
+    "district": "Bagalkote",
+    "market": "Bagalkote APMC",
+    "location": "Bagalkote"
+  },
+  {
+    "id": 2,
+    "district": "Ballari",
+    "market": "Ballari APMC",
+    "location": "Ballari"
+  },
+  {
+    "id": 3,
+    "district": "Belagavi",
+    "market": "Belagavi APMC",
+    "location": "Belagavi"
+  },
+  {
+    "id": 4,
+    "district": "Bengaluru Rural",
+    "market": "Doddaballapura APMC",
+    "location": "Doddaballapura"
+  },
+  {
+    "id": 5,
+    "district": "Bengaluru Urban",
+    "market": "Bengaluru APMC",
+    "location": "Yeshwanthpur"
+  },
+  {
+    "id": 6,
+    "district": "Bidar",
+    "market": "Bidar APMC",
+    "location": "Bidar"
+  },
+  {
+    "id": 7,
+    "district": "Chamarajanagar",
+    "market": "Chamarajanagar APMC",
+    "location": "Chamarajanagar"
+  },
+  {
+    "id": 8,
+    "district": "Chikkaballapur",
+    "market": "Chikkaballapur APMC",
+    "location": "Chikkaballapur"
+  },
+  {
+    "id": 9,
+    "district": "Chikkamagaluru",
+    "market": "Chikkamagaluru APMC",
+    "location": "Chikkamagaluru"
+  },
+  {
+    "id": 10,
+    "district": "Chitradurga",
+    "market": "Chitradurga APMC",
+    "location": "Chitradurga"
+  },
+  {
+    "id": 11,
+    "district": "Dakshina Kannada",
+    "market": "Mangaluru APMC",
+    "location": "Mangaluru"
+  },
+  {
+    "id": 12,
+    "district": "Davanagere",
+    "market": "Davanagere APMC",
+    "location": "Davanagere"
+  },
+  {
+    "id": 13,
+    "district": "Dharwad",
+    "market": "Hubballi APMC",
+    "location": "Hubballi"
+  },
+  {
+    "id": 14,
+    "district": "Gadag",
+    "market": "Gadag APMC",
+    "location": "Gadag"
+  },
+  {
+    "id": 15,
+    "district": "Hassan",
+    "market": "Hassan APMC",
+    "location": "Hassan"
+  },
+  {
+    "id": 16,
+    "district": "Haveri",
+    "market": "Haveri APMC",
+    "location": "Haveri"
+  },
+  {
+    "id": 17,
+    "district": "Kalaburagi",
+    "market": "Kalaburagi APMC",
+    "location": "Kalaburagi"
+  },
+  {
+    "id": 18,
+    "district": "Kodagu",
+    "market": "Madikeri APMC",
+    "location": "Madikeri"
+  },
+  {
+    "id": 19,
+    "district": "Kolar",
+    "market": "Kolar APMC",
+    "location": "Kolar"
+  },
+  {
+    "id": 20,
+    "district": "Koppal",
+    "market": "Gangavathi APMC",
+    "location": "Gangavathi"
+  },
+  {
+    "id": 21,
+    "district": "Mandya",
+    "market": "Mandya APMC",
+    "location": "Mandya"
+  },
+  {
+    "id": 22,
+    "district": "Mysuru",
+    "market": "Mysuru APMC",
+    "location": "Mysuru"
+  },
+  {
+    "id": 23,
+    "district": "Raichur",
+    "market": "Raichur APMC",
+    "location": "Raichur"
+  },
+  {
+    "id": 24,
+    "district": "Ramanagara",
+    "market": "Ramanagara APMC",
+    "location": "Ramanagara"
+  },
+  {
+    "id": 25,
+    "district": "Shivamogga",
+    "market": "Shivamogga APMC",
+    "location": "Shivamogga"
+  },
+  {
+    "id": 26,
+    "district": "Tumakuru",
+    "market": "Tumakuru APMC",
+    "location": "Tumakuru"
+  },
+  {
+    "id": 27,
+    "district": "Udupi",
+    "market": "Udupi APMC",
+    "location": "Udupi"
+  },
+  {
+    "id": 28,
+    "district": "Uttara Kannada",
+    "market": "Karwar APMC",
+    "location": "Karwar"
+  },
+  {
+    "id": 29,
+    "district": "Vijayanagara",
+    "market": "Hosapete APMC",
+    "location": "Hosapete"
+  },
+  {
+    "id": 30,
+    "district": "Vijayapura",
+    "market": "Vijayapura APMC",
+    "location": "Vijayapura"
+  },
+  {
+    "id": 31,
+    "district": "Yadgir",
+    "market": "Yadgir APMC",
+    "location": "Yadgir"
+  }
+]

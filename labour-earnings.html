@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Labour Earnings and Payment Ledger"
+    >
+
+    <title>
+        Labour Earnings | AgriVision Karnataka
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     GLOBAL AGRIVISION ENVIRONMENT
+     ========================================================= -->
+
+<div class="background-image" aria-hidden="true"></div>
+
+<div
+    class="ambient-glow ambient-glow-one"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-two"
+    aria-hidden="true"
+></div>
+
+<div class="mouse-glow" aria-hidden="true"></div>
+
+<div class="particle-field" aria-hidden="true"></div>
+
+<div class="fireflies" aria-hidden="true"></div>
+
+<div class="floating-leaves" aria-hidden="true"></div>
+
+<div class="cursor-stars" aria-hidden="true"></div>
+
+
+
+<!-- =========================================================
+     APPLICATION
+     ========================================================= -->
+
+<div class="av-app">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <a
+                href="labour-dashboard.html"
+                class="av-brand"
+            >
+
+                <span
+                    class="av-status-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="av-brand-name">
+                    AGRIVISION
+                </span>
+
+                <span class="av-brand-region">
+                    KARNATAKA
+                </span>
+
+            </a>
+
+
+
+            <label
+                class="av-search"
+                aria-label="Search earnings"
+            >
+
+                <span
+                    class="av-search-icon"
+                    aria-hidden="true"
+                >
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search jobs, payments, transactions..."
+                    autocomplete="off"
+                    data-global-search
+                >
+
+            </label>
+
+
+
+            <div class="av-header-actions">
+
+                <a
+                    href="labour-notifications.html"
+                    class="av-icon-button"
+                    aria-label="Notifications"
+                >
+                    🔔
+                </a>
+
+
+                <a
+                    href="labour-profile.html"
+                    class="av-icon-button"
+                    aria-label="Profile"
+                >
+                    👤
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="av-welcome">
+
+        <div class="av-page av-welcome-content">
+
+
+            <div class="av-eyebrow">
+
+                <span>
+                    LABOUR
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    EARNINGS & PAYMENTS
+                </span>
+
+            </div>
+
+
+
+            <h1 class="av-welcome-title">
+
+                Every hour worked.
+                <span class="av-gradient-text">
+                    Every task completed.
+                </span>
+                Clearly recorded.
+
+            </h1>
+
+
+
+            <p class="av-welcome-description">
+
+                AgriVision connects completed agricultural work with
+                a transparent earnings record.
+
+                Whether a job is paid by day, hour, task, quantity or
+                contract, the system should preserve the agreed
+                payment model and show how the final amount was
+                calculated.
+
+                Your earnings page is therefore not just a balance
+                screen.
+
+                It is the financial history of the work you have
+                actually completed.
+
+            </p>
+
+
+
+            <div
+                class="av-chip-row"
+                style="margin-top:30px;"
+            >
+
+                <span class="av-status av-status-info">
+
+                    CURRENT PERIOD:
+
+                    <strong
+                        data-earnings-period
+                        style="margin-left:6px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-active">
+
+                    ● LEDGER ACTIVE
+
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    PAYOUT STATUS:
+
+                    <strong
+                        data-payout-status
+                        style="margin-left:6px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EARNINGS SNAPSHOT
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                EARNINGS SNAPSHOT
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Know where your money
+                <span class="av-gradient-text">
+                    stands.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            THIS PERIOD
+                        </div>
+
+                        <div class="av-role-icon">
+                            💰
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-earnings-current
+                        >
+                            ₹—
+                        </div>
+
+                        <p class="av-card-description">
+                            Earnings recorded for the current period.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            PENDING
+                        </div>
+
+                        <div class="av-role-icon">
+                            ⏳
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-earnings-pending
+                        >
+                            ₹—
+                        </div>
+
+                        <p class="av-card-description">
+                            Completed or approved work awaiting
+                            settlement.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            PAID
+                        </div>
+
+                        <div class="av-role-icon">
+                            ✓
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-earnings-paid
+                        >
+                            ₹—
+                        </div>
+
+                        <p class="av-card-description">
+                            Amount already settled.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            JOBS
+                        </div>
+
+                        <div class="av-role-icon">
+                            🌾
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-earnings-job-count
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Completed jobs contributing to earnings.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EARNINGS BREAKDOWN
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                EARNINGS BREAKDOWN
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                See how an amount was
+                <span class="av-gradient-text">
+                    calculated.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                AgriVision should not simply display a final number.
+
+                A Labourer should be able to understand the source
+                of that amount: the job, agreed rate, recorded
+                attendance, completed quantity or task, adjustments
+                and final settlement status.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-grid av-grid-4">
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                GROSS EARNINGS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-earnings-gross
+                            >
+                                ₹—
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                ADJUSTMENTS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-earnings-adjustments
+                            >
+                                ₹—
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                OTHER
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-earnings-other
+                            >
+                                ₹—
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                NET
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-earnings-net
+                            >
+                                ₹—
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="av-card"
+                        style="
+                            margin-top:35px;
+                            border:1px solid
+                            rgba(255,255,255,0.08);
+                        "
+                    >
+
+                        <div class="av-card-body">
+
+
+                            <div class="av-page-kicker">
+                                CALCULATION
+                            </div>
+
+
+                            <p
+                                class="av-card-description"
+                                data-earnings-calculation
+                            >
+
+                                Earnings calculation details will
+                                appear here after completed work is
+                                recorded.
+
+                            </p>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAYMENT MODELS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                PAYMENT MODELS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Different work can use different
+                <span class="av-gradient-text">
+                    payment models.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-5"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📅
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Daily
+                        </h3>
+
+                        <p class="av-card-description">
+                            Payment based on the agreed working day
+                            and verified attendance.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⏱️
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Hourly
+                        </h3>
+
+                        <p class="av-card-description">
+                            Payment calculated from the agreed rate
+                            and recorded working duration.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ✓
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Task
+                        </h3>
+
+                        <p class="av-card-description">
+                            Payment linked to completion of an agreed
+                            task.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Quantity
+                        </h3>
+
+                        <p class="av-card-description">
+                            Payment calculated against verified
+                            quantity and agreed unit rate.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📋
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Contract
+                        </h3>
+
+                        <p class="av-card-description">
+                            Payment according to the agreed
+                            assignment or contract terms.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PENDING EARNINGS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                PENDING EARNINGS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Money that has been earned but is not yet
+                <span class="av-gradient-text">
+                    settled.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        data-ag-list="labour-pending-earnings"
+                    >
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                ⏳
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No pending earnings
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Earnings awaiting confirmation or
+                                settlement will appear here.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAYMENT HISTORY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                PAYMENT HISTORY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Your financial history,
+                <span class="av-gradient-text">
+                    work by work.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        data-ag-list="labour-payment-history"
+                    >
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                💳
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No payment history yet
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Settled work payments will appear
+                                here with their associated job and
+                                transaction information.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TRANSACTION LEDGER
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                TRANSACTION LEDGER
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                One place for every financial
+                <span class="av-gradient-text">
+                    movement.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        class="av-grid av-grid-4"
+                    >
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                CREDITS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-ledger-credits
+                            >
+                                ₹—
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                DEBITS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-ledger-debits
+                            >
+                                ₹—
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                ADJUSTMENTS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-ledger-adjustments
+                            >
+                                ₹—
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                BALANCE
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-ledger-balance
+                            >
+                                ₹—
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:flex-end;
+                            margin-top:30px;
+                        "
+                    >
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-ledger-action="export"
+                        >
+                            EXPORT LEDGER
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         JOB → PAYMENT TRACEABILITY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                WORK TO PAYMENT TRACE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Follow the complete path from
+                <span class="av-gradient-text">
+                    work to money.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-6"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            01
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Job
+                        </h3>
+
+                        <p class="av-card-description">
+                            Agreed work and payment terms are
+                            established.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            02
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Accept
+                        </h3>
+
+                        <p class="av-card-description">
+                            Labour accepts the assignment.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            03
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Attend
+                        </h3>
+
+                        <p class="av-card-description">
+                            Attendance is recorded.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            04
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Complete
+                        </h3>
+
+                        <p class="av-card-description">
+                            Work or quantity is recorded.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            05
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Confirm
+                        </h3>
+
+                        <p class="av-card-description">
+                            Completion moves through the
+                            confirmation workflow.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            06
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Settle
+                        </h3>
+
+                        <p class="av-card-description">
+                            The financial record is settled and
+                            stored.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAYMENT DISPUTE / REVIEW
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                PAYMENT REVIEW
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                If something doesn't look right,
+                <span class="av-gradient-text">
+                    review the record.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <p class="av-card-description">
+
+                        A payment issue should be connected to the
+                        underlying work record rather than treated as
+                        an unexplained balance change.
+
+                        Review the associated job, attendance,
+                        completion, agreed rate and settlement
+                        information before raising an issue.
+
+                    </p>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:30px;
+                        "
+                    >
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-payment-action="review"
+                        >
+                            REVIEW PAYMENT
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-payment-action="raise-issue"
+                        >
+                            REPORT PAYMENT ISSUE
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EARNINGS INSIGHTS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                EARNINGS INSIGHTS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Understand where your work is
+                <span class="av-gradient-text">
+                    creating value.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            TOP WORK TYPE
+                        </div>
+
+                        <div class="av-role-icon">
+                            🌾
+                        </div>
+
+                        <h3
+                            class="av-card-title"
+                            data-top-work-type
+                        >
+                            —
+                        </h3>
+
+                        <p class="av-card-description">
+                            Work type contributing most to recorded
+                            earnings.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            JOBS COMPLETED
+                        </div>
+
+                        <div class="av-role-icon">
+                            ✓
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-jobs-completed
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Completed assignments.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            QUANTITY WORK
+                        </div>
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-quantity-work
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Quantity-based work recorded.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            RELIABILITY
+                        </div>
+
+                        <div class="av-role-icon">
+                            ⭐
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-work-reliability
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Work and attendance reliability indicator.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINAL CTA
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:80px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        AGRIVISION EARNINGS
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        Your earnings should tell the story of your
+                        <span class="av-gradient-text">
+                            work.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="av-section-description"
+                        style="
+                            max-width:850px;
+                            margin-left:auto;
+                            margin-right:auto;
+                        "
+                    >
+
+                        Not just a balance.
+
+                        Not just a payment notification.
+
+                        A connected record showing the assignment,
+                        attendance, work completed, agreed payment
+                        model, confirmation and settlement.
+
+                        That is what makes the financial side of
+                        AgriVision transparent.
+
+                    </p>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="labour-attendance.html"
+                            class="av-button av-button-secondary"
+                        >
+                            OPEN WORK RECORD
+                        </a>
+
+
+                        <a
+                            href="labour-jobs.html"
+                            class="av-button av-button-secondary"
+                        >
+                            FIND MORE WORK
+                        </a>
+
+
+                        <a
+                            href="labour-dashboard.html"
+                            class="av-button av-button-primary"
+                        >
+                            BACK TO PORTAL
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="av-footer">
+
+    <div class="av-footer-inner">
+
+
+        <div class="av-footer-brand">
+            AGRIVISION KARNATAKA
+        </div>
+
+
+        <div class="av-footer-note">
+
+            LABOUR EARNINGS
+
+            <span>
+                •
+            </span>
+
+            PAYMENT LEDGER
+
+            <span>
+                •
+            </span>
+
+            WORK-TO-PAYMENT TRACEABILITY
+
+            <span>
+                •
+            </span>
+
+            <span data-year>
+                2026
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SHARED CORE JAVASCRIPT
+     ========================================================= -->
+
+<script
+    src="core.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,2645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Smart Shared-Load Route and Cost Optimization"
+    >
+
+    <title>
+        Smart Route Optimization | AgriVision Karnataka
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     AGRIVISION GLOBAL VISUAL ENVIRONMENT
+     ========================================================= -->
+
+<div
+    class="background-image"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-one"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-two"
+    aria-hidden="true"
+></div>
+
+<div
+    class="mouse-glow"
+    aria-hidden="true"
+></div>
+
+<div
+    class="particle-field"
+    aria-hidden="true"
+></div>
+
+<div
+    class="fireflies"
+    aria-hidden="true"
+></div>
+
+<div
+    class="floating-leaves"
+    aria-hidden="true"
+></div>
+
+<div
+    class="cursor-stars"
+    aria-hidden="true"
+></div>
+
+
+<!-- =========================================================
+     APPLICATION
+     ========================================================= -->
+
+<div class="av-app">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <a
+                href="logistics-portal.html"
+                class="av-brand"
+            >
+
+                <span
+                    class="av-status-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="av-brand-name">
+                    AGRIVISION
+                </span>
+
+                <span class="av-brand-region">
+                    KARNATAKA
+                </span>
+
+            </a>
+
+
+
+            <label
+                class="av-search"
+                aria-label="Search smart routes"
+            >
+
+                <span
+                    class="av-search-icon"
+                    aria-hidden="true"
+                >
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search orders, routes, vehicles..."
+                    autocomplete="off"
+                    data-global-search
+                >
+
+            </label>
+
+
+
+            <div class="av-header-actions">
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    aria-label="Notifications"
+                    data-notification
+                >
+                    🔔
+                </button>
+
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    aria-label="Profile"
+                    data-modal-open="smartRouteProfileModal"
+                >
+                    👤
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="av-welcome">
+
+        <div class="av-page av-welcome-content">
+
+
+            <div class="av-eyebrow">
+
+                <span>
+                    LOGISTICS CORE
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    SMART ROUTE INTELLIGENCE
+                </span>
+
+            </div>
+
+
+
+            <h1 class="av-welcome-title">
+
+                Don't Just Find A Route.
+                <span class="av-gradient-text">
+                    Optimize The Journey.
+                </span>
+
+            </h1>
+
+
+
+            <p class="av-welcome-description">
+
+                AgriVision Smart Route Optimization looks beyond
+                the shortest road.
+
+                It evaluates whether accepted agricultural orders
+                can share available vehicle capacity, whether
+                their pickup and delivery requirements are
+                compatible, what movement sequence is practical,
+                what the combined transportation requirement costs,
+                and how that cost can be fairly allocated between
+                participating orders.
+
+            </p>
+
+
+
+            <div
+                class="av-chip-row"
+                style="margin-top:32px;"
+            >
+
+                <span class="av-status av-status-active">
+                    ● OPTIMIZATION ENGINE
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    USER:
+
+                    <strong
+                        data-user-name
+                        style="margin-left:5px;"
+                    >
+                        Logistics User
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    ID:
+
+                    <strong
+                        data-user-id
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CORE IDEA
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                THE CORE AGRIVISION IDEA
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Turn unused vehicle capacity into
+                <span class="av-gradient-text">
+                    shared value.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Imagine one accepted order from Bengaluru to
+                Chitradurga with an example transportation cost
+                of ₹100.
+
+                Another accepted order may need transportation
+                from Tumakuru to Hiriyur with an example cost of
+                ₹50.
+
+                If a suitable vehicle has available capacity and
+                the two movements can actually be combined,
+                AgriVision should evaluate the shared journey
+                instead of automatically treating the orders as
+                two completely independent trips.
+
+            </p>
+
+
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            ORDER A
+                        </div>
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Bengaluru → Chitradurga
+                        </h3>
+
+                        <div class="av-metric">
+                            ₹100
+                        </div>
+
+                        <p class="av-card-description">
+
+                            Example standalone transportation
+                            cost.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            SHARED ANALYSIS
+                        </div>
+
+                        <div class="av-role-icon">
+                            🧠
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Can the journeys work together?
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            The engine checks capacity, route
+                            compatibility, timing, vehicle
+                            suitability, cargo requirements and
+                            incremental movement cost.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            ORDER B
+                        </div>
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Tumakuru → Hiriyur
+                        </h3>
+
+                        <div class="av-metric">
+                            ₹50
+                        </div>
+
+                        <p class="av-card-description">
+
+                            Example standalone transportation
+                            cost.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:30px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-grid av-grid-4">
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                01
+                            </div>
+
+                            <strong>
+                                Standalone cost
+                            </strong>
+
+                            <p class="av-card-description">
+                                What would each order cost separately?
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                02
+                            </div>
+
+                            <strong>
+                                Shared route
+                            </strong>
+
+                            <p class="av-card-description">
+                                What does the combined movement cost?
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                03
+                            </div>
+
+                            <strong>
+                                Savings
+                            </strong>
+
+                            <p class="av-card-description">
+                                What transportation saving was created?
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                04
+                            </div>
+
+                            <strong>
+                                Allocation
+                            </strong>
+
+                            <p class="av-card-description">
+                                What should each participating order pay?
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OPTIMIZATION WORKSPACE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                SMART ROUTE WORKSPACE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Build the movement scenario
+                <span class="av-gradient-text">
+                    the optimizer should evaluate.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Enter the accepted orders and available vehicle
+                information. The current interface prepares the
+                complete optimization scenario. The same data
+                structure can later be connected to a real routing
+                and optimization backend.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:42px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        id="smartRouteForm"
+                        data-ag-operation-form
+                        data-operation="smart-route-optimization"
+                    >
+
+
+                        <!-- =============================================
+                             OPTIMIZATION SETTINGS
+                             ============================================= -->
+
+                        <div class="av-page-kicker">
+                            OPTIMIZATION SETTINGS
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-3"
+                            style="margin-top:22px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="routeScenarioId"
+                                    class="av-label"
+                                >
+                                    Scenario / Planning ID
+                                </label>
+
+                                <input
+                                    id="routeScenarioId"
+                                    name="scenarioId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="SR-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="routeObjective"
+                                    class="av-label"
+                                >
+                                    Optimization Objective
+                                </label>
+
+                                <select
+                                    id="routeObjective"
+                                    name="objective"
+                                    class="av-input"
+                                    required
+                                >
+
+                                    <option value="Balanced">
+                                        Balanced — Cost + Time + Reliability
+                                    </option>
+
+                                    <option value="Lowest Cost">
+                                        Lowest Transportation Cost
+                                    </option>
+
+                                    <option value="Fastest">
+                                        Fastest Feasible Route
+                                    </option>
+
+                                    <option value="Best Utilization">
+                                        Maximum Vehicle Utilization
+                                    </option>
+
+                                    <option value="Reliability">
+                                        Highest Delivery Reliability
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="routeMaxDetour"
+                                    class="av-label"
+                                >
+                                    Maximum Acceptable Detour
+                                </label>
+
+                                <select
+                                    id="routeMaxDetour"
+                                    name="maxDetour"
+                                    class="av-input"
+                                >
+
+                                    <option value="10">
+                                        10%
+                                    </option>
+
+                                    <option value="20">
+                                        20%
+                                    </option>
+
+                                    <option value="30">
+                                        30%
+                                    </option>
+
+                                    <option value="Flexible">
+                                        Flexible
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =============================================
+                             VEHICLE
+                             ============================================= -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:42px;"
+                        >
+                            AVAILABLE VEHICLE
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-4"
+                            style="margin-top:22px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="routeVehicleId"
+                                    class="av-label"
+                                >
+                                    Vehicle ID
+                                </label>
+
+                                <input
+                                    id="routeVehicleId"
+                                    name="vehicleId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="VEH-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="routeVehicleType"
+                                    class="av-label"
+                                >
+                                    Vehicle Type
+                                </label>
+
+                                <select
+                                    id="routeVehicleType"
+                                    name="vehicleType"
+                                    class="av-input"
+                                    required
+                                >
+
+                                    <option value="Truck">
+                                        Truck
+                                    </option>
+
+                                    <option value="Mini Truck">
+                                        Mini Truck
+                                    </option>
+
+                                    <option value="Large Truck">
+                                        Large Truck
+                                    </option>
+
+                                    <option value="Refrigerated Vehicle">
+                                        Refrigerated Vehicle
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="routeVehicleCapacity"
+                                    class="av-label"
+                                >
+                                    Total Capacity
+                                </label>
+
+                                <input
+                                    id="routeVehicleCapacity"
+                                    name="vehicleCapacity"
+                                    type="number"
+                                    min="0"
+                                    step="0.01"
+                                    class="av-input"
+                                    placeholder="kg"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="routeAvailableCapacity"
+                                    class="av-label"
+                                >
+                                    Currently Available Capacity
+                                </label>
+
+                                <input
+                                    id="routeAvailableCapacity"
+                                    name="availableCapacity"
+                                    type="number"
+                                    min="0"
+                                    step="0.01"
+                                    class="av-input"
+                                    placeholder="kg"
+                                    required
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =============================================
+                             ORDER A
+                             ============================================= -->
+
+                        <div
+                            class="av-card av-reveal"
+                            style="margin-top:42px;"
+                        >
+
+                            <div class="av-card-body">
+
+
+                                <div class="av-page-kicker">
+                                    PARTICIPATING ORDER A
+                                </div>
+
+
+                                <div
+                                    class="av-grid av-grid-3"
+                                    style="margin-top:22px;"
+                                >
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderAId"
+                                            class="av-label"
+                                        >
+                                            Order ID
+                                        </label>
+
+                                        <input
+                                            id="orderAId"
+                                            name="orderAId"
+                                            type="text"
+                                            class="av-input"
+                                            placeholder="ORD-A..."
+                                            required
+                                        >
+
+                                    </div>
+
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderAOrigin"
+                                            class="av-label"
+                                        >
+                                            Pickup
+                                        </label>
+
+                                        <input
+                                            id="orderAOrigin"
+                                            name="orderAOrigin"
+                                            type="text"
+                                            class="av-input"
+                                            placeholder="Bengaluru"
+                                            required
+                                        >
+
+                                    </div>
+
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderADestination"
+                                            class="av-label"
+                                        >
+                                            Destination
+                                        </label>
+
+                                        <input
+                                            id="orderADestination"
+                                            name="orderADestination"
+                                            type="text"
+                                            class="av-input"
+                                            placeholder="Chitradurga"
+                                            required
+                                        >
+
+                                    </div>
+
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderALoad"
+                                            class="av-label"
+                                        >
+                                            Load
+                                        </label>
+
+                                        <input
+                                            id="orderALoad"
+                                            name="orderALoad"
+                                            type="number"
+                                            min="0"
+                                            step="0.01"
+                                            class="av-input"
+                                            placeholder="kg"
+                                            required
+                                        >
+
+                                    </div>
+
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderAStandalone"
+                                            class="av-label"
+                                        >
+                                            Standalone Cost
+                                        </label>
+
+                                        <input
+                                            id="orderAStandalone"
+                                            name="orderAStandalone"
+                                            type="number"
+                                            min="0"
+                                            step="0.01"
+                                            class="av-input"
+                                            placeholder="₹"
+                                            required
+                                        >
+
+                                    </div>
+
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderAPriority"
+                                            class="av-label"
+                                        >
+                                            Priority
+                                        </label>
+
+                                        <select
+                                            id="orderAPriority"
+                                            name="orderAPriority"
+                                            class="av-input"
+                                        >
+
+                                            <option value="Normal">
+                                                Normal
+                                            </option>
+
+                                            <option value="High">
+                                                High
+                                            </option>
+
+                                            <option value="Urgent">
+                                                Urgent
+                                            </option>
+
+                                            <option value="Time Critical">
+                                                Time Critical
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =============================================
+                             ORDER B
+                             ============================================= -->
+
+                        <div
+                            class="av-card av-reveal"
+                            style="margin-top:25px;"
+                        >
+
+                            <div class="av-card-body">
+
+
+                                <div class="av-page-kicker">
+                                    PARTICIPATING ORDER B
+                                </div>
+
+
+                                <div
+                                    class="av-grid av-grid-3"
+                                    style="margin-top:22px;"
+                                >
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderBId"
+                                            class="av-label"
+                                        >
+                                            Order ID
+                                        </label>
+
+                                        <input
+                                            id="orderBId"
+                                            name="orderBId"
+                                            type="text"
+                                            class="av-input"
+                                            placeholder="ORD-B..."
+                                            required
+                                        >
+
+                                    </div>
+
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderBOrigin"
+                                            class="av-label"
+                                        >
+                                            Pickup
+                                        </label>
+
+                                        <input
+                                            id="orderBOrigin"
+                                            name="orderBOrigin"
+                                            type="text"
+                                            class="av-input"
+                                            placeholder="Tumakuru"
+                                            required
+                                        >
+
+                                    </div>
+
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderBDestination"
+                                            class="av-label"
+                                        >
+                                            Destination
+                                        </label>
+
+                                        <input
+                                            id="orderBDestination"
+                                            name="orderBDestination"
+                                            type="text"
+                                            class="av-input"
+                                            placeholder="Hiriyur"
+                                            required
+                                        >
+
+                                    </div>
+
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderBLoad"
+                                            class="av-label"
+                                        >
+                                            Load
+                                        </label>
+
+                                        <input
+                                            id="orderBLoad"
+                                            name="orderBLoad"
+                                            type="number"
+                                            min="0"
+                                            step="0.01"
+                                            class="av-input"
+                                            placeholder="kg"
+                                            required
+                                        >
+
+                                    </div>
+
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderBStandalone"
+                                            class="av-label"
+                                        >
+                                            Standalone Cost
+                                        </label>
+
+                                        <input
+                                            id="orderBStandalone"
+                                            name="orderBStandalone"
+                                            type="number"
+                                            min="0"
+                                            step="0.01"
+                                            class="av-input"
+                                            placeholder="₹"
+                                            required
+                                        >
+
+                                    </div>
+
+
+
+                                    <div class="av-field">
+
+                                        <label
+                                            for="orderBPriority"
+                                            class="av-label"
+                                        >
+                                            Priority
+                                        </label>
+
+                                        <select
+                                            id="orderBPriority"
+                                            name="orderBPriority"
+                                            class="av-input"
+                                        >
+
+                                            <option value="Normal">
+                                                Normal
+                                            </option>
+
+                                            <option value="High">
+                                                High
+                                            </option>
+
+                                            <option value="Urgent">
+                                                Urgent
+                                            </option>
+
+                                            <option value="Time Critical">
+                                                Time Critical
+                                            </option>
+
+                                        </select>
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =============================================
+                             TIME WINDOWS
+                             ============================================= -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:42px;"
+                        >
+                            DELIVERY FEASIBILITY
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-4"
+                            style="margin-top:22px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="orderAPickupWindow"
+                                    class="av-label"
+                                >
+                                    Order A Pickup Window
+                                </label>
+
+                                <input
+                                    id="orderAPickupWindow"
+                                    name="orderAPickupWindow"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="07:00 - 09:00"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="orderADeliveryWindow"
+                                    class="av-label"
+                                >
+                                    Order A Delivery Window
+                                </label>
+
+                                <input
+                                    id="orderADeliveryWindow"
+                                    name="orderADeliveryWindow"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="14:00 - 17:00"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="orderBPickupWindow"
+                                    class="av-label"
+                                >
+                                    Order B Pickup Window
+                                </label>
+
+                                <input
+                                    id="orderBPickupWindow"
+                                    name="orderBPickupWindow"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="08:00 - 10:00"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="orderBDeliveryWindow"
+                                    class="av-label"
+                                >
+                                    Order B Delivery Window
+                                </label>
+
+                                <input
+                                    id="orderBDeliveryWindow"
+                                    name="orderBDeliveryWindow"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="13:00 - 16:00"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =============================================
+                             CARGO COMPATIBILITY
+                             ============================================= -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:42px;"
+                        >
+                            CARGO COMPATIBILITY
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-3"
+                            style="margin-top:22px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="orderACargo"
+                                    class="av-label"
+                                >
+                                    Order A Cargo
+                                </label>
+
+                                <select
+                                    id="orderACargo"
+                                    name="orderACargo"
+                                    class="av-input"
+                                >
+
+                                    <option value="General">
+                                        General Agricultural Produce
+                                    </option>
+
+                                    <option value="Perishable">
+                                        Perishable
+                                    </option>
+
+                                    <option value="Fragile">
+                                        Fragile
+                                    </option>
+
+                                    <option value="Cold Chain">
+                                        Cold Chain
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="orderBCargo"
+                                    class="av-label"
+                                >
+                                    Order B Cargo
+                                </label>
+
+                                <select
+                                    id="orderBCargo"
+                                    name="orderBCargo"
+                                    class="av-input"
+                                >
+
+                                    <option value="General">
+                                        General Agricultural Produce
+                                    </option>
+
+                                    <option value="Perishable">
+                                        Perishable
+                                    </option>
+
+                                    <option value="Fragile">
+                                        Fragile
+                                    </option>
+
+                                    <option value="Cold Chain">
+                                        Cold Chain
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="cargoCompatibility"
+                                    class="av-label"
+                                >
+                                    Compatibility Assessment
+                                </label>
+
+                                <select
+                                    id="cargoCompatibility"
+                                    name="cargoCompatibility"
+                                    class="av-input"
+                                >
+
+                                    <option value="Auto">
+                                        Let optimizer evaluate
+                                    </option>
+
+                                    <option value="Compatible">
+                                        Confirmed compatible
+                                    </option>
+
+                                    <option value="Not Compatible">
+                                        Not compatible
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- =============================================
+                             ADVANCED CONDITIONS
+                             ============================================= -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:42px;"
+                        >
+                            ADVANCED CONDITIONS
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-3"
+                            style="margin-top:22px;"
+                        >
+
+
+                            <label class="av-check-card">
+
+                                <input
+                                    type="checkbox"
+                                    name="allowAlternativeRoutes"
+                                    value="true"
+                                    checked
+                                >
+
+                                <span>
+
+                                    <strong>
+                                        Alternative routes
+                                    </strong>
+
+                                    <small>
+                                        Compare multiple feasible
+                                        route possibilities.
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="av-check-card">
+
+                                <input
+                                    type="checkbox"
+                                    name="allowMultiStop"
+                                    value="true"
+                                    checked
+                                >
+
+                                <span>
+
+                                    <strong>
+                                        Multi-stop optimization
+                                    </strong>
+
+                                    <small>
+                                        Allow the optimizer to
+                                        evaluate different stop
+                                        sequences.
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="av-check-card">
+
+                                <input
+                                    type="checkbox"
+                                    name="trafficAware"
+                                    value="true"
+                                    checked
+                                >
+
+                                <span>
+
+                                    <strong>
+                                        Traffic-aware evaluation
+                                    </strong>
+
+                                    <small>
+                                        Allow changing travel
+                                        conditions to influence
+                                        route evaluation.
+                                    </small>
+
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+
+
+                        <!-- =============================================
+                             SUBMIT
+                             ============================================= -->
+
+                        <div
+                            style="
+                                margin-top:42px;
+                                display:flex;
+                                justify-content:flex-end;
+                                gap:14px;
+                                flex-wrap:wrap;
+                            "
+                        >
+
+                            <a
+                                href="logistics-planning.html"
+                                class="av-button av-button-secondary"
+                            >
+                                ← BACK TO PLANNING
+                            </a>
+
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-primary"
+                            >
+
+                                ANALYZE SHARED ROUTE
+
+                                <span>
+                                    🧠
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OPTIMIZATION RESULT AREA
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                OPTIMIZATION RESULT
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Understand the recommendation,
+                <span class="av-gradient-text">
+                    not just the number.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                After analysis, AgriVision should explain whether
+                the orders can share the vehicle, why the route is
+                recommended, what the movement costs, and how the
+                resulting cost is allocated.
+
+            </p>
+
+
+
+            <div
+                id="smartRouteResult"
+                class="av-card av-reveal"
+                style="margin-top:42px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-empty">
+
+                        <div class="av-empty-icon">
+                            🧠
+                        </div>
+
+                        <h3 class="av-empty-title">
+                            No optimization analysis yet
+                        </h3>
+
+                        <p class="av-empty-text">
+
+                            Enter the accepted orders and available
+                            vehicle information above, then run the
+                            Smart Route analysis.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COST MODEL
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                FAIR COST ALLOCATION
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Shared transportation should create savings
+                <span class="av-gradient-text">
+                    without hiding the calculation.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                AgriVision should show the difference between the
+                cost of separate movements and the cost of a
+                feasible shared movement.
+
+                The final allocated cost for each order should be
+                based on the contribution and characteristics of
+                that order—not on an arbitrary fixed split.
+
+            </p>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            STEP 01
+                        </div>
+
+                        <div class="av-role-icon">
+                            ₹
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Standalone costs
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Calculate the transportation cost of
+                            each order if handled separately.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            STEP 02
+                        </div>
+
+                        <div class="av-role-icon">
+                            🛣️
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Combined cost
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Calculate the cost of the feasible
+                            shared movement.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            STEP 03
+                        </div>
+
+                        <div class="av-role-icon">
+                            📉
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Total saving
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Compare the separate and combined
+                            transportation requirements.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            STEP 04
+                        </div>
+
+                        <div class="av-role-icon">
+                            ⚖️
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Fair allocation
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Allocate the shared transportation
+                            cost across participating orders.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXAMPLE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+
+                    <div class="av-page-kicker">
+                        ILLUSTRATIVE EXAMPLE
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        The famous
+                        <span class="av-gradient-text">
+                            ₹100 + ₹50
+                        </span>
+                        scenario.
+
+                    </h2>
+
+
+                    <p class="av-section-description">
+
+                        These figures demonstrate the concept
+                        only. They are not fixed AgriVision prices.
+
+                    </p>
+
+
+
+                    <div
+                        class="av-grid av-grid-2"
+                        style="margin-top:35px;"
+                    >
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                SEPARATE MOVEMENTS
+                            </div>
+
+                            <div class="av-card">
+
+                                <div class="av-card-body">
+
+                                    <p>
+                                        Bengaluru → Chitradurga
+                                    </p>
+
+                                    <div class="av-metric">
+                                        ₹100
+                                    </div>
+
+                                    <hr>
+
+                                    <p>
+                                        Tumakuru → Hiriyur
+                                    </p>
+
+                                    <div class="av-metric">
+                                        ₹50
+                                    </div>
+
+                                    <strong>
+                                        Combined standalone example:
+                                        ₹150
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                SHARED MOVEMENT
+                            </div>
+
+                            <div class="av-card">
+
+                                <div class="av-card-body">
+
+                                    <p>
+
+                                        If the vehicle has sufficient
+                                        capacity and the route is
+                                        feasible, the optimizer can
+                                        evaluate a combined journey.
+
+                                    </p>
+
+
+                                    <div
+                                        class="av-chip-row"
+                                        style="margin-top:20px;"
+                                    >
+
+                                        <span class="av-chip">
+                                            Capacity ✓
+                                        </span>
+
+                                        <span class="av-chip">
+                                            Timing ✓
+                                        </span>
+
+                                        <span class="av-chip">
+                                            Route ✓
+                                        </span>
+
+                                        <span class="av-chip">
+                                            Vehicle ✓
+                                        </span>
+
+                                    </div>
+
+
+                                    <p
+                                        class="av-card-description"
+                                        style="margin-top:22px;"
+                                    >
+
+                                        The actual shared cost is
+                                        calculated first. Only then
+                                        is the saving allocated to
+                                        the participating orders.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FEASIBILITY CHECKS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                FEASIBILITY ENGINE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Spare capacity alone is
+                <span class="av-gradient-text">
+                    not enough.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Capacity
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Can the vehicle carry the combined
+                            loads within its usable capacity?
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📍
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Geography
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Can the pickup and delivery locations
+                            be combined without an unreasonable
+                            detour?
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⏱️
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Time windows
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Can all pickup and delivery windows
+                            still be respected?
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🚚
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Vehicle suitability
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Is the vehicle appropriate for the
+                            cargo and movement requirements?
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🌾
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Cargo compatibility
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Can the agricultural loads safely share
+                            the available transport arrangement?
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            💰
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Economic benefit
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Does combining the movements actually
+                            produce a worthwhile transportation
+                            improvement?
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         OPTIMIZATION WORKFLOW
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                SMART DECISION PIPELINE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                From accepted orders to a
+                <span class="av-gradient-text">
+                    coordinated journey.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:42px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-flow">
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                📦
+                            </strong>
+
+                            <span>
+                                Accepted orders
+                            </span>
+
+                        </div>
+
+
+                        <span>→</span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                🚚
+                            </strong>
+
+                            <span>
+                                Vehicle
+                            </span>
+
+                        </div>
+
+
+                        <span>→</span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                🔎
+                            </strong>
+
+                            <span>
+                                Compatibility
+                            </span>
+
+                        </div>
+
+
+                        <span>→</span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                🧠
+                            </strong>
+
+                            <span>
+                                Route optimization
+                            </span>
+
+                        </div>
+
+
+                        <span>→</span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                ₹
+                            </strong>
+
+                            <span>
+                                Cost allocation
+                            </span>
+
+                        </div>
+
+
+                        <span>→</span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                ✓
+                            </strong>
+
+                            <span>
+                                Plan
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIVITY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                OPTIMIZATION ACTIVITY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Every successful optimization becomes part of
+                the user's
+                <span class="av-gradient-text">
+                    activity history.
+                </span>
+
+            </h2>
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:35px;"
+            >
+
+                <div class="av-card-body">
+
+                    <div data-ag-activity>
+
+                        <p
+                            style="
+                                color:var(--av-muted);
+                                margin:0;
+                            "
+                        >
+                            Smart Route activity will appear here
+                            after successful optimization operations.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTINUE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:70px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        AFTER OPTIMIZATION
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        A selected route becomes an executable
+                        <span class="av-gradient-text">
+                            shipment plan.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="av-section-description"
+                        style="
+                            max-width:850px;
+                            margin-left:auto;
+                            margin-right:auto;
+                        "
+                    >
+
+                        Once a feasible route and cost allocation
+                        are accepted, the movement can proceed to
+                        shipment creation, driver assignment,
+                        tracking and final delivery.
+
+                    </p>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="logistics-planning.html"
+                            class="av-button av-button-secondary"
+                        >
+                            ← PLANNING
+                        </a>
+
+
+                        <a
+                            href="logistics-shipments.html"
+                            class="av-button av-button-primary"
+                        >
+                            CONTINUE TO SHIPMENTS →
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="av-footer">
+
+    <div class="av-footer-inner">
+
+
+        <div class="av-footer-brand">
+            AGRIVISION KARNATAKA
+        </div>
+
+
+        <div class="av-footer-note">
+
+            SMART SHARED-LOAD ROUTE OPTIMIZATION
+
+            <span>
+                •
+            </span>
+
+            LOGISTICS CORE
+
+            <span>
+                •
+            </span>
+
+            <span data-year>
+                2026
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     PROFILE MODAL
+     ========================================================= -->
+
+<div
+    class="av-modal-backdrop"
+    id="smartRouteProfileModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="av-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="smartRouteProfileTitle"
+    >
+
+
+        <div class="av-modal-header">
+
+
+            <div>
+
+                <div class="av-page-kicker">
+                    LOGISTICS ACCOUNT
+                </div>
+
+                <h2
+                    id="smartRouteProfileTitle"
+                    class="av-title"
+                >
+                    Profile
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="av-icon-button"
+                data-modal-close
+                aria-label="Close profile"
+            >
+                ×
+            </button>
+
+
+        </div>
+
+
+
+        <div class="av-modal-body">
+
+            <div class="av-chip-row">
+
+
+                <span class="av-chip">
+
+                    Name:
+
+                    <strong
+                        data-user-name
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    User ID:
+
+                    <strong
+                        data-user-id
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    Role:
+
+                    <strong
+                        data-user-role
+                        style="margin-left:5px;"
+                    >
+                        Logistics
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    District:
+
+                    <strong
+                        data-user-district
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="av-modal-footer">
+
+            <button
+                type="button"
+                class="av-button av-button-secondary"
+                data-modal-close
+            >
+                CLOSE
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     SHARED CORE JAVASCRIPT
+     ========================================================= -->
+
+<script
+    src="core.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

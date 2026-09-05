@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka — Create your agricultural ecosystem account."
+    >
+
+    <title>Register | AgriVision Karnataka</title>
+
+    <link
+        rel="stylesheet"
+        href="register.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND EFFECT LAYER
+         ===================================================== -->
+
+    <div class="register-background"></div>
+
+    <div
+        class="register-mouse-glow"
+        id="registerMouseGlow"
+    ></div>
+
+    <div
+        class="fireflies"
+        id="fireflies"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="leaves"
+        id="leaves"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =====================================================
+         TOP NAVIGATION
+         ===================================================== -->
+
+    <header class="register-header">
+
+        <a
+            href="ecosystem.html"
+            class="back-link"
+        >
+            <span>←</span>
+            <span>Back to Ecosystem</span>
+        </a>
+
+        <div class="header-status">
+
+            <span class="status-dot"></span>
+
+            <span>
+                AGRIVISION KARNATAKA
+            </span>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="register-main">
+
+        <!-- =================================================
+             INTRO
+             ================================================= -->
+
+        <section
+            class="register-intro"
+            id="registerIntro"
+        >
+
+            <div class="intro-kicker">
+                BUILD YOUR AGRICULTURAL IDENTITY
+            </div>
+
+            <h1>
+                Create your
+                <span>AgriVision Account</span>
+            </h1>
+
+            <p>
+                Join the connected agricultural ecosystem of
+                Karnataka and access a specialized digital
+                environment built around your role.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             REGISTRATION CARD
+             ================================================= -->
+
+        <section class="registration-shell">
+
+            <!-- =============================================
+                 PROGRESS
+                 ============================================= -->
+
+            <div class="progress-area">
+
+                <div class="progress-top">
+
+                    <div>
+
+                        <span class="progress-label">
+                            REGISTRATION
+                        </span>
+
+                        <strong id="stepTitle">
+                            Account & Role
+                        </strong>
+
+                    </div>
+
+                    <div
+                        class="progress-count"
+                        id="stepCount"
+                    >
+                        1 / 6
+                    </div>
+
+                </div>
+
+
+                <div class="progress-track">
+
+                    <div
+                        class="progress-bar"
+                        id="progressBar"
+                    ></div>
+
+                </div>
+
+
+                <div class="step-indicators">
+
+                    <span
+                        class="step-indicator active"
+                        data-indicator="1"
+                    >
+                        1
+                    </span>
+
+                    <span
+                        class="step-line"
+                    ></span>
+
+                    <span
+                        class="step-indicator"
+                        data-indicator="2"
+                    >
+                        2
+                    </span>
+
+                    <span
+                        class="step-line"
+                    ></span>
+
+                    <span
+                        class="step-indicator"
+                        data-indicator="3"
+                    >
+                        3
+                    </span>
+
+                    <span
+                        class="step-line"
+                    ></span>
+
+                    <span
+                        class="step-indicator"
+                        data-indicator="4"
+                    >
+                        4
+                    </span>
+
+                    <span
+                        class="step-line"
+                    ></span>
+
+                    <span
+                        class="step-indicator"
+                        data-indicator="5"
+                    >
+                        5
+                    </span>
+
+                    <span
+                        class="step-line"
+                    ></span>
+
+                    <span
+                        class="step-indicator"
+                        data-indicator="6"
+                    >
+                        6
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- =============================================
+                 FORM
+                 ============================================= -->
+
+            <form
+                id="registrationForm"
+                novalidate
+            >
+
+                <!-- =========================================
+                     STEP 1
+                     ========================================= -->
+
+                <section
+                    class="form-step active"
+                    data-step="1"
+                >
+
+                    <div class="step-heading">
+
+                        <span class="step-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Start your journey
+                            </h2>
+
+                            <p>
+                                Choose how you participate in
+                                the AgriVision ecosystem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-grid">
+
+                        <div class="field full">
+
+                            <label>
+                                Full Name
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                name="fullName"
+                                id="fullName"
+                                placeholder="Enter your full name"
+                                autocomplete="name"
+                                required
+                            >
+
+                            <small>
+                                Use the name associated with your account.
+                            </small>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Email Address
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="you@example.com"
+                                autocomplete="email"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Mobile Number
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                placeholder="+91 XXXXX XXXXX"
+                                autocomplete="tel"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Password
+                                <span>*</span>
+                            </label>
+
+                            <div class="password-wrap">
+
+                                <input
+                                    type="password"
+                                    name="password"
+                                    id="password"
+                                    placeholder="Create a strong password"
+                                    autocomplete="new-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-password-target="password"
+                                >
+                                    SHOW
+                                </button>
+
+                            </div>
+
+                            <div
+                                class="password-strength"
+                                id="passwordStrength"
+                            >
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <small id="passwordHint">
+                                Use at least 8 characters.
+                            </small>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Confirm Password
+                                <span>*</span>
+                            </label>
+
+                            <div class="password-wrap">
+
+                                <input
+                                    type="password"
+                                    name="confirmPassword"
+                                    id="confirmPassword"
+                                    placeholder="Confirm your password"
+                                    autocomplete="new-password"
+                                    required
+                                >
+
+                                <button
+                                    type="button"
+                                    class="password-toggle"
+                                    data-password-target="confirmPassword"
+                                >
+                                    SHOW
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="role-section">
+
+                        <div class="section-label">
+                            SELECT YOUR ROLE(S)
+                            <span>*</span>
+                        </div>
+
+                        <p class="section-description">
+                            You may select more than one role if
+                            you participate in multiple parts of
+                            the agricultural ecosystem.
+                        </p>
+
+
+                        <div class="role-grid">
+
+                            <label class="role-card">
+
+                                <input
+                                    type="checkbox"
+                                    name="roles"
+                                    value="Farmer"
+                                >
+
+                                <span class="role-card-inner">
+
+                                    <span class="role-icon">
+                                        🌾
+                                    </span>
+
+                                    <span class="role-name">
+                                        Farmer
+                                    </span>
+
+                                    <span class="role-description">
+                                        Grow, manage and sell agricultural produce.
+                                    </span>
+
+                                    <span class="role-check">
+                                        ✓
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="role-card">
+
+                                <input
+                                    type="checkbox"
+                                    name="roles"
+                                    value="Buyer"
+                                >
+
+                                <span class="role-card-inner">
+
+                                    <span class="role-icon">
+                                        🛒
+                                    </span>
+
+                                    <span class="role-name">
+                                        Buyer
+                                    </span>
+
+                                    <span class="role-description">
+                                        Discover produce and manage procurement.
+                                    </span>
+
+                                    <span class="role-check">
+                                        ✓
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="role-card">
+
+                                <input
+                                    type="checkbox"
+                                    name="roles"
+                                    value="Logistics"
+                                >
+
+                                <span class="role-card-inner">
+
+                                    <span class="role-icon">
+                                        🚚
+                                    </span>
+
+                                    <span class="role-name">
+                                        Logistics
+                                    </span>
+
+                                    <span class="role-description">
+                                        Coordinate agricultural transportation.
+                                    </span>
+
+                                    <span class="role-check">
+                                        ✓
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="role-card">
+
+                                <input
+                                    type="checkbox"
+                                    name="roles"
+                                    value="Labour"
+                                >
+
+                                <span class="role-card-inner">
+
+                                    <span class="role-icon">
+                                        👨‍🌾
+                                    </span>
+
+                                    <span class="role-name">
+                                        Labour
+                                    </span>
+
+                                    <span class="role-description">
+                                        Connect agricultural workers with opportunities.
+                                    </span>
+
+                                    <span class="role-check">
+                                        ✓
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="role-card">
+
+                                <input
+                                    type="checkbox"
+                                    name="roles"
+                                    value="Equipment Owner"
+                                >
+
+                                <span class="role-card-inner">
+
+                                    <span class="role-icon">
+                                        🚜
+                                    </span>
+
+                                    <span class="role-name">
+                                        Equipment Owner
+                                    </span>
+
+                                    <span class="role-description">
+                                        Provide agricultural machinery and equipment.
+                                    </span>
+
+                                    <span class="role-check">
+                                        ✓
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+
+                            <label class="role-card">
+
+                                <input
+                                    type="checkbox"
+                                    name="roles"
+                                    value="Machine Operator"
+                                >
+
+                                <span class="role-card-inner">
+
+                                    <span class="role-icon">
+                                        ⚙️
+                                    </span>
+
+                                    <span class="role-name">
+                                        Machine Operator
+                                    </span>
+
+                                    <span class="role-description">
+                                        Offer agricultural machinery operation services.
+                                    </span>
+
+                                    <span class="role-check">
+                                        ✓
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================================
+                     STEP 2
+                     ========================================= -->
+
+                <section
+                    class="form-step"
+                    data-step="2"
+                >
+
+                    <div class="step-heading">
+
+                        <span class="step-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Personal information
+                            </h2>
+
+                            <p>
+                                Tell us a little more about yourself.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-grid">
+
+                        <div class="field">
+
+                            <label>
+                                Date of Birth
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="date"
+                                name="dateOfBirth"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Gender
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                name="gender"
+                                required
+                            >
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option value="Male">
+                                    Male
+                                </option>
+
+                                <option value="Female">
+                                    Female
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                                <option value="Prefer not to say">
+                                    Prefer not to say
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field full">
+
+                            <label>
+                                Address
+                                <span>*</span>
+                            </label>
+
+                            <textarea
+                                name="address"
+                                rows="3"
+                                placeholder="Enter your address"
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                State
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                name="state"
+                                required
+                            >
+
+                                <option value="">
+                                    Select State
+                                </option>
+
+                                <option value="Karnataka" selected>
+                                    Karnataka
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                District
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                name="district"
+                                placeholder="e.g. Mandya"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Taluk
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                name="taluk"
+                                placeholder="Enter taluk"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Village / Town
+                                <span>*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                name="village"
+                                placeholder="Enter village or town"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================================
+                     STEP 3
+                     ========================================= -->
+
+                <section
+                    class="form-step"
+                    data-step="3"
+                >
+
+                    <div class="step-heading">
+
+                        <span class="step-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Ecosystem information
+                            </h2>
+
+                            <p>
+                                Add the information that helps
+                                connect you with the ecosystem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-grid">
+
+                        <div class="field">
+
+                            <label>
+                                Preferred Language
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                name="language"
+                                required
+                            >
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option value="Kannada">
+                                    Kannada
+                                </option>
+
+                                <option value="English">
+                                    English
+                                </option>
+
+                                <option value="Hindi">
+                                    Hindi
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Preferred Communication
+                                <span>*</span>
+                            </label>
+
+                            <select
+                                name="communication"
+                                required
+                            >
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option value="Phone">
+                                    Phone
+                                </option>
+
+                                <option value="SMS">
+                                    SMS
+                                </option>
+
+                                <option value="Email">
+                                    Email
+                                </option>
+
+                                <option value="Platform">
+                                    AgriVision Platform
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field full">
+
+                            <label>
+                                About You
+                            </label>
+
+                            <textarea
+                                name="about"
+                                rows="4"
+                                placeholder="Briefly tell us about your work, interests or participation in agriculture."
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Experience in Agriculture
+                            </label>
+
+                            <select
+                                name="experience"
+                            >
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option value="New">
+                                    New to agriculture
+                                </option>
+
+                                <option value="1-3">
+                                    1–3 years
+                                </option>
+
+                                <option value="3-5">
+                                    3–5 years
+                                </option>
+
+                                <option value="5-10">
+                                    5–10 years
+                                </option>
+
+                                <option value="10+">
+                                    10+ years
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Preferred Contact Time
+                            </label>
+
+                            <select
+                                name="contactTime"
+                            >
+
+                                <option value="">
+                                    Select
+                                </option>
+
+                                <option value="Morning">
+                                    Morning
+                                </option>
+
+                                <option value="Afternoon">
+                                    Afternoon
+                                </option>
+
+                                <option value="Evening">
+                                    Evening
+                                </option>
+
+                                <option value="Anytime">
+                                    Anytime
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="information-note">
+
+                        <span>✦</span>
+
+                        <p>
+                            The next section will adapt to the
+                            roles you selected.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================================
+                     STEP 4
+                     ROLE-SPECIFIC INFORMATION
+                     ========================================= -->
+
+                <section
+                    class="form-step"
+                    data-step="4"
+                >
+
+                    <div class="step-heading">
+
+                        <span class="step-number">
+                            04
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Role information
+                            </h2>
+
+                            <p>
+                                Provide information relevant to
+                                your selected ecosystem roles.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FARMER -->
+
+                    <div
+                        class="role-specific"
+                        data-role-section="Farmer"
+                    >
+
+                        <div class="role-specific-header">
+                            <span>🌾</span>
+
+                            <div>
+                                <h3>Farmer Profile</h3>
+                                <p>
+                                    Tell us about your agricultural operation.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="field-grid">
+
+                            <div class="field">
+
+                                <label>
+                                    Farm Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="farmName"
+                                    placeholder="Your farm name"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Total Farm Area
+                                </label>
+
+                                <input
+                                    type="number"
+                                    name="farmArea"
+                                    min="0"
+                                    step="0.01"
+                                    placeholder="e.g. 4.5"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Area Unit
+                                </label>
+
+                                <select name="farmAreaUnit">
+
+                                    <option value="acres">
+                                        Acres
+                                    </option>
+
+                                    <option value="hectares">
+                                        Hectares
+                                    </option>
+
+                                    <option value="guntas">
+                                        Guntas
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Farming Type
+                                </label>
+
+                                <select name="farmingType">
+
+                                    <option value="">
+                                        Select
+                                    </option>
+
+                                    <option value="Conventional">
+                                        Conventional
+                                    </option>
+
+                                    <option value="Organic">
+                                        Organic
+                                    </option>
+
+                                    <option value="Mixed">
+                                        Mixed
+                                    </option>
+
+                                    <option value="Natural">
+                                        Natural
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field full">
+
+                                <label>
+                                    Main Crops
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="mainCrops"
+                                    placeholder="e.g. Paddy, Ragi, Tomato"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- BUYER -->
+
+                    <div
+                        class="role-specific"
+                        data-role-section="Buyer"
+                    >
+
+                        <div class="role-specific-header">
+                            <span>🛒</span>
+
+                            <div>
+                                <h3>Buyer Profile</h3>
+                                <p>
+                                    Tell us about your procurement needs.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="field-grid">
+
+                            <div class="field">
+
+                                <label>
+                                    Organization / Business Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="buyerBusiness"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Buyer Type
+                                </label>
+
+                                <select name="buyerType">
+
+                                    <option value="">
+                                        Select
+                                    </option>
+
+                                    <option value="Individual">
+                                        Individual
+                                    </option>
+
+                                    <option value="Retailer">
+                                        Retailer
+                                    </option>
+
+                                    <option value="Wholesaler">
+                                        Wholesaler
+                                    </option>
+
+                                    <option value="Processor">
+                                        Processor
+                                    </option>
+
+                                    <option value="Institution">
+                                        Institution
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="field full">
+
+                                <label>
+                                    Products Usually Required
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="buyerProducts"
+                                    placeholder="e.g. vegetables, grains, fruits"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LOGISTICS -->
+
+                    <div
+                        class="role-specific"
+                        data-role-section="Logistics"
+                    >
+
+                        <div class="role-specific-header">
+                            <span>🚚</span>
+
+                            <div>
+                                <h3>Logistics Profile</h3>
+                                <p>
+                                    Tell us about your transportation capabilities.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="field-grid">
+
+                            <div class="field">
+
+                                <label>
+                                    Logistics / Company Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="logisticsName"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Service Area
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="logisticsArea"
+                                    placeholder="Districts / regions served"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Fleet Size
+                                </label>
+
+                                <input
+                                    type="number"
+                                    name="fleetSize"
+                                    min="0"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Vehicle Types
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="vehicleTypes"
+                                    placeholder="e.g. mini truck, truck"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LABOUR -->
+
+                    <div
+                        class="role-specific"
+                        data-role-section="Labour"
+                    >
+
+                        <div class="role-specific-header">
+                            <span>👨‍🌾</span>
+
+                            <div>
+                                <h3>Labour Profile</h3>
+                                <p>
+                                    Tell us about your agricultural work capabilities.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="field-grid">
+
+                            <div class="field">
+
+                                <label>
+                                    Work Type
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="labourWorkType"
+                                    placeholder="e.g. harvesting, planting"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Experience
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="labourExperience"
+                                    placeholder="Years of experience"
+                                >
+
+                            </div>
+
+
+                            <div class="field full">
+
+                                <label>
+                                    Preferred Work Area
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="labourArea"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EQUIPMENT -->
+
+                    <div
+                        class="role-specific"
+                        data-role-section="Equipment Owner"
+                    >
+
+                        <div class="role-specific-header">
+                            <span>🚜</span>
+
+                            <div>
+                                <h3>Equipment Owner Profile</h3>
+                                <p>
+                                    Tell us about your available equipment.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="field-grid">
+
+                            <div class="field">
+
+                                <label>
+                                    Equipment / Business Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="equipmentBusiness"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Equipment Types
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="equipmentTypes"
+                                    placeholder="e.g. tractor, harvester"
+                                >
+
+                            </div>
+
+
+                            <div class="field full">
+
+                                <label>
+                                    Service Area
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="equipmentArea"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- MACHINE OPERATOR -->
+
+                    <div
+                        class="role-specific"
+                        data-role-section="Machine Operator"
+                    >
+
+                        <div class="role-specific-header">
+                            <span>⚙️</span>
+
+                            <div>
+                                <h3>Machine Operator Profile</h3>
+                                <p>
+                                    Tell us about your operating skills.
+                                </p>
+                            </div>
+                        </div>
+
+
+                        <div class="field-grid">
+
+                            <div class="field">
+
+                                <label>
+                                    Machine Types
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="operatorMachines"
+                                    placeholder="Machines you can operate"
+                                >
+
+                            </div>
+
+
+                            <div class="field">
+
+                                <label>
+                                    Operating Experience
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="operatorExperience"
+                                    placeholder="Years"
+                                >
+
+                            </div>
+
+
+                            <div class="field full">
+
+                                <label>
+                                    Service Area
+                                </label>
+
+                                <input
+                                    type="text"
+                                    name="operatorArea"
+                                >
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================================
+                     STEP 5
+                     ========================================= -->
+
+                <section
+                    class="form-step"
+                    data-step="5"
+                >
+
+                    <div class="step-heading">
+
+                        <span class="step-number">
+                            05
+                        </span>
+
+                        <div>
+
+                            <h2>
+                                Preferences & security
+                            </h2>
+
+                            <p>
+                                Configure a few final account preferences.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="field-grid">
+
+                        <div class="field">
+
+                            <label>
+                                Notification Preference
+                            </label>
+
+                            <select name="notifications">
+
+                                <option value="All">
+                                    All important updates
+                                </option>
+
+                                <option value="Important">
+                                    Important notifications only
+                                </option>
+
+                                <option value="Platform">
+                                    Platform notifications
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="field">
+
+                            <label>
+                                Dashboard Density
+                            </label>
+
+                            <select name="dashboardDensity">
+
+                                <option value="Comfortable">
+                                    Comfortable
+                                </option>
+
+                                <option value="Compact">
+                                    Compact
+                                </option>
+
+                                <option value="Expanded">
+                                    Expanded
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="agreement-card">
+
+                        <div class="agreement-icon">
+                            🔐
+                        </div>
+
+                        <div>
+
+                            <h3>
+                                Your account identity
+                            </h3>
+
+                            <p>
+                                After you submit this registration,
+                                AgriVision will generate a unique
+                                AgriVision ID for your account. Keep
+                                this ID safe because it will be used
+                                to access your dashboard.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <label class="agreement">
+
+                        <input
+                            type="checkbox"
+                            name="terms"
+                            id="terms"
+                            required
+                        >
+
+                        <span>
+                            I confirm that the information provided
+                            is accurate and I agree to use the
+                            AgriVision platform responsibly.
+                            <b>*</b>
+                        </span>
+
+                    </label>
+
+                </section>
+
+
+                <!-- =========================================
+                     STEP 6
+                     ========================================= -->
+
+                <section
+                    class="form-step"
+                    data-step="6"
+                >
+
+                    <div class="review-heading">
+
+                        <div class="review-symbol">
+                            ✦
+                        </div>
+
+                        <h2>
+                            Review your account
+                        </h2>
+
+                        <p>
+                            Check your information before creating
+                            your AgriVision identity.
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="review-grid"
+                        id="reviewGrid"
+                    ></div>
+
+
+                    <div class="review-warning">
+
+                        <span>!</span>
+
+                        <p>
+                            Once you create your account, your
+                            AgriVision ID will be generated
+                            automatically.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+                <!-- =========================================
+                     NAVIGATION
+                     ========================================= -->
+
+                <div class="form-navigation">
+
+                    <button
+                        type="button"
+                        class="nav-button secondary"
+                        id="backButton"
+                    >
+                        <span>←</span>
+                        BACK
+                    </button>
+
+
+                    <div class="navigation-space"></div>
+
+
+                    <button
+                        type="button"
+                        class="nav-button primary"
+                        id="nextButton"
+                    >
+                        NEXT
+                        <span>→</span>
+                    </button>
+
+
+                    <button
+                        type="submit"
+                        class="nav-button create"
+                        id="createButton"
+                    >
+                        CREATE ACCOUNT
+                        <span>✦</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div
+        class="register-toast"
+        id="registerToast"
+    >
+
+        <strong id="toastTitle">
+            Information
+        </strong>
+
+        <span id="toastMessage">
+            Message
+        </span>
+
+    </div>
+
+
+    <!-- =====================================================
+         SUCCESS CELEBRATION
+         ===================================================== -->
+
+    <div
+        class="success-overlay"
+        id="successOverlay"
+        aria-hidden="true"
+    >
+
+        <div
+            class="success-particles"
+            id="successParticles"
+        ></div>
+
+
+        <div class="success-card">
+
+            <div class="success-glow"></div>
+
+            <div class="success-check">
+
+                <div class="success-check-inner">
+                    ✓
+                </div>
+
+            </div>
+
+
+            <div class="success-kicker">
+                AGRIVISION IDENTITY CREATED
+            </div>
+
+
+            <h2>
+                Welcome to
+                <span>AgriVision</span>
+            </h2>
+
+
+            <p class="success-message">
+                Your account has been successfully created.
+                Your agricultural journey starts here.
+            </p>
+
+
+            <div class="id-card">
+
+                <div class="id-card-label">
+                    YOUR UNIQUE AGRIVISION ID
+                </div>
+
+                <div
+                    class="generated-id"
+                    id="generatedId"
+                >
+                    AGV-XXXX-XXXXXXXX
+                </div>
+
+                <button
+                    type="button"
+                    class="copy-id-button"
+                    id="copyIdButton"
+                >
+                    <span>▣</span>
+                    COPY ID
+                </button>
+
+            </div>
+
+
+            <div class="success-details">
+
+                <div>
+
+                    <span>
+                        ACCOUNT
+                    </span>
+
+                    <strong id="successName">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        ROLE(S)
+                    </span>
+
+                    <strong id="successRoles">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="success-reminder">
+
+                <span>🔐</span>
+
+                <p>
+                    Save your AgriVision ID.
+                    You will use this ID and your password
+                    to access your specialized dashboard.
+                </p>
+
+            </div>
+
+
+            <div class="success-actions">
+
+                <a
+                    href="login.html"
+                    class="success-primary"
+                >
+                    CONTINUE TO LOGIN
+                    <span>→</span>
+                </a>
+
+
+                <a
+                    href="ecosystem.html"
+                    class="success-secondary"
+                >
+                    RETURN TO ECOSYSTEM
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="register.js"></script>
+
+</body>
+</html>

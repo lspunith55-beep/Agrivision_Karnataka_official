@@ -1,0 +1,3668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka — Research, observation, system thinking and continuous improvement."
+    >
+
+    <title>Research — AgriVision Karnataka</title>
+
+    <!-- EXISTING AGRIVISION STYLES -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- =========================================================
+         RESEARCH PAGE COLOUR OVERRIDES
+         NO GOLD — AGRIVISION MULTI-COLOUR SPECTRUM
+    ========================================================== -->
+    <style>
+
+        /* ---------------------------------------------------------
+           RESEARCH COLOUR SYSTEM
+        --------------------------------------------------------- */
+
+        body.research-page {
+            --research-green: #00ff87;
+            --research-green-deep: #00c878;
+            --research-cyan: #00e5ff;
+            --research-blue: #48a8ff;
+            --research-violet: #a970ff;
+            --research-purple: #d66bff;
+            --research-magenta: #ff5fcf;
+            --research-pink: #ff4fa3;
+            --research-orange: #ff7a35;
+            --research-coral: #ff6b5f;
+            --research-lime: #b8ff3d;
+            --research-red: #ff526f;
+
+            --research-ivory: #f7fff9;
+            --research-soft: #d7eee1;
+            --research-muted: #a8c8b6;
+
+            --research-spectrum:
+                linear-gradient(
+                    90deg,
+                    #00ff87 0%,
+                    #00e5ff 18%,
+                    #48a8ff 34%,
+                    #a970ff 50%,
+                    #ff5fcf 66%,
+                    #ff6b5f 82%,
+                    #b8ff3d 100%
+                );
+
+            overflow-x: hidden;
+        }
+
+
+        /* ---------------------------------------------------------
+           NO GOLD — REPLACE OLD RESEARCH GOLD VARIABLES
+        --------------------------------------------------------- */
+
+        body.research-page {
+            --research-gold: #00e5ff;
+            --research-gold-bright: #00ff87;
+        }
+
+
+        /* ---------------------------------------------------------
+           COLOUR-CHANGING / GLOWING TEXT
+        --------------------------------------------------------- */
+
+        .research-page .text-spectrum,
+        .research-page .research-spectrum-text {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #48a8ff,
+                    #a970ff,
+                    #d66bff,
+                    #ff5fcf,
+                    #ff6b5f,
+                    #b8ff3d,
+                    #00ff87
+                );
+            background-size: 500% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+
+            animation:
+                researchSpectrum 9s linear infinite,
+                researchTextGlow 3s ease-in-out infinite alternate;
+
+            filter:
+                drop-shadow(0 0 8px rgba(0,229,255,.22))
+                drop-shadow(0 0 18px rgba(168,112,255,.12));
+        }
+
+
+        .research-page .text-green {
+            color: #00ff87 !important;
+            text-shadow:
+                0 0 8px rgba(0,255,135,.45),
+                0 0 25px rgba(0,255,135,.18);
+        }
+
+        .research-page .text-cyan {
+            color: #00e5ff !important;
+            text-shadow:
+                0 0 8px rgba(0,229,255,.48),
+                0 0 25px rgba(0,229,255,.18);
+        }
+
+        .research-page .text-blue {
+            color: #48a8ff !important;
+            text-shadow:
+                0 0 8px rgba(72,168,255,.45),
+                0 0 25px rgba(72,168,255,.18);
+        }
+
+        .research-page .text-violet {
+            color: #a970ff !important;
+            text-shadow:
+                0 0 8px rgba(169,112,255,.48),
+                0 0 25px rgba(169,112,255,.18);
+        }
+
+        .research-page .text-purple {
+            color: #d66bff !important;
+            text-shadow:
+                0 0 8px rgba(214,107,255,.48),
+                0 0 25px rgba(214,107,255,.18);
+        }
+
+        .research-page .text-magenta {
+            color: #ff5fcf !important;
+            text-shadow:
+                0 0 8px rgba(255,95,207,.48),
+                0 0 25px rgba(255,95,207,.18);
+        }
+
+        .research-page .text-coral {
+            color: #ff6b5f !important;
+            text-shadow:
+                0 0 8px rgba(255,107,95,.48),
+                0 0 25px rgba(255,107,95,.18);
+        }
+
+        .research-page .text-orange {
+            color: #ff7a35 !important;
+            text-shadow:
+                0 0 8px rgba(255,122,53,.48),
+                0 0 25px rgba(255,122,53,.18);
+        }
+
+        .research-page .text-lime {
+            color: #b8ff3d !important;
+            text-shadow:
+                0 0 8px rgba(184,255,61,.45),
+                0 0 25px rgba(184,255,61,.18);
+        }
+
+
+        @keyframes researchSpectrum {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+
+        @keyframes researchTextGlow {
+            0% {
+                filter:
+                    drop-shadow(0 0 5px rgba(0,229,255,.18))
+                    drop-shadow(0 0 12px rgba(0,255,135,.08));
+            }
+
+            50% {
+                filter:
+                    drop-shadow(0 0 10px rgba(169,112,255,.28))
+                    drop-shadow(0 0 25px rgba(255,95,207,.12));
+            }
+
+            100% {
+                filter:
+                    drop-shadow(0 0 8px rgba(0,229,255,.25))
+                    drop-shadow(0 0 22px rgba(184,255,61,.10));
+            }
+        }
+
+
+        /* ---------------------------------------------------------
+           RESEARCH HEADER
+        --------------------------------------------------------- */
+
+        .research-page .research-header {
+            position: relative;
+            z-index: 100;
+        }
+
+
+        /* ---------------------------------------------------------
+           SECTION HEADINGS
+        --------------------------------------------------------- */
+
+        .research-page .research-section-heading h2 em,
+        .research-page .research-section-heading h2 .emphasis {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf,
+                    #ff6b5f,
+                    #b8ff3d
+                );
+            background-size: 350% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation: researchSpectrum 8s linear infinite;
+            font-style: normal;
+
+            filter:
+                drop-shadow(0 0 10px rgba(0,229,255,.16));
+        }
+
+
+        /* ---------------------------------------------------------
+           OPENING
+        --------------------------------------------------------- */
+
+        .research-page .research-opening h1 em {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #48a8ff,
+                    #a970ff,
+                    #ff5fcf,
+                    #ff6b5f,
+                    #b8ff3d,
+                    #00ff87
+                );
+            background-size: 600% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 10s linear infinite,
+                researchTextGlow 3s ease-in-out infinite alternate;
+
+            font-style: normal;
+        }
+
+
+        .research-page .research-question-hero {
+            border-color:
+                rgba(0,229,255,.35);
+            box-shadow:
+                0 0 35px rgba(0,229,255,.07);
+        }
+
+
+        .research-page .research-question-mark {
+            color:
+                #ff5fcf !important;
+
+            text-shadow:
+                0 0 10px rgba(255,95,207,.45),
+                0 0 30px rgba(255,95,207,.16);
+        }
+
+
+        .research-page .research-question-end {
+            color:
+                #00ff87 !important;
+
+            text-shadow:
+                0 0 10px rgba(0,255,135,.45),
+                0 0 30px rgba(0,255,135,.15);
+        }
+
+
+        /* ---------------------------------------------------------
+           STORY
+        --------------------------------------------------------- */
+
+        .research-page .research-story-main .research-dropcap::first-letter {
+            color:
+                #00ff87 !important;
+
+            text-shadow:
+                0 0 12px rgba(0,255,135,.48),
+                0 0 30px rgba(0,255,135,.15);
+        }
+
+
+        .research-page .research-emotional-line {
+            border-left-color:
+                #00e5ff !important;
+
+            box-shadow:
+                inset 4px 0 20px rgba(0,229,255,.04);
+        }
+
+
+        .research-page .research-emotional-line strong {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf
+                );
+
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 7s linear infinite;
+        }
+
+
+        .research-page .research-story-question {
+            border-color:
+                rgba(0,229,255,.42);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(0,229,255,.07),
+                    rgba(169,112,255,.055),
+                    rgba(255,95,207,.045)
+                );
+
+            box-shadow:
+                0 30px 80px rgba(0,0,0,.2),
+                0 0 35px rgba(0,229,255,.045);
+        }
+
+
+        .research-page .research-story-question span {
+            color:
+                #00e5ff !important;
+
+            text-shadow:
+                0 0 10px rgba(0,229,255,.4);
+        }
+
+
+        /* ---------------------------------------------------------
+           OBSERVATION
+        --------------------------------------------------------- */
+
+        .research-page .research-observation-chapters {
+            display: grid;
+            grid-template-columns:
+                repeat(2, minmax(0,1fr));
+            gap: 18px;
+            margin-top: 55px;
+        }
+
+
+        .research-page .research-observation-chapter {
+            position: relative;
+            min-height: 245px;
+            padding: 34px;
+            border: 1px solid rgba(255,255,255,.10);
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(3,24,18,.66),
+                    rgba(3,24,18,.42)
+                );
+            overflow: hidden;
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+        }
+
+
+        .research-page .research-observation-chapter::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            right: -70px;
+            top: -80px;
+            opacity: .14;
+            filter: blur(25px);
+            pointer-events: none;
+        }
+
+
+        .research-page .research-observation-chapter:hover {
+            transform: translateY(-7px);
+        }
+
+
+        .research-page .observation-green {
+            border-color:
+                rgba(0,255,135,.30);
+        }
+
+        .research-page .observation-green::before {
+            background: #00ff87;
+        }
+
+
+        .research-page .observation-cyan {
+            border-color:
+                rgba(0,229,255,.30);
+        }
+
+        .research-page .observation-cyan::before {
+            background: #00e5ff;
+        }
+
+
+        .research-page .observation-violet {
+            border-color:
+                rgba(169,112,255,.30);
+        }
+
+        .research-page .observation-violet::before {
+            background: #a970ff;
+        }
+
+
+        .research-page .observation-magenta {
+            border-color:
+                rgba(255,95,207,.30);
+        }
+
+        .research-page .observation-magenta::before {
+            background: #ff5fcf;
+        }
+
+
+        .research-page .research-observation-chapter-number {
+            display: block;
+            margin-bottom: 30px;
+            font-size: 10px;
+            letter-spacing: .2em;
+        }
+
+
+        .research-page .research-observation-chapter h3 {
+            margin: 0 0 14px;
+            font-size: clamp(26px,3vw,42px);
+            line-height: 1;
+            font-weight: 500;
+        }
+
+
+        .research-page .research-observation-chapter p {
+            max-width: 620px;
+            margin: 0;
+            color:
+                var(--research-muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+
+        .research-page .research-observation-revelation {
+            max-width: 850px;
+            margin: 70px auto 0;
+            text-align: center;
+        }
+
+
+        .research-page .research-observation-revelation p {
+            margin: 0;
+            color:
+                var(--research-ivory);
+            font-size: clamp(24px,3vw,40px);
+            line-height: 1.35;
+        }
+
+
+        .research-page .research-observation-spectrum {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 28px;
+            font-size: 13px;
+            letter-spacing: .08em;
+        }
+
+
+        .research-page .research-observation-spectrum span {
+            transition: filter .3s ease;
+        }
+
+
+        .research-page .research-observation-spectrum span:hover {
+            filter:
+                drop-shadow(0 0 10px currentColor);
+        }
+
+
+        /* ---------------------------------------------------------
+           HUMAN SIDE
+        --------------------------------------------------------- */
+
+        .research-page .research-human-intro p {
+            color:
+                #00e5ff !important;
+
+            text-shadow:
+                0 0 12px rgba(0,229,255,.18);
+        }
+
+
+        .research-page .research-human-step > span {
+            color:
+                #a970ff !important;
+        }
+
+
+        .research-page .research-human-step:nth-child(2) > span {
+            color:
+                #00e5ff !important;
+        }
+
+        .research-page .research-human-step:nth-child(3) > span {
+            color:
+                #ff5fcf !important;
+        }
+
+        .research-page .research-human-step:nth-child(4) > span {
+            color:
+                #b8ff3d !important;
+        }
+
+
+        /* ---------------------------------------------------------
+           QUESTIONS
+        --------------------------------------------------------- */
+
+        .research-page .research-question-card:nth-child(1) {
+            border-color:
+                rgba(0,255,135,.34);
+        }
+
+        .research-page .research-question-card:nth-child(2) {
+            border-color:
+                rgba(0,229,255,.34);
+        }
+
+        .research-page .research-question-card:nth-child(3) {
+            border-color:
+                rgba(169,112,255,.34);
+        }
+
+        .research-page .research-question-card:nth-child(4) {
+            border-color:
+                rgba(255,95,207,.34);
+        }
+
+
+        .research-page .research-question-card:hover {
+            border-color:
+                rgba(0,229,255,.7) !important;
+
+            box-shadow:
+                0 30px 70px rgba(0,0,0,.24),
+                0 0 35px rgba(0,229,255,.10);
+        }
+
+
+        .research-page .research-question-card:nth-child(1) .question-index {
+            color: #00ff87 !important;
+        }
+
+        .research-page .research-question-card:nth-child(2) .question-index {
+            color: #00e5ff !important;
+        }
+
+        .research-page .research-question-card:nth-child(3) .question-index {
+            color: #a970ff !important;
+        }
+
+        .research-page .research-question-card:nth-child(4) .question-index {
+            color: #ff5fcf !important;
+        }
+
+
+        /* ---------------------------------------------------------
+           TRANSFORMATION
+        --------------------------------------------------------- */
+
+        .research-page .research-transform-step:nth-child(1) {
+            border-color:
+                rgba(0,255,135,.30);
+        }
+
+        .research-page .research-transform-step:nth-child(2) {
+            border-color:
+                rgba(0,229,255,.30);
+        }
+
+        .research-page .research-transform-step:nth-child(3) {
+            border-color:
+                rgba(169,112,255,.30);
+        }
+
+        .research-page .research-transform-step:nth-child(4) {
+            border-color:
+                rgba(255,95,207,.30);
+        }
+
+
+        /* ---------------------------------------------------------
+           SYSTEM
+        --------------------------------------------------------- */
+
+        .research-page .research-system-center {
+            border-color:
+                #00e5ff !important;
+
+            box-shadow:
+                0 0 25px rgba(0,229,255,.12),
+                0 0 70px rgba(0,229,255,.06);
+        }
+
+
+        .research-page .research-system-center strong {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf
+                );
+
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 7s linear infinite;
+        }
+
+
+        .research-page .role-farmer {
+            color: #00ff87 !important;
+        }
+
+        .research-page .role-buyer {
+            color: #ff5fcf !important;
+        }
+
+        .research-page .role-labour {
+            color: #b8ff3d !important;
+        }
+
+        .research-page .role-logistics {
+            color: #00e5ff !important;
+        }
+
+        .research-page .role-driver {
+            color: #48a8ff !important;
+        }
+
+        .research-page .role-equipment {
+            color: #ff7a35 !important;
+        }
+
+        .research-page .role-operator {
+            color: #a970ff !important;
+        }
+
+
+        /* ---------------------------------------------------------
+           IDENTITY
+        --------------------------------------------------------- */
+
+        .research-page .identity-center {
+            border-color:
+                #ff5fcf !important;
+
+            box-shadow:
+                0 0 30px rgba(255,95,207,.12);
+        }
+
+
+        .research-page .identity-center strong {
+            color:
+                #ff5fcf !important;
+
+            text-shadow:
+                0 0 12px rgba(255,95,207,.5);
+        }
+
+
+        /* ---------------------------------------------------------
+           RESEARCH EXPERIENCE
+        --------------------------------------------------------- */
+
+        .research-page .research-experience {
+            position: relative;
+            margin-top: 65px;
+        }
+
+
+        .research-page .research-experience-axis {
+            position: relative;
+            width: 2px;
+            min-height: 100%;
+            background:
+                linear-gradient(
+                    180deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf,
+                    #b8ff3d,
+                    #ff6b5f
+                );
+            box-shadow:
+                0 0 20px rgba(0,229,255,.18);
+        }
+
+
+        .research-page .research-experience-step {
+            display: grid;
+            grid-template-columns:
+                minmax(0,1fr)
+                80px
+                minmax(0,1fr);
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 75px;
+        }
+
+
+        .research-page .research-experience-step:last-child {
+            margin-bottom: 0;
+        }
+
+
+        .research-page .experience-marker {
+            grid-column: 2;
+            grid-row: 1;
+            width: 22px;
+            height: 22px;
+            justify-self: center;
+            border-radius: 50%;
+            background:
+                var(--experience-color,#00e5ff);
+            box-shadow:
+                0 0 12px var(--experience-color,#00e5ff),
+                0 0 30px rgba(0,229,255,.18);
+            z-index: 2;
+        }
+
+
+        .research-page .experience-content {
+            padding: 30px;
+            border: 1px solid
+                color-mix(
+                    in srgb,
+                    var(--experience-color,#00e5ff) 35%,
+                    transparent
+                );
+            background:
+                rgba(3,24,18,.48);
+            transition:
+                transform .35s ease,
+                box-shadow .35s ease;
+        }
+
+
+        .research-page .experience-content:hover {
+            transform: translateY(-6px);
+            box-shadow:
+                0 25px 60px rgba(0,0,0,.22),
+                0 0 30px
+                color-mix(
+                    in srgb,
+                    var(--experience-color,#00e5ff) 10%,
+                    transparent
+                );
+        }
+
+
+        .research-page .experience-left .experience-content {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+
+        .research-page .experience-right .experience-content {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+
+        .research-page .experience-green {
+            --experience-color: #00ff87;
+        }
+
+        .research-page .experience-cyan {
+            --experience-color: #00e5ff;
+        }
+
+        .research-page .experience-violet {
+            --experience-color: #a970ff;
+        }
+
+        .research-page .experience-magenta {
+            --experience-color: #ff5fcf;
+        }
+
+        .research-page .experience-lime {
+            --experience-color: #b8ff3d;
+        }
+
+        .research-page .experience-amber {
+            --experience-color: #ff6b5f;
+        }
+
+
+        .research-page .experience-content span {
+            display: block;
+            margin-bottom: 14px;
+            color:
+                var(--experience-color);
+            font-size: 10px;
+            letter-spacing: .2em;
+            text-shadow:
+                0 0 10px
+                color-mix(
+                    in srgb,
+                    var(--experience-color) 40%,
+                    transparent
+                );
+        }
+
+
+        .research-page .experience-content h3 {
+            margin: 0 0 12px;
+            color:
+                var(--research-ivory);
+            font-size: clamp(25px,3vw,38px);
+            line-height: 1.05;
+            font-weight: 500;
+        }
+
+
+        .research-page .experience-content p {
+            margin: 0;
+            color:
+                var(--research-muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+
+        /* ---------------------------------------------------------
+           PROBLEM CHAIN
+        --------------------------------------------------------- */
+
+        .research-page .research-problem-header em {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf,
+                    #ff6b5f
+                );
+
+            background-size: 400% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 8s linear infinite;
+
+            font-style: normal;
+        }
+
+
+        .research-page .research-problem-chain article:nth-of-type(1) {
+            border-color:
+                rgba(0,255,135,.42);
+        }
+
+        .research-page .research-problem-chain article:nth-of-type(2) {
+            border-color:
+                rgba(0,229,255,.42);
+        }
+
+        .research-page .research-problem-chain article:nth-of-type(3) {
+            border-color:
+                rgba(169,112,255,.42);
+        }
+
+        .research-page .research-problem-chain article:nth-of-type(4) {
+            border-color:
+                rgba(255,95,207,.42);
+        }
+
+        .research-page .research-problem-chain article:nth-of-type(5) {
+            border-color:
+                rgba(184,255,61,.42);
+        }
+
+
+        .research-page .research-problem-chain article:nth-of-type(1) span {
+            color: #00ff87;
+        }
+
+        .research-page .research-problem-chain article:nth-of-type(2) span {
+            color: #00e5ff;
+        }
+
+        .research-page .research-problem-chain article:nth-of-type(3) span {
+            color: #a970ff;
+        }
+
+        .research-page .research-problem-chain article:nth-of-type(4) span {
+            color: #ff5fcf;
+        }
+
+        .research-page .research-problem-chain article:nth-of-type(5) span {
+            color: #b8ff3d;
+        }
+
+
+        .research-page .research-problem-chain > i {
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf,
+                    transparent
+                );
+            background-size: 300% 100%;
+            animation:
+                researchSpectrum 7s linear infinite;
+        }
+
+
+        .research-page .research-problem-chain > i::after {
+            color:
+                #00e5ff !important;
+            text-shadow:
+                0 0 10px rgba(0,229,255,.5);
+        }
+
+
+        .research-page .research-problem-conclusion strong {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf
+                );
+
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 7s linear infinite;
+        }
+
+
+        /* ---------------------------------------------------------
+           ITERATION
+        --------------------------------------------------------- */
+
+        .research-page .research-iteration-center {
+            border-color:
+                #a970ff !important;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(169,112,255,.13),
+                    rgba(3,24,18,.9) 65%
+                );
+
+            box-shadow:
+                0 0 45px rgba(169,112,255,.10);
+        }
+
+
+        .research-page .research-iteration-center span {
+            color:
+                #00e5ff !important;
+        }
+
+
+        .research-page .research-iteration-center strong {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf
+                );
+
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 7s linear infinite;
+        }
+
+
+        .research-page .research-iteration-item:hover {
+            border-color:
+                #00e5ff !important;
+
+            box-shadow:
+                0 0 25px rgba(0,229,255,.08);
+        }
+
+
+        .research-page .research-iteration-item span {
+            color:
+                #00e5ff !important;
+        }
+
+
+        /* ---------------------------------------------------------
+           DIFFERENCE
+        --------------------------------------------------------- */
+
+        .research-page .research-difference-title {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf
+                );
+
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 8s linear infinite;
+        }
+
+
+        .research-page .research-difference-points > div:nth-child(1) {
+            border-left-color:
+                #00ff87;
+        }
+
+        .research-page .research-difference-points > div:nth-child(2) {
+            border-left-color:
+                #00e5ff;
+        }
+
+        .research-page .research-difference-points > div:nth-child(3) {
+            border-left-color:
+                #a970ff;
+        }
+
+        .research-page .research-difference-points > div:nth-child(4) {
+            border-left-color:
+                #ff5fcf;
+        }
+
+
+        /* ---------------------------------------------------------
+           ETHOS
+        --------------------------------------------------------- */
+
+        .research-page .research-ethos-frame {
+            border-color:
+                rgba(0,229,255,.30) !important;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(0,255,135,.045),
+                    rgba(0,229,255,.035),
+                    rgba(169,112,255,.045),
+                    rgba(255,95,207,.035)
+                );
+
+            box-shadow:
+                0 35px 90px rgba(0,0,0,.22),
+                0 0 45px rgba(0,229,255,.045);
+        }
+
+
+        .research-page .research-ethos-frame::before {
+            border-color:
+                #00ff87 !important;
+        }
+
+
+        .research-page .research-ethos-frame::after {
+            border-color:
+                #ff5fcf !important;
+        }
+
+
+        .research-page .research-ethos-mark {
+            border-color:
+                #a970ff !important;
+
+            color:
+                #a970ff !important;
+
+            box-shadow:
+                0 0 20px rgba(169,112,255,.10);
+        }
+
+
+        .research-page .research-ethos-frame h2 em {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf,
+                    #ff6b5f,
+                    #b8ff3d
+                );
+
+            background-size: 500% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 9s linear infinite;
+
+            font-style: normal;
+        }
+
+
+        .research-page .research-ethos-frame p:last-child {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf
+                );
+
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 7s linear infinite;
+        }
+
+
+        /* ---------------------------------------------------------
+           FUTURE RESEARCH
+        --------------------------------------------------------- */
+
+        .research-page .research-future-layer:nth-child(1) {
+            border-color:
+                rgba(0,255,135,.45);
+        }
+
+        .research-page .research-future-layer:nth-child(2) {
+            border-color:
+                rgba(0,229,255,.45);
+        }
+
+        .research-page .research-future-layer:nth-child(3) {
+            border-color:
+                rgba(169,112,255,.45);
+        }
+
+        .research-page .research-future-layer:nth-child(4) {
+            border-color:
+                rgba(255,95,207,.45);
+        }
+
+
+        .research-page .research-future-layer:nth-child(1) span {
+            color: #00ff87 !important;
+        }
+
+        .research-page .research-future-layer:nth-child(2) span {
+            color: #00e5ff !important;
+        }
+
+        .research-page .research-future-layer:nth-child(3) span {
+            color: #a970ff !important;
+        }
+
+        .research-page .research-future-layer:nth-child(4) span {
+            color: #ff5fcf !important;
+        }
+
+
+        .research-page .research-future-layer:hover {
+            border-color:
+                #00e5ff !important;
+            box-shadow:
+                0 0 30px rgba(0,229,255,.07);
+        }
+
+
+        /* ---------------------------------------------------------
+           FOUNDER / FINAL
+        --------------------------------------------------------- */
+
+        .research-page .research-founder-final {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf,
+                    #ff6b5f,
+                    #b8ff3d
+                );
+
+            background-size: 500% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 9s linear infinite,
+                researchTextGlow 3s ease-in-out infinite alternate;
+        }
+
+
+        /* ---------------------------------------------------------
+           PRIMARY BUTTON — NO GOLD
+        --------------------------------------------------------- */
+
+        .research-page .research-primary-button {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 54px;
+            padding: 0 28px;
+
+            border: 1px solid rgba(0,229,255,.65);
+
+            color: #f7fff9 !important;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,255,135,.10),
+                    rgba(0,229,255,.10),
+                    rgba(169,112,255,.10),
+                    rgba(255,95,207,.10)
+                );
+
+            box-shadow:
+                0 0 20px rgba(0,229,255,.08);
+
+            overflow: hidden;
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
+        }
+
+
+        .research-page .research-primary-button::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf,
+                    #ff6b5f,
+                    #b8ff3d
+                );
+
+            background-size: 500% 100%;
+
+            opacity: .08;
+
+            animation:
+                researchSpectrum 7s linear infinite;
+
+            pointer-events: none;
+        }
+
+
+        .research-page .research-primary-button:hover {
+            transform: translateY(-3px);
+
+            border-color:
+                #00ff87;
+
+            box-shadow:
+                0 0 25px rgba(0,255,135,.16),
+                0 0 55px rgba(0,229,255,.08);
+        }
+
+
+        .research-page .research-outline-button {
+            border-color:
+                rgba(169,112,255,.45) !important;
+        }
+
+
+        .research-page .research-outline-button:hover {
+            border-color:
+                #ff5fcf !important;
+
+            box-shadow:
+                0 0 25px rgba(255,95,207,.10);
+        }
+
+
+        /* ---------------------------------------------------------
+           RESEARCH FOOTER
+        --------------------------------------------------------- */
+
+        .research-page .research-footer-brand strong {
+            background:
+                linear-gradient(
+                    90deg,
+                    #00ff87,
+                    #00e5ff,
+                    #a970ff,
+                    #ff5fcf
+                );
+
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation:
+                researchSpectrum 8s linear infinite;
+        }
+
+
+        /* ---------------------------------------------------------
+           RESPONSIVE EXPERIENCE
+        --------------------------------------------------------- */
+
+        @media (max-width: 850px) {
+
+            .research-page .research-observation-chapters {
+                grid-template-columns: 1fr;
+            }
+
+            .research-page .research-experience-step {
+                grid-template-columns:
+                    30px
+                    minmax(0,1fr);
+
+                gap: 18px;
+                margin-bottom: 42px;
+            }
+
+            .research-page .research-experience-axis {
+                position: absolute;
+                left: 14px;
+                top: 0;
+                bottom: 0;
+            }
+
+            .research-page .experience-marker {
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+            .research-page .experience-left .experience-content,
+            .research-page .experience-right .experience-content {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            .research-page .research-iteration-layout {
+                width: min(560px,100%);
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .research-page .research-observation-chapter {
+                padding: 27px;
+                min-height: 215px;
+            }
+
+            .research-page .experience-content {
+                padding: 23px;
+            }
+
+            .research-page .research-question-card {
+                min-height: 280px;
+            }
+
+            .research-page .research-iteration-layout {
+                aspect-ratio: auto;
+                min-height: 560px;
+            }
+
+            .research-page .research-iteration-center {
+                width: 140px;
+                height: 140px;
+            }
+
+            .research-page .iteration-top,
+            .research-page .iteration-right,
+            .research-page .iteration-bottom,
+            .research-page .iteration-left {
+                position: static;
+                transform: none;
+                width: 100%;
+                margin: 12px 0;
+            }
+        }
+
+
+        /* ---------------------------------------------------------
+           REDUCED MOTION
+        --------------------------------------------------------- */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .research-page .text-spectrum,
+            .research-page .research-spectrum-text,
+            .research-page .research-opening h1 em,
+            .research-page .research-founder-final,
+            .research-page .research-ethos-frame h2 em,
+            .research-page .research-ethos-frame p:last-child,
+            .research-page .research-primary-button::before,
+            .research-page .research-section-heading h2 em,
+            .research-page .research-problem-header em,
+            .research-page .research-difference-title {
+                animation: none !important;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body class="research-page">
+
+    <!-- =========================================================
+         SHARED AGRIVISION BACKGROUND / EFFECTS
+    ========================================================== -->
+
+    <div class="background-image"></div>
+
+    <div class="particles"></div>
+    <div class="floating-leaves"></div>
+    <div class="fireflies"></div>
+    <div class="light-trails"></div>
+
+    <div class="mouse-glow"></div>
+    <div class="fm-cursor-orb"></div>
+
+
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+
+    <header id="header" class="research-header">
+
+        <div class="research-header-inner">
+
+            <a
+                href="index.html"
+                class="research-brand"
+                aria-label="AgriVision Karnataka Home"
+            >
+                <span class="research-brand-mark">A</span>
+
+                <span class="research-brand-text">
+                    <strong>AGRIVISION</strong>
+                    <small>KARNATAKA</small>
+                </span>
+            </a>
+
+
+            <nav class="research-navigation">
+
+                <a href="#research-start">Research</a>
+
+                <a href="#research-story">Story</a>
+
+                <a href="#research-observation">Observation</a>
+
+                <a href="#research-questions">Questions</a>
+
+                <a href="#research-system">System</a>
+
+                <a href="#research-journey">Journey</a>
+
+                <a href="#research-next">Next</a>
+
+            </nav>
+
+
+            <button
+                class="mobile-menu research-menu"
+                aria-label="Open navigation"
+                type="button"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         RESEARCH PROGRESS
+    ========================================================== -->
+
+    <div class="research-progress"></div>
+
+
+    <main>
+
+
+        <!-- =====================================================
+             01 — OPENING
+        ====================================================== -->
+
+        <section
+            id="research-start"
+            class="research-section research-opening"
+        >
+
+            <div class="research-opening-orbit">
+
+                <span class="research-orbit-ring"></span>
+
+                <span class="research-orbit-dot"></span>
+
+            </div>
+
+
+            <div class="research-container">
+
+                <div class="research-opening-content">
+
+                    <span class="research-kicker text-cyan">
+                        RESEARCH / 01
+                    </span>
+
+
+                    <h1>
+
+                        Research began
+                        <br>
+
+                        <em>with a question.</em>
+
+                    </h1>
+
+
+                    <p class="research-opening-lead">
+
+                        Not with a platform.
+                        Not with a feature list.
+                        Not with technology.
+
+                        <br><br>
+
+                        It began with trying to understand
+                        why something that should have been
+                        simple was not simple at all.
+
+                    </p>
+
+
+                    <div class="research-question-hero">
+
+                        <span class="research-question-mark">?</span>
+
+                        <p>
+                            What if the problem was not
+                            agriculture itself — but the
+                            disconnected system surrounding it?
+                        </p>
+
+                        <span class="research-question-end">→</span>
+
+                    </div>
+
+
+                    <div class="research-opening-meta">
+
+                        <span>OBSERVE</span>
+                        <i></i>
+                        <span>QUESTION</span>
+                        <i></i>
+                        <span>UNDERSTAND</span>
+
+                    </div>
+
+
+                    <div class="research-scroll-cue">
+
+                        <span>SCROLL TO RESEARCH</span>
+
+                        <div></div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             02 — PERSONAL STORY
+        ====================================================== -->
+
+        <section
+            id="research-story"
+            class="research-section research-story"
+        >
+
+            <div class="research-container">
+
+                <div class="research-section-heading">
+
+                    <div>
+
+                        <span class="research-kicker text-green">
+                            02 / THE BEGINNING
+                        </span>
+
+                        <span class="research-section-number">
+                            PERSONAL OBSERVATION
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+
+                        Before researching
+                        <br>
+
+                        <em>the system,</em>
+
+                        I encountered
+                        <br>
+
+                        <span class="text-cyan">
+                            one small problem.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="research-story-grid">
+
+                    <article class="research-story-main">
+
+                        <p class="research-dropcap">
+
+                            My family has a connection with
+                            agriculture. During one onion crop,
+                            the produce was sold through a broker
+                            at a price that was below the retail
+                            rates visible in Bengaluru.
+
+                        </p>
+
+
+                        <p>
+
+                            The experience raised a question
+                            that was much bigger than the price
+                            of one crop.
+
+                            <br><br>
+
+                            If the farmer could not easily see
+                            the wider market situation, and if
+                            reaching a direct buyer was difficult,
+                            where exactly was the information
+                            being lost?
+
+                        </p>
+
+
+                        <p>
+
+                            That question became the starting
+                            point for deeper research into the
+                            agricultural ecosystem.
+
+                        </p>
+
+
+                        <p class="research-emotional-line">
+
+                            A single onion transaction made me
+                            look beyond the transaction itself.
+
+                            <strong>
+                                The real subject became the system.
+                            </strong>
+
+                        </p>
+
+                    </article>
+
+
+                    <aside class="research-story-aside">
+
+                        <div class="research-story-question">
+
+                            <span>
+                                THE QUESTION
+                            </span>
+
+                            <strong>
+                                Where does value
+                                disappear between
+                                the farm and the market?
+                            </strong>
+
+                            <small>
+                                This became one of the
+                                questions that shaped
+                                the research direction.
+                            </small>
+
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             03 — OBSERVATION
+        ====================================================== -->
+
+        <section
+            id="research-observation"
+            class="research-section"
+        >
+
+            <div class="research-container">
+
+                <div class="research-section-heading centered">
+
+                    <span class="research-kicker text-violet">
+                        03 / OBSERVATION
+                    </span>
+
+                    <h2>
+
+                        The deeper I looked,
+                        <br>
+
+                        the more
+                        <span class="text-spectrum">
+                            connected
+                        </span>
+                        everything became.
+
+                    </h2>
+
+                    <p>
+
+                        What initially looked like a market-access
+                        problem gradually revealed relationships
+                        between people, movement, machines,
+                        information and decisions.
+
+                    </p>
+
+                </div>
+
+
+                <div class="research-observation-chapters">
+
+
+                    <article class="research-observation-chapter observation-green">
+
+                        <span class="research-observation-chapter-number text-green">
+                            01 / FARM
+                        </span>
+
+                        <h3>
+                            The farmer
+                        </h3>
+
+                        <p>
+
+                            At the centre was the farmer —
+                            producing, deciding and carrying
+                            the consequences of information
+                            that may or may not reach them
+                            at the right moment.
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-observation-chapter observation-cyan">
+
+                        <span class="research-observation-chapter-number text-cyan">
+                            02 / PEOPLE & MACHINES
+                        </span>
+
+                        <h3>
+                            Skills & resources
+                        </h3>
+
+                        <p>
+
+                            Labour, equipment and machine
+                            operators form another layer.
+                            Their availability, skills and
+                            coordination influence what can
+                            actually happen on the farm.
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-observation-chapter observation-violet">
+
+                        <span class="research-observation-chapter-number text-violet">
+                            03 / MOVEMENT
+                        </span>
+
+                        <h3>
+                            Logistics
+                        </h3>
+
+                        <p>
+
+                            Once produce moves beyond the farm,
+                            transportation and coordination
+                            become part of the same story.
+
+                            Drivers and logistics providers
+                            connect physical movement with time.
+
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-observation-chapter observation-magenta">
+
+                        <span class="research-observation-chapter-number text-magenta">
+                            04 / MARKET
+                        </span>
+
+                        <h3>
+                            The buyer
+                        </h3>
+
+                        <p>
+
+                            On the other side sits demand.
+                            Buyers need access to suitable
+                            produce, while farmers need a clearer
+                            path towards real demand.
+
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <div class="research-observation-revelation">
+
+                    <p>
+
+                        These were never
+                        <span class="text-spectrum">
+                            separate stories.
+                        </span>
+
+                    </p>
+
+
+                    <div class="research-observation-spectrum">
+
+                        <span class="text-green">FARM</span>
+
+                        <span>•</span>
+
+                        <span class="text-cyan">PEOPLE</span>
+
+                        <span>•</span>
+
+                        <span class="text-violet">MOVEMENT</span>
+
+                        <span>•</span>
+
+                        <span class="text-magenta">MARKET</span>
+
+                        <span>•</span>
+
+                        <span class="text-lime">RESOURCES</span>
+
+                        <span>•</span>
+
+                        <span class="text-coral">INFORMATION</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             04 — HUMAN SIDE
+        ====================================================== -->
+
+        <section
+            class="research-section research-human"
+        >
+
+            <div class="research-container">
+
+                <div class="research-human-layout">
+
+
+                    <div class="research-human-intro">
+
+                        <span class="research-kicker text-magenta">
+                            04 / THE HUMAN SIDE
+                        </span>
+
+                        <h2>
+
+                            Research was not only
+                            <span class="text-spectrum">
+                                about systems.
+                            </span>
+
+                        </h2>
+
+                        <p>
+
+                            It was about understanding
+                            the people who make those
+                            systems work.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="research-human-steps">
+
+
+                        <article class="research-human-step">
+
+                            <span>01</span>
+
+                            <div>
+
+                                <h3>
+                                    Farmers need clarity.
+                                </h3>
+
+                                <p>
+                                    Information becomes useful
+                                    only when it can help someone
+                                    make a real decision.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="research-human-step">
+
+                            <span>02</span>
+
+                            <div>
+
+                                <h3>
+                                    Workers need opportunity.
+                                </h3>
+
+                                <p>
+                                    Labour and skills are resources
+                                    that need better visibility and
+                                    coordination.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="research-human-step">
+
+                            <span>03</span>
+
+                            <div>
+
+                                <h3>
+                                    Resources need connection.
+                                </h3>
+
+                                <p>
+                                    Equipment, operators, logistics
+                                    and transport become more useful
+                                    when they can be coordinated.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <article class="research-human-step">
+
+                            <span>04</span>
+
+                            <div>
+
+                                <h3>
+                                    Markets need relationships.
+                                </h3>
+
+                                <p>
+                                    Buyers and producers need a
+                                    clearer path towards one another.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             05 — QUESTIONS
+        ====================================================== -->
+
+        <section
+            id="research-questions"
+            class="research-section"
+        >
+
+            <div class="research-container">
+
+                <div class="research-section-heading">
+
+                    <div>
+
+                        <span class="research-kicker text-cyan">
+                            05 / QUESTIONS
+                        </span>
+
+                        <span class="research-section-number">
+                            QUESTIONS BEFORE FEATURES
+                        </span>
+
+                    </div>
+
+
+                    <h2>
+
+                        Every feature had to
+                        <br>
+
+                        survive a
+                        <span class="text-spectrum">
+                            question.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="research-question-grid">
+
+
+                    <article class="research-question-card">
+
+                        <span class="question-index">
+                            QUESTION / 01
+                        </span>
+
+                        <div class="question-symbol">
+                            ?
+                        </div>
+
+                        <h3>
+                            Who actually needs this?
+                        </h3>
+
+                        <p>
+                            A feature should begin with a real
+                            person and a real need, not technology
+                            looking for a purpose.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-question-card">
+
+                        <span class="question-index">
+                            QUESTION / 02
+                        </span>
+
+                        <div class="question-symbol">
+                            ?
+                        </div>
+
+                        <h3>
+                            What happens before and after?
+                        </h3>
+
+                        <p>
+                            A useful agricultural system cannot
+                            understand one step while ignoring
+                            everything surrounding it.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-question-card">
+
+                        <span class="question-index">
+                            QUESTION / 03
+                        </span>
+
+                        <div class="question-symbol">
+                            ?
+                        </div>
+
+                        <h3>
+                            Can these pieces connect?
+                        </h3>
+
+                        <p>
+                            Market access, labour, logistics,
+                            equipment and information should not
+                            be researched as isolated subjects.
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-question-card">
+
+                        <span class="question-index">
+                            QUESTION / 04
+                        </span>
+
+                        <div class="question-symbol">
+                            ?
+                        </div>
+
+                        <h3>
+                            What should improve next?
+                        </h3>
+
+                        <p>
+                            Research does not end when something
+                            is designed. Every decision creates
+                            another opportunity to review and improve.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             06 — TRANSFORMATION
+        ====================================================== -->
+
+        <section
+            class="research-section research-transformation"
+        >
+
+            <div class="research-container">
+
+                <div class="research-section-heading centered">
+
+                    <span class="research-kicker text-lime">
+                        06 / TRANSFORMATION
+                    </span>
+
+                    <h2>
+
+                        From one problem
+                        <br>
+
+                        to an
+                        <span class="text-spectrum">
+                            ecosystem.
+                        </span>
+
+                    </h2>
+
+                    <p>
+
+                        The research direction changed as
+                        relationships between different parts
+                        of agriculture became clearer.
+
+                    </p>
+
+                </div>
+
+
+                <div class="research-transformation-flow">
+
+
+                    <div class="research-transform-step">
+
+                        <span class="research-transform-number text-green">
+                            01
+                        </span>
+
+                        <strong>
+                            Onion experience
+                        </strong>
+
+                        <p>
+                            A real personal observation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="research-transform-connector"></div>
+
+
+                    <div class="research-transform-step">
+
+                        <span class="research-transform-number text-cyan">
+                            02
+                        </span>
+
+                        <strong>
+                            Market access
+                        </strong>
+
+                        <p>
+                            Understanding information
+                            and buyer access.
+                        </p>
+
+                    </div>
+
+
+                    <div class="research-transform-connector"></div>
+
+
+                    <div class="research-transform-step">
+
+                        <span class="research-transform-number text-violet">
+                            03
+                        </span>
+
+                        <strong>
+                            Ecosystem research
+                        </strong>
+
+                        <p>
+                            Looking beyond one transaction.
+                        </p>
+
+                    </div>
+
+
+                    <div class="research-transform-connector"></div>
+
+
+                    <div class="research-transform-step final-step">
+
+                        <span class="research-transform-number text-magenta">
+                            04
+                        </span>
+
+                        <strong>
+                            Connected system
+                        </strong>
+
+                        <p>
+                            Designing around relationships.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             07 — SYSTEM
+        ====================================================== -->
+
+        <section
+            id="research-system"
+            class="research-section research-system"
+        >
+
+            <div class="research-container">
+
+                <div class="research-section-heading centered">
+
+                    <span class="research-kicker text-cyan">
+                        07 / SYSTEM ARCHITECTURE
+                    </span>
+
+                    <h2>
+
+                        The research eventually
+                        <br>
+
+                        became a
+                        <span class="text-spectrum">
+                            system architecture.
+                        </span>
+
+                    </h2>
+
+                    <p>
+
+                        The ecosystem was understood as a
+                        connected network rather than a collection
+                        of independent services.
+
+                    </p>
+
+                </div>
+
+
+                <div class="research-system-visual">
+
+
+                    <div class="research-system-ring ring-one"></div>
+
+                    <div class="research-system-ring ring-two"></div>
+
+                    <div class="research-system-ring ring-three"></div>
+
+
+                    <div class="research-system-center">
+
+                        <span class="text-cyan">
+                            AGRIVISION
+                        </span>
+
+                        <strong>
+                            ECOSYSTEM
+                        </strong>
+
+                        <small>
+                            CONNECTED AGRICULTURE
+                        </small>
+
+                    </div>
+
+
+                    <div class="research-role role-farmer">
+                        FARMER
+                    </div>
+
+                    <div class="research-role role-buyer">
+                        BUYER
+                    </div>
+
+                    <div class="research-role role-labour">
+                        LABOUR
+                    </div>
+
+                    <div class="research-role role-logistics">
+                        LOGISTICS
+                    </div>
+
+                    <div class="research-role role-driver">
+                        DRIVER
+                    </div>
+
+                    <div class="research-role role-equipment">
+                        EQUIPMENT
+                    </div>
+
+                    <div class="research-role role-operator">
+                        OPERATOR
+                    </div>
+
+
+                </div>
+
+
+                <p class="research-system-caption">
+
+                    Seven operational roles.
+                    One connected ecosystem.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             08 — IDENTITY
+        ====================================================== -->
+
+        <section
+            class="research-section research-identity"
+        >
+
+            <div class="research-container">
+
+                <div class="research-identity-grid">
+
+
+                    <div class="research-identity-copy">
+
+                        <span class="research-kicker text-violet">
+                            08 / IDENTITY
+                        </span>
+
+                        <h2>
+
+                            Research shaped
+                            <br>
+
+                            not only what
+                            <span class="text-spectrum">
+                                AgriVision does,
+                            </span>
+
+                            but what it
+                            <span class="text-cyan">
+                                stands for.
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+
+                            The platform is not intended to be
+                            just another agricultural marketplace.
+
+                            It is being designed as an interconnected
+                            environment where different parts of
+                            the agricultural ecosystem can become
+                            easier to understand and coordinate.
+
+                        </p>
+
+
+                        <p>
+
+                            That distinction became an important
+                            part of the project's identity.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="research-identity-diagram">
+
+                        <div class="identity-line identity-line-a"></div>
+                        <div class="identity-line identity-line-b"></div>
+                        <div class="identity-line identity-line-c"></div>
+                        <div class="identity-line identity-line-d"></div>
+
+
+                        <div class="identity-center">
+
+                            <strong>
+                                AVK
+                            </strong>
+
+                            <small>
+                                SYSTEM
+                            </small>
+
+                        </div>
+
+
+                        <div class="identity-node identity-a">
+                            PEOPLE
+                        </div>
+
+                        <div class="identity-node identity-b">
+                            RESOURCES
+                        </div>
+
+                        <div class="identity-node identity-c">
+                            MOVEMENT
+                        </div>
+
+                        <div class="identity-node identity-d">
+                            KNOWLEDGE
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             09 — RESEARCH EXPERIENCE
+        ====================================================== -->
+
+        <section
+            id="research-journey"
+            class="research-section"
+        >
+
+            <div class="research-container">
+
+                <div class="research-section-heading centered">
+
+                    <span class="research-kicker text-magenta">
+                        09 / RESEARCH EXPERIENCE
+                    </span>
+
+                    <h2>
+
+                        Research became a cycle
+                        <br>
+
+                        of
+                        <span class="text-spectrum">
+                            looking deeper.
+                        </span>
+
+                    </h2>
+
+                    <p>
+
+                        The project evolved through repeated
+                        observation, questioning, connection,
+                        design and improvement.
+
+                    </p>
+
+                </div>
+
+
+                <div class="research-experience">
+
+
+                    <div class="research-experience-axis"></div>
+
+
+                    <!-- LOOK -->
+
+                    <article class="research-experience-step experience-left experience-green">
+
+                        <div class="experience-content">
+
+                            <span>
+                                01 / LOOK
+                            </span>
+
+                            <h3>
+                                Start with what is visible.
+                            </h3>
+
+                            <p>
+
+                                The initial observation was simple:
+                                an agricultural transaction where
+                                the farmer did not have the same
+                                visibility into the wider market.
+
+                            </p>
+
+                        </div>
+
+                        <div class="experience-marker"></div>
+
+                    </article>
+
+
+                    <!-- LISTEN -->
+
+                    <article class="research-experience-step experience-right experience-cyan">
+
+                        <div class="experience-content">
+
+                            <span>
+                                02 / LISTEN
+                            </span>
+
+                            <h3>
+                                Understand the people around it.
+                            </h3>
+
+                            <p>
+
+                                The research expanded towards the
+                                different people and resources that
+                                influence agricultural activity.
+
+                            </p>
+
+                        </div>
+
+                        <div class="experience-marker"></div>
+
+                    </article>
+
+
+                    <!-- CONNECT -->
+
+                    <article class="research-experience-step experience-left experience-violet">
+
+                        <div class="experience-content">
+
+                            <span>
+                                03 / CONNECT
+                            </span>
+
+                            <h3>
+                                Map the relationships.
+                            </h3>
+
+                            <p>
+
+                                Farmers, buyers, labour, equipment,
+                                operators, logistics and drivers
+                                began to appear as connected parts
+                                of one larger system.
+
+                            </p>
+
+                        </div>
+
+                        <div class="experience-marker"></div>
+
+                    </article>
+
+
+                    <!-- REIMAGINE -->
+
+                    <article class="research-experience-step experience-right experience-magenta">
+
+                        <div class="experience-content">
+
+                            <span>
+                                04 / REIMAGINE
+                            </span>
+
+                            <h3>
+                                Question the original assumptions.
+                            </h3>
+
+                            <p>
+
+                                Instead of building around one
+                                isolated marketplace problem,
+                                the concept was reimagined around
+                                an interconnected ecosystem.
+
+                            </p>
+
+                        </div>
+
+                        <div class="experience-marker"></div>
+
+                    </article>
+
+
+                    <!-- DESIGN -->
+
+                    <article class="research-experience-step experience-left experience-lime">
+
+                        <div class="experience-content">
+
+                            <span>
+                                05 / DESIGN
+                            </span>
+
+                            <h3>
+                                Turn research into architecture.
+                            </h3>
+
+                            <p>
+
+                                The research informed the structure
+                                of roles, public information,
+                                identity, portals and the wider
+                                ecosystem.
+
+                            </p>
+
+                        </div>
+
+                        <div class="experience-marker"></div>
+
+                    </article>
+
+
+                    <!-- BUILD -->
+
+                    <article class="research-experience-step experience-right experience-amber">
+
+                        <div class="experience-content">
+
+                            <span>
+                                06 / BUILD
+                            </span>
+
+                            <h3>
+                                Build, review and improve.
+                            </h3>
+
+                            <p>
+
+                                The architecture continued to evolve
+                                through repeated review and redesign
+                                rather than being treated as finished
+                                after the first version.
+
+                            </p>
+
+                        </div>
+
+                        <div class="experience-marker"></div>
+
+                    </article>
+
+
+                </div>
+
+
+                <div class="research-journey-conclusion">
+
+                    <p>
+
+                        <span class="text-green">Research</span>
+                        became
+
+                        <span class="text-cyan">
+                            Design
+                        </span>,
+
+                        which became
+
+                        <span class="text-violet">
+                            Review
+                        </span>,
+
+                        which became
+
+                        <span class="text-magenta">
+                            Improvement.
+                        </span>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             10 — CORE PROBLEM
+        ====================================================== -->
+
+        <section
+            class="research-section research-problem"
+        >
+
+            <div class="research-container">
+
+
+                <div class="research-problem-header">
+
+                    <span class="research-kicker text-cyan">
+                        10 / CORE PROBLEM
+                    </span>
+
+                    <h2>
+
+                        Fragmentation is not
+                        <br>
+
+                        one problem.
+
+                        <br>
+
+                        It is a chain of
+                        <em>
+                            problems.
+                        </em>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="research-problem-chain">
+
+
+                    <article>
+
+                        <span>
+                            01 / INFORMATION
+                        </span>
+
+                        <strong>
+                            Limited visibility
+                        </strong>
+
+                        <p>
+                            Information may not reach
+                            the right person at the right time.
+                        </p>
+
+                    </article>
+
+
+                    <i></i>
+
+
+                    <article>
+
+                        <span>
+                            02 / ACCESS
+                        </span>
+
+                        <strong>
+                            Difficult connections
+                        </strong>
+
+                        <p>
+                            People and resources can remain
+                            difficult to discover.
+                        </p>
+
+                    </article>
+
+
+                    <i></i>
+
+
+                    <article>
+
+                        <span>
+                            03 / COORDINATION
+                        </span>
+
+                        <strong>
+                            Disconnected services
+                        </strong>
+
+                        <p>
+                            Separate activities may not
+                            coordinate efficiently.
+                        </p>
+
+                    </article>
+
+
+                    <i></i>
+
+
+                    <article>
+
+                        <span>
+                            04 / MOVEMENT
+                        </span>
+
+                        <strong>
+                            Physical dependency
+                        </strong>
+
+                        <p>
+                            Agriculture still depends on
+                            people and resources moving together.
+                        </p>
+
+                    </article>
+
+
+                    <i></i>
+
+
+                    <article>
+
+                        <span>
+                            05 / ECOSYSTEM
+                        </span>
+
+                        <strong>
+                            Fragmented experience
+                        </strong>
+
+                        <p>
+                            The result can feel like many
+                            disconnected systems instead of one.
+                        </p>
+
+                    </article>
+
+                </div>
+
+
+                <div class="research-problem-conclusion">
+
+                    <span></span>
+
+                    <p>
+
+                        The research direction became:
+
+                        <strong>
+                            connect the chain.
+                        </strong>
+
+                    </p>
+
+                    <span></span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             11 — ITERATION
+        ====================================================== -->
+
+        <section
+            class="research-section research-iteration"
+        >
+
+            <div class="research-container">
+
+                <div class="research-section-heading centered">
+
+                    <span class="research-kicker text-violet">
+                        11 / ITERATION
+                    </span>
+
+                    <h2>
+
+                        Research did not produce
+                        <br>
+
+                        one final answer.
+
+                        <br>
+
+                        It produced a habit of
+                        <span class="text-spectrum">
+                            improvement.
+                        </span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="research-iteration-layout">
+
+
+                    <div class="research-iteration-center">
+
+                        <span>
+                            CONTINUOUS
+                        </span>
+
+                        <strong>
+                            ↻
+                        </strong>
+
+                        <small>
+                            IMPROVEMENT
+                        </small>
+
+                    </div>
+
+
+                    <div class="research-iteration-item iteration-top">
+
+                        <span class="text-green">
+                            01
+                        </span>
+
+                        RESEARCH
+
+                    </div>
+
+
+                    <div class="research-iteration-item iteration-right">
+
+                        <span class="text-cyan">
+                            02
+                        </span>
+
+                        DESIGN
+
+                    </div>
+
+
+                    <div class="research-iteration-item iteration-bottom">
+
+                        <span class="text-magenta">
+                            03
+                        </span>
+
+                        REVIEW
+
+                    </div>
+
+
+                    <div class="research-iteration-item iteration-left">
+
+                        <span class="text-violet">
+                            04
+                        </span>
+
+                        REDESIGN
+
+                    </div>
+
+                </div>
+
+
+                <p class="research-iteration-note">
+
+                    This cycle became one of the defining
+                    principles of AgriVision Karnataka's
+                    development.
+
+                    <br>
+
+                    The architecture was repeatedly reconsidered
+                    as new relationships became clearer.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             12 — PRINCIPLES / DIFFERENCE
+        ====================================================== -->
+
+        <section
+            class="research-section research-difference"
+        >
+
+            <div class="research-container">
+
+                <div class="research-difference-layout">
+
+
+                    <div class="research-difference-title">
+
+                        <span class="research-kicker text-lime">
+                            12 / WHAT RESEARCH CHANGED
+                        </span>
+
+                        <h2>
+
+                            It changed the
+                            <span class="text-spectrum">
+                                way the problem
+                                was framed.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <div class="research-difference-points">
+
+
+                        <div>
+
+                            <h3>
+                                From marketplace
+                            </h3>
+
+                            <p>
+                                towards ecosystem.
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                From transactions
+                            </h3>
+
+                            <p>
+                                towards relationships.
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                From features
+                            </h3>
+
+                            <p>
+                                towards real needs.
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                From completion
+                            </h3>
+
+                            <p>
+                                towards continuous improvement.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             13 — RESEARCH ETHOS
+        ====================================================== -->
+
+        <section
+            class="research-section research-ethos"
+        >
+
+            <div class="research-container">
+
+
+                <div class="research-ethos-frame">
+
+                    <div class="research-ethos-mark">
+                        R
+                    </div>
+
+
+                    <span class="research-kicker text-cyan">
+                        13 / RESEARCH ETHOS
+                    </span>
+
+
+                    <h2>
+
+                        Do not build
+                        <br>
+
+                        what looks impressive.
+
+                        <br>
+
+                        Build what becomes
+                        <em>
+                            meaningful.
+                        </em>
+
+                    </h2>
+
+
+                    <p>
+
+                        Research keeps the project grounded
+                        in the realities that inspired it.
+
+                    </p>
+
+
+                    <p>
+
+                        Observe deeply.
+                        Question continuously.
+                        Connect the pieces.
+                        Improve the system.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             14 — FUTURE RESEARCH
+        ====================================================== -->
+
+        <section
+            id="research-next"
+            class="research-section research-next"
+        >
+
+            <div class="research-container">
+
+
+                <div class="research-section-heading centered">
+
+                    <span class="research-kicker text-magenta">
+                        14 / FUTURE RESEARCH
+                    </span>
+
+                    <h2>
+
+                        The research
+                        <span class="text-spectrum">
+                            continues.
+                        </span>
+
+                    </h2>
+
+                    <p>
+
+                        AgriVision Karnataka is not treated as
+                        a finished answer. There are still deeper
+                        questions to explore.
+
+                    </p>
+
+                </div>
+
+
+                <div class="research-future-layers">
+
+
+                    <article class="research-future-layer">
+
+                        <span>
+                            FUTURE / 01
+                        </span>
+
+                        <h3>
+                            Agricultural intelligence
+                        </h3>
+
+                        <p>
+                            How can information become more useful,
+                            understandable and timely for agricultural
+                            decisions?
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-future-layer">
+
+                        <span>
+                            FUTURE / 02
+                        </span>
+
+                        <h3>
+                            Resource utilisation
+                        </h3>
+
+                        <p>
+                            How can underused agricultural resources,
+                            skills and capabilities become easier
+                            to discover and coordinate?
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-future-layer">
+
+                        <span>
+                            FUTURE / 03
+                        </span>
+
+                        <h3>
+                            Sustainable systems
+                        </h3>
+
+                        <p>
+                            How can the ecosystem support more
+                            responsible use of resources and
+                            long-term agricultural resilience?
+                        </p>
+
+                    </article>
+
+
+                    <article class="research-future-layer">
+
+                        <span>
+                            FUTURE / 04
+                        </span>
+
+                        <h3>
+                            Connected research
+                        </h3>
+
+                        <p>
+                            How can future research continuously
+                            improve the architecture rather than
+                            allowing it to become static?
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             15 — WHY THIS MATTERS
+        ====================================================== -->
+
+        <section
+            class="research-section research-founder"
+        >
+
+            <div class="research-container">
+
+
+                <div class="research-founder-content">
+
+                    <span class="research-kicker text-green">
+                        15 / WHY THIS MATTERS
+                    </span>
+
+
+                    <p class="research-founder-line">
+
+                        The research did not begin because
+                        agriculture needed another website.
+
+                    </p>
+
+
+                    <p class="research-founder-line">
+
+                        It began because one agricultural experience
+                        exposed a question about information,
+                        access and connection.
+
+                    </p>
+
+
+                    <p class="research-founder-final">
+
+                        That question became AgriVision Karnataka.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             16 — FINAL
+        ====================================================== -->
+
+        <section
+            class="research-section research-final"
+        >
+
+            <div class="research-final-orbit"></div>
+
+
+            <div class="research-container">
+
+                <div class="research-final-content">
+
+                    <span class="research-kicker text-cyan">
+                        RESEARCH / CONTINUING
+                    </span>
+
+
+                    <h2>
+
+                        Every answer creates
+                        <br>
+
+                        another question.
+
+                    </h2>
+
+
+                    <p>
+
+                        And that is why research remains
+                        part of AgriVision Karnataka —
+                        not as a chapter that ends,
+                        but as a process that keeps the
+                        ecosystem improving.
+
+                    </p>
+
+
+                    <div class="research-final-actions">
+
+                        <a
+                            href="ecosystem.html"
+                            class="research-primary-button"
+                        >
+                            <span>
+                                Explore the Ecosystem
+                            </span>
+                        </a>
+
+
+                        <a
+                            href="future.html"
+                            class="research-outline-button"
+                        >
+                            Explore the Future
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer class="research-footer">
+
+        <div class="research-container">
+
+            <div class="research-footer-inner">
+
+
+                <div class="research-footer-brand">
+
+                    <strong>
+                        AGRIVISION KARNATAKA
+                    </strong>
+
+                    <p>
+                        Researching connections.
+                        Designing possibilities.
+                        Building an agricultural ecosystem.
+                    </p>
+
+                </div>
+
+
+                <div class="research-footer-links">
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="ecosystem.html">
+                        Ecosystem
+                    </a>
+
+                    <a href="impact.html">
+                        Impact
+                    </a>
+
+                    <a href="sustainability.html">
+                        Sustainability
+                    </a>
+
+                    <a href="future.html">
+                        Future
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="research-footer-bottom">
+
+                <span>
+                    © <span id="year"></span>
+                    AgriVision Karnataka
+                </span>
+
+                <span>
+                    Research • Design • Improve
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         BACK TO TOP
+    ========================================================== -->
+
+    <button
+        class="scroll-top research-top"
+        type="button"
+        aria-label="Back to top"
+    >
+        ↑
+    </button>
+
+
+
+    <!-- =========================================================
+         EXISTING AGRIVISION JAVASCRIPT
+    ========================================================== -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

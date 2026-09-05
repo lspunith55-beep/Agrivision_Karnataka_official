@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Driver Current Trip"
+    >
+
+    <title>
+        Current Trip | Driver | AgriVision Karnataka
+    </title>
+
+    <!-- SHARED CORE CSS -->
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     GLOBAL AGRIVISION VISUAL ENVIRONMENT
+     ========================================================= -->
+
+<div
+    class="background-image"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-one"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-two"
+    aria-hidden="true"
+></div>
+
+<div
+    class="mouse-glow"
+    aria-hidden="true"
+></div>
+
+<div
+    class="particle-field"
+    aria-hidden="true"
+></div>
+
+<div
+    class="fireflies"
+    aria-hidden="true"
+></div>
+
+<div
+    class="floating-leaves"
+    aria-hidden="true"
+></div>
+
+<div
+    class="cursor-stars"
+    aria-hidden="true"
+></div>
+
+
+
+<!-- =========================================================
+     APPLICATION
+     ========================================================= -->
+
+<div class="av-app">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <a
+                href="driver-portal.html"
+                class="av-brand"
+            >
+
+                <span
+                    class="av-status-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="av-brand-name">
+                    AGRIVISION
+                </span>
+
+                <span class="av-brand-region">
+                    KARNATAKA
+                </span>
+
+            </a>
+
+
+
+            <label
+                class="av-search"
+                aria-label="Search trip"
+            >
+
+                <span
+                    class="av-search-icon"
+                    aria-hidden="true"
+                >
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search shipment, order, location..."
+                    autocomplete="off"
+                    data-global-search
+                >
+
+            </label>
+
+
+
+            <div class="av-header-actions">
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    aria-label="Notifications"
+                    data-notification
+                >
+                    🔔
+                </button>
+
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    aria-label="Driver profile"
+                    data-modal-open="driverTripProfileModal"
+                >
+                    👤
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="av-welcome">
+
+        <div class="av-page av-welcome-content">
+
+
+            <div class="av-eyebrow">
+
+                <span>
+                    DRIVER CORE
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    LIVE TRIP EXECUTION
+                </span>
+
+            </div>
+
+
+
+            <h1 class="av-welcome-title">
+
+                From Planned Route To
+                <span class="av-gradient-text">
+                    Successful Delivery.
+                </span>
+
+            </h1>
+
+
+
+            <p class="av-welcome-description">
+
+                This is the Driver's operational workspace for an
+                accepted movement.
+
+                Every stage of the trip is connected here:
+                travelling to pickup, arrival, loading, departure,
+                transit, intermediate stops, delay reporting,
+                destination arrival, unloading and final delivery
+                confirmation.
+
+                A completed trip should update the shipment,
+                order, vehicle, Driver, logistics network and
+                activity history together.
+
+            </p>
+
+
+
+            <div
+                class="av-chip-row"
+                style="margin-top:32px;"
+            >
+
+                <span
+                    class="av-status av-status-active"
+                    data-driver-trip-status
+                >
+                    ● TRIP READY
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    SHIPMENT:
+
+                    <strong
+                        data-trip-shipment-id
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    DRIVER:
+
+                    <strong
+                        data-user-name
+                        style="margin-left:5px;"
+                    >
+                        Driver
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    VEHICLE:
+
+                    <strong
+                        data-driver-vehicle
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CURRENT TRIP SUMMARY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                CURRENT MOVEMENT
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                One clear view of the movement from
+                <span class="av-gradient-text">
+                    start to finish.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            PICKUP
+                        </div>
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <h3
+                            class="av-card-title"
+                            data-trip-pickup
+                        >
+                            —
+                        </h3>
+
+                        <p
+                            class="av-card-description"
+                            data-trip-pickup-detail
+                        >
+                            Pickup information will appear here.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            DESTINATION
+                        </div>
+
+                        <div class="av-role-icon">
+                            📍
+                        </div>
+
+                        <h3
+                            class="av-card-title"
+                            data-trip-destination
+                        >
+                            —
+                        </h3>
+
+                        <p
+                            class="av-card-description"
+                            data-trip-destination-detail
+                        >
+                            Destination information will appear
+                            here.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            CARGO
+                        </div>
+
+                        <div class="av-role-icon">
+                            🌾
+                        </div>
+
+                        <h3
+                            class="av-card-title"
+                            data-trip-cargo
+                        >
+                            —
+                        </h3>
+
+                        <p
+                            class="av-card-description"
+                            data-trip-cargo-detail
+                        >
+                            Cargo information will appear here.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            STATUS
+                        </div>
+
+                        <div class="av-role-icon">
+                            🚚
+                        </div>
+
+                        <h3
+                            class="av-card-title"
+                            data-trip-current-status
+                        >
+                            READY
+                        </h3>
+
+                        <p
+                            class="av-card-description"
+                            data-trip-status-detail
+                        >
+                            Awaiting the next operational action.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TRIP PROGRESS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                MOVEMENT PROGRESS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Every stage has a purpose,
+                <span class="av-gradient-text">
+                    and every stage is recorded.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:42px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-flow">
+
+
+                        <div
+                            class="av-flow-item"
+                            data-trip-step="accepted"
+                        >
+
+                            <strong>
+                                ✓
+                            </strong>
+
+                            <span>
+                                Accepted
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div
+                            class="av-flow-item"
+                            data-trip-step="to-pickup"
+                        >
+
+                            <strong>
+                                🚚
+                            </strong>
+
+                            <span>
+                                To Pickup
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div
+                            class="av-flow-item"
+                            data-trip-step="arrived-pickup"
+                        >
+
+                            <strong>
+                                📍
+                            </strong>
+
+                            <span>
+                                Arrived
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div
+                            class="av-flow-item"
+                            data-trip-step="loading"
+                        >
+
+                            <strong>
+                                📦
+                            </strong>
+
+                            <span>
+                                Loading
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div
+                            class="av-flow-item"
+                            data-trip-step="transit"
+                        >
+
+                            <strong>
+                                🛣️
+                            </strong>
+
+                            <span>
+                                Transit
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div
+                            class="av-flow-item"
+                            data-trip-step="destination"
+                        >
+
+                            <strong>
+                                📍
+                            </strong>
+
+                            <span>
+                                Destination
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div
+                            class="av-flow-item"
+                            data-trip-step="delivered"
+                        >
+
+                            <strong>
+                                🎉
+                            </strong>
+
+                            <span>
+                                Delivered
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PICKUP OPERATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                PICKUP
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Start the movement by confirming the
+                <span class="av-gradient-text">
+                    pickup.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                The Driver should confirm arrival at the pickup
+                location before loading begins.
+
+                This creates a reliable operational timestamp and
+                keeps the Farmer and Logistics records synchronized.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-arrive-pickup"
+                    >
+
+
+                        <div class="av-grid av-grid-3">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="pickupShipmentId"
+                                    class="av-label"
+                                >
+                                    Shipment ID
+                                </label>
+
+                                <input
+                                    id="pickupShipmentId"
+                                    name="shipmentId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="SHP-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="pickupLocation"
+                                    class="av-label"
+                                >
+                                    Pickup Location
+                                </label>
+
+                                <input
+                                    id="pickupLocation"
+                                    name="location"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Pickup location"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="pickupTime"
+                                    class="av-label"
+                                >
+                                    Arrival Time
+                                </label>
+
+                                <input
+                                    id="pickupTime"
+                                    name="arrivalTime"
+                                    type="datetime-local"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:flex-end;
+                                margin-top:28px;
+                            "
+                        >
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-primary"
+                            >
+
+                                CONFIRM ARRIVAL
+
+                                <span>
+                                    📍
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LOADING
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                LOADING
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Record what actually enters the
+                <span class="av-gradient-text">
+                    vehicle.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Loading is connected to cargo, capacity and any
+                supporting labour or equipment.
+
+                If a shared load has been accepted, the system must
+                account for all participating cargo before the
+                vehicle departs.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-loading-complete"
+                    >
+
+
+                        <div class="av-grid av-grid-4">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="loadingShipmentId"
+                                    class="av-label"
+                                >
+                                    Shipment ID
+                                </label>
+
+                                <input
+                                    id="loadingShipmentId"
+                                    name="shipmentId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="SHP-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="loadingQuantity"
+                                    class="av-label"
+                                >
+                                    Loaded Quantity
+                                </label>
+
+                                <input
+                                    id="loadingQuantity"
+                                    name="loadedQuantity"
+                                    type="number"
+                                    min="0"
+                                    step="0.01"
+                                    class="av-input"
+                                    placeholder="kg"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="loadingCondition"
+                                    class="av-label"
+                                >
+                                    Cargo Condition
+                                </label>
+
+                                <select
+                                    id="loadingCondition"
+                                    name="cargoCondition"
+                                    class="av-input"
+                                >
+
+                                    <option value="Good">
+                                        Good
+                                    </option>
+
+                                    <option value="Acceptable">
+                                        Acceptable
+                                    </option>
+
+                                    <option value="Issue">
+                                        Issue
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div
+                                style="
+                                    display:flex;
+                                    align-items:flex-end;
+                                "
+                            >
+
+                                <button
+                                    type="submit"
+                                    class="av-button av-button-primary"
+                                    style="width:100%;"
+                                >
+
+                                    CONFIRM LOADED
+
+                                    <span>
+                                        📦
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-field"
+                            style="margin-top:25px;"
+                        >
+
+                            <label
+                                for="loadingNotes"
+                                class="av-label"
+                            >
+                                Loading Notes
+                            </label>
+
+                            <textarea
+                                id="loadingNotes"
+                                name="notes"
+                                class="av-input"
+                                rows="4"
+                                placeholder="Record relevant loading information..."
+                            ></textarea>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIVE CARGO / CAPACITY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                VEHICLE LOAD
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Know what the vehicle is carrying before
+                <span class="av-gradient-text">
+                    continuing the journey.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            TOTAL CAPACITY
+                        </div>
+
+                        <div class="av-role-icon">
+                            🚛
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-trip-total-capacity
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            CURRENT LOAD
+                        </div>
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-trip-current-load
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            REMAINING
+                        </div>
+
+                        <div class="av-role-icon">
+                            🟢
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-trip-remaining-capacity
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            SHARED LOAD
+                        </div>
+
+                        <div class="av-role-icon">
+                            🔗
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-trip-shared-load
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         START TRANSIT
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                TRANSIT
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                The cargo is loaded.
+                <span class="av-gradient-text">
+                    Begin the journey.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-start-transit"
+                    >
+
+
+                        <div class="av-grid av-grid-3">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="transitShipmentId"
+                                    class="av-label"
+                                >
+                                    Shipment ID
+                                </label>
+
+                                <input
+                                    id="transitShipmentId"
+                                    name="shipmentId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="SHP-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="transitRoute"
+                                    class="av-label"
+                                >
+                                    Confirmed Route
+                                </label>
+
+                                <input
+                                    id="transitRoute"
+                                    name="route"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Origin → Destination"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="transitDeparture"
+                                    class="av-label"
+                                >
+                                    Departure Time
+                                </label>
+
+                                <input
+                                    id="transitDeparture"
+                                    name="departureTime"
+                                    type="datetime-local"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:flex-end;
+                                margin-top:28px;
+                            "
+                        >
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-primary"
+                            >
+
+                                START TRANSIT
+
+                                <span>
+                                    🚚
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LIVE TRIP STATUS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                TRIP STATUS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Keep the network informed while the vehicle is
+                <span class="av-gradient-text">
+                    moving.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:42px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-trip-status"
+                    >
+
+
+                        <div class="av-grid av-grid-4">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="tripStatusShipment"
+                                    class="av-label"
+                                >
+                                    Shipment ID
+                                </label>
+
+                                <input
+                                    id="tripStatusShipment"
+                                    name="shipmentId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="SHP-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="tripStatus"
+                                    class="av-label"
+                                >
+                                    Status
+                                </label>
+
+                                <select
+                                    id="tripStatus"
+                                    name="status"
+                                    class="av-input"
+                                    required
+                                >
+
+                                    <option value="In Transit">
+                                        In Transit
+                                    </option>
+
+                                    <option value="Approaching Pickup">
+                                        Approaching Pickup
+                                    </option>
+
+                                    <option value="At Intermediate Stop">
+                                        At Intermediate Stop
+                                    </option>
+
+                                    <option value="Approaching Destination">
+                                        Approaching Destination
+                                    </option>
+
+                                    <option value="Stopped">
+                                        Temporarily Stopped
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="tripCurrentLocation"
+                                    class="av-label"
+                                >
+                                    Current Location
+                                </label>
+
+                                <input
+                                    id="tripCurrentLocation"
+                                    name="location"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Current location"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="tripEta"
+                                    class="av-label"
+                                >
+                                    Updated ETA
+                                </label>
+
+                                <input
+                                    id="tripEta"
+                                    name="eta"
+                                    type="datetime-local"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-field"
+                            style="margin-top:25px;"
+                        >
+
+                            <label
+                                for="tripStatusNotes"
+                                class="av-label"
+                            >
+                                Status Note
+                            </label>
+
+                            <textarea
+                                id="tripStatusNotes"
+                                name="notes"
+                                class="av-input"
+                                rows="4"
+                                placeholder="Optional update for Logistics..."
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:flex-end;
+                                margin-top:28px;
+                            "
+                        >
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-primary"
+                            >
+
+                                UPDATE TRIP
+
+                                <span>
+                                    📡
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INTERMEDIATE STOPS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                INTERMEDIATE MOVEMENT
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Shared journeys may have multiple stops.
+                <span class="av-gradient-text">
+                    Keep every stop visible.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                When Smart Route combines compatible orders, the
+                vehicle may need to visit additional pickup or
+                delivery locations.
+
+                These stops must be explicitly represented so that
+                the driver knows what happens next and the connected
+                orders remain synchronized.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="driver-trip-stops">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                📍
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No intermediate stops
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Planned stops from the active route
+                                will appear here.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EXCEPTION / DELAY REPORTING
+         ===================================================== -->
+
+    <section
+        class="av-section"
+        id="exception"
+    >
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                EXCEPTION REPORTING
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Real roads change.
+                <span class="av-gradient-text">
+                    Record what happened.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Traffic, road conditions, weather, vehicle problems
+                and loading delays can change the expected journey.
+
+                The Driver should be able to report these events so
+                Logistics and connected participants are not working
+                with outdated assumptions.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-trip-exception"
+                    >
+
+
+                        <div class="av-grid av-grid-4">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="exceptionShipment"
+                                    class="av-label"
+                                >
+                                    Shipment ID
+                                </label>
+
+                                <input
+                                    id="exceptionShipment"
+                                    name="shipmentId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="SHP-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="exceptionType"
+                                    class="av-label"
+                                >
+                                    Issue Type
+                                </label>
+
+                                <select
+                                    id="exceptionType"
+                                    name="type"
+                                    class="av-input"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select issue
+                                    </option>
+
+                                    <option value="Traffic">
+                                        Traffic
+                                    </option>
+
+                                    <option value="Road Condition">
+                                        Road Condition
+                                    </option>
+
+                                    <option value="Weather">
+                                        Weather
+                                    </option>
+
+                                    <option value="Vehicle Issue">
+                                        Vehicle Issue
+                                    </option>
+
+                                    <option value="Loading Delay">
+                                        Loading Delay
+                                    </option>
+
+                                    <option value="Destination Issue">
+                                        Destination Issue
+                                    </option>
+
+                                    <option value="Cargo Issue">
+                                        Cargo Issue
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="exceptionSeverity"
+                                    class="av-label"
+                                >
+                                    Severity
+                                </label>
+
+                                <select
+                                    id="exceptionSeverity"
+                                    name="severity"
+                                    class="av-input"
+                                >
+
+                                    <option value="Low">
+                                        Low
+                                    </option>
+
+                                    <option value="Medium">
+                                        Medium
+                                    </option>
+
+                                    <option value="High">
+                                        High
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="exceptionDelay"
+                                    class="av-label"
+                                >
+                                    Estimated Delay
+                                </label>
+
+                                <input
+                                    id="exceptionDelay"
+                                    name="delayMinutes"
+                                    type="number"
+                                    min="0"
+                                    step="1"
+                                    class="av-input"
+                                    placeholder="Minutes"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-field"
+                            style="margin-top:25px;"
+                        >
+
+                            <label
+                                for="exceptionLocation"
+                                class="av-label"
+                            >
+                                Current Location
+                            </label>
+
+                            <input
+                                id="exceptionLocation"
+                                name="location"
+                                type="text"
+                                class="av-input"
+                                placeholder="Where did the issue occur?"
+                            >
+
+                        </div>
+
+
+
+                        <div
+                            class="av-field"
+                            style="margin-top:25px;"
+                        >
+
+                            <label
+                                for="exceptionDescription"
+                                class="av-label"
+                            >
+                                Description
+                            </label>
+
+                            <textarea
+                                id="exceptionDescription"
+                                name="description"
+                                class="av-input"
+                                rows="5"
+                                placeholder="Explain the issue and its effect on the movement..."
+                                required
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:flex-end;
+                                margin-top:28px;
+                            "
+                        >
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-secondary"
+                            >
+
+                                REPORT EXCEPTION
+
+                                <span>
+                                    ⚠️
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DESTINATION ARRIVAL
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                DESTINATION
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Arrival is another important
+                <span class="av-gradient-text">
+                    operational event.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-arrive-destination"
+                    >
+
+
+                        <div class="av-grid av-grid-3">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="destinationShipment"
+                                    class="av-label"
+                                >
+                                    Shipment ID
+                                </label>
+
+                                <input
+                                    id="destinationShipment"
+                                    name="shipmentId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="SHP-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="destinationLocation"
+                                    class="av-label"
+                                >
+                                    Destination
+                                </label>
+
+                                <input
+                                    id="destinationLocation"
+                                    name="location"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Destination"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="destinationArrivalTime"
+                                    class="av-label"
+                                >
+                                    Arrival Time
+                                </label>
+
+                                <input
+                                    id="destinationArrivalTime"
+                                    name="arrivalTime"
+                                    type="datetime-local"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:flex-end;
+                                margin-top:28px;
+                            "
+                        >
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-primary"
+                            >
+
+                                CONFIRM ARRIVAL
+
+                                <span>
+                                    📍
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DELIVERY CONFIRMATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                DELIVERY CONFIRMATION
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Finish the journey with a clear
+                <span class="av-gradient-text">
+                    delivery record.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Delivery confirmation is the point at which the
+                physical movement becomes a completed digital
+                operation.
+
+                Once successfully confirmed, the connected
+                shipment, order, vehicle, Driver, earnings,
+                reliability record and activity history can all
+                progress together.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-delivery-complete"
+                    >
+
+
+                        <div class="av-grid av-grid-4">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="deliveryShipment"
+                                    class="av-label"
+                                >
+                                    Shipment ID
+                                </label>
+
+                                <input
+                                    id="deliveryShipment"
+                                    name="shipmentId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="SHP-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="deliveryQuantity"
+                                    class="av-label"
+                                >
+                                    Quantity Delivered
+                                </label>
+
+                                <input
+                                    id="deliveryQuantity"
+                                    name="quantityDelivered"
+                                    type="number"
+                                    min="0"
+                                    step="0.01"
+                                    class="av-input"
+                                    placeholder="kg"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="deliveryCondition"
+                                    class="av-label"
+                                >
+                                    Cargo Condition
+                                </label>
+
+                                <select
+                                    id="deliveryCondition"
+                                    name="cargoCondition"
+                                    class="av-input"
+                                >
+
+                                    <option value="Good">
+                                        Good
+                                    </option>
+
+                                    <option value="Acceptable">
+                                        Acceptable
+                                    </option>
+
+                                    <option value="Issue">
+                                        Issue
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="receiverName"
+                                    class="av-label"
+                                >
+                                    Receiver
+                                </label>
+
+                                <input
+                                    id="receiverName"
+                                    name="receiver"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Receiver name"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-field"
+                            style="margin-top:25px;"
+                        >
+
+                            <label
+                                for="deliveryNotes"
+                                class="av-label"
+                            >
+                                Delivery Notes
+                            </label>
+
+                            <textarea
+                                id="deliveryNotes"
+                                name="notes"
+                                class="av-input"
+                                rows="5"
+                                placeholder="Record final delivery information..."
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <div
+                            class="av-chip-row"
+                            style="
+                                justify-content:flex-end;
+                                margin-top:30px;
+                            "
+                        >
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-primary"
+                            >
+
+                                CONFIRM DELIVERY
+
+                                <span>
+                                    ✓
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COMPLETION CHAIN
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                AFTER SUCCESSFUL DELIVERY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Completion should update the entire
+                <span class="av-gradient-text">
+                    ecosystem.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Shipment
+                        </h3>
+
+                        <p class="av-card-description">
+                            Movement becomes completed.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🚛
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Vehicle
+                        </h3>
+
+                        <p class="av-card-description">
+                            Vehicle can become available for its
+                            next eligible movement.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            💰
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Earnings
+                        </h3>
+
+                        <p class="av-card-description">
+                            Completed movement contributes to the
+                            Driver's earnings record.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⭐
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Reliability
+                        </h3>
+
+                        <p class="av-card-description">
+                            Successful operational history can feed
+                            the Driver's reliability record.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SUCCESS / ACTIVITY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                TRIP ACTIVITY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                The journey should remain visible after it
+                <span class="av-gradient-text">
+                    ends.
+                </span>
+
+            </h2>
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:35px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-activity>
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                🕘
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No trip activity yet
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Pickup, loading, transit, exception,
+                                arrival and successful delivery
+                                operations will appear here.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:70px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        DRIVER WORKSPACE
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        Trip completed?
+                        <span class="av-gradient-text">
+                            See what you earned.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="av-section-description"
+                        style="
+                            max-width:820px;
+                            margin-left:auto;
+                            margin-right:auto;
+                        "
+                    >
+
+                        After a successful delivery, the next
+                        important records are the Driver's earnings,
+                        completed movement history and reliability
+                        information.
+
+                    </p>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="driver-earnings.html"
+                            class="av-button av-button-primary"
+                        >
+                            VIEW EARNINGS
+                        </a>
+
+
+                        <a
+                            href="driver-performance.html"
+                            class="av-button av-button-secondary"
+                        >
+                            VIEW PERFORMANCE
+                        </a>
+
+
+                        <a
+                            href="driver-deliveries.html"
+                            class="av-button av-button-secondary"
+                        >
+                            FIND NEXT DELIVERY
+                        </a>
+
+
+                        <a
+                            href="driver-portal.html"
+                            class="av-button av-button-secondary"
+                        >
+                            DRIVER PORTAL
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="av-footer">
+
+    <div class="av-footer-inner">
+
+
+        <div class="av-footer-brand">
+            AGRIVISION KARNATAKA
+        </div>
+
+
+        <div class="av-footer-note">
+
+            DRIVER TRIP
+
+            <span>
+                •
+            </span>
+
+            PICKUP • TRANSIT • DELIVERY
+
+            <span>
+                •
+            </span>
+
+            AGRICULTURAL LOGISTICS
+
+            <span>
+                •
+            </span>
+
+            <span data-year>
+                2026
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     DRIVER PROFILE MODAL
+     ========================================================= -->
+
+<div
+    class="av-modal-backdrop"
+    id="driverTripProfileModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="av-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="driverTripProfileTitle"
+    >
+
+
+        <div class="av-modal-header">
+
+
+            <div>
+
+                <div class="av-page-kicker">
+                    DRIVER ACCOUNT
+                </div>
+
+                <h2
+                    id="driverTripProfileTitle"
+                    class="av-title"
+                >
+                    Driver Profile
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="av-icon-button"
+                data-modal-close
+                aria-label="Close profile"
+            >
+                ×
+            </button>
+
+
+        </div>
+
+
+
+        <div class="av-modal-body">
+
+
+            <div class="av-chip-row">
+
+
+                <span class="av-chip">
+
+                    Name:
+
+                    <strong
+                        data-user-name
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    Driver ID:
+
+                    <strong
+                        data-user-id
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    Role:
+
+                    <strong
+                        data-user-role
+                        style="margin-left:5px;"
+                    >
+                        Driver
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    Vehicle:
+
+                    <strong
+                        data-driver-vehicle
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="av-modal-footer">
+
+            <a
+                href="driver-earnings.html"
+                class="av-button av-button-primary"
+            >
+                EARNINGS
+            </a>
+
+
+            <button
+                type="button"
+                class="av-button av-button-secondary"
+                data-modal-close
+            >
+                CLOSE
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     SHARED CORE JAVASCRIPT
+     ========================================================= -->
+
+<script
+    src="core.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

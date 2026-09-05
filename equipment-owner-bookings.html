@@ -1,0 +1,3706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Equipment Owner Bookings and Operations"
+    >
+
+    <title>
+        Bookings & Operations | AgriVision Karnataka
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     AGRIVISION GLOBAL ENVIRONMENT
+     ========================================================= -->
+
+<div class="background-image" aria-hidden="true"></div>
+
+<div class="ambient-glow ambient-glow-one" aria-hidden="true"></div>
+
+<div class="ambient-glow ambient-glow-two" aria-hidden="true"></div>
+
+<div class="mouse-glow" aria-hidden="true"></div>
+
+<div class="particle-field" aria-hidden="true"></div>
+
+<div class="fireflies" aria-hidden="true"></div>
+
+<div class="floating-leaves" aria-hidden="true"></div>
+
+<div class="cursor-stars" aria-hidden="true"></div>
+
+
+
+<div class="av-app">
+
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+
+<header class="av-header">
+
+    <div class="av-header-inner">
+
+
+        <a
+            href="equipment-owner-dashboard.html"
+            class="av-brand"
+        >
+
+            <span
+                class="av-status-dot"
+                aria-hidden="true"
+            ></span>
+
+            <span class="av-brand-name">
+                AGRIVISION
+            </span>
+
+            <span class="av-brand-region">
+                KARNATAKA
+            </span>
+
+        </a>
+
+
+
+        <label
+            class="av-search"
+            aria-label="Search bookings"
+        >
+
+            <span
+                class="av-search-icon"
+                aria-hidden="true"
+            >
+                ⌕
+            </span>
+
+            <input
+                type="search"
+                placeholder="Search bookings, farmers, equipment..."
+                data-global-search
+            >
+
+        </label>
+
+
+
+        <div class="av-header-actions">
+
+            <a
+                href="equipment-owner-profile.html#notifications"
+                class="av-icon-button"
+                aria-label="Notifications"
+            >
+                🔔
+            </a>
+
+            <a
+                href="equipment-owner-profile.html"
+                class="av-icon-button"
+                aria-label="Profile"
+            >
+                👤
+            </a>
+
+        </div>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="av-welcome">
+
+    <div class="av-page av-welcome-content">
+
+
+        <div class="av-eyebrow">
+
+            <span>
+                EQUIPMENT OWNER
+            </span>
+
+            <span>
+                •
+            </span>
+
+            <span>
+                OPERATIONS CENTER
+            </span>
+
+        </div>
+
+
+        <h1 class="av-welcome-title">
+
+            From request to completed work,
+            <span class="av-gradient-text">
+                control the operation.
+            </span>
+
+        </h1>
+
+
+        <p class="av-welcome-description">
+
+            Manage Farmer requests, equipment rentals,
+            Operator assignments, transportation, shared-load
+            opportunities, equipment usage, returns, inspections
+            and operational issues from one connected workspace.
+
+        </p>
+
+
+        <div
+            class="av-chip-row"
+            style="margin-top:30px;"
+        >
+
+            <a
+                href="#requests"
+                class="av-button av-button-primary"
+            >
+                PENDING REQUESTS
+            </a>
+
+            <a
+                href="#active"
+                class="av-button av-button-secondary"
+            >
+                ACTIVE RENTALS
+            </a>
+
+            <a
+                href="#logistics"
+                class="av-button av-button-secondary"
+            >
+                LOGISTICS
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OPERATION SUMMARY
+     ========================================================= -->
+
+<section class="av-section">
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            OPERATIONS SUMMARY
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            Everything happening across your
+            <span class="av-gradient-text">
+                assignments.
+            </span>
+
+        </h2>
+
+
+        <div
+            class="av-grid av-grid-6"
+            style="margin-top:42px;"
+        >
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-page-kicker">
+                        REQUESTS
+                    </div>
+
+                    <div class="av-role-icon">
+                        📋
+                    </div>
+
+                    <div
+                        class="av-metric"
+                        data-pending-requests
+                    >
+                        —
+                    </div>
+
+                    <p class="av-card-description">
+                        Awaiting owner decision.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-page-kicker">
+                        UPCOMING
+                    </div>
+
+                    <div class="av-role-icon">
+                        📅
+                    </div>
+
+                    <div
+                        class="av-metric"
+                        data-upcoming-rentals
+                    >
+                        —
+                    </div>
+
+                    <p class="av-card-description">
+                        Accepted future rentals.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-page-kicker">
+                        ACTIVE
+                    </div>
+
+                    <div class="av-role-icon">
+                        🌾
+                    </div>
+
+                    <div
+                        class="av-metric"
+                        data-active-rentals
+                    >
+                        —
+                    </div>
+
+                    <p class="av-card-description">
+                        Equipment currently in use.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-page-kicker">
+                        TRANSIT
+                    </div>
+
+                    <div class="av-role-icon">
+                        🚚
+                    </div>
+
+                    <div
+                        class="av-metric"
+                        data-transit-equipment
+                    >
+                        —
+                    </div>
+
+                    <p class="av-card-description">
+                        Equipment currently moving.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-page-kicker">
+                        RETURNS
+                    </div>
+
+                    <div class="av-role-icon">
+                        ↩️
+                    </div>
+
+                    <div
+                        class="av-metric"
+                        data-pending-returns
+                    >
+                        —
+                    </div>
+
+                    <p class="av-card-description">
+                        Equipment awaiting return.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-page-kicker">
+                        INSPECTION
+                    </div>
+
+                    <div class="av-role-icon">
+                        🔍
+                    </div>
+
+                    <div
+                        class="av-metric"
+                        data-pending-inspections
+                    >
+                        —
+                    </div>
+
+                    <p class="av-card-description">
+                        Returned equipment requiring review.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     REQUESTS
+     ========================================================= -->
+
+<section
+    class="av-section"
+    id="requests"
+>
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            FARMER REQUESTS
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            Review every request before it becomes a
+            <span class="av-gradient-text">
+                booking.
+            </span>
+
+        </h2>
+
+
+        <p class="av-section-description">
+
+            A request contains the Farmer's agricultural
+            requirement, equipment need, location, schedule,
+            Operator requirement and transportation requirements.
+
+        </p>
+
+
+
+        <!-- REQUEST FILTER -->
+
+        <div
+            class="av-card av-reveal"
+            style="margin-top:35px;"
+        >
+
+            <div class="av-card-body">
+
+
+                <div class="av-grid av-grid-4">
+
+
+                    <div class="av-field">
+
+                        <label
+                            class="av-label"
+                            for="requestSearch"
+                        >
+                            Search
+                        </label>
+
+                        <input
+                            id="requestSearch"
+                            class="av-input"
+                            type="search"
+                            placeholder="Farmer, equipment, request..."
+                            data-request-search
+                        >
+
+                    </div>
+
+
+                    <div class="av-field">
+
+                        <label
+                            class="av-label"
+                            for="requestStatus"
+                        >
+                            Status
+                        </label>
+
+                        <select
+                            id="requestStatus"
+                            class="av-input"
+                            data-request-status
+                        >
+
+                            <option value="all">
+                                All
+                            </option>
+
+                            <option value="pending">
+                                Pending
+                            </option>
+
+                            <option value="accepted">
+                                Accepted
+                            </option>
+
+                            <option value="rejected">
+                                Rejected
+                            </option>
+
+                            <option value="clarification">
+                                Clarification
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="av-field">
+
+                        <label
+                            class="av-label"
+                            for="requestType"
+                        >
+                            Equipment
+                        </label>
+
+                        <select
+                            id="requestType"
+                            class="av-input"
+                            data-request-type
+                        >
+
+                            <option value="all">
+                                All equipment
+                            </option>
+
+                            <option value="tractor">
+                                Tractor
+                            </option>
+
+                            <option value="harvester">
+                                Harvester
+                            </option>
+
+                            <option value="seeder">
+                                Seeder
+                            </option>
+
+                            <option value="sprayer">
+                                Sprayer
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="av-field">
+
+                        <label
+                            class="av-label"
+                            for="requestSort"
+                        >
+                            Sort
+                        </label>
+
+                        <select
+                            id="requestSort"
+                            class="av-input"
+                            data-request-sort
+                        >
+
+                            <option value="recent">
+                                Recent
+                            </option>
+
+                            <option value="date">
+                                Work date
+                            </option>
+
+                            <option value="location">
+                                Location
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- REQUEST LIST -->
+
+        <div
+            class="av-grid av-grid-2"
+            style="margin-top:30px;"
+            data-request-list
+        >
+
+
+            <!-- REQUEST 1 -->
+
+            <article
+                class="av-card av-reveal request-card"
+                data-request-card
+                data-request-status-value="pending"
+                data-request-type-value="tractor"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:space-between;
+                            align-items:center;
+                        "
+                    >
+
+                        <span class="av-status av-status-info">
+                            ● PENDING
+                        </span>
+
+                        <span class="av-page-kicker">
+                            REQ-001
+                        </span>
+
+                    </div>
+
+
+                    <h3 class="av-card-title">
+                        Tractor requirement
+                    </h3>
+
+
+                    <p class="av-card-description">
+
+                        Farmer requires tractor support for
+                        agricultural field preparation.
+
+                    </p>
+
+
+                    <div
+                        class="av-grid av-grid-2"
+                        style="margin-top:25px;"
+                    >
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                FARMER
+                            </div>
+
+                            <strong>
+                                Farmer request
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                EQUIPMENT
+                            </div>
+
+                            <strong>
+                                Tractor
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                LOCATION
+                            </div>
+
+                            <strong>
+                                Farm location
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                DATE
+                            </div>
+
+                            <strong>
+                                Scheduled date
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                WORK
+                            </div>
+
+                            <strong>
+                                Field operation
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                OPERATOR
+                            </div>
+
+                            <strong>
+                                Required
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="margin-top:25px;"
+                    >
+
+                        <span class="av-chip">
+                            👷 Operator required
+                        </span>
+
+                        <span class="av-chip">
+                            🚚 Delivery required
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:flex-end;
+                            margin-top:28px;
+                        "
+                    >
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-request-action="clarify"
+                            data-request-id="REQ-001"
+                        >
+                            CLARIFY
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-request-action="reject"
+                            data-request-id="REQ-001"
+                        >
+                            REJECT
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="av-button av-button-primary"
+                            data-request-action="accept"
+                            data-request-id="REQ-001"
+                        >
+                            ACCEPT
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- REQUEST 2 -->
+
+            <article
+                class="av-card av-reveal request-card"
+                data-request-card
+                data-request-status-value="pending"
+                data-request-type-value="harvester"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:space-between;
+                            align-items:center;
+                        "
+                    >
+
+                        <span class="av-status av-status-info">
+                            ● PENDING
+                        </span>
+
+                        <span class="av-page-kicker">
+                            REQ-002
+                        </span>
+
+                    </div>
+
+
+                    <h3 class="av-card-title">
+                        Harvesting equipment
+                    </h3>
+
+
+                    <p class="av-card-description">
+
+                        Agricultural harvesting requirement with
+                        transportation coordination.
+
+                    </p>
+
+
+                    <div
+                        class="av-grid av-grid-2"
+                        style="margin-top:25px;"
+                    >
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                FARMER
+                            </div>
+
+                            <strong>
+                                Farmer request
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                EQUIPMENT
+                            </div>
+
+                            <strong>
+                                Harvester
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                LOCATION
+                            </div>
+
+                            <strong>
+                                Farm location
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                DATE
+                            </div>
+
+                            <strong>
+                                Scheduled date
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                OPERATOR
+                            </div>
+
+                            <strong>
+                                Not specified
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                TRANSPORT
+                            </div>
+
+                            <strong>
+                                Required
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="margin-top:25px;"
+                    >
+
+                        <span class="av-chip">
+                            🚚 Transport required
+                        </span>
+
+                        <span class="av-chip">
+                            📅 Schedule check
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:flex-end;
+                            margin-top:28px;
+                        "
+                    >
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-request-action="clarify"
+                            data-request-id="REQ-002"
+                        >
+                            CLARIFY
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-request-action="reject"
+                            data-request-id="REQ-002"
+                        >
+                            REJECT
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="av-button av-button-primary"
+                            data-request-action="accept"
+                            data-request-id="REQ-002"
+                        >
+                            ACCEPT
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     BOOKING WORKFLOW
+     ========================================================= -->
+
+<section class="av-section">
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            BOOKING LIFECYCLE
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            An accepted request becomes a
+            <span class="av-gradient-text">
+                coordinated operation.
+            </span>
+
+        </h2>
+
+
+        <div
+            class="av-grid av-grid-8"
+            style="margin-top:42px;"
+        >
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        01
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Request
+                    </h3>
+
+                    <p class="av-card-description">
+                        Farmer submits an equipment requirement.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        02
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Review
+                    </h3>
+
+                    <p class="av-card-description">
+                        Owner checks equipment, date and operational
+                        feasibility.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        03
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Accept
+                    </h3>
+
+                    <p class="av-card-description">
+                        Compatible request becomes an accepted
+                        booking.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        04
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Assign
+                    </h3>
+
+                    <p class="av-card-description">
+                        Operator requirements are resolved.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        05
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Move
+                    </h3>
+
+                    <p class="av-card-description">
+                        Equipment transportation is coordinated.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        06
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Work
+                    </h3>
+
+                    <p class="av-card-description">
+                        Equipment performs the assigned
+                        agricultural operation.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        07
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Return
+                    </h3>
+
+                    <p class="av-card-description">
+                        Equipment returns to the owner.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        08
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Close
+                    </h3>
+
+                    <p class="av-card-description">
+                        Inspection, payment, rating and history are
+                        updated.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ACTIVE RENTALS
+     ========================================================= -->
+
+<section
+    class="av-section"
+    id="active"
+>
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            ACTIVE RENTALS
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            Monitor equipment while it is
+            <span class="av-gradient-text">
+                working.
+            </span>
+
+        </h2>
+
+
+        <div
+            class="av-card av-reveal"
+            style="margin-top:42px;"
+        >
+
+            <div class="av-card-body">
+
+
+                <div
+                    class="av-grid av-grid-2"
+                    data-active-rental-list
+                >
+
+
+                    <article
+                        class="av-card"
+                        style="
+                            background:rgba(255,255,255,.025);
+                        "
+                    >
+
+                        <div class="av-card-body">
+
+
+                            <div
+                                class="av-chip-row"
+                                style="
+                                    justify-content:space-between;
+                                "
+                            >
+
+                                <span class="av-status av-status-active">
+                                    ● IN USE
+                                </span>
+
+                                <span class="av-page-kicker">
+                                    RENT-001
+                                </span>
+
+                            </div>
+
+
+                            <h3 class="av-card-title">
+                                Tractor Assignment
+                            </h3>
+
+
+                            <p class="av-card-description">
+                                Equipment is currently assigned to
+                                agricultural work.
+                            </p>
+
+
+                            <div
+                                class="av-grid av-grid-2"
+                                style="margin-top:25px;"
+                            >
+
+                                <div>
+
+                                    <div class="av-page-kicker">
+                                        FARMER
+                                    </div>
+
+                                    <strong>
+                                        Farmer
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <div class="av-page-kicker">
+                                        EQUIPMENT
+                                    </div>
+
+                                    <strong>
+                                        Tractor
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <div class="av-page-kicker">
+                                        OPERATOR
+                                    </div>
+
+                                    <strong>
+                                        Assigned
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <div class="av-page-kicker">
+                                        USAGE
+                                    </div>
+
+                                    <strong>
+                                        Active
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="av-chip-row"
+                                style="margin-top:25px;"
+                            >
+
+                                <span class="av-chip">
+                                    ⏱ Usage tracking
+                                </span>
+
+                                <span class="av-chip">
+                                    🌾 Work active
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="av-chip-row"
+                                style="
+                                    justify-content:flex-end;
+                                    margin-top:28px;
+                                "
+                            >
+
+                                <button
+                                    type="button"
+                                    class="av-button av-button-secondary"
+                                    data-rental-action="usage"
+                                    data-rental-id="RENT-001"
+                                >
+                                    VIEW USAGE
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="av-card"
+                        style="
+                            background:rgba(255,255,255,.025);
+                        "
+                    >
+
+                        <div class="av-card-body">
+
+
+                            <div
+                                class="av-chip-row"
+                                style="
+                                    justify-content:space-between;
+                                "
+                            >
+
+                                <span class="av-status av-status-info">
+                                    ● SCHEDULED
+                                </span>
+
+                                <span class="av-page-kicker">
+                                    RENT-002
+                                </span>
+
+                            </div>
+
+
+                            <h3 class="av-card-title">
+                                Harvester Assignment
+                            </h3>
+
+
+                            <p class="av-card-description">
+                                Upcoming operation awaiting final
+                                logistics coordination.
+                            </p>
+
+
+                            <div
+                                class="av-grid av-grid-2"
+                                style="margin-top:25px;"
+                            >
+
+                                <div>
+
+                                    <div class="av-page-kicker">
+                                        FARMER
+                                    </div>
+
+                                    <strong>
+                                        Farmer
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <div class="av-page-kicker">
+                                        EQUIPMENT
+                                    </div>
+
+                                    <strong>
+                                        Harvester
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <div class="av-page-kicker">
+                                        OPERATOR
+                                    </div>
+
+                                    <strong>
+                                        To be resolved
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <div class="av-page-kicker">
+                                        TRANSPORT
+                                    </div>
+
+                                    <strong>
+                                        Required
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="av-chip-row"
+                                style="margin-top:25px;"
+                            >
+
+                                <span class="av-chip">
+                                    👷 Operator
+                                </span>
+
+                                <span class="av-chip">
+                                    🚚 Logistics
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="av-chip-row"
+                                style="
+                                    justify-content:flex-end;
+                                    margin-top:28px;
+                                "
+                            >
+
+                                <button
+                                    type="button"
+                                    class="av-button av-button-primary"
+                                    data-rental-action="coordinate"
+                                    data-rental-id="RENT-002"
+                                >
+                                    COORDINATE
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     OPERATOR ASSIGNMENT
+     ========================================================= -->
+
+<section class="av-section">
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            OPERATOR COORDINATION
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            Match the right person to the
+            <span class="av-gradient-text">
+                right machine.
+            </span>
+
+        </h2>
+
+
+        <p class="av-section-description">
+
+            When a Farmer needs equipment together with an
+            Operator, the equipment booking and Operator
+            assignment should remain connected.
+
+        </p>
+
+
+        <div
+            class="av-card av-reveal"
+            style="margin-top:42px;"
+        >
+
+            <div class="av-card-body">
+
+
+                <div class="av-grid av-grid-4">
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            🚜
+                        </div>
+
+                        <div class="av-page-kicker">
+                            EQUIPMENT
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Required Machine
+                        </h3>
+
+                        <p class="av-card-description">
+                            Match equipment capability and
+                            availability.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            👷
+                        </div>
+
+                        <div class="av-page-kicker">
+                            SKILL
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Operator
+                        </h3>
+
+                        <p class="av-card-description">
+                            Consider skills, experience,
+                            availability and current assignments.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            📅
+                        </div>
+
+                        <div class="av-page-kicker">
+                            TIME
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Schedule
+                        </h3>
+
+                        <p class="av-card-description">
+                            Prevent overlapping equipment and
+                            Operator assignments.
+                        </p>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            ✓
+                        </div>
+
+                        <div class="av-page-kicker">
+                            MATCH
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Assignment
+                        </h3>
+
+                        <p class="av-card-description">
+                            Create a coordinated work assignment.
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="av-chip-row"
+                    style="
+                        justify-content:flex-end;
+                        margin-top:35px;
+                    "
+                >
+
+                    <button
+                        type="button"
+                        class="av-button av-button-primary"
+                        data-operator-action="match"
+                    >
+                        FIND OPERATORS
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LOGISTICS
+     ========================================================= -->
+
+<section
+    class="av-section"
+    id="logistics"
+>
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            EQUIPMENT LOGISTICS
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            Move machinery from origin to farm with
+            <span class="av-gradient-text">
+                operational intelligence.
+            </span>
+
+        </h2>
+
+
+        <p class="av-section-description">
+
+            Transportation is not an afterthought. Equipment
+            movement is linked to the booking, required delivery
+            time, vehicle capacity and the broader AgriVision
+            logistics network.
+
+        </p>
+
+
+
+        <div
+            class="av-grid av-grid-5"
+            style="margin-top:42px;"
+        >
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        📍
+                    </div>
+
+                    <div class="av-page-kicker">
+                        ORIGIN
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Equipment
+                    </h3>
+
+                    <p class="av-card-description">
+                        Current equipment location.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        📍
+                    </div>
+
+                    <div class="av-page-kicker">
+                        DESTINATION
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Farm
+                    </h3>
+
+                    <p class="av-card-description">
+                        Required work location.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        🚚
+                    </div>
+
+                    <div class="av-page-kicker">
+                        VEHICLE
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Capacity
+                    </h3>
+
+                    <p class="av-card-description">
+                        Vehicle suitability and available capacity.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        ⏱️
+                    </div>
+
+                    <div class="av-page-kicker">
+                        WINDOW
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Timing
+                    </h3>
+
+                    <p class="av-card-description">
+                        Pickup and delivery constraints.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        ₹
+                    </div>
+
+                    <div class="av-page-kicker">
+                        COST
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Allocation
+                    </h3>
+
+                    <p class="av-card-description">
+                        Transportation cost calculation.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SMART ROUTE OPTIMIZATION
+     ========================================================= -->
+
+<section class="av-section">
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            CORE AGRIVISION ENGINE
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            Smart Route Optimization
+            <span class="av-gradient-text">
+                + Shared Capacity
+            </span>
+
+        </h2>
+
+
+        <p class="av-section-description">
+
+            The objective is not simply to find a route. The system
+            should determine whether compatible transportation
+            movements can share available vehicle capacity while
+            respecting route, timing, capacity and cost constraints.
+
+        </p>
+
+
+
+        <!-- EXAMPLE -->
+
+        <div
+            class="av-card av-reveal"
+            style="margin-top:42px;"
+        >
+
+            <div class="av-card-body">
+
+
+                <div class="av-grid av-grid-2">
+
+
+                    <!-- MOVEMENT A -->
+
+                    <div
+                        class="av-card"
+                        style="
+                            background:rgba(255,255,255,.025);
+                        "
+                    >
+
+                        <div class="av-card-body">
+
+
+                            <div class="av-page-kicker">
+                                ORDER / MOVEMENT A
+                            </div>
+
+
+                            <h3 class="av-card-title">
+                                Bengaluru → Chitradurga
+                            </h3>
+
+
+                            <div
+                                class="av-metric"
+                                data-route-cost-a
+                            >
+                                ₹100
+                            </div>
+
+
+                            <p class="av-card-description">
+
+                                Example standalone transportation
+                                cost.
+
+                            </p>
+
+
+                            <div
+                                class="av-chip-row"
+                                style="margin-top:20px;"
+                            >
+
+                                <span class="av-chip">
+                                    Origin: Bengaluru
+                                </span>
+
+                                <span class="av-chip">
+                                    Destination: Chitradurga
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- MOVEMENT B -->
+
+                    <div
+                        class="av-card"
+                        style="
+                            background:rgba(255,255,255,.025);
+                        "
+                    >
+
+                        <div class="av-card-body">
+
+
+                            <div class="av-page-kicker">
+                                ORDER / MOVEMENT B
+                            </div>
+
+
+                            <h3 class="av-card-title">
+                                Tumakuru → Hiriyur
+                            </h3>
+
+
+                            <div
+                                class="av-metric"
+                                data-route-cost-b
+                            >
+                                ₹50
+                            </div>
+
+
+                            <p class="av-card-description">
+
+                                Example standalone transportation
+                                cost.
+
+                            </p>
+
+
+                            <div
+                                class="av-chip-row"
+                                style="margin-top:20px;"
+                            >
+
+                                <span class="av-chip">
+                                    Origin: Tumakuru
+                                </span>
+
+                                <span class="av-chip">
+                                    Destination: Hiriyur
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- OPTIMIZATION INPUTS -->
+
+                <div
+                    class="av-page-kicker"
+                    style="margin-top:45px;"
+                >
+                    OPTIMIZATION FACTORS
+                </div>
+
+
+                <div
+                    class="av-grid av-grid-6"
+                    style="margin-top:25px;"
+                >
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            🛣️
+                        </div>
+
+                        <strong>
+                            Route compatibility
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <strong>
+                            Vehicle capacity
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            ↪️
+                        </div>
+
+                        <strong>
+                            Detour
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            ⏱️
+                        </div>
+
+                        <strong>
+                            Delivery window
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            ⚙️
+                        </div>
+
+                        <strong>
+                            Operating cost
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            📏
+                        </div>
+
+                        <strong>
+                            Distance
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- CALCULATOR -->
+
+                <div
+                    class="av-card"
+                    style="
+                        margin-top:40px;
+                        background:rgba(255,255,255,.025);
+                    "
+                >
+
+                    <div class="av-card-body">
+
+
+                        <div class="av-page-kicker">
+                            SHARED LOAD ANALYSIS
+                        </div>
+
+
+                        <h3 class="av-card-title">
+                            Evaluate a possible shared vehicle
+                        </h3>
+
+
+                        <div
+                            class="av-grid av-grid-4"
+                            style="margin-top:25px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    class="av-label"
+                                    for="vehicleCapacity"
+                                >
+                                    Vehicle Capacity
+                                </label>
+
+                                <input
+                                    id="vehicleCapacity"
+                                    class="av-input"
+                                    type="number"
+                                    min="0"
+                                    placeholder="Capacity"
+                                    data-route-capacity
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    class="av-label"
+                                    for="loadA"
+                                >
+                                    Movement A Load
+                                </label>
+
+                                <input
+                                    id="loadA"
+                                    class="av-input"
+                                    type="number"
+                                    min="0"
+                                    placeholder="Load"
+                                    data-route-load-a
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    class="av-label"
+                                    for="loadB"
+                                >
+                                    Movement B Load
+                                </label>
+
+                                <input
+                                    id="loadB"
+                                    class="av-input"
+                                    type="number"
+                                    min="0"
+                                    placeholder="Load"
+                                    data-route-load-b
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    class="av-label"
+                                    for="detour"
+                                >
+                                    Estimated Detour
+                                </label>
+
+                                <input
+                                    id="detour"
+                                    class="av-input"
+                                    type="number"
+                                    min="0"
+                                    placeholder="%"
+                                    data-route-detour
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="
+                                justify-content:flex-end;
+                                margin-top:30px;
+                            "
+                        >
+
+                            <button
+                                type="button"
+                                class="av-button av-button-primary"
+                                data-route-analyze
+                            >
+                                ANALYZE SHARED LOAD
+                            </button>
+
+                        </div>
+
+
+                        <div
+                            class="av-card"
+                            style="
+                                margin-top:30px;
+                                background:rgba(255,255,255,.025);
+                            "
+                            data-route-result
+                        >
+
+                            <div class="av-card-body">
+
+
+                                <div class="av-page-kicker">
+                                    RESULT
+                                </div>
+
+
+                                <h3
+                                    class="av-card-title"
+                                    data-route-result-title
+                                >
+                                    Enter vehicle and load information
+                                </h3>
+
+
+                                <p
+                                    class="av-card-description"
+                                    data-route-result-text
+                                >
+
+                                    The platform should evaluate
+                                    capacity, route compatibility,
+                                    detour and timing before proposing
+                                    a shared movement.
+
+                                </p>
+
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DRIVER / LOGISTICS HANDOFF
+     ========================================================= -->
+
+<section class="av-section">
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            DRIVER & LOGISTICS HANDOFF
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            Once transportation is planned,
+            <span class="av-gradient-text">
+                hand it to operations.
+            </span>
+
+        </h2>
+
+
+        <div
+            class="av-card av-reveal"
+            style="margin-top:42px;"
+        >
+
+            <div class="av-card-body">
+
+
+                <div
+                    class="av-grid av-grid-6"
+                >
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            01
+                        </div>
+
+                        <div class="av-page-kicker">
+                            REQUEST
+                        </div>
+
+                        <strong>
+                            Transport requirement
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            02
+                        </div>
+
+                        <div class="av-page-kicker">
+                            MATCH
+                        </div>
+
+                        <strong>
+                            Logistics provider
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            03
+                        </div>
+
+                        <div class="av-page-kicker">
+                            VEHICLE
+                        </div>
+
+                        <strong>
+                            Suitable vehicle
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            04
+                        </div>
+
+                        <div class="av-page-kicker">
+                            DRIVER
+                        </div>
+
+                        <strong>
+                            Driver assignment
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            05
+                        </div>
+
+                        <div class="av-page-kicker">
+                            TRANSIT
+                        </div>
+
+                        <strong>
+                            Equipment movement
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            06
+                        </div>
+
+                        <div class="av-page-kicker">
+                            DELIVERY
+                        </div>
+
+                        <strong>
+                            Farm arrival
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="av-chip-row"
+                    style="
+                        justify-content:flex-end;
+                        margin-top:35px;
+                    "
+                >
+
+                    <button
+                        type="button"
+                        class="av-button av-button-primary"
+                        data-logistics-action="create"
+                    >
+                        CREATE LOGISTICS REQUEST
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     USAGE TRACKING
+     ========================================================= -->
+
+<section class="av-section">
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            EQUIPMENT USAGE
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            Capture the work that actually
+            <span class="av-gradient-text">
+                happened.
+            </span>
+
+        </h2>
+
+
+        <div
+            class="av-card av-reveal"
+            style="margin-top:42px;"
+        >
+
+            <div class="av-card-body">
+
+
+                <div class="av-grid av-grid-4">
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            ▶
+                        </div>
+
+                        <div class="av-page-kicker">
+                            START
+                        </div>
+
+                        <strong>
+                            Start time
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            ⏱️
+                        </div>
+
+                        <div class="av-page-kicker">
+                            DURATION
+                        </div>
+
+                        <strong>
+                            Operating hours
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            🌾
+                        </div>
+
+                        <div class="av-page-kicker">
+                            WORK
+                        </div>
+
+                        <strong>
+                            Work completed
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <div class="av-role-icon">
+                            ✓
+                        </div>
+
+                        <div class="av-page-kicker">
+                            CONFIRMATION
+                        </div>
+
+                        <strong>
+                            Farmer confirmation
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+                <div
+                    class="av-chip-row"
+                    style="
+                        margin-top:35px;
+                    "
+                >
+
+                    <span class="av-chip">
+                        Operating hours
+                    </span>
+
+                    <span class="av-chip">
+                        Acreage / quantity
+                    </span>
+
+                    <span class="av-chip">
+                        Operator
+                    </span>
+
+                    <span class="av-chip">
+                        Work notes
+                    </span>
+
+                    <span class="av-chip">
+                        Farmer confirmation
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RETURN & INSPECTION
+     ========================================================= -->
+
+<section class="av-section">
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            RETURN & INSPECTION
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            Close the rental with a complete
+            <span class="av-gradient-text">
+                condition record.
+            </span>
+
+        </h2>
+
+
+        <div
+            class="av-grid av-grid-2"
+            style="margin-top:42px;"
+        >
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+
+                    <div class="av-role-icon">
+                        ↩️
+                    </div>
+
+
+                    <div class="av-page-kicker">
+                        RETURN
+                    </div>
+
+
+                    <h3 class="av-card-title">
+                        Equipment return
+                    </h3>
+
+
+                    <p class="av-card-description">
+
+                        Record when the equipment leaves the
+                        Farmer's location and returns to the owner.
+
+                    </p>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="margin-top:25px;"
+                    >
+
+                        <span class="av-chip">
+                            Return scheduled
+                        </span>
+
+                        <span class="av-chip">
+                            Pickup
+                        </span>
+
+                        <span class="av-chip">
+                            Transit
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:flex-end;
+                            margin-top:28px;
+                        "
+                    >
+
+                        <button
+                            type="button"
+                            class="av-button av-button-primary"
+                            data-return-action="schedule"
+                        >
+                            MANAGE RETURN
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+
+                    <div class="av-role-icon">
+                        🔍
+                    </div>
+
+
+                    <div class="av-page-kicker">
+                        INSPECTION
+                    </div>
+
+
+                    <h3 class="av-card-title">
+                        Post-rental inspection
+                    </h3>
+
+
+                    <p class="av-card-description">
+
+                        Compare the pre-rental and post-rental
+                        condition and record any issue that needs
+                        review.
+
+                    </p>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="margin-top:25px;"
+                    >
+
+                        <span class="av-chip">
+                            Condition
+                        </span>
+
+                        <span class="av-chip">
+                            Usage hours
+                        </span>
+
+                        <span class="av-chip">
+                            Photos
+                        </span>
+
+                        <span class="av-chip">
+                            Damage review
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:flex-end;
+                            margin-top:28px;
+                        "
+                    >
+
+                        <button
+                            type="button"
+                            class="av-button av-button-primary"
+                            data-inspection-action="open"
+                        >
+                            START INSPECTION
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     DISPUTES / EXCEPTIONS
+     ========================================================= -->
+
+<section class="av-section">
+
+    <div class="av-page">
+
+
+        <div class="av-page-kicker">
+            EXCEPTIONS & DISPUTES
+        </div>
+
+
+        <h2 class="av-section-title">
+
+            Problems should enter a
+            <span class="av-gradient-text">
+                controlled workflow.
+            </span>
+
+        </h2>
+
+
+        <div
+            class="av-grid av-grid-4"
+            style="margin-top:42px;"
+        >
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        ⚠️
+                    </div>
+
+                    <div class="av-page-kicker">
+                        EQUIPMENT
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Damage
+                    </h3>
+
+                    <p class="av-card-description">
+                        Record and review reported equipment issues.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        ⏱️
+                    </div>
+
+                    <div class="av-page-kicker">
+                        SCHEDULE
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Delay
+                    </h3>
+
+                    <p class="av-card-description">
+                        Record delivery, work or return delays.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        ₹
+                    </div>
+
+                    <div class="av-page-kicker">
+                        FINANCE
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Payment issue
+                    </h3>
+
+                    <p class="av-card-description">
+                        Route settlement discrepancies for review.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+                    <div class="av-role-icon">
+                        ⚖️
+                    </div>
+
+                    <div class="av-page-kicker">
+                        DISPUTE
+                    </div>
+
+                    <h3 class="av-card-title">
+                        Resolution
+                    </h3>
+
+                    <p class="av-card-description">
+                        Maintain a traceable resolution record.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     COMPLETE OPERATION FLOW
+     ========================================================= -->
+
+<section class="av-section">
+
+    <div class="av-page">
+
+
+        <div class="av-card av-reveal">
+
+            <div
+                class="av-card-body"
+                style="
+                    text-align:center;
+                    padding:75px 30px;
+                "
+            >
+
+
+                <div class="av-page-kicker">
+                    COMPLETE EQUIPMENT OPERATION
+                </div>
+
+
+                <h2 class="av-section-title">
+
+                    One connected workflow.
+                    <span class="av-gradient-text">
+                        No fragmented records.
+                    </span>
+
+                </h2>
+
+
+                <p
+                    class="av-section-description"
+                    style="
+                        max-width:900px;
+                        margin-left:auto;
+                        margin-right:auto;
+                    "
+                >
+
+                    Farmer requirement → Equipment matching →
+                    Owner decision → Operator assignment →
+                    Logistics → Driver → Smart route optimization →
+                    Delivery → Agricultural work → Usage record →
+                    Return → Inspection → Settlement → Rating →
+                    Maintenance history.
+
+                </p>
+
+
+                <div
+                    class="av-chip-row"
+                    style="
+                        justify-content:center;
+                        margin-top:35px;
+                    "
+                >
+
+                    <span class="av-status av-status-info">
+                        FARMER
+                    </span>
+
+                    <span class="av-status av-status-info">
+                        EQUIPMENT
+                    </span>
+
+                    <span class="av-status av-status-info">
+                        OPERATOR
+                    </span>
+
+                    <span class="av-status av-status-info">
+                        LOGISTICS
+                    </span>
+
+                    <span class="av-status av-status-info">
+                        DRIVER
+                    </span>
+
+                    <span class="av-status av-status-info">
+                        ROUTE ENGINE
+                    </span>
+
+                    <span class="av-status av-status-info">
+                        FINANCE
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="av-chip-row"
+                    style="
+                        justify-content:center;
+                        margin-top:35px;
+                    "
+                >
+
+                    <a
+                        href="equipment-owner-equipment.html"
+                        class="av-button av-button-secondary"
+                    >
+                        EQUIPMENT
+                    </a>
+
+
+                    <a
+                        href="equipment-owner-finance.html"
+                        class="av-button av-button-secondary"
+                    >
+                        NEXT: FINANCE
+                    </a>
+
+
+                    <a
+                        href="equipment-owner-profile.html"
+                        class="av-button av-button-secondary"
+                    >
+                        PROFILE
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="av-footer">
+
+    <div class="av-footer-inner">
+
+
+        <div class="av-footer-brand">
+            AGRIVISION KARNATAKA
+        </div>
+
+
+        <div class="av-footer-note">
+
+            EQUIPMENT OWNER
+
+            <span>•</span>
+
+            BOOKINGS
+
+            <span>•</span>
+
+            OPERATIONS
+
+            <span>•</span>
+
+            LOGISTICS
+
+            <span>•</span>
+
+            SMART ROUTING
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     CORE JS
+     ========================================================= -->
+
+<script
+    src="core.js"
+    defer
+></script>
+
+
+
+<!-- =========================================================
+     PAGE LOGIC
+     ========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    /* =====================================================
+       YEAR
+       ===================================================== */
+
+    document
+        .querySelectorAll("[data-year]")
+        .forEach(element => {
+
+            element.textContent =
+                new Date().getFullYear();
+
+        });
+
+
+
+    /* =====================================================
+       DEMO METRICS
+       Backend/API will replace these values.
+       ===================================================== */
+
+    const metrics = {
+
+        "[data-pending-requests]": "2",
+        "[data-upcoming-rentals]": "1",
+        "[data-active-rentals]": "1",
+        "[data-transit-equipment]": "0",
+        "[data-pending-returns]": "0",
+        "[data-pending-inspections]": "0"
+
+    };
+
+
+    Object
+        .entries(metrics)
+        .forEach(([selector, value]) => {
+
+            document
+                .querySelectorAll(selector)
+                .forEach(element => {
+
+                    element.textContent =
+                        value;
+
+                });
+
+        });
+
+
+
+    /* =====================================================
+       REQUEST FILTER
+       ===================================================== */
+
+    const search =
+        document.querySelector(
+            "[data-request-search]"
+        );
+
+    const status =
+        document.querySelector(
+            "[data-request-status]"
+        );
+
+    const type =
+        document.querySelector(
+            "[data-request-type]"
+        );
+
+
+    const requestCards =
+        document.querySelectorAll(
+            "[data-request-card]"
+        );
+
+
+    function filterRequests() {
+
+        const searchValue =
+            (search?.value || "")
+                .trim()
+                .toLowerCase();
+
+        const statusValue =
+            status?.value || "all";
+
+        const typeValue =
+            type?.value || "all";
+
+
+        requestCards.forEach(card => {
+
+            const text =
+                card.textContent.toLowerCase();
+
+            const cardStatus =
+                card.dataset.requestStatusValue;
+
+            const cardType =
+                card.dataset.requestTypeValue;
+
+
+            const matchesSearch =
+                !searchValue ||
+                text.includes(searchValue);
+
+            const matchesStatus =
+                statusValue === "all" ||
+                cardStatus === statusValue;
+
+            const matchesType =
+                typeValue === "all" ||
+                cardType === typeValue;
+
+
+            card.style.display =
+                matchesSearch &&
+                matchesStatus &&
+                matchesType
+                    ? ""
+                    : "none";
+
+        });
+
+    }
+
+
+    search?.addEventListener(
+        "input",
+        filterRequests
+    );
+
+    status?.addEventListener(
+        "change",
+        filterRequests
+    );
+
+    type?.addEventListener(
+        "change",
+        filterRequests
+    );
+
+
+
+    /* =====================================================
+       REQUEST ACTIONS
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            "[data-request-action]"
+        )
+        .forEach(button => {
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const action =
+                        button.dataset.requestAction;
+
+                    const requestId =
+                        button.dataset.requestId;
+
+
+                    if (
+                        action === "accept"
+                    ) {
+
+                        alert(
+                            "Request " +
+                            requestId +
+                            " accepted. Booking workflow can now continue."
+                        );
+
+                    }
+
+
+                    else if (
+                        action === "reject"
+                    ) {
+
+                        alert(
+                            "Request " +
+                            requestId +
+                            " rejected."
+                        );
+
+                    }
+
+
+                    else if (
+                        action === "clarify"
+                    ) {
+
+                        alert(
+                            "Clarification request opened for " +
+                            requestId +
+                            "."
+                        );
+
+                    }
+
+                }
+            );
+
+        });
+
+
+
+    /* =====================================================
+       RENTAL ACTIONS
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            "[data-rental-action]"
+        )
+        .forEach(button => {
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    const action =
+                        button.dataset.rentalAction;
+
+                    const rentalId =
+                        button.dataset.rentalId;
+
+
+                    if (
+                        action === "usage"
+                    ) {
+
+                        alert(
+                            "Opening usage record for " +
+                            rentalId
+                        );
+
+                    }
+
+
+                    if (
+                        action === "coordinate"
+                    ) {
+
+                        document
+                            .querySelector("#logistics")
+                            ?.scrollIntoView({
+                                behavior: "smooth"
+                            });
+
+                    }
+
+                }
+            );
+
+        });
+
+
+
+    /* =====================================================
+       SHARED LOAD ANALYSIS
+       ===================================================== */
+
+    const analyzeButton =
+        document.querySelector(
+            "[data-route-analyze]"
+        );
+
+
+    analyzeButton?.addEventListener(
+        "click",
+        () => {
+
+
+            const capacity =
+                Number(
+                    document.querySelector(
+                        "[data-route-capacity]"
+                    )?.value || 0
+                );
+
+
+            const loadA =
+                Number(
+                    document.querySelector(
+                        "[data-route-load-a]"
+                    )?.value || 0
+                );
+
+
+            const loadB =
+                Number(
+                    document.querySelector(
+                        "[data-route-load-b]"
+                    )?.value || 0
+                );
+
+
+            const detour =
+                Number(
+                    document.querySelector(
+                        "[data-route-detour]"
+                    )?.value || 0
+                );
+
+
+            const title =
+                document.querySelector(
+                    "[data-route-result-title]"
+                );
+
+
+            const text =
+                document.querySelector(
+                    "[data-route-result-text]"
+                );
+
+
+            if (
+                capacity <= 0 ||
+                loadA < 0 ||
+                loadB < 0
+            ) {
+
+                title.textContent =
+                    "Enter valid capacity and load values.";
+
+                text.textContent =
+                    "The optimization engine requires vehicle capacity and shipment loads before evaluating the shared movement.";
+
+                return;
+
+            }
+
+
+            const totalLoad =
+                loadA + loadB;
+
+
+            const capacityAvailable =
+                totalLoad <= capacity;
+
+
+            const detourAcceptable =
+                detour <= 20;
+
+
+            if (
+                capacityAvailable &&
+                detourAcceptable
+            ) {
+
+                title.textContent =
+                    "Potential shared-load opportunity detected.";
+
+                text.textContent =
+                    "Both loads fit within the entered vehicle capacity and the entered detour is within this prototype's illustrative threshold. A production engine must additionally verify route geometry, timing, equipment constraints, vehicle rules and operating cost before accepting the combination.";
+
+            }
+
+            else {
+
+                title.textContent =
+                    "Shared movement is not currently suitable.";
+
+                text.textContent =
+                    "The entered loads exceed vehicle capacity or the detour is too high for this prototype evaluation. The production optimization engine should evaluate alternative vehicles, routes or schedules.";
+
+            }
+
+        }
+    );
+
+
+
+    /* =====================================================
+       OPERATOR
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            "[data-operator-action]"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    alert(
+                        "Operator matching opened. The production system will match skills, equipment experience, availability, location and current assignments."
+                    );
+
+                }
+            );
+
+        });
+
+
+
+    /* =====================================================
+       LOGISTICS
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            "[data-logistics-action]"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    alert(
+                        "Logistics request creation opened. The request will connect equipment, destination, timing, vehicle capacity and Driver coordination."
+                    );
+
+                }
+            );
+
+        });
+
+
+
+    /* =====================================================
+       RETURN
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            "[data-return-action]"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    alert(
+                        "Return management opened."
+                    );
+
+                }
+            );
+
+        });
+
+
+
+    /* =====================================================
+       INSPECTION
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            "[data-inspection-action]"
+        )
+        .forEach(button => {
+
+            button.addEventListener(
+                "click",
+                () => {
+
+                    alert(
+                        "Post-rental inspection opened."
+                    );
+
+                }
+            );
+
+        });
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>

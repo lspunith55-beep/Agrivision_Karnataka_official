@@ -1,0 +1,2706 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka — Machine Operator Equipment & Capabilities"
+    >
+
+    <title>
+        Operator Machines | AgriVision Karnataka
+    </title>
+
+
+    <!-- =====================================================
+         AGRIVISION SHARED CORE
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+
+    <!-- =====================================================
+         PAGE-SPECIFIC CSS
+         ===================================================== -->
+
+    <style>
+
+        /* =====================================================
+           PAGE
+           ===================================================== */
+
+        body[data-page="operator-machines"] {
+            overflow-x: hidden;
+        }
+
+
+        body[data-page="operator-machines"] .av-page {
+            width: min(94%, 1500px);
+            margin-inline: auto;
+        }
+
+
+        body[data-page="operator-machines"] .av-section {
+            padding-top: clamp(70px, 8vw, 110px);
+            padding-bottom: clamp(70px, 8vw, 110px);
+        }
+
+
+        /* =====================================================
+           TYPOGRAPHY
+           ===================================================== */
+
+        .machines-title {
+
+            font-size:
+                clamp(3rem, 6vw, 6rem);
+
+            line-height: .98;
+
+            letter-spacing: -.045em;
+
+            max-width: 1050px;
+
+        }
+
+
+        .machines-description {
+
+            max-width: 820px;
+
+            margin-top: 26px;
+
+            font-size:
+                clamp(1rem, 1.15vw, 1.18rem);
+
+            line-height: 1.8;
+
+        }
+
+
+        .machines-section-title {
+
+            font-size:
+                clamp(2rem, 3.5vw, 3.8rem);
+
+            line-height: 1.08;
+
+            letter-spacing: -.035em;
+
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .machines-hero {
+
+            min-height: 610px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding-top: 125px !important;
+
+        }
+
+
+        .machines-hero-actions {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 13px;
+
+            margin-top: 34px;
+
+        }
+
+
+        /* =====================================================
+           EQUIPMENT SUMMARY
+           ===================================================== */
+
+        .machine-summary-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 20px;
+
+        }
+
+
+        .machine-summary-card {
+
+            min-height: 205px;
+
+        }
+
+
+        .machine-summary-card
+        .av-stat-value {
+
+            font-size:
+                clamp(2.4rem, 4vw, 4rem);
+
+            line-height: 1;
+
+            margin-top: 13px;
+
+        }
+
+
+        .machine-summary-card
+        .av-stat-foot {
+
+            margin-top: 12px;
+
+            line-height: 1.55;
+
+        }
+
+
+        /* =====================================================
+           MACHINE GRID
+           ===================================================== */
+
+        .machine-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 22px;
+
+            margin-top: 30px;
+
+        }
+
+
+        .machine-card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 380px;
+
+        }
+
+
+        .machine-card
+        .av-panel-content {
+
+            height: 100%;
+
+            display: flex;
+
+            flex-direction: column;
+
+        }
+
+
+        .machine-icon {
+
+            width: 78px;
+
+            height: 78px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 21px;
+
+            background:
+                rgba(255,255,255,.055);
+
+            border:
+                1px solid
+                rgba(255,255,255,.09);
+
+            font-size: 2.45rem;
+
+            margin-bottom: 24px;
+
+        }
+
+
+        .machine-card h3 {
+
+            margin: 9px 0 12px;
+
+            font-size:
+                clamp(1.25rem, 1.8vw, 1.55rem);
+
+            line-height: 1.25;
+
+        }
+
+
+        .machine-card-description {
+
+            margin: 0;
+
+            line-height: 1.65;
+
+        }
+
+
+        .machine-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-top: 20px;
+
+        }
+
+
+        .machine-tag {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            min-height: 31px;
+
+            padding:
+                6px 10px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(255,255,255,.045);
+
+            border:
+                1px solid
+                rgba(255,255,255,.07);
+
+            font-size: .7rem;
+
+            font-weight: 800;
+
+            letter-spacing: .03em;
+
+        }
+
+
+        .machine-card-footer {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 15px;
+
+            margin-top: auto;
+
+            padding-top: 28px;
+
+        }
+
+
+        .machine-status {
+
+            font-size: .7rem;
+
+            font-weight: 850;
+
+            letter-spacing: .09em;
+
+        }
+
+
+        /* =====================================================
+           CAPABILITIES
+           ===================================================== */
+
+        .capability-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 22px;
+
+            margin-top: 28px;
+
+        }
+
+
+        .capability-item {
+
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 17px;
+
+            padding: 22px;
+
+            border-radius: 17px;
+
+            background:
+                rgba(255,255,255,.035);
+
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+
+        }
+
+
+        .capability-item-icon {
+
+            width: 50px;
+
+            height: 50px;
+
+            flex: 0 0 50px;
+
+            display: grid;
+
+            place-items: center;
+
+            border-radius: 14px;
+
+            background:
+                rgba(255,255,255,.06);
+
+            font-size: 1.45rem;
+
+        }
+
+
+        .capability-item h3 {
+
+            margin: 0 0 7px;
+
+            font-size: 1.1rem;
+
+        }
+
+
+        .capability-item p {
+
+            margin: 0;
+
+            font-size: .94rem;
+
+            line-height: 1.55;
+
+        }
+
+
+        /* =====================================================
+           MACHINE DETAIL
+           ===================================================== */
+
+        .machine-detail-panel {
+
+            display: none;
+
+            margin-top: 20px;
+
+            padding-top: 22px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.08);
+
+        }
+
+
+        .machine-card.expanded
+        .machine-detail-panel {
+
+            display: block;
+
+        }
+
+
+        .machine-detail-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 12px;
+
+        }
+
+
+        .machine-detail-box {
+
+            padding: 15px;
+
+            border-radius: 13px;
+
+            background:
+                rgba(255,255,255,.035);
+
+        }
+
+
+        .machine-detail-label {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            font-size: .66rem;
+
+            font-weight: 850;
+
+            letter-spacing: .1em;
+
+            opacity: .6;
+
+        }
+
+
+        .machine-detail-value {
+
+            font-size: .92rem;
+
+            font-weight: 700;
+
+            line-height: 1.45;
+
+        }
+
+
+        /* =====================================================
+           EMPTY
+           ===================================================== */
+
+        .machine-empty {
+
+            grid-column: 1 / -1;
+
+            min-height: 360px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 45px;
+
+        }
+
+
+        .machine-empty-icon {
+
+            font-size: 3.6rem;
+
+            margin-bottom: 18px;
+
+        }
+
+
+        .machine-empty h3 {
+
+            margin-bottom: 10px;
+
+            font-size: 1.5rem;
+
+        }
+
+
+        .machine-empty p {
+
+            max-width: 650px;
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================================
+           QUOTE
+           ===================================================== */
+
+        .machine-quote {
+
+            min-height: 310px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 45px;
+
+        }
+
+
+        .machine-quote blockquote {
+
+            max-width: 900px;
+
+            margin: 0;
+
+            font-size:
+                clamp(1.55rem, 3vw, 2.8rem);
+
+            line-height: 1.4;
+
+            font-weight: 750;
+
+            letter-spacing: -.02em;
+
+        }
+
+
+        .machine-quote cite {
+
+            display: block;
+
+            margin-top: 22px;
+
+            font-size: .75rem;
+
+            font-style: normal;
+
+            font-weight: 850;
+
+            letter-spacing: .13em;
+
+        }
+
+
+        /* =====================================================
+           NAVIGATION
+           ===================================================== */
+
+        .machine-navigation {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 18px;
+
+        }
+
+
+        .machine-navigation-card {
+
+            text-decoration: none;
+
+        }
+
+
+        .machine-navigation-card h3 {
+
+            margin:
+                10px 0;
+
+            font-size: 1.25rem;
+
+        }
+
+
+        .machine-navigation-card p {
+
+            margin: 0;
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .machine-summary-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+
+            }
+
+
+            .machine-grid {
+
+                grid-template-columns:
+                    repeat(2, minmax(0,1fr));
+
+            }
+
+
+            .machine-navigation {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+
+            body[data-page="operator-machines"]
+            .av-page {
+
+                width: min(92%,1500px);
+
+            }
+
+
+            .machines-hero {
+
+                min-height: auto;
+
+                padding-top: 110px !important;
+
+            }
+
+
+            .machine-summary-grid,
+            .machine-grid,
+            .capability-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+
+            .machines-hero-actions {
+
+                flex-direction: column;
+
+            }
+
+
+            .machines-hero-actions
+            .av-button {
+
+                width: 100%;
+
+                justify-content: center;
+
+            }
+
+
+            .machine-detail-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media (max-width: 450px) {
+
+            .machine-card
+            .av-panel-content {
+
+                padding: 23px;
+
+            }
+
+
+            .machine-quote {
+
+                padding: 30px 22px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+
+<body
+    data-page="operator-machines"
+    data-role="operator"
+>
+
+
+    <!-- =====================================================
+         SHARED AGRIVISION VISUAL LAYERS
+         ===================================================== -->
+
+    <div
+        class="background-image"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="ambient-glow"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="particle-field"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="fireflies"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="floating-leaves"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="cursor-stars"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="mouse-glow"
+        aria-hidden="true"
+    ></div>
+
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <!-- LEFT -->
+
+            <div class="av-header-title">
+
+                <span class="av-status-dot"></span>
+
+                <span>
+                    AGRIVISION
+                </span>
+
+                <span class="av-header-divider">
+                    /
+                </span>
+
+                <span class="av-text-muted">
+                    MACHINE OPERATOR
+                </span>
+
+            </div>
+
+
+
+            <!-- SEARCH -->
+
+            <div class="av-search">
+
+                <span aria-hidden="true">
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search your ecosystem..."
+                    aria-label="Search AgriVision ecosystem"
+                    data-global-search
+                >
+
+            </div>
+
+
+
+            <!-- ACTIONS -->
+
+            <div class="av-header-actions">
+
+
+                <button
+                    class="av-icon-button"
+                    type="button"
+                    data-notification
+                    aria-label="Notifications"
+                    title="Notifications"
+                >
+                    ◉
+                </button>
+
+
+                <button
+                    class="av-icon-button"
+                    type="button"
+                    data-modal-open="messagesModal"
+                    aria-label="Messages"
+                    title="Messages"
+                >
+                    ◌
+                </button>
+
+
+                <button
+                    class="av-icon-button"
+                    type="button"
+                    data-modal-open="profileModal"
+                    aria-label="Profile"
+                    title="Profile"
+                >
+                    ◎
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="av-page av-page-enter">
+
+
+        <!-- =================================================
+             HERO
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal machines-hero"
+        >
+
+            <div>
+
+
+                <div class="av-eyebrow">
+
+                    <span class="av-status-dot"></span>
+
+                    AGRIVISION KARNATAKA
+
+                    <span>·</span>
+
+                    EQUIPMENT & CAPABILITIES
+
+                </div>
+
+
+                <h1 class="machines-title">
+
+                    Know your
+
+                    <span class="av-gradient-text">
+                        machine.
+                    </span>
+
+                    Know your field.
+
+                </h1>
+
+
+                <p class="machines-description">
+
+                    The Machines module gives the Operator a
+                    dedicated view of the agricultural equipment
+                    and capabilities connected to their work.
+                    Suitable machinery is an essential link
+                    between an agricultural requirement and
+                    successful field execution.
+
+                </p>
+
+
+                <div class="machines-hero-actions">
+
+
+                    <a
+                        href="machine-operator-portal.html"
+                        class="av-button av-button-secondary"
+                    >
+                        ← OPERATOR PORTAL
+                    </a>
+
+
+                    <a
+                        href="operator-assignments.html"
+                        class="av-button av-button-primary"
+                    >
+                        ASSIGNMENTS →
+                    </a>
+
+
+                    <a
+                        href="operator-availability.html"
+                        class="av-button av-button-cyan"
+                    >
+                        AVAILABILITY →
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="av-flex av-wrap av-gap-3 av-mt-6"
+                >
+
+                    <span class="av-status av-status-active">
+
+                        <span class="av-status-dot"></span>
+
+                        OPERATOR SYSTEM ACTIVE
+
+                    </span>
+
+
+                    <span class="av-status av-status-info">
+                        EQUIPMENT
+                    </span>
+
+
+                    <span class="av-status av-status-info">
+                        FIELD OPERATIONS
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUMMARY
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="av-section-heading">
+
+
+                <div>
+
+                    <div class="av-eyebrow">
+                        EQUIPMENT OVERVIEW
+                    </div>
+
+
+                    <h2 class="machine-section-title">
+
+                        Your equipment at a
+
+                        <span class="av-gradient-text">
+                            glance.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="av-subtitle">
+
+                        Key information about the machines
+                        associated with your Operator profile.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="machine-summary-grid">
+
+
+                <article
+                    class="av-stat-card machine-summary-card"
+                >
+
+                    <div class="av-stat-label">
+                        MACHINES
+                    </div>
+
+                    <div
+                        id="machineCount"
+                        class="av-stat-value av-gradient-text"
+                    >
+                        0
+                    </div>
+
+                    <div class="av-stat-foot">
+                        Machines or equipment types associated
+                        with the current Operator profile.
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="av-stat-card machine-summary-card"
+                >
+
+                    <div class="av-stat-label">
+                        CAPABILITIES
+                    </div>
+
+                    <div
+                        id="capabilityCount"
+                        class="av-stat-value"
+                    >
+                        0
+                    </div>
+
+                    <div class="av-stat-foot">
+                        Equipment capabilities identified
+                        from the Operator profile.
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="av-stat-card machine-summary-card"
+                >
+
+                    <div class="av-stat-label">
+                        OPERATOR
+                    </div>
+
+                    <div
+                        class="av-stat-value"
+                        style="font-size:1.65rem;"
+                        data-user-name
+                    >
+                        AgriVision Member
+                    </div>
+
+                    <div class="av-stat-foot">
+                        Current Machine Operator profile.
+                    </div>
+
+                </article>
+
+
+                <article
+                    class="av-stat-card machine-summary-card"
+                >
+
+                    <div class="av-stat-label">
+                        ROLE
+                    </div>
+
+                    <div
+                        class="av-stat-value"
+                        style="font-size:1.65rem;"
+                        data-user-role
+                    >
+                        Machine Operator
+                    </div>
+
+                    <div class="av-stat-foot">
+                        Responsible for machine-operation
+                        field activities.
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             MACHINE LIST
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+            id="machines"
+        >
+
+            <div class="av-section-heading">
+
+
+                <div>
+
+                    <div class="av-eyebrow">
+                        REGISTERED EQUIPMENT
+                    </div>
+
+
+                    <h2 class="machine-section-title">
+
+                        Machines connected to your
+
+                        <span class="av-gradient-text">
+                            profile.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="av-subtitle">
+
+                        Review each machine and its associated
+                        operation information.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="machineGrid"
+                class="machine-grid"
+            >
+
+                <div class="av-panel machine-empty">
+
+                    <div class="machine-empty-icon">
+                        🚜
+                    </div>
+
+                    <h3>
+                        Loading equipment
+                    </h3>
+
+                    <p>
+                        Reading machine information from the
+                        AgriVision Operator profile.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CAPABILITIES
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="av-section-heading">
+
+
+                <div>
+
+                    <div class="av-eyebrow">
+                        OPERATION CAPABILITIES
+                    </div>
+
+
+                    <h2 class="machine-section-title">
+
+                        Equipment becomes useful
+
+                        <span class="av-gradient-text">
+                            through capability.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="av-subtitle">
+
+                        Machine capability determines which
+                        agricultural field operations can be
+                        supported.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="capability-grid">
+
+
+                <article class="av-panel capability-item">
+
+                    <div class="capability-item-icon">
+                        🌾
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Crop Operations
+                        </h3>
+
+                        <p>
+                            Equipment can support agricultural
+                            operations according to its intended
+                            field capability.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-panel capability-item">
+
+                    <div class="capability-item-icon">
+                        🚜
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Field Machinery
+                        </h3>
+
+                        <p>
+                            Machinery connects physical field
+                            work with the digital AgriVision
+                            coordination system.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-panel capability-item">
+
+                    <div class="capability-item-icon">
+                        ⚙
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Operator Skill
+                        </h3>
+
+                        <p>
+                            Equipment capability becomes
+                            actionable when paired with a
+                            capable operator.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-panel capability-item">
+
+                    <div class="capability-item-icon">
+                        📋
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Service Matching
+                        </h3>
+
+                        <p>
+                            Machine information helps connect
+                            equipment with appropriate
+                            agricultural service requirements.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             QUOTE
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="av-panel">
+
+                <div class="machine-quote">
+
+                    <div>
+
+                        <div
+                            class="av-eyebrow"
+                            style="margin-bottom:20px;"
+                        >
+                            AGRIVISION PRINCIPLE
+                        </div>
+
+
+                        <blockquote>
+
+                            “The right machine creates
+                            possibilities. The right operator
+                            turns those possibilities into
+                            field results.”
+
+                        </blockquote>
+
+
+                        <cite>
+                            AGRIVISION KARNATAKA
+                        </cite>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FIELD WORKFLOW
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="av-section-heading">
+
+
+                <div>
+
+                    <div class="av-eyebrow">
+                        EQUIPMENT WORKFLOW
+                    </div>
+
+
+                    <h2 class="machine-section-title">
+
+                        From machine
+
+                        <span class="av-gradient-text">
+                            to field.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="av-subtitle">
+
+                        Equipment is one part of a larger
+                        agricultural operation.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="av-panel">
+
+                <div class="av-panel-content">
+
+
+                    <div class="av-flow">
+
+
+                        <div class="av-flow-item">
+
+                            <span class="av-flow-icon">
+                                🚜
+                            </span>
+
+                            <strong>
+                                MACHINE
+                            </strong>
+
+                            <small>
+                                Equipment available
+                            </small>
+
+                        </div>
+
+
+                        <span class="av-flow-arrow">
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <span class="av-flow-icon">
+                                ⚙
+                            </span>
+
+                            <strong>
+                                OPERATOR
+                            </strong>
+
+                            <small>
+                                Skilled operation
+                            </small>
+
+                        </div>
+
+
+                        <span class="av-flow-arrow">
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <span class="av-flow-icon">
+                                📋
+                            </span>
+
+                            <strong>
+                                ASSIGNMENT
+                            </strong>
+
+                            <small>
+                                Work coordinated
+                            </small>
+
+                        </div>
+
+
+                        <span class="av-flow-arrow">
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <span class="av-flow-icon">
+                                🌾
+                            </span>
+
+                            <strong>
+                                FIELD
+                            </strong>
+
+                            <small>
+                                Agricultural operation
+                            </small>
+
+                        </div>
+
+
+                        <span class="av-flow-arrow">
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <span class="av-flow-icon">
+                                ✓
+                            </span>
+
+                            <strong>
+                                RESULT
+                            </strong>
+
+                            <small>
+                                Work completed
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             NAVIGATION
+             ================================================= -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="machine-navigation">
+
+
+                <a
+                    href="machine-operator-portal.html"
+                    class="av-panel machine-navigation-card"
+                >
+
+                    <div class="av-panel-content">
+
+                        <div class="av-eyebrow">
+                            OPERATOR HOME
+                        </div>
+
+                        <h3>
+                            Operator Portal
+                        </h3>
+
+                        <p>
+                            Return to the central Machine Operator
+                            control center.
+                        </p>
+
+                        <div class="av-mt-5">
+                            ← OPEN PORTAL
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="operator-assignments.html"
+                    class="av-panel machine-navigation-card"
+                >
+
+                    <div class="av-panel-content">
+
+                        <div class="av-eyebrow">
+                            FIELD WORK
+                        </div>
+
+                        <h3>
+                            Assignments
+                        </h3>
+
+                        <p>
+                            Review machine-operation requests and
+                            current field assignments.
+                        </p>
+
+                        <div class="av-mt-5">
+                            OPEN ASSIGNMENTS →
+                        </div>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="operator-availability.html"
+                    class="av-panel machine-navigation-card"
+                >
+
+                    <div class="av-panel-content">
+
+                        <div class="av-eyebrow">
+                            OPERATOR STATUS
+                        </div>
+
+                        <h3>
+                            Availability
+                        </h3>
+
+                        <p>
+                            Manage your availability for
+                            agricultural machine operations.
+                        </p>
+
+                        <div class="av-mt-5">
+                            OPEN AVAILABILITY →
+                        </div>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         PROFILE MODAL
+         ===================================================== -->
+
+    <div
+        class="av-modal-backdrop"
+        id="profileModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="profileModalTitle"
+    >
+
+        <div class="av-modal">
+
+            <div class="av-panel-content">
+
+                <div class="av-eyebrow">
+                    ACCOUNT
+                </div>
+
+
+                <h2
+                    class="av-title"
+                    id="profileModalTitle"
+                >
+
+                    Operator
+
+                    <span class="av-gradient-text">
+                        Profile
+                    </span>
+
+                </h2>
+
+
+                <div class="av-grid av-mt-6">
+
+
+                    <div class="av-stat-card">
+
+                        <div class="av-stat-label">
+                            NAME
+                        </div>
+
+                        <div
+                            class="av-stat-value"
+                            style="font-size:1.5rem;"
+                            data-user-name
+                        >
+                            AgriVision Member
+                        </div>
+
+                    </div>
+
+
+                    <div class="av-stat-card">
+
+                        <div class="av-stat-label">
+                            ROLE
+                        </div>
+
+                        <div
+                            class="av-stat-value"
+                            style="font-size:1.5rem;"
+                            data-user-role
+                        >
+                            Machine Operator
+                        </div>
+
+                    </div>
+
+
+                    <div class="av-stat-card">
+
+                        <div class="av-stat-label">
+                            EMAIL
+                        </div>
+
+                        <div
+                            class="av-stat-value"
+                            style="font-size:1.3rem;"
+                            data-user-email
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="av-mt-6">
+
+                    <button
+                        type="button"
+                        class="av-button av-button-secondary"
+                        data-modal-close
+                    >
+                        CLOSE
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MESSAGES MODAL
+         ===================================================== -->
+
+    <div
+        class="av-modal-backdrop"
+        id="messagesModal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="messagesModalTitle"
+    >
+
+        <div class="av-modal">
+
+            <div class="av-panel-content">
+
+                <div class="av-between">
+
+                    <div>
+
+                        <div class="av-eyebrow">
+                            COMMUNICATION
+                        </div>
+
+                        <h2
+                            class="av-title"
+                            id="messagesModalTitle"
+                        >
+                            Messages
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="av-icon-button"
+                        data-modal-close
+                        aria-label="Close"
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="operatorMessages"
+                    class="av-mt-6"
+                >
+
+                    <div class="av-empty-state">
+
+                        <div class="av-empty-icon">
+                            ◌
+                        </div>
+
+                        <h3>
+                            No messages
+                        </h3>
+
+                        <p>
+                            Operator communication will appear
+                            here when available.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="av-footer">
+
+        <div class="av-footer-inner">
+
+            <p class="av-footer-note">
+
+                Agricultural Intelligence Infrastructure
+                · Connected Systems · Karnataka
+
+            </p>
+
+
+            <p
+                class="av-footer-note"
+                style="margin-top:7px;"
+            >
+
+                ©
+                <span data-year>
+                    2026
+                </span>
+
+                AgriVision Karnataka
+
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         CORE JS
+         ===================================================== -->
+
+    <script src="core.js"></script>
+
+
+
+    <!-- =====================================================
+         PAGE LOGIC
+         ===================================================== -->
+
+    <script>
+
+        "use strict";
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            () => {
+
+
+                /* =================================================
+                   CORE INITIALIZATION
+                   ================================================= */
+
+                if (
+                    window.AgriVisionCore
+                ) {
+
+                    const methods = [
+
+                        "populateUser",
+                        "initializeModals",
+                        "initializeSearch",
+                        "initializeReveal",
+                        "initialize3D",
+                        "initializeRipple",
+                        "initializeMouseGlow",
+                        "initializeCursorStars",
+                        "createFireflies",
+                        "createLeaves",
+                        "createParticles",
+                        "initializeParallax",
+                        "initializeNotifications",
+                        "loadActivity"
+
+                    ];
+
+
+                    methods.forEach(
+                        method => {
+
+                            if (
+                                typeof
+                                AgriVisionCore[method] ===
+                                "function"
+                            ) {
+
+                                AgriVisionCore[method]();
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   YEAR
+                   ================================================= */
+
+                document
+                    .querySelectorAll(
+                        "[data-year]"
+                    )
+                    .forEach(
+                        element => {
+
+                            element.textContent =
+                                new Date()
+                                    .getFullYear();
+
+                        }
+                    );
+
+
+
+                /* =================================================
+                   USER
+                   ================================================= */
+
+                function getUser() {
+
+                    if (
+                        !window.AgriVisionCore ||
+                        typeof
+                        AgriVisionCore.getUser !==
+                        "function"
+                    ) {
+
+                        return {};
+
+                    }
+
+
+                    return (
+                        AgriVisionCore.getUser() ||
+                        {}
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   MACHINE SOURCE
+                   ================================================= */
+
+                function getMachines() {
+
+                    const user =
+                        getUser();
+
+
+                    let machines =
+                        user.machinesOperated ||
+                        user.machines ||
+                        user.machineTypes ||
+                        user.equipment ||
+                        user.equipmentTypes ||
+                        user.machine ||
+                        [];
+
+
+                    if (
+                        Array.isArray(
+                            machines
+                        )
+                    ) {
+
+                        return machines
+                            .filter(
+                                item =>
+                                    item !== null &&
+                                    item !== undefined &&
+                                    String(
+                                        typeof item ===
+                                        "object"
+                                            ? (
+                                                item.name ||
+                                                item.title ||
+                                                item.machine ||
+                                                item.type ||
+                                                ""
+                                            )
+                                            : item
+                                    ).trim()
+                            );
+
+                    }
+
+
+                    if (
+                        machines &&
+                        typeof machines ===
+                        "object"
+                    ) {
+
+                        return [
+                            machines
+                        ];
+
+                    }
+
+
+                    if (machines) {
+
+                        return String(
+                            machines
+                        )
+                        .split(",")
+                        .map(
+                            item =>
+                                item.trim()
+                        )
+                        .filter(Boolean);
+
+                    }
+
+
+                    return [];
+
+                }
+
+
+
+                /* =================================================
+                   MACHINE NAME
+                   ================================================= */
+
+                function machineName(
+                    machine
+                ) {
+
+                    if (
+                        machine &&
+                        typeof machine ===
+                        "object"
+                    ) {
+
+                        return (
+                            machine.name ||
+                            machine.title ||
+                            machine.machine ||
+                            machine.type ||
+                            "Agricultural Machine"
+                        );
+
+                    }
+
+
+                    return String(
+                        machine
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   MACHINE DATA
+                   ================================================= */
+
+                function machineDescription(
+                    machine
+                ) {
+
+                    if (
+                        machine &&
+                        typeof machine ===
+                        "object"
+                    ) {
+
+                        return (
+                            machine.description ||
+                            machine.details ||
+                            machine.purpose ||
+                            "Agricultural equipment associated with the Operator profile."
+                        );
+
+                    }
+
+
+                    return (
+                        "Agricultural equipment associated with the Operator profile."
+                    );
+
+                }
+
+
+
+                function machineStatus(
+                    machine
+                ) {
+
+                    if (
+                        machine &&
+                        typeof machine ===
+                        "object"
+                    ) {
+
+                        return (
+                            machine.status ||
+                            machine.availability ||
+                            "REGISTERED"
+                        );
+
+                    }
+
+
+                    return "REGISTERED";
+
+                }
+
+
+
+                function machineCapabilities(
+                    machine
+                ) {
+
+                    if (
+                        machine &&
+                        typeof machine ===
+                        "object"
+                    ) {
+
+                        const capabilities =
+                            machine.capabilities ||
+                            machine.operations ||
+                            machine.services ||
+                            machine.useCases ||
+                            [];
+
+
+                        if (
+                            Array.isArray(
+                                capabilities
+                            )
+                        ) {
+
+                            return capabilities
+                                .map(
+                                    item =>
+                                        String(item)
+                                )
+                                .filter(Boolean)
+                                .slice(0,5);
+
+                        }
+
+
+                        if (capabilities) {
+
+                            return String(
+                                capabilities
+                            )
+                            .split(",")
+                            .map(
+                                item =>
+                                    item.trim()
+                            )
+                            .filter(Boolean)
+                            .slice(0,5);
+
+                        }
+
+                    }
+
+
+                    return [
+
+                        "FIELD SERVICE",
+                        "MACHINE OPERATION"
+
+                    ];
+
+                }
+
+
+
+                /* =================================================
+                   ESCAPE
+                   ================================================= */
+
+                function escapeHTML(
+                    input
+                ) {
+
+                    return String(
+                        input
+                    )
+
+                    .replace(
+                        /&/g,
+                        "&amp;"
+                    )
+
+                    .replace(
+                        /</g,
+                        "&lt;"
+                    )
+
+                    .replace(
+                        />/g,
+                        "&gt;"
+                    )
+
+                    .replace(
+                        /"/g,
+                        "&quot;"
+                    )
+
+                    .replace(
+                        /'/g,
+                        "&#039;"
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   MACHINE CARD
+                   ================================================= */
+
+                function createMachineCard(
+                    machine,
+                    index
+                ) {
+
+                    const name =
+                        machineName(
+                            machine
+                        );
+
+
+                    const description =
+                        machineDescription(
+                            machine
+                        );
+
+
+                    const status =
+                        machineStatus(
+                            machine
+                        );
+
+
+                    const capabilities =
+                        machineCapabilities(
+                            machine
+                        );
+
+
+                    const machineId =
+                        machine &&
+                        typeof machine ===
+                        "object"
+                            ? (
+                                machine.id ||
+                                machine.machineId ||
+                                machine.equipmentId ||
+                                "—"
+                            )
+                            : "—";
+
+
+                    const type =
+                        machine &&
+                        typeof machine ===
+                        "object"
+                            ? (
+                                machine.type ||
+                                machine.category ||
+                                "Agricultural Equipment"
+                            )
+                            : "Agricultural Equipment";
+
+
+                    const card =
+                        document.createElement(
+                            "article"
+                        );
+
+
+                    card.className =
+                        "av-panel machine-card";
+
+
+                    card.innerHTML = `
+
+                        <div class="av-panel-content">
+
+                            <div class="machine-icon">
+                                🚜
+                            </div>
+
+
+                            <div class="av-eyebrow">
+
+                                MACHINE
+                                ${String(
+                                    index + 1
+                                ).padStart(2,"0")}
+
+                            </div>
+
+
+                            <h3>
+                                ${escapeHTML(name)}
+                            </h3>
+
+
+                            <p class="machine-card-description">
+                                ${escapeHTML(
+                                    description
+                                )}
+                            </p>
+
+
+                            <div class="machine-tags">
+
+                                ${capabilities
+                                    .map(
+                                        capability => `
+                                            <span class="machine-tag">
+                                                ${escapeHTML(
+                                                    capability
+                                                )}
+                                            </span>
+                                        `
+                                    )
+                                    .join("")
+                                }
+
+                            </div>
+
+
+                            <div class="machine-card-footer">
+
+                                <span class="machine-status">
+
+                                    ${escapeHTML(
+                                        String(
+                                            status
+                                        ).toUpperCase()
+                                    )}
+
+                                </span>
+
+
+                                <button
+                                    type="button"
+                                    class="av-button av-button-secondary machine-details-button"
+                                >
+                                    DETAILS
+                                </button>
+
+                            </div>
+
+
+                            <div
+                                class="machine-detail-panel"
+                            >
+
+                                <div
+                                    class="machine-detail-grid"
+                                >
+
+
+                                    <div
+                                        class="machine-detail-box"
+                                    >
+
+                                        <span
+                                            class="machine-detail-label"
+                                        >
+                                            MACHINE ID
+                                        </span>
+
+                                        <div
+                                            class="machine-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                machineId
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="machine-detail-box"
+                                    >
+
+                                        <span
+                                            class="machine-detail-label"
+                                        >
+                                            TYPE
+                                        </span>
+
+                                        <div
+                                            class="machine-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                type
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="machine-detail-box"
+                                    >
+
+                                        <span
+                                            class="machine-detail-label"
+                                        >
+                                            STATUS
+                                        </span>
+
+                                        <div
+                                            class="machine-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                status
+                                            )}
+                                        </div>
+
+                                    </div>
+
+
+                                    <div
+                                        class="machine-detail-box"
+                                    >
+
+                                        <span
+                                            class="machine-detail-label"
+                                        >
+                                            CAPABILITIES
+                                        </span>
+
+                                        <div
+                                            class="machine-detail-value"
+                                        >
+                                            ${escapeHTML(
+                                                capabilities.join(
+                                                    ", "
+                                                )
+                                            )}
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    `;
+
+
+                    const button =
+                        card.querySelector(
+                            ".machine-details-button"
+                        );
+
+
+                    button.addEventListener(
+                        "click",
+                        () => {
+
+                            card.classList.toggle(
+                                "expanded"
+                            );
+
+
+                            button.textContent =
+                                card.classList.contains(
+                                    "expanded"
+                                )
+                                    ? "HIDE"
+                                    : "DETAILS";
+
+                        }
+                    );
+
+
+                    return card;
+
+                }
+
+
+
+                /* =================================================
+                   RENDER MACHINES
+                   ================================================= */
+
+                function renderMachines() {
+
+                    const machines =
+                        getMachines();
+
+
+                    const grid =
+                        document.getElementById(
+                            "machineGrid"
+                        );
+
+
+                    if (!grid) {
+
+                        return;
+
+                    }
+
+
+                    document
+                        .getElementById(
+                            "machineCount"
+                        )
+                        .textContent =
+                        machines.length;
+
+
+                    document
+                        .getElementById(
+                            "capabilityCount"
+                        )
+                        .textContent =
+                        machines.length;
+
+
+                    grid.innerHTML =
+                        "";
+
+
+                    if (!machines.length) {
+
+                        grid.innerHTML = `
+
+                            <div class="av-panel machine-empty">
+
+                                <div
+                                    class="machine-empty-icon"
+                                >
+                                    🚜
+                                </div>
+
+
+                                <h3>
+                                    No machines registered
+                                </h3>
+
+
+                                <p>
+                                    No machine information is
+                                    currently available in the
+                                    Operator profile. Once
+                                    equipment data is connected,
+                                    it will appear here.
+                                </p>
+
+                            </div>
+
+                        `;
+
+                        return;
+
+                    }
+
+
+                    machines.forEach(
+                        (
+                            machine,
+                            index
+                        ) => {
+
+                            grid.appendChild(
+                                createMachineCard(
+                                    machine,
+                                    index
+                                )
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                /* =================================================
+                   INITIAL RENDER
+                   ================================================= */
+
+                renderMachines();
+
+
+
+                /* =================================================
+                   LIVE AGRIVISION EVENTS
+                   ================================================= */
+
+                document.addEventListener(
+                    "agrivision:event",
+                    renderMachines
+                );
+
+
+                document.addEventListener(
+                    "agrivision:data-updated",
+                    renderMachines
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

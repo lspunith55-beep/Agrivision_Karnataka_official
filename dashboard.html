@@ -1,0 +1,1304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka — Connected Agricultural Ecosystem Dashboard"
+    >
+
+    <title>AgriVision Karnataka | Dashboard</title>
+
+    <link rel="stylesheet" href="core.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND
+         NO DARK OVERLAY
+         ===================================================== -->
+
+    <div class="background-image"></div>
+
+    <!-- Ambient visual effects -->
+    <div class="ambient-glow ambient-glow-one"></div>
+    <div class="ambient-glow ambient-glow-two"></div>
+
+    <div class="floating-leaves" aria-hidden="true"></div>
+    <div class="fireflies" aria-hidden="true"></div>
+    <div class="particle-field" aria-hidden="true"></div>
+    <div class="cursor-stars" aria-hidden="true"></div>
+
+    <div class="mouse-glow" aria-hidden="true"></div>
+
+
+    <!-- =====================================================
+         APPLICATION
+         ===================================================== -->
+
+    <div class="av-app">
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <header class="av-header">
+
+            <div class="av-header-inner">
+
+                <a
+                    href="dashboard.html"
+                    class="av-brand"
+                >
+
+                    <span class="av-brand-name">
+                        AGRIVISION
+                    </span>
+
+                    <span class="av-status-dot"></span>
+
+                    <span class="av-brand-region">
+                        KARNATAKA
+                    </span>
+
+                </a>
+
+
+                <div class="av-search">
+
+                    <span class="av-search-icon">
+                        ⌕
+                    </span>
+
+                    <input
+                        type="search"
+                        data-global-search
+                        placeholder="Search your ecosystem..."
+                        aria-label="Search ecosystem"
+                    >
+
+                </div>
+
+
+                <div class="av-header-actions">
+
+                    <button
+                        class="av-icon-button"
+                        type="button"
+                        data-notification
+                        aria-label="Notifications"
+                    >
+                        🔔
+                    </button>
+
+                    <button
+                        class="av-icon-button"
+                        type="button"
+                        data-modal-open="messagesModal"
+                        aria-label="Messages"
+                    >
+                        💬
+                    </button>
+
+                    <button
+                        class="av-icon-button"
+                        type="button"
+                        data-modal-open="profileModal"
+                        aria-label="Profile"
+                    >
+                        👤
+                    </button>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             MAIN
+             ================================================= -->
+
+        <main class="av-page av-page-enter">
+
+
+            <!-- =================================================
+                 WELCOME
+                 ================================================= -->
+
+            <section class="av-welcome av-reveal av-visible">
+
+                <div class="av-welcome-content">
+
+                    <div class="av-eyebrow">
+
+                        <span class="av-status-dot"></span>
+
+                        AGRIVISION KARNATAKA
+
+                        <span>·</span>
+
+                        PERSONAL COMMAND CENTER
+
+                    </div>
+
+
+                    <h1 class="av-welcome-title">
+
+                        Your
+
+                        <span class="av-gradient-text">
+                            agricultural ecosystem
+                        </span>
+
+                        starts here.
+
+                    </h1>
+
+
+                    <p class="av-welcome-description">
+
+                        One connected space to access your
+                        agricultural systems, monitor your
+                        ecosystem and move between the people,
+                        resources and operations that power
+                        AgriVision.
+
+                    </p>
+
+
+                    <div class="av-chip-row av-center av-mt-6">
+
+                        <span class="av-status av-status-active">
+                            <span class="av-status-dot"></span>
+                            ECOSYSTEM ACTIVE
+                        </span>
+
+                        <span class="av-status av-status-info">
+                            KARNATAKA
+                        </span>
+
+                        <span class="av-status av-status-green">
+                            7 CORE SYSTEMS
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SEVEN CORE SYSTEMS
+                 ================================================= -->
+
+            <section
+                id="systems"
+                class="av-section av-reveal"
+            >
+
+                <div class="av-section-header">
+
+                    <div>
+
+                        <div class="av-page-kicker">
+                            AGRIVISION ECOSYSTEM
+                        </div>
+
+                        <h2 class="av-section-title">
+                            Enter your system
+                        </h2>
+
+                        <p class="av-section-description">
+
+                            Seven specialized systems connected
+                            through one agricultural ecosystem.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="av-grid av-grid-4 av-mt-6"
+                    id="roleGrid"
+                >
+
+
+                    <!-- FARMER -->
+
+                    <article
+                        class="av-card av-role-card av-3d av-reveal"
+                    >
+
+                        <div class="av-card-glow"></div>
+
+                        <div class="av-card-body">
+
+                            <div class="av-role-icon">
+                                🌾
+                            </div>
+
+                            <div class="av-page-kicker">
+                                SYSTEM 01
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Farmer
+                            </h3>
+
+                            <p class="av-card-description">
+
+                                Manage crops, farming activities,
+                                marketplace interactions, labour,
+                                machinery, logistics and deliveries.
+
+                            </p>
+
+                            <div class="av-chip-row av-mt-5">
+
+                                <span class="av-chip">
+                                    Production
+                                </span>
+
+                                <span class="av-chip">
+                                    Marketplace
+                                </span>
+
+                                <span class="av-chip">
+                                    Logistics
+                                </span>
+
+                            </div>
+
+                            <button
+                                class="av-button av-button-primary av-mt-6"
+                                type="button"
+                                data-role="farmer"
+                            >
+                                Open Farmer System
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BUYER -->
+
+                    <article
+                        class="av-card av-role-card av-3d av-reveal"
+                    >
+
+                        <div class="av-card-glow"></div>
+
+                        <div class="av-card-body">
+
+                            <div class="av-role-icon">
+                                🛒
+                            </div>
+
+                            <div class="av-page-kicker">
+                                SYSTEM 02
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Buyer
+                            </h3>
+
+                            <p class="av-card-description">
+
+                                Discover agricultural products,
+                                compare supply, connect with farmers,
+                                negotiate and manage orders.
+
+                            </p>
+
+                            <div class="av-chip-row av-mt-5">
+
+                                <span class="av-chip">
+                                    Marketplace
+                                </span>
+
+                                <span class="av-chip">
+                                    Orders
+                                </span>
+
+                                <span class="av-chip">
+                                    Suppliers
+                                </span>
+
+                            </div>
+
+                            <button
+                                class="av-button av-button-cyan av-mt-6"
+                                type="button"
+                                data-role="buyer"
+                            >
+                                Open Buyer System
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- LABOUR -->
+
+                    <article
+                        class="av-card av-role-card av-3d av-reveal"
+                    >
+
+                        <div class="av-card-glow"></div>
+
+                        <div class="av-card-body">
+
+                            <div class="av-role-icon">
+                                👷
+                            </div>
+
+                            <div class="av-page-kicker">
+                                SYSTEM 03
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Labour
+                            </h3>
+
+                            <p class="av-card-description">
+
+                                Discover agricultural work,
+                                manage applications, assignments,
+                                schedules and completed work.
+
+                            </p>
+
+                            <div class="av-chip-row av-mt-5">
+
+                                <span class="av-chip">
+                                    Jobs
+                                </span>
+
+                                <span class="av-chip">
+                                    Applications
+                                </span>
+
+                                <span class="av-chip">
+                                    Work
+                                </span>
+
+                            </div>
+
+                            <button
+                                class="av-button av-button-green av-mt-6"
+                                type="button"
+                                data-role="labour"
+                            >
+                                Open Labour System
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- LOGISTICS -->
+
+                    <article
+                        class="av-card av-role-card av-3d av-reveal"
+                    >
+
+                        <div class="av-card-glow"></div>
+
+                        <div class="av-card-body">
+
+                            <div class="av-role-icon">
+                                🚚
+                            </div>
+
+                            <div class="av-page-kicker">
+                                SYSTEM 04
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Logistics
+                            </h3>
+
+                            <p class="av-card-description">
+
+                                Coordinate transportation,
+                                vehicle assignments, routes,
+                                shipments and deliveries.
+
+                            </p>
+
+                            <div class="av-chip-row av-mt-5">
+
+                                <span class="av-chip">
+                                    Transport
+                                </span>
+
+                                <span class="av-chip">
+                                    Routes
+                                </span>
+
+                                <span class="av-chip">
+                                    Delivery
+                                </span>
+
+                            </div>
+
+                            <button
+                                class="av-button av-button-cyan av-mt-6"
+                                type="button"
+                                data-role="logistics"
+                            >
+                                Open Logistics System
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- DRIVER -->
+
+                    <article
+                        class="av-card av-role-card av-3d av-reveal"
+                    >
+
+                        <div class="av-card-glow"></div>
+
+                        <div class="av-card-body">
+
+                            <div class="av-role-icon">
+                                🚛
+                            </div>
+
+                            <div class="av-page-kicker">
+                                SYSTEM 05
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Driver
+                            </h3>
+
+                            <p class="av-card-description">
+
+                                Receive assignments, manage active
+                                trips, follow routes and complete
+                                agricultural deliveries.
+
+                            </p>
+
+                            <div class="av-chip-row av-mt-5">
+
+                                <span class="av-chip">
+                                    Assignments
+                                </span>
+
+                                <span class="av-chip">
+                                    Trips
+                                </span>
+
+                                <span class="av-chip">
+                                    Delivery
+                                </span>
+
+                            </div>
+
+                            <button
+                                class="av-button av-button-violet av-mt-6"
+                                type="button"
+                                data-role="driver"
+                            >
+                                Open Driver System
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- EQUIPMENT -->
+
+                    <article
+                        class="av-card av-role-card av-3d av-reveal"
+                    >
+
+                        <div class="av-card-glow"></div>
+
+                        <div class="av-card-body">
+
+                            <div class="av-role-icon">
+                                🚜
+                            </div>
+
+                            <div class="av-page-kicker">
+                                SYSTEM 06
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Equipment
+                            </h3>
+
+                            <p class="av-card-description">
+
+                                Manage agricultural machinery,
+                                availability, bookings, requests
+                                and equipment operations.
+
+                            </p>
+
+                            <div class="av-chip-row av-mt-5">
+
+                                <span class="av-chip">
+                                    Machinery
+                                </span>
+
+                                <span class="av-chip">
+                                    Availability
+                                </span>
+
+                                <span class="av-chip">
+                                    Bookings
+                                </span>
+
+                            </div>
+
+                            <button
+                                class="av-button av-button-gold av-mt-6"
+                                type="button"
+                                data-role="equipment"
+                            >
+                                Open Equipment System
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- MACHINE OPERATOR -->
+
+                    <article
+                        class="av-card av-role-card av-3d av-reveal"
+                    >
+
+                        <div class="av-card-glow"></div>
+
+                        <div class="av-card-body">
+
+                            <div class="av-role-icon">
+                                ⚙️
+                            </div>
+
+                            <div class="av-page-kicker">
+                                SYSTEM 07
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Machine Operator
+                            </h3>
+
+                            <p class="av-card-description">
+
+                                Manage operator availability,
+                                qualifications, assignments,
+                                schedules and machine operations.
+
+                            </p>
+
+                            <div class="av-chip-row av-mt-5">
+
+                                <span class="av-chip">
+                                    Qualified
+                                </span>
+
+                                <span class="av-chip">
+                                    Available
+                                </span>
+
+                                <span class="av-chip">
+                                    Scheduled
+                                </span>
+
+                            </div>
+
+                            <button
+                                class="av-button av-button-violet av-mt-6"
+                                type="button"
+                                data-role="operator"
+                            >
+                                Open Operator System
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CONNECTED INTELLIGENCE -->
+
+                    <article
+                        class="av-card av-role-card av-3d av-reveal"
+                    >
+
+                        <div class="av-card-glow"></div>
+
+                        <div class="av-card-body">
+
+                            <div class="av-role-icon">
+                                🧠
+                            </div>
+
+                            <div class="av-page-kicker">
+                                ECOSYSTEM
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Connected Intelligence
+                            </h3>
+
+                            <p class="av-card-description">
+
+                                Connect agricultural production,
+                                people, resources, movement,
+                                operations and ecosystem events.
+
+                            </p>
+
+                            <div class="av-chip-row av-mt-5">
+
+                                <span class="av-chip">
+                                    Intelligence
+                                </span>
+
+                                <span class="av-chip">
+                                    Coordination
+                                </span>
+
+                                <span class="av-chip">
+                                    Ecosystem
+                                </span>
+
+                            </div>
+
+                            <button
+                                class="av-button av-button-secondary av-mt-6"
+                                type="button"
+                                data-modal-open="intelligenceModal"
+                            >
+                                Explore Intelligence
+                                <span>→</span>
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 CONNECTED FLOW
+                 ================================================= -->
+
+            <section
+                id="flow"
+                class="av-section av-reveal"
+            >
+
+                <div class="av-section-header">
+
+                    <div>
+
+                        <div class="av-page-kicker">
+                            CONNECTED AGRICULTURE
+                        </div>
+
+                        <h2 class="av-section-title">
+                            One ecosystem.
+                        </h2>
+
+                        <p class="av-section-description">
+
+                            Agricultural activity can move
+                            through multiple connected systems
+                            while remaining part of one ecosystem.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="av-card av-mt-6">
+
+                    <div class="av-card-body">
+
+                        <div class="av-flow">
+
+                            <div class="av-flow-item">
+                                <span class="av-flow-icon">🌾</span>
+                                <span>Production</span>
+                            </div>
+
+                            <span class="av-flow-arrow">→</span>
+
+                            <div class="av-flow-item">
+                                <span class="av-flow-icon">🛒</span>
+                                <span>Market</span>
+                            </div>
+
+                            <span class="av-flow-arrow">→</span>
+
+                            <div class="av-flow-item">
+                                <span class="av-flow-icon">👷</span>
+                                <span>Labour</span>
+                            </div>
+
+                            <span class="av-flow-arrow">→</span>
+
+                            <div class="av-flow-item">
+                                <span class="av-flow-icon">🚜</span>
+                                <span>Equipment</span>
+                            </div>
+
+                            <span class="av-flow-arrow">→</span>
+
+                            <div class="av-flow-item">
+                                <span class="av-flow-icon">⚙️</span>
+                                <span>Operator</span>
+                            </div>
+
+                            <span class="av-flow-arrow">→</span>
+
+                            <div class="av-flow-item">
+                                <span class="av-flow-icon">🚚</span>
+                                <span>Logistics</span>
+                            </div>
+
+                            <span class="av-flow-arrow">→</span>
+
+                            <div class="av-flow-item">
+                                <span class="av-flow-icon">📦</span>
+                                <span>Delivery</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 ACTIVITY
+                 ================================================= -->
+
+            <section
+                id="activity"
+                class="av-section av-reveal"
+            >
+
+                <div class="av-grid av-grid-2">
+
+
+                    <div class="av-card">
+
+                        <div class="av-card-body">
+
+                            <div class="av-between">
+
+                                <div>
+
+                                    <div class="av-page-kicker">
+                                        ECOSYSTEM ACTIVITY
+                                    </div>
+
+                                    <h2 class="av-section-title av-mt-2">
+                                        Recent activity
+                                    </h2>
+
+                                </div>
+
+                                <span class="av-status av-status-active">
+                                    LIVE
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                id="ecosystemActivity"
+                                class="av-timeline av-mt-6"
+                            >
+
+                                <div class="av-empty-state">
+
+                                    <div class="av-empty-icon">
+                                        ✦
+                                    </div>
+
+                                    <h3>
+                                        No ecosystem activity yet
+                                    </h3>
+
+                                    <p>
+
+                                        Completed operations from
+                                        connected systems will appear
+                                        here.
+
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="av-card">
+
+                        <div class="av-card-body">
+
+                            <div class="av-page-kicker">
+                                THE AGRIVISION IDEA
+                            </div>
+
+                            <h2 class="av-title av-mt-3">
+
+                                Agriculture is a
+
+                                <span class="av-gradient-text">
+                                    connected system.
+                                </span>
+
+                            </h2>
+
+                            <p class="av-page-description av-mt-5">
+
+                                A crop can create demand.
+                                Demand can connect farmers and
+                                buyers. Operations can require
+                                labour, equipment, operators and
+                                transportation.
+
+                            </p>
+
+                            <p class="av-page-description av-mt-3">
+
+                                AgriVision brings these systems
+                                together so agricultural activity
+                                can become part of a connected
+                                ecosystem.
+
+                            </p>
+
+                            <div class="av-chip-row av-mt-6">
+
+                                <span class="av-status av-status-green">
+                                    🌾 PRODUCTION
+                                </span>
+
+                                <span class="av-status av-status-cyan">
+                                    🛒 MARKET
+                                </span>
+
+                                <span class="av-status av-status-green">
+                                    👷 LABOUR
+                                </span>
+
+                                <span class="av-status av-status-violet">
+                                    🚜 MACHINERY
+                                </span>
+
+                                <span class="av-status av-status-cyan">
+                                    🚚 LOGISTICS
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 FINAL
+                 ================================================= -->
+
+            <section
+                class="av-section av-final-section av-reveal"
+            >
+
+                <div class="av-final-content">
+
+                    <div class="av-eyebrow">
+                        AGRIVISION KARNATAKA
+                    </div>
+
+                    <h2 class="av-final-title">
+
+                        Better coordination.
+
+                        <br>
+
+                        Better agriculture.
+
+                        <br>
+
+                        <span class="av-gradient-text">
+                            One ecosystem.
+                        </span>
+
+                    </h2>
+
+                    <p class="av-final-description">
+
+                        People. Resources. Agriculture.
+                        Movement. Intelligence.
+
+                    </p>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- =================================================
+             FOOTER
+             ================================================= -->
+
+        <footer class="av-footer">
+
+            <div class="av-footer-inner">
+
+                <div class="av-footer-brand">
+
+                    <span class="av-brand-name">
+                        AGRIVISION
+                    </span>
+
+                    <span class="av-status-dot"></span>
+
+                    <span class="av-text-green">
+                        KARNATAKA
+                    </span>
+
+                </div>
+
+                <p class="av-footer-note">
+                    Agricultural Intelligence Infrastructure
+                </p>
+
+                <p class="av-footer-note">
+
+                    ©
+                    <span data-year>2026</span>
+                    AgriVision Karnataka
+
+                </p>
+
+            </div>
+
+        </footer>
+
+    </div>
+
+
+    <!-- =====================================================
+         PROFILE MODAL
+         ===================================================== -->
+
+    <div
+        class="av-modal-backdrop"
+        id="profileModal"
+        role="dialog"
+        aria-modal="true"
+    >
+
+        <div class="av-modal">
+
+            <div class="av-panel-content">
+
+                <div class="av-between">
+
+                    <div>
+
+                        <div class="av-eyebrow">
+                            ACCOUNT
+                        </div>
+
+                        <h2 class="av-title av-mt-2">
+                            Your
+                            <span class="av-gradient-text">
+                                identity
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <button
+                        class="av-icon-button"
+                        type="button"
+                        data-modal-close
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="av-grid av-grid-3 av-mt-6">
+
+                    <div class="av-stat-card">
+
+                        <div class="av-stat-label">
+                            NAME
+                        </div>
+
+                        <div
+                            class="av-stat-value"
+                            data-user-name
+                        >
+                            AgriVision Member
+                        </div>
+
+                    </div>
+
+                    <div class="av-stat-card">
+
+                        <div class="av-stat-label">
+                            ROLE
+                        </div>
+
+                        <div
+                            class="av-stat-value av-text-green"
+                            data-user-role
+                        >
+                            No active role
+                        </div>
+
+                    </div>
+
+                    <div class="av-stat-card">
+
+                        <div class="av-stat-label">
+                            EMAIL
+                        </div>
+
+                        <div
+                            class="av-stat-value"
+                            data-user-email
+                        >
+                            —
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         MESSAGES
+         ===================================================== -->
+
+    <div
+        class="av-modal-backdrop"
+        id="messagesModal"
+        role="dialog"
+        aria-modal="true"
+    >
+
+        <div class="av-modal">
+
+            <div class="av-panel-content">
+
+                <div class="av-between">
+
+                    <div>
+
+                        <div class="av-eyebrow">
+                            COMMUNICATION
+                        </div>
+
+                        <h2 class="av-title av-mt-2">
+                            Messages
+                        </h2>
+
+                    </div>
+
+                    <button
+                        class="av-icon-button"
+                        type="button"
+                        data-modal-close
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="av-empty-state av-mt-6">
+
+                    <div class="av-empty-icon">
+                        💬
+                    </div>
+
+                    <h3>
+                        No messages yet
+                    </h3>
+
+                    <p>
+                        Ecosystem communication will appear here.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+         INTELLIGENCE
+         ===================================================== -->
+
+    <div
+        class="av-modal-backdrop"
+        id="intelligenceModal"
+        role="dialog"
+        aria-modal="true"
+    >
+
+        <div class="av-modal">
+
+            <div class="av-panel-content">
+
+                <div class="av-between">
+
+                    <div>
+
+                        <div class="av-eyebrow">
+                            ECOSYSTEM INTELLIGENCE
+                        </div>
+
+                        <h2 class="av-title av-mt-2">
+                            Connected intelligence
+                        </h2>
+
+                    </div>
+
+                    <button
+                        class="av-icon-button"
+                        type="button"
+                        data-modal-close
+                    >
+                        ×
+                    </button>
+
+                </div>
+
+
+                <div class="av-grid av-grid-2 av-mt-6">
+
+                    <div class="av-stat-card">
+                        <div class="av-stat-label">
+                            PRODUCTION
+                        </div>
+                        <div class="av-stat-value">
+                            Crops & farms
+                        </div>
+                    </div>
+
+                    <div class="av-stat-card">
+                        <div class="av-stat-label">
+                            MARKET
+                        </div>
+                        <div class="av-stat-value">
+                            Buyers & orders
+                        </div>
+                    </div>
+
+                    <div class="av-stat-card">
+                        <div class="av-stat-label">
+                            RESOURCES
+                        </div>
+                        <div class="av-stat-value">
+                            Labour & machinery
+                        </div>
+                    </div>
+
+                    <div class="av-stat-card">
+                        <div class="av-stat-label">
+                            MOVEMENT
+                        </div>
+                        <div class="av-stat-value">
+                            Logistics & delivery
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="core.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            if (
+                window.AgriVisionCore &&
+                typeof AgriVisionCore.initializeDashboard === "function"
+            ) {
+                AgriVisionCore.initializeDashboard();
+            }
+
+        });
+    </script>
+
+</body>
+</html>

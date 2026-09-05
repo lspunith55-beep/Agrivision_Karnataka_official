@@ -1,0 +1,4658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Sustainability — conserving water, soil, energy, biodiversity and natural resources through data-informed sustainable agriculture."
+    >
+
+    <title>Sustainability | AgriVision Karnataka</title>
+
+    <!-- =========================================================
+         SHARED PROJECT STYLES
+         ========================================================= -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         PAGE-SPECIFIC STYLES
+         Everything is scoped under .sustainability-page
+         ========================================================= -->
+    <style>
+        /* =====================================================
+           ROOT
+           ===================================================== */
+
+        .sustainability-page {
+            --sus-bg: #061c17;
+            --sus-bg-deep: #03120f;
+
+            --sus-emerald: #00d99a;
+            --sus-mint: #69ffd1;
+            --sus-cyan: #27dfff;
+            --sus-blue: #5b8cff;
+            --sus-violet: #a66cff;
+            --sus-magenta: #ee6bff;
+            --sus-coral: #ff806b;
+            --sus-lime: #b8ff67;
+
+            --sus-white: #f3fff9;
+            --sus-soft: #c8ded5;
+            --sus-muted: #91aaa1;
+
+            --sus-line: rgba(150, 255, 224, 0.17);
+            --sus-line-bright: rgba(150, 255, 224, 0.34);
+
+            --sus-glass: rgba(5, 31, 25, 0.58);
+            --sus-glass-heavy: rgba(4, 25, 21, 0.78);
+
+            position: relative;
+            overflow-x: hidden;
+            background:
+                radial-gradient(
+                    circle at 15% 15%,
+                    rgba(0, 217, 154, 0.12),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 28%,
+                    rgba(39, 223, 255, 0.08),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 50% 70%,
+                    rgba(166, 108, 255, 0.07),
+                    transparent 32%
+                ),
+                var(--sus-bg-deep);
+            color: var(--sus-white);
+        }
+
+        .sustainability-page *,
+        .sustainability-page *::before,
+        .sustainability-page *::after {
+            box-sizing: border-box;
+        }
+
+        .sustainability-page a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* =====================================================
+           SHARED BACKGROUND HOOKS
+           These intentionally use the same hooks as the rest
+           of the AgriVision project so script.js can control
+           the atmospheric effects.
+           ===================================================== */
+
+        .sustainability-page .background-image {
+            opacity: 0.55;
+        }
+
+        .sustainability-page .particles,
+        .sustainability-page .floating-leaves,
+        .sustainability-page .fireflies,
+        .sustainability-page .light-trails {
+            pointer-events: none;
+        }
+
+        /* =====================================================
+           PAGE SHELL
+           ===================================================== */
+
+        .sustainability-shell {
+            position: relative;
+            z-index: 2;
+        }
+
+        .sustainability-container {
+            width: min(1380px, calc(100% - 80px));
+            margin: 0 auto;
+        }
+
+        .sus-section {
+            position: relative;
+            padding: 150px 0;
+        }
+
+        .sus-section + .sus-section {
+            border-top: 1px solid rgba(150, 255, 224, 0.07);
+        }
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .sustainability-page .sus-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 500;
+            padding: 20px 28px;
+            pointer-events: none;
+        }
+
+        .sustainability-page .sus-header-inner {
+            width: min(1480px, 100%);
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            pointer-events: auto;
+        }
+
+        .sus-brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+
+            padding: 10px 15px;
+
+            border: 1px solid rgba(150, 255, 224, 0.18);
+            border-radius: 999px;
+
+            background: rgba(4, 22, 18, 0.48);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+
+            box-shadow:
+                0 10px 45px rgba(0, 0, 0, 0.25),
+                inset 0 0 30px rgba(0, 217, 154, 0.035);
+        }
+
+        .sus-brand-mark {
+            width: 30px;
+            height: 30px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--sus-emerald),
+                    var(--sus-cyan)
+                );
+
+            color: #03140f;
+            font-size: 13px;
+        }
+
+        .sus-brand-text {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .sus-header-link {
+            width: 46px;
+            height: 46px;
+
+            display: grid;
+            place-items: center;
+
+            border: 1px solid rgba(150, 255, 224, 0.24);
+            border-radius: 50%;
+
+            background: rgba(4, 22, 18, 0.58);
+            backdrop-filter: blur(16px);
+
+            color: var(--sus-white);
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .sus-header-link:hover {
+            transform: translateY(-2px) rotate(4deg);
+
+            border-color: var(--sus-emerald);
+
+            box-shadow:
+                0 0 25px rgba(0, 217, 154, 0.2);
+        }
+
+        /* =====================================================
+           TYPOGRAPHY
+           ===================================================== */
+
+        .sus-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            margin-bottom: 24px;
+
+            color: var(--sus-mint);
+
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+        }
+
+        .sus-kicker::before {
+            content: "";
+            width: 28px;
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--sus-emerald),
+                    transparent
+                );
+        }
+
+        .sus-title {
+            max-width: 1050px;
+
+            margin: 0;
+
+            font-size: clamp(48px, 7vw, 105px);
+            line-height: 0.92;
+            letter-spacing: -0.055em;
+            font-weight: 900;
+        }
+
+        .sus-title .green {
+            color: var(--sus-emerald);
+        }
+
+        .sus-title .cyan {
+            color: var(--sus-cyan);
+        }
+
+        .sus-title .violet {
+            color: var(--sus-violet);
+        }
+
+        .sus-title .lime {
+            color: var(--sus-lime);
+        }
+
+        .sus-title .coral {
+            color: var(--sus-coral);
+        }
+
+        .sus-gradient-text {
+            background:
+                linear-gradient(
+                    105deg,
+                    var(--sus-mint),
+                    var(--sus-cyan) 35%,
+                    var(--sus-violet) 68%,
+                    var(--sus-magenta)
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .sus-lead {
+            max-width: 780px;
+
+            margin-top: 30px;
+
+            color: var(--sus-soft);
+
+            font-size: clamp(17px, 1.6vw, 21px);
+            line-height: 1.75;
+        }
+
+        .sus-small {
+            color: var(--sus-muted);
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           BUTTONS
+           ===================================================== */
+
+        .sus-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+
+            margin-top: 38px;
+        }
+
+        .sus-button {
+            position: relative;
+
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+
+            min-height: 50px;
+            padding: 0 20px;
+
+            border: 1px solid rgba(150, 255, 224, 0.26);
+            border-radius: 999px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 217, 154, 0.12),
+                    rgba(39, 223, 255, 0.05)
+                );
+
+            color: var(--sus-white);
+
+            font-size: 12px;
+            font-weight: 850;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+
+            overflow: hidden;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .sus-button::after {
+            content: "";
+
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    transparent 25%,
+                    rgba(255,255,255,0.14),
+                    transparent 70%
+                );
+
+            transform: translateX(-120%);
+            transition: transform 0.6s ease;
+        }
+
+        .sus-button:hover {
+            transform: translateY(-3px);
+
+            border-color: var(--sus-emerald);
+
+            box-shadow:
+                0 15px 40px rgba(0, 217, 154, 0.13);
+        }
+
+        .sus-button:hover::after {
+            transform: translateX(120%);
+        }
+
+        .sus-button.secondary {
+            border-color: rgba(166, 108, 255, 0.28);
+
+            background:
+                rgba(166, 108, 255, 0.07);
+        }
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .sus-hero {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 130px;
+            padding-bottom: 80px;
+        }
+
+        .sus-hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+            gap: 70px;
+            align-items: center;
+        }
+
+        .sus-hero-copy {
+            position: relative;
+            z-index: 2;
+        }
+
+        .sus-hero-statement {
+            margin-top: 38px;
+
+            max-width: 640px;
+
+            padding-left: 20px;
+
+            border-left: 2px solid var(--sus-emerald);
+
+            color: #d8ebe4;
+
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .sus-hero-orbit {
+            position: relative;
+
+            width: min(480px, 100%);
+            aspect-ratio: 1;
+
+            margin-left: auto;
+        }
+
+        .sus-orbit-ring {
+            position: absolute;
+            inset: 8%;
+
+            border:
+                1px solid
+                rgba(105, 255, 209, 0.18);
+
+            border-radius: 50%;
+
+            animation: susOrbit 24s linear infinite;
+        }
+
+        .sus-orbit-ring:nth-child(2) {
+            inset: 19%;
+
+            border-color:
+                rgba(39, 223, 255, 0.18);
+
+            animation-duration: 17s;
+            animation-direction: reverse;
+        }
+
+        .sus-orbit-ring:nth-child(3) {
+            inset: 31%;
+
+            border-color:
+                rgba(166, 108, 255, 0.2);
+
+            animation-duration: 12s;
+        }
+
+        .sus-earth-core {
+            position: absolute;
+            inset: 34%;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle at 32% 25%,
+                    rgba(105, 255, 209, 0.5),
+                    rgba(0, 217, 154, 0.12) 30%,
+                    rgba(4, 36, 28, 0.9) 72%
+                );
+
+            border:
+                1px solid
+                rgba(105, 255, 209, 0.32);
+
+            box-shadow:
+                0 0 80px rgba(0, 217, 154, 0.14),
+                inset 0 0 55px rgba(39, 223, 255, 0.08);
+
+            color: var(--sus-mint);
+
+            font-size: 52px;
+        }
+
+        .sus-orbit-node {
+            position: absolute;
+
+            display: grid;
+            place-items: center;
+
+            width: 58px;
+            height: 58px;
+
+            border:
+                1px solid
+                rgba(150, 255, 224, 0.25);
+
+            border-radius: 50%;
+
+            background:
+                rgba(5, 31, 25, 0.75);
+
+            backdrop-filter: blur(12px);
+
+            box-shadow:
+                0 12px 35px rgba(0,0,0,0.28);
+
+            font-size: 17px;
+        }
+
+        .sus-node-water {
+            top: 9%;
+            left: 44%;
+            color: var(--sus-cyan);
+        }
+
+        .sus-node-soil {
+            top: 43%;
+            right: 2%;
+            color: var(--sus-lime);
+        }
+
+        .sus-node-energy {
+            bottom: 8%;
+            left: 48%;
+            color: var(--sus-coral);
+        }
+
+        .sus-node-nature {
+            top: 44%;
+            left: 2%;
+            color: var(--sus-mint);
+        }
+
+        @keyframes susOrbit {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* =====================================================
+           SECTION INTRO
+           ===================================================== */
+
+        .sus-section-head {
+            display: grid;
+            grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+            gap: 80px;
+            align-items: end;
+
+            margin-bottom: 70px;
+        }
+
+        .sus-section-number {
+            font-size: clamp(58px, 8vw, 115px);
+            line-height: 0.8;
+            font-weight: 900;
+            letter-spacing: -0.07em;
+
+            color: rgba(105, 255, 209, 0.1);
+        }
+
+        .sus-section-heading {
+            margin: 0;
+
+            font-size: clamp(34px, 4.5vw, 68px);
+            line-height: 0.98;
+            letter-spacing: -0.045em;
+            font-weight: 900;
+        }
+
+        .sus-section-description {
+            max-width: 680px;
+
+            margin-top: 22px;
+
+            color: var(--sus-soft);
+
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* =====================================================
+           PRINCIPLE STATEMENT
+           ===================================================== */
+
+        .sus-statement {
+            padding: 55px;
+
+            border:
+                1px solid
+                rgba(105, 255, 209, 0.16);
+
+            border-radius: 32px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0, 217, 154, 0.08),
+                    rgba(39, 223, 255, 0.035),
+                    rgba(166, 108, 255, 0.045)
+                );
+
+            box-shadow:
+                inset 0 0 80px rgba(105, 255, 209, 0.018);
+        }
+
+        .sus-statement p {
+            max-width: 1100px;
+
+            margin: 0;
+
+            font-size: clamp(28px, 4vw, 55px);
+            line-height: 1.08;
+            letter-spacing: -0.04em;
+            font-weight: 850;
+        }
+
+        /* =====================================================
+           CONSERVATION MATRIX
+           ===================================================== */
+
+        .sus-conservation-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 16px;
+        }
+
+        .sus-conservation-card {
+            min-height: 280px;
+
+            position: relative;
+
+            padding: 28px;
+
+            border:
+                1px solid
+                var(--sus-line);
+
+            border-radius: 26px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(7, 39, 31, 0.72),
+                    rgba(3, 24, 19, 0.7)
+                );
+
+            overflow: hidden;
+
+            transition:
+                transform 0.4s ease,
+                border-color 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+        .sus-conservation-card::before {
+            content: "";
+
+            position: absolute;
+
+            width: 160px;
+            height: 160px;
+
+            top: -80px;
+            right: -80px;
+
+            border-radius: 50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    var(--card-accent, var(--sus-emerald)),
+                    transparent 70%
+                );
+
+            opacity: 0.12;
+        }
+
+        .sus-conservation-card:hover {
+            transform: translateY(-8px);
+
+            border-color:
+                rgba(150, 255, 224, 0.34);
+
+            box-shadow:
+                0 24px 60px rgba(0,0,0,0.22);
+        }
+
+        .sus-conservation-card.water {
+            --card-accent: var(--sus-cyan);
+        }
+
+        .sus-conservation-card.soil {
+            --card-accent: var(--sus-lime);
+        }
+
+        .sus-conservation-card.energy {
+            --card-accent: var(--sus-coral);
+        }
+
+        .sus-conservation-card.biodiversity {
+            --card-accent: var(--sus-violet);
+        }
+
+        .sus-conservation-icon {
+            width: 54px;
+            height: 54px;
+
+            display: grid;
+            place-items: center;
+
+            margin-bottom: 50px;
+
+            border:
+                1px solid
+                rgba(150,255,224,0.2);
+
+            border-radius: 16px;
+
+            color: var(--card-accent, var(--sus-emerald));
+
+            background:
+                rgba(255,255,255,0.025);
+
+            font-size: 20px;
+        }
+
+        .sus-conservation-card h3 {
+            margin: 0 0 12px;
+
+            font-size: 23px;
+            letter-spacing: -0.025em;
+        }
+
+        .sus-conservation-card p {
+            margin: 0;
+
+            color: var(--sus-muted);
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* =====================================================
+           WATER SECTION
+           ===================================================== */
+
+        .sus-water-layout {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 25px;
+        }
+
+        .sus-water-visual {
+            position: relative;
+
+            min-height: 600px;
+
+            padding: 40px;
+
+            display: flex;
+            align-items: flex-end;
+
+            border:
+                1px solid
+                rgba(39, 223, 255, 0.18);
+
+            border-radius: 34px;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 50% 25%,
+                    rgba(39, 223, 255, 0.16),
+                    transparent 32%
+                ),
+                linear-gradient(
+                    180deg,
+                    rgba(9, 53, 54, 0.35),
+                    rgba(3, 24, 20, 0.9)
+                );
+        }
+
+        .sus-water-drop {
+            position: absolute;
+
+            width: 360px;
+            height: 460px;
+
+            left: 50%;
+            top: 8%;
+
+            transform: translateX(-50%);
+
+            border-radius:
+                55% 55% 62% 62% /
+                62% 62% 45% 45%;
+
+            background:
+                radial-gradient(
+                    circle at 30% 25%,
+                    rgba(255,255,255,0.32),
+                    transparent 8%
+                ),
+                linear-gradient(
+                    145deg,
+                    rgba(105,255,209,0.18),
+                    rgba(39,223,255,0.08)
+                );
+
+            border:
+                1px solid
+                rgba(105,255,209,0.25);
+
+            box-shadow:
+                0 0 100px rgba(39,223,255,0.12);
+
+            opacity: 0.75;
+        }
+
+        .sus-water-copy {
+            position: relative;
+            z-index: 2;
+
+            max-width: 500px;
+        }
+
+        .sus-water-copy h3 {
+            margin: 0 0 15px;
+
+            font-size: clamp(35px, 4vw, 60px);
+            line-height: 0.98;
+            letter-spacing: -0.045em;
+        }
+
+        .sus-water-copy p {
+            margin: 0;
+
+            color: var(--sus-soft);
+
+            line-height: 1.75;
+        }
+
+        .sus-water-actions {
+            display: grid;
+            gap: 15px;
+        }
+
+        .sus-practice {
+            display: grid;
+            grid-template-columns: 58px 1fr;
+            gap: 18px;
+
+            padding: 27px;
+
+            border:
+                1px solid
+                rgba(150,255,224,0.14);
+
+            border-radius: 24px;
+
+            background:
+                rgba(5, 29, 24, 0.62);
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+        .sus-practice:hover {
+            transform: translateX(6px);
+
+            border-color:
+                rgba(39,223,255,0.32);
+        }
+
+        .sus-practice-icon {
+            width: 58px;
+            height: 58px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 17px;
+
+            color: var(--sus-cyan);
+
+            background:
+                rgba(39,223,255,0.07);
+
+            border:
+                1px solid
+                rgba(39,223,255,0.15);
+        }
+
+        .sus-practice h4 {
+            margin: 0 0 7px;
+
+            font-size: 18px;
+        }
+
+        .sus-practice p {
+            margin: 0;
+
+            color: var(--sus-muted);
+
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+        /* =====================================================
+           SOIL
+           ===================================================== */
+
+        .sus-soil-stage {
+            position: relative;
+
+            padding: 70px 60px;
+
+            border-radius: 36px;
+
+            border:
+                1px solid
+                rgba(184,255,103,0.16);
+
+            background:
+                linear-gradient(
+                    160deg,
+                    rgba(34, 56, 26, 0.32),
+                    rgba(7, 31, 24, 0.75)
+                );
+
+            overflow: hidden;
+        }
+
+        .sus-soil-layers {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 15px;
+
+            margin-top: 50px;
+        }
+
+        .sus-soil-layer {
+            min-height: 230px;
+
+            padding: 28px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            border-radius: 24px;
+
+            border:
+                1px solid
+                rgba(184,255,103,0.15);
+
+            background:
+                linear-gradient(
+                    180deg,
+                    rgba(184,255,103,0.035),
+                    rgba(3, 20, 15, 0.76)
+                );
+        }
+
+        .sus-soil-layer:nth-child(2) {
+            border-color:
+                rgba(105,255,209,0.15);
+        }
+
+        .sus-soil-layer:nth-child(3) {
+            border-color:
+                rgba(166,108,255,0.16);
+        }
+
+        .sus-soil-layer span {
+            margin-bottom: auto;
+
+            color: rgba(243,255,249,0.35);
+
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .sus-soil-layer h4 {
+            margin: 0 0 9px;
+
+            font-size: 22px;
+        }
+
+        .sus-soil-layer p {
+            margin: 0;
+
+            color: var(--sus-muted);
+
+            font-size: 13px;
+            line-height: 1.65;
+        }
+
+        /* =====================================================
+           ENERGY / FUEL
+           ===================================================== */
+
+        .sus-energy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .sus-energy-panel {
+            min-height: 430px;
+
+            padding: 40px;
+
+            border-radius: 30px;
+
+            border:
+                1px solid
+                rgba(255,128,107,0.17);
+
+            background:
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(255,128,107,0.1),
+                    transparent 28%
+                ),
+                rgba(8, 29, 23, 0.68);
+        }
+
+        .sus-energy-panel:nth-child(2) {
+            border-color:
+                rgba(184,255,103,0.15);
+
+            background:
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(184,255,103,0.08),
+                    transparent 28%
+                ),
+                rgba(8, 29, 23, 0.68);
+        }
+
+        .sus-energy-number {
+            font-size: 72px;
+            line-height: 0.9;
+            font-weight: 900;
+            letter-spacing: -0.06em;
+
+            color: var(--sus-coral);
+        }
+
+        .sus-energy-panel:nth-child(2)
+        .sus-energy-number {
+            color: var(--sus-lime);
+        }
+
+        .sus-energy-panel h3 {
+            margin: 24px 0 12px;
+
+            font-size: 28px;
+        }
+
+        .sus-energy-panel p {
+            margin: 0;
+
+            color: var(--sus-muted);
+
+            line-height: 1.75;
+        }
+
+        .sus-energy-list {
+            display: grid;
+            gap: 10px;
+
+            margin-top: 30px;
+        }
+
+        .sus-energy-list div {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+
+            color: #cfe2db;
+
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .sus-energy-list i {
+            margin-top: 4px;
+            color: var(--sus-coral);
+        }
+
+        /* =====================================================
+           WASTE / RESIDUE
+           ===================================================== */
+
+        .sus-residue-flow {
+            display: grid;
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+            gap: 12px;
+            align-items: stretch;
+        }
+
+        .sus-residue-step {
+            position: relative;
+
+            min-height: 230px;
+
+            padding: 25px;
+
+            border:
+                1px solid
+                rgba(150,255,224,0.14);
+
+            border-radius: 23px;
+
+            background:
+                rgba(5, 29, 24, 0.62);
+        }
+
+        .sus-residue-step:not(:last-child)::after {
+            content: "→";
+
+            position: absolute;
+
+            right: -18px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            color: rgba(105,255,209,0.45);
+
+            font-size: 20px;
+
+            z-index: 3;
+        }
+
+        .sus-residue-step .step-no {
+            color: rgba(243,255,249,0.28);
+
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.16em;
+        }
+
+        .sus-residue-step i {
+            display: block;
+
+            margin: 35px 0 22px;
+
+            color: var(--sus-lime);
+
+            font-size: 23px;
+        }
+
+        .sus-residue-step h4 {
+            margin: 0 0 8px;
+
+            font-size: 17px;
+        }
+
+        .sus-residue-step p {
+            margin: 0;
+
+            color: var(--sus-muted);
+
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           CURRENT SURVEY
+           ===================================================== */
+
+        .sus-survey {
+            position: relative;
+
+            padding: 60px;
+
+            border-radius: 36px;
+
+            border:
+                1px solid
+                rgba(39,223,255,0.18);
+
+            background:
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(39,223,255,0.1),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    rgba(7, 42, 39, 0.7),
+                    rgba(5, 25, 21, 0.8)
+                );
+        }
+
+        .sus-survey-layout {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .sus-survey-label {
+            display: inline-flex;
+
+            padding: 8px 12px;
+
+            border:
+                1px solid
+                rgba(39,223,255,0.22);
+
+            border-radius: 999px;
+
+            color: var(--sus-cyan);
+
+            background:
+                rgba(39,223,255,0.05);
+
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .sus-survey h3 {
+            margin: 24px 0 15px;
+
+            font-size: clamp(32px, 4vw, 60px);
+            line-height: 0.98;
+            letter-spacing: -0.045em;
+        }
+
+        .sus-survey p {
+            margin: 0;
+
+            color: var(--sus-soft);
+
+            line-height: 1.75;
+        }
+
+        .sus-survey-data {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 13px;
+        }
+
+        .sus-data-box {
+            min-height: 170px;
+
+            padding: 25px;
+
+            border-radius: 22px;
+
+            border:
+                1px solid
+                rgba(150,255,224,0.13);
+
+            background:
+                rgba(2, 19, 15, 0.45);
+        }
+
+        .sus-data-box i {
+            color: var(--sus-cyan);
+            font-size: 19px;
+        }
+
+        .sus-data-box h4 {
+            margin: 27px 0 7px;
+
+            font-size: 16px;
+        }
+
+        .sus-data-box p {
+            color: var(--sus-muted);
+
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        /* =====================================================
+           DATA → CONSERVATION
+           ===================================================== */
+
+        .sus-data-flow {
+            display: grid;
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 14px;
+        }
+
+        .sus-data-stage {
+            position: relative;
+
+            min-height: 270px;
+
+            padding: 30px;
+
+            border-radius: 25px;
+
+            background:
+                rgba(5, 30, 24, 0.65);
+
+            border:
+                1px solid
+                rgba(150,255,224,0.14);
+        }
+
+        .sus-data-stage:nth-child(1) {
+            border-color:
+                rgba(39,223,255,0.22);
+        }
+
+        .sus-data-stage:nth-child(2) {
+            border-color:
+                rgba(184,255,103,0.2);
+        }
+
+        .sus-data-stage:nth-child(3) {
+            border-color:
+                rgba(166,108,255,0.22);
+        }
+
+        .sus-data-stage:nth-child(4) {
+            border-color:
+                rgba(255,128,107,0.22);
+        }
+
+        .sus-data-stage .number {
+            color: rgba(243,255,249,0.25);
+
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 0.14em;
+        }
+
+        .sus-data-stage i {
+            margin: 55px 0 20px;
+
+            display: block;
+
+            font-size: 25px;
+        }
+
+        .sus-data-stage:nth-child(1) i {
+            color: var(--sus-cyan);
+        }
+
+        .sus-data-stage:nth-child(2) i {
+            color: var(--sus-lime);
+        }
+
+        .sus-data-stage:nth-child(3) i {
+            color: var(--sus-violet);
+        }
+
+        .sus-data-stage:nth-child(4) i {
+            color: var(--sus-coral);
+        }
+
+        .sus-data-stage h4 {
+            margin: 0 0 8px;
+
+            font-size: 18px;
+        }
+
+        .sus-data-stage p {
+            margin: 0;
+
+            color: var(--sus-muted);
+
+            font-size: 12px;
+            line-height: 1.65;
+        }
+
+        /* =====================================================
+           THREE DIMENSIONS
+           ===================================================== */
+
+        .sus-dimensions {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap: 16px;
+        }
+
+        .sus-dimension {
+            min-height: 430px;
+
+            padding: 36px;
+
+            border-radius: 30px;
+
+            border:
+                1px solid
+                rgba(150,255,224,0.13);
+
+            background:
+                rgba(5, 29, 24, 0.65);
+        }
+
+        .sus-dimension.environment {
+            border-color:
+                rgba(105,255,209,0.2);
+        }
+
+        .sus-dimension.resource {
+            border-color:
+                rgba(39,223,255,0.2);
+        }
+
+        .sus-dimension.future {
+            border-color:
+                rgba(166,108,255,0.2);
+        }
+
+        .sus-dimension-icon {
+            width: 62px;
+            height: 62px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 18px;
+
+            font-size: 22px;
+        }
+
+        .environment .sus-dimension-icon {
+            color: var(--sus-mint);
+            background: rgba(105,255,209,0.07);
+        }
+
+        .resource .sus-dimension-icon {
+            color: var(--sus-cyan);
+            background: rgba(39,223,255,0.07);
+        }
+
+        .future .sus-dimension-icon {
+            color: var(--sus-violet);
+            background: rgba(166,108,255,0.07);
+        }
+
+        .sus-dimension h3 {
+            margin: 45px 0 14px;
+
+            font-size: 29px;
+        }
+
+        .sus-dimension p {
+            margin: 0;
+
+            color: var(--sus-muted);
+
+            line-height: 1.75;
+        }
+
+        .sus-dimension ul {
+            display: grid;
+            gap: 10px;
+
+            padding: 0;
+            margin: 25px 0 0;
+
+            list-style: none;
+        }
+
+        .sus-dimension li {
+            display: flex;
+            gap: 10px;
+
+            color: #c9ddd5;
+
+            font-size: 13px;
+            line-height: 1.55;
+        }
+
+        .sus-dimension li::before {
+            content: "•";
+
+            color: var(--sus-emerald);
+            font-weight: 900;
+        }
+
+        /* =====================================================
+           MEASUREMENT
+           ===================================================== */
+
+        .sus-measurement-warning {
+            margin-bottom: 25px;
+
+            padding: 22px 25px;
+
+            border-left:
+                2px solid
+                var(--sus-coral);
+
+            background:
+                rgba(255,128,107,0.045);
+
+            color: #d9e9e3;
+
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .sus-indicators {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, minmax(0, 1fr));
+
+            gap: 13px;
+        }
+
+        .sus-indicator {
+            min-height: 190px;
+
+            padding: 25px;
+
+            border-radius: 22px;
+
+            border:
+                1px solid
+                rgba(150,255,224,0.12);
+
+            background:
+                rgba(5, 28, 23, 0.58);
+        }
+
+        .sus-indicator span {
+            display: inline-block;
+
+            padding: 5px 8px;
+
+            border-radius: 999px;
+
+            background:
+                rgba(105,255,209,0.06);
+
+            color: var(--sus-mint);
+
+            font-size: 8px;
+            font-weight: 900;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .sus-indicator h4 {
+            margin: 28px 0 8px;
+
+            font-size: 17px;
+        }
+
+        .sus-indicator p {
+            margin: 0;
+
+            color: var(--sus-muted);
+
+            font-size: 12px;
+            line-height: 1.65;
+        }
+
+        /* =====================================================
+           ARCHITECTURE
+           ===================================================== */
+
+        .sus-architecture {
+            position: relative;
+
+            padding: 70px 40px;
+
+            border-radius: 38px;
+
+            border:
+                1px solid
+                rgba(166,108,255,0.16);
+
+            background:
+                radial-gradient(
+                    circle at 50% 50%,
+                    rgba(166,108,255,0.07),
+                    transparent 38%
+                ),
+                rgba(5, 25, 21, 0.7);
+
+            overflow: hidden;
+        }
+
+        .sus-architecture-track {
+            display: grid;
+
+            grid-template-columns:
+                repeat(6, minmax(0, 1fr));
+
+            gap: 8px;
+
+            align-items: center;
+        }
+
+        .sus-architecture-node {
+            min-height: 160px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 20px;
+
+            border-radius: 22px;
+
+            border:
+                1px solid
+                rgba(150,255,224,0.14);
+
+            background:
+                rgba(3, 20, 16, 0.6);
+        }
+
+        .sus-architecture-node i {
+            margin-bottom: 18px;
+
+            font-size: 24px;
+        }
+
+        .sus-architecture-node:nth-child(1) i {
+            color: var(--sus-cyan);
+        }
+
+        .sus-architecture-node:nth-child(2) i {
+            color: var(--sus-lime);
+        }
+
+        .sus-architecture-node:nth-child(3) i {
+            color: var(--sus-violet);
+        }
+
+        .sus-architecture-node:nth-child(4) i {
+            color: var(--sus-coral);
+        }
+
+        .sus-architecture-node:nth-child(5) i {
+            color: var(--sus-mint);
+        }
+
+        .sus-architecture-node:nth-child(6) i {
+            color: var(--sus-magenta);
+        }
+
+        .sus-architecture-node strong {
+            font-size: 14px;
+        }
+
+        .sus-architecture-node span {
+            margin-top: 6px;
+
+            color: var(--sus-muted);
+
+            font-size: 10px;
+            line-height: 1.5;
+        }
+
+        .sus-architecture-arrow {
+            text-align: center;
+
+            color: rgba(105,255,209,0.4);
+        }
+
+        /* =====================================================
+           CURRENT VS FUTURE
+           ===================================================== */
+
+        .sus-status-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .sus-status {
+            padding: 38px;
+
+            border-radius: 30px;
+
+            border:
+                1px solid
+                rgba(150,255,224,0.14);
+
+            background:
+                rgba(5,29,24,0.62);
+        }
+
+        .sus-status.current {
+            border-color:
+                rgba(105,255,209,0.18);
+        }
+
+        .sus-status.future {
+            border-color:
+                rgba(166,108,255,0.18);
+        }
+
+        .sus-status-label {
+            display: inline-flex;
+
+            padding: 7px 10px;
+
+            border-radius: 999px;
+
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .current .sus-status-label {
+            color: var(--sus-mint);
+            background: rgba(105,255,209,0.07);
+        }
+
+        .future .sus-status-label {
+            color: var(--sus-violet);
+            background: rgba(166,108,255,0.07);
+        }
+
+        .sus-status h3 {
+            margin: 25px 0 14px;
+
+            font-size: 29px;
+        }
+
+        .sus-status p {
+            margin: 0;
+
+            color: var(--sus-muted);
+
+            line-height: 1.7;
+        }
+
+        .sus-status ul {
+            display: grid;
+            gap: 13px;
+
+            margin: 28px 0 0;
+            padding: 0;
+
+            list-style: none;
+        }
+
+        .sus-status li {
+            display: flex;
+            gap: 12px;
+
+            color: #c8ddd5;
+
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .current .sus-status li i {
+            color: var(--sus-mint);
+        }
+
+        .future .sus-status li i {
+            color: var(--sus-violet);
+        }
+
+        /* =====================================================
+           FINAL JOURNEY
+           ===================================================== */
+
+        .sus-journey {
+            position: relative;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(8, minmax(0, 1fr));
+
+            gap: 5px;
+
+            padding: 30px 0;
+        }
+
+        .sus-journey-step {
+            position: relative;
+
+            text-align: center;
+
+            padding: 25px 10px;
+        }
+
+        .sus-journey-step::after {
+            content: "";
+
+            position: absolute;
+
+            top: 42px;
+            left: 72%;
+
+            width: 56%;
+
+            height: 1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(105,255,209,0.35),
+                    rgba(166,108,255,0.12)
+                );
+        }
+
+        .sus-journey-step:last-child::after {
+            display: none;
+        }
+
+        .sus-journey-icon {
+            position: relative;
+            z-index: 2;
+
+            width: 66px;
+            height: 66px;
+
+            margin: 0 auto 20px;
+
+            display: grid;
+            place-items: center;
+
+            border:
+                1px solid
+                rgba(150,255,224,0.18);
+
+            border-radius: 50%;
+
+            background:
+                rgba(5,29,24,0.9);
+
+            color: var(--sus-mint);
+
+            box-shadow:
+                0 0 30px rgba(0,217,154,0.06);
+        }
+
+        .sus-journey-step:nth-child(2) .sus-journey-icon {
+            color: var(--sus-cyan);
+        }
+
+        .sus-journey-step:nth-child(3) .sus-journey-icon {
+            color: var(--sus-lime);
+        }
+
+        .sus-journey-step:nth-child(4) .sus-journey-icon {
+            color: var(--sus-coral);
+        }
+
+        .sus-journey-step:nth-child(5) .sus-journey-icon {
+            color: var(--sus-violet);
+        }
+
+        .sus-journey-step:nth-child(6) .sus-journey-icon {
+            color: var(--sus-magenta);
+        }
+
+        .sus-journey-step:nth-child(7) .sus-journey-icon {
+            color: var(--sus-cyan);
+        }
+
+        .sus-journey-step:nth-child(8) .sus-journey-icon {
+            color: var(--sus-lime);
+        }
+
+        .sus-journey-step strong {
+            display: block;
+
+            font-size: 13px;
+        }
+
+        .sus-journey-step span {
+            display: block;
+
+            margin-top: 7px;
+
+            color: var(--sus-muted);
+
+            font-size: 10px;
+            line-height: 1.45;
+        }
+
+        /* =====================================================
+           FINAL CTA
+           ===================================================== */
+
+        .sus-final {
+            min-height: 85vh;
+
+            display: flex;
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .sus-final-inner {
+            width: min(1100px, 100%);
+            margin: auto;
+        }
+
+        .sus-final .sus-title {
+            margin: auto;
+        }
+
+        .sus-final p {
+            max-width: 720px;
+
+            margin: 30px auto 0;
+
+            color: var(--sus-soft);
+
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .sus-final .sus-actions {
+            justify-content: center;
+        }
+
+        .sus-final-note {
+            margin-top: 40px;
+
+            color: rgba(200,222,213,0.48);
+
+            font-size: 11px;
+            letter-spacing: 0.05em;
+        }
+
+        /* =====================================================
+           REVEAL ANIMATION
+           ===================================================== */
+
+        .sustainability-page .sus-reveal {
+            opacity: 0;
+            transform: translateY(35px);
+
+            transition:
+                opacity 0.85s ease,
+                transform 0.85s cubic-bezier(.2,.75,.25,1);
+        }
+
+        .sustainability-page .sus-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .sustainability-page .sus-delay-1 {
+            transition-delay: 0.08s;
+        }
+
+        .sustainability-page .sus-delay-2 {
+            transition-delay: 0.16s;
+        }
+
+        .sustainability-page .sus-delay-3 {
+            transition-delay: 0.24s;
+        }
+
+        .sustainability-page .sus-delay-4 {
+            transition-delay: 0.32s;
+        }
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1150px) {
+
+            .sustainability-container {
+                width: min(100% - 50px, 1100px);
+            }
+
+            .sus-conservation-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sus-residue-flow {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .sus-residue-step:nth-child(3)::after {
+                display: none;
+            }
+
+            .sus-data-flow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sus-indicators {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sus-architecture-track {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .sus-architecture-arrow {
+                display: none;
+            }
+
+            .sus-journey {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .sus-journey-step:nth-child(4)::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 900px) {
+
+            .sus-hero-grid,
+            .sus-water-layout,
+            .sus-survey-layout,
+            .sus-status-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sus-hero-orbit {
+                margin: 30px auto 0;
+                width: min(440px, 90%);
+            }
+
+            .sus-section-head {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .sus-section-number {
+                font-size: 70px;
+            }
+
+            .sus-soil-layers {
+                grid-template-columns: 1fr;
+            }
+
+            .sus-energy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .sus-dimensions {
+                grid-template-columns: 1fr;
+            }
+
+            .sus-architecture-track {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .sustainability-container {
+                width: calc(100% - 32px);
+            }
+
+            .sus-section {
+                padding: 100px 0;
+            }
+
+            .sustainability-page .sus-header {
+                padding: 12px 14px;
+            }
+
+            .sus-brand {
+                padding: 8px 11px;
+            }
+
+            .sus-brand-text {
+                font-size: 10px;
+            }
+
+            .sus-header-link {
+                width: 42px;
+                height: 42px;
+            }
+
+            .sus-hero {
+                padding-top: 110px;
+            }
+
+            .sus-title {
+                font-size: clamp(42px, 14vw, 72px);
+            }
+
+            .sus-conservation-grid,
+            .sus-data-flow,
+            .sus-indicators,
+            .sus-residue-flow {
+                grid-template-columns: 1fr;
+            }
+
+            .sus-residue-step:not(:last-child)::after {
+                display: none;
+            }
+
+            .sus-statement,
+            .sus-survey,
+            .sus-soil-stage,
+            .sus-architecture {
+                padding: 30px 22px;
+                border-radius: 25px;
+            }
+
+            .sus-water-visual {
+                min-height: 470px;
+                padding: 28px;
+            }
+
+            .sus-water-drop {
+                width: 260px;
+                height: 350px;
+            }
+
+            .sus-energy-panel,
+            .sus-status,
+            .sus-dimension {
+                padding: 28px;
+            }
+
+            .sus-architecture-track {
+                grid-template-columns: 1fr;
+            }
+
+            .sus-journey {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .sus-journey-step::after {
+                display: none;
+            }
+
+            .sus-final {
+                min-height: 75vh;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .sustainability-page *,
+            .sustainability-page *::before,
+            .sustainability-page *::after {
+                animation-duration: 0.001ms !important;
+                animation-iteration-count: 1 !important;
+                scroll-behavior: auto !important;
+                transition-duration: 0.001ms !important;
+            }
+
+            .sustainability-page .sus-reveal {
+                opacity: 1;
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body class="sustainability-page">
+
+    <!-- =========================================================
+         SHARED ATMOSPHERIC BACKGROUND
+         ========================================================= -->
+
+    <div class="background-image"></div>
+    <div class="particles"></div>
+    <div class="floating-leaves"></div>
+    <div class="fireflies"></div>
+    <div class="light-trails"></div>
+    <div class="mouse-glow"></div>
+    <div class="fm-cursor-orb"></div>
+
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header class="sus-header">
+        <div class="sus-header-inner">
+
+            <a
+                href="index.html"
+                class="sus-brand"
+                aria-label="AgriVision Karnataka Home"
+            >
+                <span class="sus-brand-mark">
+                    <i class="fa-solid fa-leaf"></i>
+                </span>
+
+                <span class="sus-brand-text">
+                    AgriVision Karnataka
+                </span>
+            </a>
+
+            <a
+                href="ecosystem.html"
+                class="sus-header-link"
+                aria-label="Return to ecosystem"
+                title="Ecosystem"
+            >
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+
+        </div>
+    </header>
+
+
+    <main class="sustainability-shell">
+
+
+        <!-- =====================================================
+             01 — HERO
+             ===================================================== -->
+
+        <section
+            class="sus-section sus-hero"
+            id="sustainability-start"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-hero-grid">
+
+                    <div class="sus-hero-copy sus-reveal">
+
+                        <div class="sus-kicker">
+                            01 / Sustainability
+                        </div>
+
+                        <h1 class="sus-title">
+                            Agriculture
+                            <span class="sus-gradient-text">
+                                cannot survive
+                            </span>
+                            without nature.
+                        </h1>
+
+                        <p class="sus-lead">
+                            Sustainability in AgriVision Karnataka is about
+                            protecting the natural systems that agriculture
+                            depends on — water, soil, air, energy,
+                            vegetation and biodiversity.
+                        </p>
+
+                        <div class="sus-hero-statement">
+                            The objective is not simply to produce more.
+                            It is to understand how agricultural resources
+                            are being used, identify where they are under
+                            pressure, and support better conservation
+                            decisions over time.
+                        </div>
+
+                        <div class="sus-actions">
+
+                            <a
+                                href="#water"
+                                class="sus-button"
+                            >
+                                Explore conservation
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+
+                            <a
+                                href="#survey"
+                                class="sus-button secondary"
+                            >
+                                The data question
+                                <i class="fa-solid fa-chart-line"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="sus-hero-orbit sus-reveal sus-delay-2"
+                        aria-hidden="true"
+                    >
+
+                        <div class="sus-orbit-ring"></div>
+                        <div class="sus-orbit-ring"></div>
+                        <div class="sus-orbit-ring"></div>
+
+                        <div class="sus-earth-core">
+                            <i class="fa-solid fa-earth-asia"></i>
+                        </div>
+
+                        <div class="sus-orbit-node sus-node-water">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+
+                        <div class="sus-orbit-node sus-node-soil">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+
+                        <div class="sus-orbit-node sus-node-energy">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+
+                        <div class="sus-orbit-node sus-node-nature">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             02 — WHAT SUSTAINABILITY MEANS
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="meaning"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            02
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            The principle
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            Sustainability means
+                            <span class="sus-gradient-text">
+                                conserving what agriculture depends on.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            Every farm depends on natural resources.
+                            Water supports crops. Soil stores nutrients.
+                            Trees protect landscapes. Energy powers
+                            irrigation and machinery. Clean air and healthy
+                            ecosystems support life around farms.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-statement sus-reveal">
+
+                    <p>
+                        The question is not only
+                        <span class="sus-gradient-text">
+                            “How much can we produce?”
+                        </span>
+                        but also
+                        <span class="green">
+                            “How can we protect the resources that make
+                            production possible?”
+                        </span>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             03 — CONSERVATION PRIORITIES
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="priorities"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            03
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            Conservation priorities
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            Four natural systems.
+                            <span class="sus-gradient-text">
+                                One agricultural future.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            Sustainability begins by looking directly at
+                            the resources under pressure and asking what
+                            can be conserved, restored, reused or managed
+                            more intelligently.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-conservation-grid">
+
+                    <article
+                        class="sus-conservation-card water sus-reveal"
+                    >
+                        <div class="sus-conservation-icon">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+
+                        <h3>Water</h3>
+
+                        <p>
+                            Reduce avoidable water loss, improve irrigation
+                            efficiency, protect groundwater and encourage
+                            rainwater conservation.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="sus-conservation-card soil sus-reveal sus-delay-1"
+                    >
+                        <div class="sus-conservation-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+
+                        <h3>Soil</h3>
+
+                        <p>
+                            Protect soil structure, organic matter and
+                            nutrients while reducing erosion, degradation
+                            and unnecessary chemical pressure.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="sus-conservation-card energy sus-reveal sus-delay-2"
+                    >
+                        <div class="sus-conservation-icon">
+                            <i class="fa-solid fa-gas-pump"></i>
+                        </div>
+
+                        <h3>Fuel & Energy</h3>
+
+                        <p>
+                            Reduce unnecessary machine movement, inefficient
+                            pumping and avoidable fuel consumption while
+                            exploring cleaner energy options.
+                        </p>
+                    </article>
+
+
+                    <article
+                        class="sus-conservation-card biodiversity sus-reveal sus-delay-3"
+                    >
+                        <div class="sus-conservation-icon">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+
+                        <h3>Nature</h3>
+
+                        <p>
+                            Protect trees, vegetation, pollinators,
+                            surrounding ecosystems and the natural
+                            landscape supporting agriculture.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             04 — WATER
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="water"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            04
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            Water conservation
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            Every drop has
+                            <span class="cyan">
+                                agricultural value.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            Karnataka agriculture is strongly influenced by
+                            rainfall variability and irrigation availability.
+                            Sustainable agriculture therefore needs to treat
+                            water as a resource to be measured, conserved
+                            and managed carefully.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-water-layout">
+
+                    <div class="sus-water-visual sus-reveal">
+
+                        <div class="sus-water-drop"></div>
+
+                        <div class="sus-water-copy">
+
+                            <div class="sus-kicker">
+                                Water principle
+                            </div>
+
+                            <h3>
+                                Use water
+                                <span class="cyan">
+                                    where it matters.
+                                </span>
+                            </h3>
+
+                            <p>
+                                The goal is not simply “more irrigation”.
+                                It is better irrigation — matching water
+                                use with crop, soil, weather and local
+                                conditions wherever reliable information
+                                is available.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sus-water-actions">
+
+                        <article class="sus-practice sus-reveal">
+
+                            <div class="sus-practice-icon">
+                                <i class="fa-solid fa-faucet-drip"></i>
+                            </div>
+
+                            <div>
+                                <h4>Efficient irrigation</h4>
+
+                                <p>
+                                    Encourage appropriate irrigation
+                                    methods such as drip or sprinkler
+                                    systems where suitable.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                        <article class="sus-practice sus-reveal sus-delay-1">
+
+                            <div class="sus-practice-icon">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                            </div>
+
+                            <div>
+                                <h4>Rainwater conservation</h4>
+
+                                <p>
+                                    Support awareness of rainwater
+                                    harvesting, farm ponds, recharge
+                                    structures and watershed practices.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                        <article class="sus-practice sus-reveal sus-delay-2">
+
+                            <div class="sus-practice-icon">
+                                <i class="fa-solid fa-water"></i>
+                            </div>
+
+                            <div>
+                                <h4>Groundwater awareness</h4>
+
+                                <p>
+                                    Understand local groundwater pressure
+                                    and encourage responsible extraction
+                                    rather than treating groundwater as
+                                    unlimited.
+                                </p>
+                            </div>
+
+                        </article>
+
+
+                        <article class="sus-practice sus-reveal sus-delay-3">
+
+                            <div class="sus-practice-icon">
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </div>
+
+                            <div>
+                                <h4>Measure water use</h4>
+
+                                <p>
+                                    Future digital records could help compare
+                                    irrigation practices, crop requirements
+                                    and resource use over time.
+                                </p>
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             05 — SOIL
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="soil"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            05
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            Soil conservation
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            Healthy soil is
+                            <span class="lime">
+                                agricultural infrastructure.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            Soil is not simply the place where a crop grows.
+                            It stores water, nutrients, organic matter and
+                            biological activity. Soil degradation can reduce
+                            the long-term productivity and resilience of
+                            agricultural land.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-soil-stage sus-reveal">
+
+                    <div class="sus-kicker">
+                        Protect the foundation
+                    </div>
+
+                    <h3 class="sus-section-heading">
+                        Conserve the soil
+                        <span class="sus-gradient-text">
+                            before it becomes a crisis.
+                        </span>
+                    </h3>
+
+                    <div class="sus-soil-layers">
+
+                        <article class="sus-soil-layer">
+
+                            <span>
+                                01 / Structure
+                            </span>
+
+                            <h4>
+                                Reduce erosion
+                            </h4>
+
+                            <p>
+                                Protect exposed soil and encourage practices
+                                that reduce loss of fertile topsoil.
+                            </p>
+
+                        </article>
+
+
+                        <article class="sus-soil-layer">
+
+                            <span>
+                                02 / Nutrients
+                            </span>
+
+                            <h4>
+                                Use nutrients wisely
+                            </h4>
+
+                            <p>
+                                Soil testing and site-specific nutrient
+                                management can help avoid unnecessary
+                                fertilizer application.
+                            </p>
+
+                        </article>
+
+
+                        <article class="sus-soil-layer">
+
+                            <span>
+                                03 / Biology
+                            </span>
+
+                            <h4>
+                                Build soil health
+                            </h4>
+
+                            <p>
+                                Organic matter, residue recycling,
+                                diversification and other soil-building
+                                practices can support long-term soil health.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             06 — FUEL & ENERGY
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="energy"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            06
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            Fuel & energy
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            Saving fuel begins with
+                            <span class="coral">
+                                avoiding unnecessary work.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            Agricultural machinery, irrigation pumps,
+                            transport and other operations consume energy.
+                            Better planning can create opportunities to
+                            reduce avoidable machine hours, repeated trips
+                            and inefficient resource use.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-energy-grid">
+
+                    <article class="sus-energy-panel sus-reveal">
+
+                        <div class="sus-energy-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Use machinery intelligently.
+                        </h3>
+
+                        <p>
+                            Equipment should ideally be used for productive
+                            agricultural work rather than unnecessary
+                            movement or avoidable idle time.
+                        </p>
+
+                        <div class="sus-energy-list">
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Better field planning
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Reduce unnecessary machine movement
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Improve equipment utilisation
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Track operating hours in future systems
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="sus-energy-panel sus-reveal sus-delay-1">
+
+                        <div class="sus-energy-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Make energy visible.
+                        </h3>
+
+                        <p>
+                            Once reliable operational data becomes available,
+                            energy use can become something that is measured
+                            rather than assumed.
+                        </p>
+
+                        <div class="sus-energy-list">
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Machine operating hours
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Fuel-use records
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Pump operating patterns
+                            </div>
+
+                            <div>
+                                <i class="fa-solid fa-check"></i>
+                                Future renewable-energy adoption
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             07 — CROP RESIDUE & WASTE
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="waste"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            07
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            Waste & residue
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            What looks like waste
+                            <span class="sus-gradient-text">
+                                can become a resource.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            Crop residues can contain nutrients and organic
+                            matter. Burning residues can damage soil quality
+                            and contribute to air pollution. Conservation
+                            therefore means asking how agricultural
+                            by-products can be retained, recycled or reused.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-residue-flow">
+
+                    <article class="sus-residue-step sus-reveal">
+
+                        <span class="step-no">
+                            STEP 01
+                        </span>
+
+                        <i class="fa-solid fa-wheat-awn"></i>
+
+                        <h4>
+                            Crop residue
+                        </h4>
+
+                        <p>
+                            Residue remains after harvesting.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-residue-step sus-reveal sus-delay-1">
+
+                        <span class="step-no">
+                            STEP 02
+                        </span>
+
+                        <i class="fa-solid fa-ban"></i>
+
+                        <h4>
+                            Avoid burning
+                        </h4>
+
+                        <p>
+                            Prevent unnecessary open burning where
+                            alternative management is possible.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-residue-step sus-reveal sus-delay-2">
+
+                        <span class="step-no">
+                            STEP 03
+                        </span>
+
+                        <i class="fa-solid fa-recycle"></i>
+
+                        <h4>
+                            Recycle
+                        </h4>
+
+                        <p>
+                            Explore incorporation, composting, mulching
+                            or other appropriate uses.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-residue-step sus-reveal sus-delay-3">
+
+                        <span class="step-no">
+                            STEP 04
+                        </span>
+
+                        <i class="fa-solid fa-seedling"></i>
+
+                        <h4>
+                            Return value
+                        </h4>
+
+                        <p>
+                            Organic matter and nutrients can contribute
+                            back to agricultural systems.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-residue-step sus-reveal sus-delay-4">
+
+                        <span class="step-no">
+                            STEP 05
+                        </span>
+
+                        <i class="fa-solid fa-earth-asia"></i>
+
+                        <h4>
+                            Protect nature
+                        </h4>
+
+                        <p>
+                            Less waste and better residue management can
+                            support cleaner agricultural landscapes.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             08 — KARNATAKA CROP SURVEY
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="survey"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            08
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            Karnataka / Current data landscape
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            The first step toward
+                            <span class="cyan">
+                                conservation is knowing what exists.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            Karnataka's current crop-survey systems are
+                            designed to build a clearer picture of crops
+                            grown and irrigation methods across farmland.
+                            That type of verified agricultural information
+                            creates an important foundation for better
+                            resource planning.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-survey sus-reveal">
+
+                    <div class="sus-survey-layout">
+
+                        <div>
+
+                            <span class="sus-survey-label">
+                                Karnataka Crop Survey
+                            </span>
+
+                            <h3>
+                                From
+                                <span class="cyan">
+                                    knowing
+                                </span>
+                                to
+                                <span class="lime">
+                                    conserving.
+                                </span>
+                            </h3>
+
+                            <p>
+                                A survey does not automatically save water
+                                or protect soil. Its value comes from what
+                                accurate information enables governments,
+                                researchers, institutions and agricultural
+                                systems to understand and act upon.
+                            </p>
+
+                            <p style="margin-top:18px;">
+                                AgriVision can be designed to complement this
+                                broader data-driven direction by turning
+                                relevant agricultural information into
+                                understandable conservation awareness and,
+                                where appropriate, future decision support.
+                            </p>
+
+                        </div>
+
+
+                        <div class="sus-survey-data">
+
+                            <article class="sus-data-box">
+
+                                <i class="fa-solid fa-seedling"></i>
+
+                                <h4>
+                                    Crop information
+                                </h4>
+
+                                <p>
+                                    Understanding what crops are being
+                                    cultivated across different areas.
+                                </p>
+
+                            </article>
+
+
+                            <article class="sus-data-box">
+
+                                <i class="fa-solid fa-water"></i>
+
+                                <h4>
+                                    Irrigation information
+                                </h4>
+
+                                <p>
+                                    Understanding the irrigation methods
+                                    associated with agricultural land.
+                                </p>
+
+                            </article>
+
+
+                            <article class="sus-data-box">
+
+                                <i class="fa-solid fa-map-location-dot"></i>
+
+                                <h4>
+                                    Location context
+                                </h4>
+
+                                <p>
+                                    Comparing agricultural conditions across
+                                    different regions can reveal patterns.
+                                </p>
+
+                            </article>
+
+
+                            <article class="sus-data-box">
+
+                                <i class="fa-solid fa-database"></i>
+
+                                <h4>
+                                    Verified records
+                                </h4>
+
+                                <p>
+                                    Better records can support more informed
+                                    planning across agricultural systems.
+                                </p>
+
+                            </article>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             09 — DATA TO CONSERVATION
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="data-action"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            09
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            The conservation loop
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            Data should lead to
+                            <span class="sus-gradient-text">
+                                better decisions.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            The long-term idea is simple: observe the
+                            agricultural environment, understand pressure,
+                            identify opportunities and measure whether
+                            conservation efforts are actually working.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-data-flow">
+
+                    <article class="sus-data-stage sus-reveal">
+
+                        <span class="number">
+                            01 / OBSERVE
+                        </span>
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        <h4>
+                            Collect information
+                        </h4>
+
+                        <p>
+                            Crop, irrigation, soil, weather, resource and
+                            operational information where reliable data is
+                            available.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-data-stage sus-reveal sus-delay-1">
+
+                        <span class="number">
+                            02 / UNDERSTAND
+                        </span>
+
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+
+                        <h4>
+                            Find pressure points
+                        </h4>
+
+                        <p>
+                            Identify areas where water, soil, fuel,
+                            vegetation or other resources may require
+                            greater attention.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-data-stage sus-reveal sus-delay-2">
+
+                        <span class="number">
+                            03 / ACT
+                        </span>
+
+                        <i class="fa-solid fa-hand-holding-seedling"></i>
+
+                        <h4>
+                            Support conservation
+                        </h4>
+
+                        <p>
+                            Connect users with knowledge, practices,
+                            services and future decision-support systems
+                            appropriate to their situation.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-data-stage sus-reveal sus-delay-3">
+
+                        <span class="number">
+                            04 / MEASURE
+                        </span>
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                        <h4>
+                            Evaluate change
+                        </h4>
+
+                        <p>
+                            Compare reliable before-and-after measurements
+                            instead of assuming that an intervention worked.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             10 — THREE DIMENSIONS
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="dimensions"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            10
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            A wider definition
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            Sustainability has
+                            <span class="sus-gradient-text">
+                                environmental, resource and future
+                                dimensions.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            Protecting nature is the foundation. But
+                            conservation also requires responsible resource
+                            use and systems capable of learning from evidence
+                            over time.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-dimensions">
+
+                    <article class="sus-dimension environment sus-reveal">
+
+                        <div class="sus-dimension-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+
+                        <h3>
+                            Environment
+                        </h3>
+
+                        <p>
+                            Protect the natural systems surrounding
+                            agriculture.
+                        </p>
+
+                        <ul>
+                            <li>Water conservation</li>
+                            <li>Soil protection</li>
+                            <li>Air-quality awareness</li>
+                            <li>Crop-residue management</li>
+                            <li>Tree and vegetation protection</li>
+                            <li>Biodiversity awareness</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="sus-dimension resource sus-reveal sus-delay-1">
+
+                        <div class="sus-dimension-icon">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+
+                        <h3>
+                            Resource efficiency
+                        </h3>
+
+                        <p>
+                            Use agricultural inputs carefully and avoid
+                            unnecessary resource consumption.
+                        </p>
+
+                        <ul>
+                            <li>Water-use efficiency</li>
+                            <li>Fuel conservation</li>
+                            <li>Energy efficiency</li>
+                            <li>Machinery utilisation</li>
+                            <li>Responsible fertilizer use</li>
+                            <li>Waste reduction</li>
+                        </ul>
+
+                    </article>
+
+
+                    <article class="sus-dimension future sus-reveal sus-delay-2">
+
+                        <div class="sus-dimension-icon">
+                            <i class="fa-solid fa-arrows-spin"></i>
+                        </div>
+
+                        <h3>
+                            Future resilience
+                        </h3>
+
+                        <p>
+                            Build systems capable of responding to changing
+                            climate, resource and agricultural conditions.
+                        </p>
+
+                        <ul>
+                            <li>Climate-aware decisions</li>
+                            <li>Long-term resource records</li>
+                            <li>Conservation intelligence</li>
+                            <li>Predictive agricultural support</li>
+                            <li>Research integration</li>
+                            <li>Continuous improvement</li>
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             11 — MEASUREMENT
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="measurement"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            11
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            Measure first. Claim second.
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            No invented sustainability
+                            <span class="coral">
+                                statistics.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            AgriVision should never claim that it saved a
+                            certain amount of water, fuel or carbon unless
+                            those results have actually been measured and
+                            verified.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-measurement-warning sus-reveal">
+
+                    <strong>
+                        Important:
+                    </strong>
+
+                    The indicators below are examples of what a future
+                    sustainability measurement system could track. They
+                    are not current AgriVision achievement statistics.
+
+                </div>
+
+
+                <div class="sus-indicators">
+
+                    <article class="sus-indicator sus-reveal">
+
+                        <span>
+                            Potential indicator
+                        </span>
+
+                        <h4>
+                            Water used per crop
+                        </h4>
+
+                        <p>
+                            Compare irrigation volume against crop,
+                            location, season and production context where
+                            reliable measurements exist.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-indicator sus-reveal sus-delay-1">
+
+                        <span>
+                            Potential indicator
+                        </span>
+
+                        <h4>
+                            Groundwater pressure
+                        </h4>
+
+                        <p>
+                            Track relevant groundwater observations over
+                            time rather than assuming extraction levels.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-indicator sus-reveal sus-delay-2">
+
+                        <span>
+                            Potential indicator
+                        </span>
+
+                        <h4>
+                            Fuel per operation
+                        </h4>
+
+                        <p>
+                            Measure fuel consumed against machine hours,
+                            operation type or agricultural activity.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-indicator sus-reveal sus-delay-3">
+
+                        <span>
+                            Potential indicator
+                        </span>
+
+                        <h4>
+                            Residue management
+                        </h4>
+
+                        <p>
+                            Record whether residues are retained,
+                            incorporated, composted, reused or otherwise
+                            managed.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-indicator sus-reveal">
+
+                        <span>
+                            Potential indicator
+                        </span>
+
+                        <h4>
+                            Soil health
+                        </h4>
+
+                        <p>
+                            Use appropriate soil-test observations and
+                            repeated measurements to understand changes.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-indicator sus-reveal sus-delay-1">
+
+                        <span>
+                            Potential indicator
+                        </span>
+
+                        <h4>
+                            Tree / vegetation cover
+                        </h4>
+
+                        <p>
+                            Future geospatial systems could help monitor
+                            changes in vegetation and agricultural landscapes.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-indicator sus-reveal sus-delay-2">
+
+                        <span>
+                            Potential indicator
+                        </span>
+
+                        <h4>
+                            Irrigation method
+                        </h4>
+
+                        <p>
+                            Compare irrigation practices and their suitability
+                            for different agricultural conditions.
+                        </p>
+
+                    </article>
+
+
+                    <article class="sus-indicator sus-reveal sus-delay-3">
+
+                        <span>
+                            Requires real data
+                        </span>
+
+                        <h4>
+                            Emissions
+                        </h4>
+
+                        <p>
+                            Any carbon or emissions claim would require a
+                            defined methodology, reliable activity data and
+                            appropriate calculation.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             12 — SUSTAINABILITY ARCHITECTURE
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="architecture"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            12
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            Conservation architecture
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            Observe.
+                            Understand.
+                            Act.
+                            <span class="sus-gradient-text">
+                                Restore.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            A future sustainability intelligence layer
+                            could sit above agricultural data and turn
+                            observations into conservation-oriented
+                            decision support.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-architecture sus-reveal">
+
+                    <div class="sus-architecture-track">
+
+                        <div class="sus-architecture-node">
+
+                            <i class="fa-solid fa-satellite"></i>
+
+                            <strong>
+                                Observe
+                            </strong>
+
+                            <span>
+                                Farm & environmental data
+                            </span>
+
+                        </div>
+
+
+                        <div class="sus-architecture-arrow">
+                            →
+                        </div>
+
+
+                        <div class="sus-architecture-node">
+
+                            <i class="fa-solid fa-database"></i>
+
+                            <strong>
+                                Record
+                            </strong>
+
+                            <span>
+                                Structured information
+                            </span>
+
+                        </div>
+
+
+                        <div class="sus-architecture-arrow">
+                            →
+                        </div>
+
+
+                        <div class="sus-architecture-node">
+
+                            <i class="fa-solid fa-brain"></i>
+
+                            <strong>
+                                Understand
+                            </strong>
+
+                            <span>
+                                Patterns & pressure
+                            </span>
+
+                        </div>
+
+
+                        <div class="sus-architecture-arrow">
+                            →
+                        </div>
+
+
+                        <div class="sus-architecture-node">
+
+                            <i class="fa-solid fa-seedling"></i>
+
+                            <strong>
+                                Conserve
+                            </strong>
+
+                            <span>
+                                Appropriate action
+                            </span>
+
+                        </div>
+
+
+                        <div class="sus-architecture-arrow">
+                            →
+                        </div>
+
+
+                        <div class="sus-architecture-node">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            <strong>
+                                Measure
+                            </strong>
+
+                            <span>
+                                Evidence of change
+                            </span>
+
+                        </div>
+
+
+                        <div class="sus-architecture-arrow">
+                            →
+                        </div>
+
+
+                        <div class="sus-architecture-node">
+
+                            <i class="fa-solid fa-arrows-rotate"></i>
+
+                            <strong>
+                                Improve
+                            </strong>
+
+                            <span>
+                                Learn & adapt
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             13 — CURRENT VS FUTURE
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="status"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            13
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            Architecture honesty
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            What exists today
+                            <span class="sus-gradient-text">
+                                vs what can come next.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            Sustainability must remain evidence-based.
+                            AgriVision can clearly distinguish existing
+                            agricultural capabilities from future
+                            conservation intelligence.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-status-grid">
+
+                    <article class="sus-status current sus-reveal">
+
+                        <span class="sus-status-label">
+                            Current foundation
+                        </span>
+
+                        <h3>
+                            Build the agricultural record.
+                        </h3>
+
+                        <p>
+                            The present ecosystem establishes the
+                            agricultural information and role structure
+                            required for more advanced systems later.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Farmer and crop information
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Agricultural role-based records
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Equipment and operational information
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Agricultural activity history
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Research and future modules
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+
+                    <article class="sus-status future sus-reveal sus-delay-1">
+
+                        <span class="sus-status-label">
+                            Future possibility
+                        </span>
+
+                        <h3>
+                            Build conservation intelligence.
+                        </h3>
+
+                        <p>
+                            With reliable data, future versions could
+                            introduce dedicated environmental and
+                            resource-conservation capabilities.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                Water-use intelligence
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                Soil-health monitoring
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                Fuel and energy analysis
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                Environmental risk alerts
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                Conservation recommendations
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-arrow-right"></i>
+                                Long-term sustainability dashboards
+                            </li>
+
+                        </ul>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             14 — FINAL SUSTAINABILITY JOURNEY
+             ===================================================== -->
+
+        <section
+            class="sus-section"
+            id="journey"
+        >
+
+            <div class="sustainability-container">
+
+                <div class="sus-section-head sus-reveal">
+
+                    <div>
+                        <div class="sus-section-number">
+                            14
+                        </div>
+                    </div>
+
+                    <div>
+
+                        <div class="sus-kicker">
+                            The long-term journey
+                        </div>
+
+                        <h2 class="sus-section-heading">
+                            From agriculture
+                            <span class="sus-gradient-text">
+                                to conservation intelligence.
+                            </span>
+                        </h2>
+
+                        <p class="sus-section-description">
+                            The ultimate goal is not to decorate agriculture
+                            with a “green” label. It is to make conservation
+                            part of how agricultural decisions are understood,
+                            measured and improved.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-journey sus-reveal">
+
+                    <div class="sus-journey-step">
+
+                        <div class="sus-journey-icon">
+                            <i class="fa-solid fa-seedling"></i>
+                        </div>
+
+                        <strong>
+                            Farm
+                        </strong>
+
+                        <span>
+                            Understand production
+                        </span>
+
+                    </div>
+
+
+                    <div class="sus-journey-step">
+
+                        <div class="sus-journey-icon">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+
+                        <strong>
+                            Water
+                        </strong>
+
+                        <span>
+                            Conserve every source
+                        </span>
+
+                    </div>
+
+
+                    <div class="sus-journey-step">
+
+                        <div class="sus-journey-icon">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+
+                        <strong>
+                            Soil
+                        </strong>
+
+                        <span>
+                            Protect the foundation
+                        </span>
+
+                    </div>
+
+
+                    <div class="sus-journey-step">
+
+                        <div class="sus-journey-icon">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+
+                        <strong>
+                            Energy
+                        </strong>
+
+                        <span>
+                            Reduce avoidable use
+                        </span>
+
+                    </div>
+
+
+                    <div class="sus-journey-step">
+
+                        <div class="sus-journey-icon">
+                            <i class="fa-solid fa-recycle"></i>
+                        </div>
+
+                        <strong>
+                            Waste
+                        </strong>
+
+                        <span>
+                            Reuse agricultural value
+                        </span>
+
+                    </div>
+
+
+                    <div class="sus-journey-step">
+
+                        <div class="sus-journey-icon">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+
+                        <strong>
+                            Nature
+                        </strong>
+
+                        <span>
+                            Protect ecosystems
+                        </span>
+
+                    </div>
+
+
+                    <div class="sus-journey-step">
+
+                        <div class="sus-journey-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <strong>
+                            Measure
+                        </strong>
+
+                        <span>
+                            Prove what changes
+                        </span>
+
+                    </div>
+
+
+                    <div class="sus-journey-step">
+
+                        <div class="sus-journey-icon">
+                            <i class="fa-solid fa-arrows-rotate"></i>
+                        </div>
+
+                        <strong>
+                            Improve
+                        </strong>
+
+                        <span>
+                            Learn and conserve
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="sus-final sus-reveal">
+
+                    <div class="sus-final-inner">
+
+                        <div class="sus-kicker">
+                            AgriVision Karnataka
+                        </div>
+
+                        <h2 class="sus-title">
+
+                            <span class="sus-gradient-text">
+                                Protect the farm.
+                            </span>
+
+                            <br>
+
+                            Protect the resources
+                            <span class="lime">
+                                behind it.
+                            </span>
+
+                        </h2>
+
+                        <p>
+                            Sustainable agriculture is not only about
+                            tomorrow's harvest. It is about ensuring that
+                            water remains available, soil remains productive,
+                            energy is used responsibly, waste is managed,
+                            ecosystems are protected and future generations
+                            inherit an agricultural landscape capable of
+                            continuing to produce.
+                        </p>
+
+                        <div class="sus-actions">
+
+                            <a
+                                href="impact.html"
+                                class="sus-button"
+                            >
+                                Explore impact
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                            <a
+                                href="research.html"
+                                class="sus-button secondary"
+                            >
+                                Explore research
+                                <i class="fa-solid fa-flask"></i>
+                            </a>
+
+                            <a
+                                href="future.html"
+                                class="sus-button"
+                            >
+                                See the future
+                                <i class="fa-solid fa-sparkles"></i>
+                            </a>
+
+                        </div>
+
+                        <div class="sus-final-note">
+                            Conservation claims should always follow
+                            measurement, evidence and responsible interpretation.
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         SHARED PROJECT SCRIPT
+         ========================================================= -->
+
+    <script
+        defer
+        src="script.js"
+    ></script>
+
+
+    <!-- =========================================================
+         PAGE-SPECIFIC BEHAVIOUR
+         ========================================================= -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+
+            /* -------------------------------------------------
+               REVEAL ON SCROLL
+               ------------------------------------------------- */
+
+            const revealItems =
+                document.querySelectorAll(
+                    ".sustainability-page .sus-reveal"
+                );
+
+            if ("IntersectionObserver" in window) {
+
+                const revealObserver =
+                    new IntersectionObserver(
+                        (entries, observer) => {
+
+                            entries.forEach(entry => {
+
+                                if (!entry.isIntersecting) {
+                                    return;
+                                }
+
+                                entry.target.classList.add(
+                                    "visible"
+                                );
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+
+                            });
+
+                        },
+                        {
+                            threshold: 0.12,
+                            rootMargin: "0px 0px -40px 0px"
+                        }
+                    );
+
+                revealItems.forEach(item => {
+                    revealObserver.observe(item);
+                });
+
+            } else {
+
+                revealItems.forEach(item => {
+                    item.classList.add("visible");
+                });
+
+            }
+
+
+            /* -------------------------------------------------
+               INTERNAL SMOOTH SCROLL
+               ------------------------------------------------- */
+
+            document
+                .querySelectorAll(
+                    '.sustainability-page a[href^="#"]'
+                )
+                .forEach(link => {
+
+                    link.addEventListener(
+                        "click",
+                        event => {
+
+                            const targetId =
+                                link.getAttribute("href");
+
+                            if (
+                                !targetId ||
+                                targetId === "#"
+                            ) {
+                                return;
+                            }
+
+                            const target =
+                                document.querySelector(
+                                    targetId
+                                );
+
+                            if (!target) {
+                                return;
+                            }
+
+                            event.preventDefault();
+
+                            target.scrollIntoView({
+                                behavior:
+                                    window.matchMedia(
+                                        "(prefers-reduced-motion: reduce)"
+                                    ).matches
+                                        ? "auto"
+                                        : "smooth",
+                                block: "start"
+                            });
+
+                        }
+                    );
+
+                });
+
+
+            /* -------------------------------------------------
+               CONSERVATION CARD POINTER LIGHT
+               ------------------------------------------------- */
+
+            const cards =
+                document.querySelectorAll(
+                    ".sus-conservation-card, " +
+                    ".sus-practice, " +
+                    ".sus-indicator, " +
+                    ".sus-data-stage, " +
+                    ".sus-dimension, " +
+                    ".sus-status"
+                );
+
+            cards.forEach(card => {
+
+                card.addEventListener(
+                    "pointermove",
+                    event => {
+
+                        const rect =
+                            card.getBoundingClientRect();
+
+                        const x =
+                            event.clientX - rect.left;
+
+                        const y =
+                            event.clientY - rect.top;
+
+                        card.style.background =
+                            `
+                            radial-gradient(
+                                circle at ${x}px ${y}px,
+                                rgba(105,255,209,0.055),
+                                transparent 34%
+                            ),
+                            rgba(5,29,24,0.65)
+                            `;
+
+                    }
+                );
+
+                card.addEventListener(
+                    "pointerleave",
+                    () => {
+
+                        card.style.background = "";
+
+                    }
+                );
+
+            });
+
+
+            /* -------------------------------------------------
+               JOURNEY STEP MICRO-INTERACTION
+               ------------------------------------------------- */
+
+            const journeySteps =
+                document.querySelectorAll(
+                    ".sus-journey-step"
+                );
+
+            journeySteps.forEach(step => {
+
+                step.addEventListener(
+                    "mouseenter",
+                    () => {
+
+                        const icon =
+                            step.querySelector(
+                                ".sus-journey-icon"
+                            );
+
+                        if (!icon) {
+                            return;
+                        }
+
+                        icon.style.transform =
+                            "translateY(-5px) scale(1.06)";
+
+                        icon.style.transition =
+                            "transform 0.3s ease";
+
+                    }
+                );
+
+                step.addEventListener(
+                    "mouseleave",
+                    () => {
+
+                        const icon =
+                            step.querySelector(
+                                ".sus-journey-icon"
+                            );
+
+                        if (!icon) {
+                            return;
+                        }
+
+                        icon.style.transform =
+                            "";
+
+                    }
+                );
+
+            });
+
+
+            /* -------------------------------------------------
+               ACTIVE SECTION OBSERVER
+               Adds a subtle body state for shared effects.
+               ------------------------------------------------- */
+
+            const sections =
+                document.querySelectorAll(
+                    ".sus-section[id]"
+                );
+
+            if ("IntersectionObserver" in window) {
+
+                const sectionObserver =
+                    new IntersectionObserver(
+                        entries => {
+
+                            entries.forEach(entry => {
+
+                                if (
+                                    entry.isIntersecting &&
+                                    entry.intersectionRatio > 0.25
+                                ) {
+
+                                    document.body.dataset
+                                        .sustainabilitySection =
+                                        entry.target.id;
+
+                                }
+
+                            });
+
+                        },
+                        {
+                            threshold: [0.25, 0.5, 0.75]
+                        }
+                    );
+
+                sections.forEach(section => {
+                    sectionObserver.observe(section);
+                });
+
+            }
+
+        });
+    </script>
+
+</body>
+</html>

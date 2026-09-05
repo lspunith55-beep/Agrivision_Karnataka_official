@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Logistics Analytics and Performance Intelligence"
+    >
+
+    <title>
+        Logistics Analytics | AgriVision Karnataka
+    </title>
+
+    <!-- SHARED CORE CSS -->
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     AGRIVISION GLOBAL VISUAL ENVIRONMENT
+     ========================================================= -->
+
+<div
+    class="background-image"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-one"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-two"
+    aria-hidden="true"
+></div>
+
+<div
+    class="mouse-glow"
+    aria-hidden="true"
+></div>
+
+<div
+    class="particle-field"
+    aria-hidden="true"
+></div>
+
+<div
+    class="fireflies"
+    aria-hidden="true"
+></div>
+
+<div
+    class="floating-leaves"
+    aria-hidden="true"
+></div>
+
+<div
+    class="cursor-stars"
+    aria-hidden="true"
+></div>
+
+
+<!-- =========================================================
+     APPLICATION
+     ========================================================= -->
+
+<div class="av-app">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <a
+                href="logistics-portal.html"
+                class="av-brand"
+            >
+
+                <span
+                    class="av-status-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="av-brand-name">
+                    AGRIVISION
+                </span>
+
+                <span class="av-brand-region">
+                    KARNATAKA
+                </span>
+
+            </a>
+
+
+
+            <label
+                class="av-search"
+                aria-label="Search logistics analytics"
+            >
+
+                <span
+                    class="av-search-icon"
+                    aria-hidden="true"
+                >
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search shipments, routes, vehicles..."
+                    autocomplete="off"
+                    data-global-search
+                >
+
+            </label>
+
+
+
+            <div class="av-header-actions">
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    aria-label="Notifications"
+                    data-notification
+                >
+                    🔔
+                </button>
+
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    aria-label="Profile"
+                    data-modal-open="analyticsProfileModal"
+                >
+                    👤
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="av-welcome">
+
+        <div class="av-page av-welcome-content">
+
+
+            <div class="av-eyebrow">
+
+                <span>
+                    LOGISTICS CORE
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    ANALYTICS & INTELLIGENCE
+                </span>
+
+            </div>
+
+
+
+            <h1 class="av-welcome-title">
+
+                Turn Every Journey Into
+                <span class="av-gradient-text">
+                    Better Decisions.
+                </span>
+
+            </h1>
+
+
+
+            <p class="av-welcome-description">
+
+                Logistics analytics transforms the movement
+                records created throughout AgriVision into
+                operational intelligence.
+
+                Instead of looking only at individual shipments,
+                the system can examine route efficiency, vehicle
+                utilization, shared-load performance, delivery
+                reliability, transportation cost, savings,
+                resource utilization and recurring operational
+                problems.
+
+            </p>
+
+
+
+            <div
+                class="av-chip-row"
+                style="margin-top:32px;"
+            >
+
+                <span class="av-status av-status-active">
+                    ● ANALYTICS SYSTEM ACTIVE
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    USER:
+
+                    <strong
+                        data-user-name
+                        style="margin-left:5px;"
+                    >
+                        Logistics User
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    ID:
+
+                    <strong
+                        data-user-id
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ANALYTICS PERIOD
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                ANALYSIS PERIOD
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Choose the movement period you want to
+                <span class="av-gradient-text">
+                    understand.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Analytics should be calculated from the user's
+                actual logistics records rather than from
+                fabricated values. Select the period and scope
+                that should be examined.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="logistics-analytics"
+                    >
+
+
+                        <div
+                            class="av-grid av-grid-4"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="analyticsFrom"
+                                    class="av-label"
+                                >
+                                    From
+                                </label>
+
+                                <input
+                                    id="analyticsFrom"
+                                    name="fromDate"
+                                    type="date"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="analyticsTo"
+                                    class="av-label"
+                                >
+                                    To
+                                </label>
+
+                                <input
+                                    id="analyticsTo"
+                                    name="toDate"
+                                    type="date"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="analyticsScope"
+                                    class="av-label"
+                                >
+                                    Analysis Scope
+                                </label>
+
+                                <select
+                                    id="analyticsScope"
+                                    name="scope"
+                                    class="av-input"
+                                >
+
+                                    <option value="All Logistics">
+                                        All Logistics
+                                    </option>
+
+                                    <option value="Shipments">
+                                        Shipments
+                                    </option>
+
+                                    <option value="Routes">
+                                        Routes
+                                    </option>
+
+                                    <option value="Vehicles">
+                                        Vehicles
+                                    </option>
+
+                                    <option value="Shared Loads">
+                                        Shared Loads
+                                    </option>
+
+                                    <option value="Exceptions">
+                                        Exceptions
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div
+                                style="
+                                    display:flex;
+                                    align-items:flex-end;
+                                "
+                            >
+
+                                <button
+                                    type="submit"
+                                    class="av-button av-button-primary"
+                                    style="width:100%;"
+                                >
+
+                                    ANALYZE
+
+                                    <span>
+                                        📊
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         KEY PERFORMANCE INDICATORS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                LOGISTICS OVERVIEW
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                See the entire logistics operation at a
+                <span class="av-gradient-text">
+                    glance.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            SHIPMENTS
+                        </div>
+
+                        <div class="av-role-icon">
+                            🚚
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-total-shipments
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Total shipments in the selected period.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            COMPLETION
+                        </div>
+
+                        <div class="av-role-icon">
+                            ✓
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-completion-rate
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Shipment completion performance.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            UTILIZATION
+                        </div>
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-utilization
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Vehicle capacity utilization.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            SAVINGS
+                        </div>
+
+                        <div class="av-role-icon">
+                            💰
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-savings
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Savings created through optimization.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SHIPMENT PERFORMANCE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                SHIPMENT PERFORMANCE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Understand how reliably agricultural cargo is
+                <span class="av-gradient-text">
+                    reaching its destination.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⏱️
+                        </div>
+
+                        <h3 class="av-card-title">
+                            On-time delivery
+                        </h3>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-on-time
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+
+                            Percentage of completed movements
+                            reaching their destination within
+                            the applicable delivery window.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⚠️
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Delays
+                        </h3>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-delays
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+
+                            Recorded movements affected by
+                            operational delays.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🛡️
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Exceptions
+                        </h3>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-exceptions
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+
+                            Shipment exceptions requiring
+                            operational attention.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ROUTE EFFICIENCY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                ROUTE EFFICIENCY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                The best route is not always the shortest route.
+                It is the route that delivers the required cargo
+                <span class="av-gradient-text">
+                    efficiently and feasibly.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Route analytics can compare planned and actual
+                movement, identify excessive detours, examine
+                repeated bottlenecks and help the Smart Route
+                system improve future decisions.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        class="av-grid av-grid-3"
+                    >
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                ROUTES ANALYZED
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-analytics-routes
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Routes evaluated during the period.
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                ROUTE EFFICIENCY
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-analytics-route-efficiency
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Efficiency indicator from recorded
+                                route data.
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                EXCESS DETOUR
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-analytics-detour
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Recorded additional movement where
+                                available.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         VEHICLE UTILIZATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                VEHICLE INTELLIGENCE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Every empty space is a potential opportunity for
+                <span class="av-gradient-text">
+                    better utilization.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Vehicle analytics should reveal whether available
+                capacity is being used effectively and where
+                compatible shared-load opportunities may exist.
+
+            </p>
+
+
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            VEHICLES
+                        </div>
+
+                        <div class="av-role-icon">
+                            🚛
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-vehicles
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Vehicles participating in recorded
+                            movements.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            CAPACITY
+                        </div>
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-capacity
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Recorded vehicle capacity utilization.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            IDLE OPPORTUNITY
+                        </div>
+
+                        <div class="av-role-icon">
+                            🔎
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-idle
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Potential unused capacity identified
+                            from available records.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SHARED LOAD ANALYTICS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                SMART SHARED-LOAD PERFORMANCE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Measure how much value is created when compatible
+                orders
+                <span class="av-gradient-text">
+                    move together.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Shared-load analytics is one of the most important
+                parts of the AgriVision logistics concept.
+
+                The system should measure how often compatible
+                orders are successfully combined, how much vehicle
+                capacity is used, how much transportation cost is
+                reduced and how the resulting cost is distributed
+                across participating orders.
+
+            </p>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            SHARED MOVEMENTS
+                        </div>
+
+                        <div class="av-role-icon">
+                            🔗
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-shared
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Successful shared-load movements.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            SAVINGS
+                        </div>
+
+                        <div class="av-role-icon">
+                            📉
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-shared-savings
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Transportation savings attributed to
+                            shared movements.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            UTILIZATION
+                        </div>
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-shared-utilization
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Vehicle utilization during shared-load
+                            movements.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            ORDERS
+                        </div>
+
+                        <div class="av-role-icon">
+                            👥
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-participating-orders
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Orders participating in shared
+                            transportation.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COST INTELLIGENCE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                TRANSPORTATION ECONOMICS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Make transportation cost
+                <span class="av-gradient-text">
+                    visible and explainable.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                The analytics system should preserve the difference
+                between standalone transportation cost, combined
+                movement cost and the resulting saving.
+
+                This allows the logistics system to explain where
+                value was created rather than simply displaying a
+                final price.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        class="av-grid av-grid-4"
+                    >
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                STANDALONE COST
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-analytics-standalone-cost
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Separate movement cost represented
+                                by recorded orders.
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                OPTIMIZED COST
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-analytics-optimized-cost
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Cost of optimized transportation
+                                movements.
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                TOTAL SAVING
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-analytics-total-saving
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Difference between comparable
+                                standalone and optimized costs.
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                AVERAGE SAVING
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-analytics-average-saving
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Average saving across applicable
+                                optimized movements.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESOURCE UTILIZATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                ECOSYSTEM RESOURCE INTELLIGENCE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Logistics is more than trucks.
+                <span class="av-gradient-text">
+                    It is an ecosystem.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                A successful movement may require a driver,
+                loading or unloading labour, equipment and
+                specialized operators.
+
+                Analytics should therefore help identify whether
+                these resources are being coordinated effectively.
+
+            </p>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            👤
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Drivers
+                        </h3>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-drivers
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Drivers involved in recorded movements.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            👷
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Labour
+                        </h3>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-labour
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Labour requirements coordinated with
+                            shipments.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🛠️
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Equipment
+                        </h3>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-equipment
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Equipment requirements recorded during
+                            logistics operations.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⚙️
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Operators
+                        </h3>
+
+                        <div
+                            class="av-metric"
+                            data-analytics-operators
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Specialized operator requirements.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DELAY ANALYSIS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                EXCEPTION INTELLIGENCE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                A delay is not only a problem.
+                It can reveal a
+                <span class="av-gradient-text">
+                    pattern.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Repeated exceptions can reveal where the
+                logistics system needs improvement.
+
+                Analytics can group recorded issues by category,
+                location, route, vehicle or operational stage.
+
+            </p>
+
+
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            MOST RECORDED
+                        </div>
+
+                        <div class="av-role-icon">
+                            ⚠️
+                        </div>
+
+                        <h3
+                            class="av-card-title"
+                            data-analytics-top-exception
+                        >
+                            —
+                        </h3>
+
+                        <p class="av-card-description">
+                            Most frequently recorded exception
+                            category.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            COMMON LOCATION
+                        </div>
+
+                        <div class="av-role-icon">
+                            📍
+                        </div>
+
+                        <h3
+                            class="av-card-title"
+                            data-analytics-top-location
+                        >
+                            —
+                        </h3>
+
+                        <p class="av-card-description">
+                            Location associated with recurring
+                            operational issues.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            AFFECTED MOVEMENTS
+                        </div>
+
+                        <div class="av-role-icon">
+                            🚚
+                        </div>
+
+                        <h3
+                            class="av-card-title"
+                            data-analytics-affected-movements
+                        >
+                            —
+                        </h3>
+
+                        <p class="av-card-description">
+                            Movements affected by recorded
+                            exceptions.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DISTRICT MOVEMENT INTELLIGENCE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                REGIONAL MOVEMENT
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Discover how agricultural goods are moving
+                <span class="av-gradient-text">
+                    across Karnataka.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Aggregated logistics records can reveal recurring
+                origin-destination relationships, high-volume
+                corridors and areas where additional transport
+                capacity may be useful.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        data-ag-list="logistics-movement-analysis"
+                    >
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                🗺️
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                Regional analysis awaiting data
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Recorded shipment and route data
+                                will populate regional movement
+                                insights.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INSIGHTS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                ACTIONABLE INSIGHTS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Analytics should end with a decision,
+                <span class="av-gradient-text">
+                    not just a chart.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🧠
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Improve route matching
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Use historical route performance to
+                            identify combinations that repeatedly
+                            work well and those that produce
+                            unnecessary detours.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🚛
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Improve capacity usage
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Identify recurring unused vehicle
+                            capacity and potential opportunities
+                            for compatible shared loads.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            💡
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Improve operations
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Repeated delays, exceptions and
+                            resource bottlenecks can guide future
+                            planning decisions.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DATA PRINCIPLE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:65px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        AGRIVISION DATA PRINCIPLE
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        Decisions should come from the
+                        <span class="av-gradient-text">
+                            actual ecosystem.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="av-section-description"
+                        style="
+                            max-width:850px;
+                            margin-left:auto;
+                            margin-right:auto;
+                        "
+                    >
+
+                        Analytics must remain connected to the
+                        same shared data architecture used by the
+                        dashboard, portals, orders, resources,
+                        shipments, routes and activity records.
+
+                        A successful operation should update the
+                        relevant record once and allow the
+                        resulting information to flow throughout
+                        the ecosystem.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIVITY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                ANALYTICS ACTIVITY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Analysis itself becomes part of the
+                <span class="av-gradient-text">
+                    user's activity.
+                </span>
+
+            </h2>
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:35px;"
+            >
+
+                <div class="av-card-body">
+
+                    <div data-ag-activity>
+
+                        <p
+                            style="
+                                color:var(--av-muted);
+                                margin:0;
+                            "
+                        >
+                            Analytics activity will appear here
+                            after successful operations.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:70px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        LOGISTICS INTELLIGENCE LOOP
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        Plan.
+                        Optimize.
+                        Move.
+                        Track.
+                        <span class="av-gradient-text">
+                            Learn.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="av-section-description"
+                        style="
+                            max-width:820px;
+                            margin-left:auto;
+                            margin-right:auto;
+                        "
+                    >
+
+                        Analytics closes the loop.
+
+                        The information generated by completed
+                        movements can become useful input for
+                        better planning and smarter future route
+                        decisions.
+
+                    </p>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="logistics-smart-route.html"
+                            class="av-button av-button-secondary"
+                        >
+                            SMART ROUTE
+                        </a>
+
+
+                        <a
+                            href="logistics-shipments.html"
+                            class="av-button av-button-secondary"
+                        >
+                            SHIPMENTS
+                        </a>
+
+
+                        <a
+                            href="logistics-tracking.html"
+                            class="av-button av-button-secondary"
+                        >
+                            TRACKING
+                        </a>
+
+
+                        <a
+                            href="logistics-portal.html"
+                            class="av-button av-button-primary"
+                        >
+                            LOGISTICS PORTAL →
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="av-footer">
+
+    <div class="av-footer-inner">
+
+
+        <div class="av-footer-brand">
+            AGRIVISION KARNATAKA
+        </div>
+
+
+        <div class="av-footer-note">
+
+            LOGISTICS ANALYTICS
+
+            <span>
+                •
+            </span>
+
+            MOVEMENT INTELLIGENCE
+
+            <span>
+                •
+            </span>
+
+            <span data-year>
+                2026
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     PROFILE MODAL
+     ========================================================= -->
+
+<div
+    class="av-modal-backdrop"
+    id="analyticsProfileModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="av-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="analyticsProfileTitle"
+    >
+
+
+        <div class="av-modal-header">
+
+
+            <div>
+
+                <div class="av-page-kicker">
+                    LOGISTICS ACCOUNT
+                </div>
+
+                <h2
+                    id="analyticsProfileTitle"
+                    class="av-title"
+                >
+                    Profile
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="av-icon-button"
+                data-modal-close
+                aria-label="Close profile"
+            >
+                ×
+            </button>
+
+
+        </div>
+
+
+
+        <div class="av-modal-body">
+
+            <div class="av-chip-row">
+
+
+                <span class="av-chip">
+
+                    Name:
+
+                    <strong
+                        data-user-name
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    User ID:
+
+                    <strong
+                        data-user-id
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    Role:
+
+                    <strong
+                        data-user-role
+                        style="margin-left:5px;"
+                    >
+                        Logistics
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    District:
+
+                    <strong
+                        data-user-district
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+            </div>
+
+        </div>
+
+
+
+        <div class="av-modal-footer">
+
+            <button
+                type="button"
+                class="av-button av-button-secondary"
+                data-modal-close
+            >
+                CLOSE
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     SHARED CORE JAVASCRIPT
+     ========================================================= -->
+
+<script
+    src="core.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

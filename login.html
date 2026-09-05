@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Secure login to the AgriVision Karnataka agricultural ecosystem."
+    >
+
+    <meta
+        name="theme-color"
+        content="#020807"
+    >
+
+    <title>
+        Login | AgriVision Karnataka
+    </title>
+
+
+    <!-- =====================================================
+         LOGIN CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="login.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         BACKGROUND
+         ===================================================== -->
+
+    <div
+        class="login-background"
+        aria-hidden="true"
+    ></div>
+
+
+    <div
+        class="login-mouse-glow"
+        id="loginMouseGlow"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =====================================================
+         FIREFLIES
+         ===================================================== -->
+
+    <div
+        class="login-fireflies"
+        id="loginFireflies"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =====================================================
+         FALLING LEAVES
+         ===================================================== -->
+
+    <div
+        class="login-leaves"
+        id="loginLeaves"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="login-header">
+
+
+        <a
+            href="ecosystem.html"
+            class="back-link"
+        >
+
+            <span
+                class="back-arrow"
+                aria-hidden="true"
+            >
+                ←
+            </span>
+
+            <span>
+                Back to Ecosystem
+            </span>
+
+        </a>
+
+
+        <div class="header-status">
+
+            <span
+                class="status-dot"
+                aria-hidden="true"
+            ></span>
+
+            <span>
+                AGRIVISION KARNATAKA
+            </span>
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="login-main">
+
+
+        <!-- =================================================
+             INTRO
+             ================================================= -->
+
+        <section
+            class="login-intro"
+            aria-labelledby="login-title"
+        >
+
+            <div class="intro-kicker">
+                YOUR AGRICULTURAL ECOSYSTEM
+            </div>
+
+
+            <h1 id="login-title">
+
+                Welcome
+                <span>
+                    Back
+                </span>
+
+            </h1>
+
+
+            <p>
+
+                Sign in with your unique AgriVision ID
+                and continue to your personalized dashboard.
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LOGIN CARD
+             ================================================= -->
+
+        <section
+            class="login-card"
+            aria-label="AgriVision login"
+        >
+
+
+            <div
+                class="card-top-line"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="login-card-content">
+
+
+                <!-- =============================================
+                     HEADING
+                     ============================================= -->
+
+                <div class="login-card-heading">
+
+
+                    <div
+                        class="login-symbol"
+                        aria-hidden="true"
+                    >
+                        ✦
+                    </div>
+
+
+                    <div>
+
+                        <span class="heading-kicker">
+                            SECURE ACCESS
+                        </span>
+
+                        <h2>
+                            Sign in to AgriVision
+                        </h2>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =============================================
+                     FORM
+                     ============================================= -->
+
+                <form
+                    id="loginForm"
+                    novalidate
+                    autocomplete="on"
+                >
+
+
+                    <!-- =========================================
+                         AGRIVISION ID
+                         ========================================= -->
+
+                    <div class="login-field">
+
+
+                        <label for="agrivisionId">
+                            AGRIVISION ID
+                        </label>
+
+
+                        <div class="input-wrapper">
+
+
+                            <span
+                                class="input-icon"
+                                aria-hidden="true"
+                            >
+                                ◈
+                            </span>
+
+
+                            <input
+                                type="text"
+                                id="agrivisionId"
+                                name="agrivisionId"
+                                placeholder="AGV-FAR-XXXXXXXX"
+                                autocomplete="username"
+                                spellcheck="false"
+                                autocapitalize="characters"
+                                required
+                            >
+
+
+                        </div>
+
+
+                        <small>
+
+                            Enter the unique ID generated
+                            during registration.
+
+                        </small>
+
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         PASSWORD
+                         ========================================= -->
+
+                    <div class="login-field">
+
+
+                        <div class="password-label-row">
+
+
+                            <label for="loginPassword">
+                                PASSWORD
+                            </label>
+
+
+                            <button
+                                type="button"
+                                class="forgot-link"
+                                id="forgotButton"
+                            >
+                                Forgot password?
+                            </button>
+
+
+                        </div>
+
+
+                        <div class="input-wrapper">
+
+
+                            <span
+                                class="input-icon"
+                                aria-hidden="true"
+                            >
+                                ◉
+                            </span>
+
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                name="password"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+
+                            <button
+                                type="button"
+                                class="show-password"
+                                id="showPassword"
+                            >
+                                SHOW
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         REMEMBER DEVICE
+                         ========================================= -->
+
+                    <label
+                        class="remember-row"
+                        for="rememberMe"
+                    >
+
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                            name="rememberMe"
+                        >
+
+
+                        <span
+                            class="custom-checkbox"
+                            aria-hidden="true"
+                        ></span>
+
+
+                        <span class="remember-text">
+                            Remember this device
+                        </span>
+
+
+                    </label>
+
+
+
+                    <!-- =========================================
+                         LOGIN BUTTON
+                         ========================================= -->
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                        id="loginButton"
+                    >
+
+
+                        <span
+                            class="login-button-text"
+                        >
+                            ENTER MY DASHBOARD
+                        </span>
+
+
+                        <span
+                            class="login-button-arrow"
+                            aria-hidden="true"
+                        >
+                            →
+                        </span>
+
+
+                        <span
+                            class="login-loader"
+                            aria-hidden="true"
+                        ></span>
+
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- =============================================
+                     DIVIDER
+                     ============================================= -->
+
+                <div class="login-divider">
+
+
+                    <span></span>
+
+
+                    <strong>
+                        NEW TO AGRIVISION?
+                    </strong>
+
+
+                    <span></span>
+
+
+                </div>
+
+
+
+                <!-- =============================================
+                     REGISTER
+                     ============================================= -->
+
+                <a
+                    href="register.html"
+                    class="register-button"
+                >
+
+                    <span>
+                        CREATE AN ACCOUNT
+                    </span>
+
+                    <span aria-hidden="true">
+                        ✦
+                    </span>
+
+                </a>
+
+
+
+                <!-- =============================================
+                     SECURITY
+                     ============================================= -->
+
+                <div class="security-note">
+
+
+                    <span
+                        class="security-icon"
+                        aria-hidden="true"
+                    >
+                        🔐
+                    </span>
+
+
+                    <div>
+
+                        <strong>
+                            Secure ecosystem access
+                        </strong>
+
+
+                        <p>
+
+                            After authentication, you will
+                            enter your personalized dashboard.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 FOOTER
+                 ================================================= -->
+
+            <div class="login-card-footer">
+
+
+                <span>
+                    AGRIVISION
+                </span>
+
+
+                <span
+                    class="footer-dot"
+                    aria-hidden="true"
+                ></span>
+
+
+                <span>
+                    KARNATAKA
+                </span>
+
+
+                <span
+                    class="footer-dot"
+                    aria-hidden="true"
+                ></span>
+
+
+                <span>
+                    DIGITAL AGRICULTURE
+                </span>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             FEATURES
+             ================================================= -->
+
+        <section
+            class="login-features"
+            aria-label="AgriVision features"
+        >
+
+
+            <div class="feature-item">
+
+                <span
+                    class="feature-icon"
+                    aria-hidden="true"
+                >
+                    🌾
+                </span>
+
+                <div>
+
+                    <strong>
+                        Role-based
+                    </strong>
+
+                    <span>
+                        Experience
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <span
+                    class="feature-icon"
+                    aria-hidden="true"
+                >
+                    ⚡
+                </span>
+
+                <div>
+
+                    <strong>
+                        Connected
+                    </strong>
+
+                    <span>
+                        Ecosystem
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-item">
+
+                <span
+                    class="feature-icon"
+                    aria-hidden="true"
+                >
+                    ✦
+                </span>
+
+                <div>
+
+                    <strong>
+                        Personalized
+                    </strong>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         TOAST
+         ===================================================== -->
+
+    <div
+        class="login-toast"
+        id="loginToast"
+        role="status"
+        aria-live="polite"
+    >
+
+        <strong id="toastTitle">
+            Login
+        </strong>
+
+        <span id="toastMessage">
+            Message
+        </span>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MULTIPLE ROLE INFORMATION
+         =====================================================
+
+         IMPORTANT:
+         Even when a user has multiple roles, we do NOT
+         navigate directly to an individual portal.
+
+         The selected role is stored as activeRole and
+         dashboard.html decides what to display.
+         ===================================================== -->
+
+    <div
+        class="role-selector-overlay"
+        id="roleSelectorOverlay"
+        aria-hidden="true"
+    >
+
+
+        <div
+            class="role-selector-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="roleSelectorTitle"
+        >
+
+
+            <div
+                class="selector-symbol"
+                aria-hidden="true"
+            >
+                ✦
+            </div>
+
+
+            <div class="selector-kicker">
+                MULTIPLE ROLES DETECTED
+            </div>
+
+
+            <h2 id="roleSelectorTitle">
+                Choose your workspace
+            </h2>
+
+
+            <p>
+
+                Your account is connected to multiple
+                AgriVision roles. Choose the workspace
+                you want to make active.
+
+            </p>
+
+
+            <div
+                class="dashboard-role-list"
+                id="dashboardRoleList"
+            ></div>
+
+
+            <button
+                type="button"
+                class="selector-cancel"
+                id="selectorCancel"
+            >
+                CANCEL
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         FORGOT PASSWORD
+         ===================================================== -->
+
+    <div
+        class="forgot-overlay"
+        id="forgotOverlay"
+        aria-hidden="true"
+    >
+
+
+        <div
+            class="forgot-card"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="forgotTitle"
+        >
+
+
+            <button
+                type="button"
+                class="modal-close"
+                id="forgotClose"
+                aria-label="Close"
+            >
+                ×
+            </button>
+
+
+            <div
+                class="forgot-symbol"
+                aria-hidden="true"
+            >
+                ?
+            </div>
+
+
+            <span class="modal-kicker">
+                ACCOUNT RECOVERY
+            </span>
+
+
+            <h2 id="forgotTitle">
+                Need help signing in?
+            </h2>
+
+
+            <p>
+
+                Password recovery will later be connected
+                to the production authentication system.
+
+            </p>
+
+
+            <div class="forgot-info">
+
+
+                <span aria-hidden="true">
+                    ✦
+                </span>
+
+
+                <div>
+
+                    <strong>
+                        For this prototype
+                    </strong>
+
+
+                    <p>
+
+                        Use the password created during
+                        registration on this device.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <button
+                type="button"
+                class="modal-action"
+                id="forgotDone"
+            >
+                CLOSE
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script
+        src="login.js"
+        defer
+    ></script>
+
+
+</body>
+
+</html>

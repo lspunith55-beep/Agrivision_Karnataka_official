@@ -1,0 +1,366 @@
+[
+  {
+    "district": "Bagalkote",
+    "taluks": [
+      "Bagalkote",
+      "Badami",
+      "Bilagi",
+      "Hunagund",
+      "Ilkal",
+      "Jamkhandi",
+      "Mudhol",
+      "Rabakavi Banahatti"
+    ]
+  },
+  {
+    "district": "Ballari",
+    "taluks": [
+      "Ballari",
+      "Hospet",
+      "Kampli",
+      "Kurugodu",
+      "Sandur",
+      "Siruguppa"
+    ]
+  },
+  {
+    "district": "Belagavi",
+    "taluks": [
+      "Athani",
+      "Bailhongal",
+      "Belagavi",
+      "Chikodi",
+      "Gokak",
+      "Hukkeri",
+      "Kagwad",
+      "Khanapur",
+      "Mudalagi",
+      "Nippani",
+      "Raibag",
+      "Ramdurg",
+      "Savadatti"
+    ]
+  },
+  {
+    "district": "Bengaluru Rural",
+    "taluks": [
+      "Devanahalli",
+      "Doddaballapura",
+      "Hoskote",
+      "Nelamangala"
+    ]
+  },
+  {
+    "district": "Bengaluru Urban",
+    "taluks": [
+      "Bengaluru North",
+      "Bengaluru South",
+      "Bengaluru East",
+      "Anekal",
+      "Yelahanka"
+    ]
+  },
+  {
+    "district": "Bidar",
+    "taluks": [
+      "Aurad",
+      "Basavakalyan",
+      "Bhalki",
+      "Bidar",
+      "Humnabad",
+      "Kamalnagar"
+    ]
+  },
+  {
+    "district": "Chamarajanagar",
+    "taluks": [
+      "Chamarajanagar",
+      "Gundlupet",
+      "Hanur",
+      "Kollegal",
+      "Yelandur"
+    ]
+  },
+  {
+    "district": "Chikkaballapur",
+    "taluks": [
+      "Bagepalli",
+      "Chikkaballapur",
+      "Chintamani",
+      "Gauribidanur",
+      "Gudibanda",
+      "Sidlaghatta"
+    ]
+  },
+  {
+    "district": "Chikkamagaluru",
+    "taluks": [
+      "Chikkamagaluru",
+      "Kadur",
+      "Koppa",
+      "Mudigere",
+      "Narasimharajapura",
+      "Sringeri",
+      "Tarikere"
+    ]
+  },
+  {
+    "district": "Chitradurga",
+    "taluks": [
+      "Challakere",
+      "Chitradurga",
+      "Hiriyur",
+      "Holalkere",
+      "Hosadurga",
+      "Molakalmuru"
+    ]
+    }
+    , {
+    "district": "Dakshina Kannada",
+    "taluks": [
+      "Bantwal",
+      "Belthangady",
+      "Kadaba",
+      "Mangaluru",
+      "Moodabidri",
+      "Puttur",
+      "Sullia"
+    ]
+  },
+  {
+    "district": "Davanagere",
+    "taluks": [
+      "Channagiri",
+      "Davanagere",
+      "Harihar",
+      "Honnali",
+      "Jagalur",
+      "Nyamathi"
+    ]
+  },
+  {
+    "district": "Dharwad",
+    "taluks": [
+      "Annigeri",
+      "Dharwad",
+      "Hubballi",
+      "Kalghatgi",
+      "Kundgol",
+      "Navalgund"
+    ]
+  },
+  {
+    "district": "Gadag",
+    "taluks": [
+      "Gadag",
+      "Gajendragad",
+      "Mundargi",
+      "Naragund",
+      "Ron",
+      "Shirahatti"
+    ]
+  },
+  {
+    "district": "Hassan",
+    "taluks": [
+      "Alur",
+      "Arsikere",
+      "Arkalgud",
+      "Belur",
+      "Channarayapatna",
+      "Hassan",
+      "Holenarasipura",
+      "Sakleshpur"
+    ]
+  },
+  {
+    "district": "Haveri",
+    "taluks": [
+      "Byadgi",
+      "Hangal",
+      "Haveri",
+      "Hirekerur",
+      "Ranebennur",
+      "Savanur",
+      "Shiggaon"
+    ]
+  },
+  {
+    "district": "Kalaburagi",
+    "taluks": [
+      "Afzalpur",
+      "Aland",
+      "Chincholi",
+      "Chitapur",
+      "Jewargi",
+      "Kalaburagi",
+      "Sedam"
+    ]
+  },
+  {
+    "district": "Kodagu",
+    "taluks": [
+      "Madikeri",
+      "Somwarpet",
+      "Virajpet"
+    ]
+  },
+  {
+    "district": "Kolar",
+    "taluks": [
+      "Bangarapet",
+      "KGF",
+      "Kolar",
+      "Malur",
+      "Mulbagal",
+      "Srinivaspur"
+    ]
+  },
+  {
+    "district": "Koppal",
+    "taluks": [
+      "Gangavathi",
+      "Kanakagiri",
+      "Koppal",
+      "Kukanoor",
+      "Kushtagi",
+      "Yelburga"
+    ]
+  },
+  {
+    "district": "Mandya",
+    "taluks": [
+      "KR Pet",
+      "Maddur",
+      "Malavalli",
+      "Mandya",
+      "Nagamangala",
+      "Pandavapura",
+      "Srirangapatna"
+    ]
+  },
+  {
+    "district": "Mysuru",
+    "taluks": [
+      "HD Kote",
+      "Hunsur",
+      "KR Nagar",
+      "Mysuru",
+      "Nanjangud",
+      "Periyapatna",
+      "Saragur",
+      "T Narasipura"
+    ]
+  },
+  {
+    "district": "Raichur",
+    "taluks": [
+      "Devadurga",
+      "Lingasugur",
+      "Manvi",
+      "Maski",
+      "Raichur",
+      "Sindhanur"
+    ]
+  },
+  {
+    "district": "Ramanagara",
+    "taluks": [
+      "Channapatna",
+      "Kanakapura",
+      "Magadi",
+      "Ramanagara",
+      "Harohalli"
+    ]
+  },
+  {
+    "district": "Shivamogga",
+    "taluks": [
+      "Bhadravati",
+      "Hosanagara",
+      "Sagara",
+      "Shikaripura",
+      "Shivamogga",
+      "Soraba",
+      "Tirthahalli"
+    ]
+  },
+  {
+    "district": "Tumakuru",
+    "taluks": [
+      "Chikkanayakanahalli",
+      "Gubbi",
+      "Koratagere",
+      "Kunigal",
+      "Madhugiri",
+      "Pavagada",
+      "Sira",
+      "Tiptur",
+      "Tumakuru",
+      "Turvekere"
+    ]
+  },
+  {
+    "district": "Udupi",
+    "taluks": [
+      "Brahmavar",
+      "Byndoor",
+      "Hebri",
+      "Kapu",
+      "Karkala",
+      "Kundapura",
+      "Udupi"
+    ]
+  },
+  {
+    "district": "Uttara Kannada",
+    "taluks": [
+      "Ankola",
+      "Bhatkal",
+      "Dandeli",
+      "Haliyal",
+      "Honnavar",
+      "Joida",
+      "Karwar",
+      "Kumta",
+      "Mundgod",
+      "Siddapur",
+      "Sirsi",
+      "Yellapur"
+    ]
+  },
+  {
+    "district": "Vijayanagara",
+    "taluks": [
+      "Harapanahalli",
+      "Hagaribommanahalli",
+      "Hospet",
+      "Hoovina Hadagali",
+      "Kotturu",
+      "Kudligi"
+    ]
+  },
+  {
+    "district": "Vijayapura",
+    "taluks": [
+      "Basavana Bagewadi",
+      "Babaleshwar",
+      "Devanahalli",
+      "Indi",
+      "Muddebihal",
+      "Sindagi",
+      "Tikota",
+      "Vijayapura"
+    ]
+  },
+  {
+    "district": "Yadgir",
+    "taluks": [
+      "Gurmitkal",
+      "Shahapur",
+      "Shorapur",
+      "Vadagera",
+      "Yadgir"
+    ]
+  }
+]

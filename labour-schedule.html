@@ -1,0 +1,1788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Labour Availability and Work Schedule"
+    >
+
+    <title>
+        Labour Schedule | AgriVision Karnataka
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     GLOBAL AGRIVISION ENVIRONMENT
+     ========================================================= -->
+
+<div
+    class="background-image"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-one"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-two"
+    aria-hidden="true"
+></div>
+
+<div
+    class="mouse-glow"
+    aria-hidden="true"
+></div>
+
+<div
+    class="particle-field"
+    aria-hidden="true"
+></div>
+
+<div
+    class="fireflies"
+    aria-hidden="true"
+></div>
+
+<div
+    class="floating-leaves"
+    aria-hidden="true"
+></div>
+
+<div
+    class="cursor-stars"
+    aria-hidden="true"
+></div>
+
+
+
+<!-- =========================================================
+     APPLICATION
+     ========================================================= -->
+
+<div class="av-app">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <a
+                href="labour-dashboard.html"
+                class="av-brand"
+            >
+
+                <span
+                    class="av-status-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="av-brand-name">
+                    AGRIVISION
+                </span>
+
+                <span class="av-brand-region">
+                    KARNATAKA
+                </span>
+
+            </a>
+
+
+
+            <label
+                class="av-search"
+                aria-label="Search schedule"
+            >
+
+                <span
+                    class="av-search-icon"
+                    aria-hidden="true"
+                >
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search jobs, dates, farms..."
+                    autocomplete="off"
+                    data-global-search
+                >
+
+            </label>
+
+
+
+            <div class="av-header-actions">
+
+                <a
+                    href="labour-notifications.html"
+                    class="av-icon-button"
+                    aria-label="Notifications"
+                >
+                    🔔
+                </a>
+
+
+                <a
+                    href="labour-profile.html"
+                    class="av-icon-button"
+                    aria-label="Profile"
+                >
+                    👤
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="av-welcome">
+
+        <div class="av-page av-welcome-content">
+
+
+            <div class="av-eyebrow">
+
+                <span>
+                    LABOUR
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    AVAILABILITY & SCHEDULE
+                </span>
+
+            </div>
+
+
+
+            <h1 class="av-welcome-title">
+
+                Make your time visible.
+                <span class="av-gradient-text">
+                    Make every commitment count.
+                </span>
+
+            </h1>
+
+
+
+            <p class="av-welcome-description">
+
+                Agricultural work is seasonal, time-sensitive and
+                often dependent on having the right people available
+                at the right moment.
+
+                Your schedule tells AgriVision when you can work,
+                when you are already committed and when you are
+                unavailable.
+
+                This helps prevent conflicting bookings and allows
+                Farmers to find Labour who can genuinely be present
+                when the work begins.
+
+            </p>
+
+
+
+            <div
+                class="av-chip-row"
+                style="margin-top:30px;"
+            >
+
+                <span
+                    class="av-status av-status-active"
+                    data-labour-availability-status
+                >
+                    ● AVAILABLE
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    UPCOMING:
+
+                    <strong
+                        data-labour-upcoming-jobs
+                        style="margin-left:6px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    CONFLICTS:
+
+                    <strong
+                        data-labour-schedule-conflicts
+                        style="margin-left:6px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AVAILABILITY STATUS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                CURRENT AVAILABILITY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Tell the network whether you are
+                <span class="av-gradient-text">
+                    ready to work.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="labour-availability-status"
+                    >
+
+
+                        <div class="av-grid av-grid-4">
+
+
+                            <label class="av-chip">
+
+                                <input
+                                    type="radio"
+                                    name="availabilityStatus"
+                                    value="Available"
+                                    checked
+                                >
+
+                                <span style="margin-left:10px;">
+                                    🟢 Available
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="av-chip">
+
+                                <input
+                                    type="radio"
+                                    name="availabilityStatus"
+                                    value="Limited"
+                                >
+
+                                <span style="margin-left:10px;">
+                                    🟡 Limited
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="av-chip">
+
+                                <input
+                                    type="radio"
+                                    name="availabilityStatus"
+                                    value="Working"
+                                >
+
+                                <span style="margin-left:10px;">
+                                    🔵 Currently Working
+                                </span>
+
+                            </label>
+
+
+
+                            <label class="av-chip">
+
+                                <input
+                                    type="radio"
+                                    name="availabilityStatus"
+                                    value="Unavailable"
+                                >
+
+                                <span style="margin-left:10px;">
+                                    ⚪ Unavailable
+                                </span>
+
+                            </label>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-grid av-grid-2"
+                            style="margin-top:28px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="availabilityFrom"
+                                    class="av-label"
+                                >
+                                    Available From
+                                </label>
+
+                                <input
+                                    id="availabilityFrom"
+                                    name="availableFrom"
+                                    type="date"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="availabilityUntil"
+                                    class="av-label"
+                                >
+                                    Available Until
+                                </label>
+
+                                <input
+                                    id="availabilityUntil"
+                                    name="availableUntil"
+                                    type="date"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-field"
+                            style="margin-top:25px;"
+                        >
+
+                            <label
+                                for="availabilityNote"
+                                class="av-label"
+                            >
+                                Availability Note
+                            </label>
+
+                            <textarea
+                                id="availabilityNote"
+                                name="note"
+                                class="av-input"
+                                rows="3"
+                                placeholder="Add any useful availability information..."
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:flex-end;
+                                margin-top:28px;
+                            "
+                        >
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-primary"
+                            >
+                                UPDATE AVAILABILITY
+                                <span>✓</span>
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AVAILABILITY PREFERENCES
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                WORKING PREFERENCES
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Define the working hours that fit your
+                <span class="av-gradient-text">
+                    life.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="labour-working-preferences"
+                    >
+
+
+                        <div class="av-grid av-grid-3">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="preferredStart"
+                                    class="av-label"
+                                >
+                                    Preferred Start
+                                </label>
+
+                                <input
+                                    id="preferredStart"
+                                    name="preferredStart"
+                                    type="time"
+                                    class="av-input"
+                                    value="07:00"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="preferredEnd"
+                                    class="av-label"
+                                >
+                                    Preferred End
+                                </label>
+
+                                <input
+                                    id="preferredEnd"
+                                    name="preferredEnd"
+                                    type="time"
+                                    class="av-input"
+                                    value="17:00"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="preferredShift"
+                                    class="av-label"
+                                >
+                                    Preferred Shift
+                                </label>
+
+                                <select
+                                    id="preferredShift"
+                                    name="shift"
+                                    class="av-input"
+                                >
+
+                                    <option value="Full Day">
+                                        Full Day
+                                    </option>
+
+                                    <option value="Morning">
+                                        Morning
+                                    </option>
+
+                                    <option value="Afternoon">
+                                        Afternoon
+                                    </option>
+
+                                    <option value="Evening">
+                                        Evening
+                                    </option>
+
+                                    <option value="Flexible">
+                                        Flexible
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:35px;"
+                        >
+                            PREFERRED WORKING DAYS
+                        </div>
+
+
+
+                        <div
+                            class="av-grid av-grid-7"
+                            style="margin-top:20px;"
+                        >
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="days"
+                                    value="Monday"
+                                >
+                                <span style="margin-left:7px;">
+                                    Mon
+                                </span>
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="days"
+                                    value="Tuesday"
+                                >
+                                <span style="margin-left:7px;">
+                                    Tue
+                                </span>
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="days"
+                                    value="Wednesday"
+                                >
+                                <span style="margin-left:7px;">
+                                    Wed
+                                </span>
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="days"
+                                    value="Thursday"
+                                >
+                                <span style="margin-left:7px;">
+                                    Thu
+                                </span>
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="days"
+                                    value="Friday"
+                                >
+                                <span style="margin-left:7px;">
+                                    Fri
+                                </span>
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="days"
+                                    value="Saturday"
+                                >
+                                <span style="margin-left:7px;">
+                                    Sat
+                                </span>
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="days"
+                                    value="Sunday"
+                                >
+                                <span style="margin-left:7px;">
+                                    Sun
+                                </span>
+                            </label>
+
+
+                        </div>
+
+
+
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:flex-end;
+                                margin-top:28px;
+                            "
+                        >
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-primary"
+                            >
+                                SAVE PREFERENCES
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CALENDAR
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                WORK CALENDAR
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                See your commitments before you
+                <span class="av-gradient-text">
+                    accept more.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                The calendar brings confirmed work and unavailable
+                periods together.
+
+                Before accepting a new opportunity, you should be
+                able to understand whether its timing overlaps with
+                something you have already committed to.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:42px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        style="
+                            display:flex;
+                            justify-content:space-between;
+                            align-items:center;
+                            gap:20px;
+                            flex-wrap:wrap;
+                        "
+                    >
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                CURRENT MONTH
+                            </div>
+
+                            <h3
+                                class="av-card-title"
+                                data-schedule-month
+                            >
+                                —
+                            </h3>
+
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                        >
+
+                            <button
+                                type="button"
+                                class="av-button av-button-secondary"
+                                data-calendar-prev
+                            >
+                                ← PREVIOUS
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="av-button av-button-secondary"
+                                data-calendar-today
+                            >
+                                TODAY
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="av-button av-button-secondary"
+                                data-calendar-next
+                            >
+                                NEXT →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CALENDAR -->
+
+                    <div
+                        class="av-calendar"
+                        data-labour-calendar
+                        style="margin-top:35px;"
+                    >
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                📅
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                Loading schedule
+                            </h3>
+
+                            <p class="av-empty-text">
+                                Your work calendar will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- LEGEND -->
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:30px;
+                        "
+                    >
+
+                        <span class="av-chip">
+                            🟢 Available
+                        </span>
+
+                        <span class="av-chip">
+                            🔵 Confirmed Work
+                        </span>
+
+                        <span class="av-chip">
+                            🟡 Limited
+                        </span>
+
+                        <span class="av-chip">
+                            ⚪ Unavailable
+                        </span>
+
+                        <span class="av-chip">
+                            🔴 Conflict
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         UPCOMING WORK
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                UPCOMING WORK
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Your next commitments,
+                <span class="av-gradient-text">
+                    clearly organized.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+
+                        <div class="av-page-kicker">
+                            UPCOMING JOB
+                        </div>
+
+
+                        <div class="av-role-icon">
+                            🌾
+                        </div>
+
+
+                        <h3 class="av-card-title">
+                            Harvesting Assignment
+                        </h3>
+
+
+                        <p class="av-card-description">
+
+                            Your next confirmed agricultural work
+                            assignment.
+
+                        </p>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="margin-top:20px;"
+                        >
+
+                            <span class="av-chip">
+                                📅 Scheduled
+                            </span>
+
+                            <span class="av-chip">
+                                📍 Farm Location
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="labour-attendance.html"
+                            class="av-button av-button-secondary"
+                            style="margin-top:25px;"
+                        >
+                            OPEN WORK STATUS
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+
+                        <div class="av-page-kicker">
+                            NEXT REQUEST
+                        </div>
+
+
+                        <div class="av-role-icon">
+                            📩
+                        </div>
+
+
+                        <h3 class="av-card-title">
+                            Pending Response
+                        </h3>
+
+
+                        <p class="av-card-description">
+
+                            A Farmer request awaiting your decision.
+
+                        </p>
+
+
+                        <a
+                            href="labour-jobs.html"
+                            class="av-button av-button-secondary"
+                            style="margin-top:25px;"
+                        >
+                            REVIEW REQUEST
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+
+                        <div class="av-page-kicker">
+                            AVAILABILITY
+                        </div>
+
+
+                        <div class="av-role-icon">
+                            🟢
+                        </div>
+
+
+                        <h3 class="av-card-title">
+                            Open Period
+                        </h3>
+
+
+                        <p class="av-card-description">
+
+                            Your next available working period.
+
+                        </p>
+
+
+                        <a
+                            href="#availability"
+                            class="av-button av-button-secondary"
+                            style="margin-top:25px;"
+                        >
+                            MANAGE PERIOD
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCHEDULE CONFLICTS
+         ===================================================== -->
+
+    <section
+        class="av-section"
+        id="conflicts"
+    >
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                SCHEDULE SAFETY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Never accidentally promise your time
+                <span class="av-gradient-text">
+                    twice.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                AgriVision should identify overlapping commitments
+                before they become operational problems.
+
+                A conflict can occur when a new job overlaps with
+                confirmed work, declared unavailability or another
+                accepted commitment.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        data-ag-list="labour-schedule-conflicts"
+                    >
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                ✓
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No schedule conflicts
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                New conflicts detected by the
+                                scheduling system will appear here.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SEASONAL AVAILABILITY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                SEASONAL PLANNING
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Agricultural demand changes with the
+                <span class="av-gradient-text">
+                    season.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Harvesting, planting and post-harvest activities can
+                create periods of high workforce demand.
+
+                Keeping future availability visible can help Farmers
+                plan earlier and can help Labour discover
+                opportunities before they become urgent.
+
+            </p>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🌱
+                        </div>
+
+                        <div class="av-page-kicker">
+                            PLANTING
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Future Availability
+                        </h3>
+
+                        <p class="av-card-description">
+                            Record periods when you expect to be
+                            available for planting-related work.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🌾
+                        </div>
+
+                        <div class="av-page-kicker">
+                            HARVEST
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Harvest Season
+                        </h3>
+
+                        <p class="av-card-description">
+                            Signal availability for seasonal
+                            harvesting opportunities.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <div class="av-page-kicker">
+                            POST-HARVEST
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Handling Work
+                        </h3>
+
+                        <p class="av-card-description">
+                            Make sorting, grading and packing
+                            availability visible.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📈
+                        </div>
+
+                        <div class="av-page-kicker">
+                            DEMAND
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Demand Signals
+                        </h3>
+
+                        <p class="av-card-description">
+                            Future demand can help Labour plan where
+                            and when to make availability visible.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         TEAM SCHEDULING
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                TEAM SCHEDULING
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                If you work as a team,
+                <span class="av-gradient-text">
+                    schedule as a team.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-grid av-grid-4">
+
+
+                        <div class="av-chip">
+
+                            👥 Team Size
+
+                            <strong
+                                data-labour-team-size
+                                style="margin-left:auto;"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="av-chip">
+
+                            🟢 Team Availability
+
+                            <strong
+                                data-labour-team-availability
+                                style="margin-left:auto;"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="av-chip">
+
+                            📅 Team Jobs
+
+                            <strong
+                                data-labour-team-jobs
+                                style="margin-left:auto;"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                        <div class="av-chip">
+
+                            ✓ Team Status
+
+                            <strong
+                                data-labour-team-status
+                                style="margin-left:auto;"
+                            >
+                                —
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div
+                        style="
+                            display:flex;
+                            justify-content:center;
+                            margin-top:30px;
+                        "
+                    >
+
+                        <a
+                            href="labour-team.html"
+                            class="av-button av-button-secondary"
+                        >
+                            OPEN TEAM SCHEDULE
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SCHEDULING PRINCIPLES
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                HOW SCHEDULING WORKS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Availability is more than a green
+                <span class="av-gradient-text">
+                    button.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            01
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Declare
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Tell AgriVision when you can realistically
+                            work.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            02
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Match
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Available periods can be considered when
+                            matching you with Farmer requirements.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            03
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Commit
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Accepting a job creates a real scheduling
+                            commitment.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            04
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Complete
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Completed work moves from schedule into
+                            attendance, earnings and work history.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FINAL THOUGHT
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:80px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        AGRIVISION PRINCIPLE
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        Good scheduling doesn't just fill a
+                        calendar.
+
+                        <span class="av-gradient-text">
+                            It protects commitments.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="av-section-description"
+                        style="
+                            max-width:850px;
+                            margin-left:auto;
+                            margin-right:auto;
+                        "
+                    >
+
+                        A Farmer needs confidence that the people
+                        they book will be available.
+
+                        A Labourer needs confidence that accepting
+                        one job will not create an accidental
+                        conflict with another.
+
+                        AgriVision's scheduling layer is designed to
+                        make those commitments visible, understandable
+                        and easier to manage.
+
+                    </p>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="labour-jobs.html"
+                            class="av-button av-button-primary"
+                        >
+                            FIND WORK
+                        </a>
+
+
+                        <a
+                            href="labour-attendance.html"
+                            class="av-button av-button-secondary"
+                        >
+                            OPEN ATTENDANCE
+                        </a>
+
+
+                        <a
+                            href="labour-dashboard.html"
+                            class="av-button av-button-secondary"
+                        >
+                            BACK TO PORTAL
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="av-footer">
+
+    <div class="av-footer-inner">
+
+
+        <div class="av-footer-brand">
+            AGRIVISION KARNATAKA
+        </div>
+
+
+        <div class="av-footer-note">
+
+            LABOUR SCHEDULE
+
+            <span>
+                •
+            </span>
+
+            AVAILABILITY
+
+            <span>
+                •
+            </span>
+
+            WORK CALENDAR
+
+            <span>
+                •
+            </span>
+
+            <span data-year>
+                2026
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SHARED CORE JAVASCRIPT
+     ========================================================= -->
+
+<script
+    src="core.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

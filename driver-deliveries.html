@@ -1,0 +1,2152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Driver Deliveries"
+    >
+
+    <title>
+        Driver Deliveries | AgriVision Karnataka
+    </title>
+
+    <!-- =====================================================
+         SHARED CORE CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     GLOBAL AGRIVISION VISUAL ENVIRONMENT
+     ========================================================= -->
+
+<div
+    class="background-image"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-one"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-two"
+    aria-hidden="true"
+></div>
+
+<div
+    class="mouse-glow"
+    aria-hidden="true"
+></div>
+
+<div
+    class="particle-field"
+    aria-hidden="true"
+></div>
+
+<div
+    class="fireflies"
+    aria-hidden="true"
+></div>
+
+<div
+    class="floating-leaves"
+    aria-hidden="true"
+></div>
+
+<div
+    class="cursor-stars"
+    aria-hidden="true"
+></div>
+
+
+
+<!-- =========================================================
+     APPLICATION
+     ========================================================= -->
+
+<div class="av-app">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <a
+                href="driver-portal.html"
+                class="av-brand"
+            >
+
+                <span
+                    class="av-status-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="av-brand-name">
+                    AGRIVISION
+                </span>
+
+                <span class="av-brand-region">
+                    KARNATAKA
+                </span>
+
+            </a>
+
+
+
+            <label
+                class="av-search"
+                aria-label="Search deliveries"
+            >
+
+                <span
+                    class="av-search-icon"
+                    aria-hidden="true"
+                >
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search orders, shipments, locations..."
+                    autocomplete="off"
+                    data-global-search
+                >
+
+            </label>
+
+
+
+            <div class="av-header-actions">
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    aria-label="Notifications"
+                    data-notification
+                >
+                    🔔
+                </button>
+
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    aria-label="Driver profile"
+                    data-modal-open="driverDeliveriesProfileModal"
+                >
+                    👤
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="av-welcome">
+
+        <div class="av-page av-welcome-content">
+
+
+            <div class="av-eyebrow">
+
+                <span>
+                    DRIVER CORE
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    DELIVERY NETWORK
+                </span>
+
+            </div>
+
+
+
+            <h1 class="av-welcome-title">
+
+                Find The Right Work For
+                <span class="av-gradient-text">
+                    Your Journey.
+                </span>
+
+            </h1>
+
+
+
+            <p class="av-welcome-description">
+
+                AgriVision connects drivers with agricultural
+                transportation opportunities that can actually fit
+                their vehicle, capacity, availability and operating
+                area.
+
+                A delivery is more than an origin and destination.
+                The system considers the complete movement so that
+                a driver can make informed decisions before
+                accepting work.
+
+            </p>
+
+
+
+            <div
+                class="av-chip-row"
+                style="margin-top:32px;"
+            >
+
+                <span
+                    class="av-status av-status-active"
+                    data-driver-status-display
+                >
+                    ● AVAILABLE
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    DRIVER:
+
+                    <strong
+                        data-user-name
+                        style="margin-left:5px;"
+                    >
+                        Driver
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    DRIVER ID:
+
+                    <strong
+                        data-user-id
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    VEHICLE:
+
+                    <strong
+                        data-driver-vehicle
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DELIVERY SEARCH / FILTERS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                FIND DELIVERY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Search for opportunities that match your
+                <span class="av-gradient-text">
+                    journey.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Available deliveries should be filtered against
+                practical requirements instead of showing every
+                order in the network.
+
+                Use the filters below to identify suitable
+                agricultural movements.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-delivery-search"
+                    >
+
+
+                        <div class="av-grid av-grid-4">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="deliveryOrigin"
+                                    class="av-label"
+                                >
+                                    Pickup Area
+                                </label>
+
+                                <input
+                                    id="deliveryOrigin"
+                                    name="origin"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Bangalore, Tumkur..."
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="deliveryDestination"
+                                    class="av-label"
+                                >
+                                    Destination
+                                </label>
+
+                                <input
+                                    id="deliveryDestination"
+                                    name="destination"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Chitradurga, Hiriyur..."
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="deliveryCargo"
+                                    class="av-label"
+                                >
+                                    Cargo / Crop
+                                </label>
+
+                                <input
+                                    id="deliveryCargo"
+                                    name="cargo"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Crop or product"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="deliveryCapacity"
+                                    class="av-label"
+                                >
+                                    Required Capacity
+                                </label>
+
+                                <input
+                                    id="deliveryCapacity"
+                                    name="capacity"
+                                    type="number"
+                                    min="0"
+                                    step="0.01"
+                                    class="av-input"
+                                    placeholder="kg"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-grid av-grid-4"
+                            style="margin-top:25px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="deliveryDate"
+                                    class="av-label"
+                                >
+                                    Delivery Date
+                                </label>
+
+                                <input
+                                    id="deliveryDate"
+                                    name="deliveryDate"
+                                    type="date"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="deliveryVehicleType"
+                                    class="av-label"
+                                >
+                                    Vehicle Requirement
+                                </label>
+
+                                <select
+                                    id="deliveryVehicleType"
+                                    name="vehicleType"
+                                    class="av-input"
+                                >
+
+                                    <option value="Any">
+                                        Any Suitable Vehicle
+                                    </option>
+
+                                    <option value="Mini Truck">
+                                        Mini Truck
+                                    </option>
+
+                                    <option value="Truck">
+                                        Truck
+                                    </option>
+
+                                    <option value="Large Truck">
+                                        Large Truck
+                                    </option>
+
+                                    <option value="Refrigerated Vehicle">
+                                        Refrigerated Vehicle
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="sharedLoadFilter"
+                                    class="av-label"
+                                >
+                                    Shared Load
+                                </label>
+
+                                <select
+                                    id="sharedLoadFilter"
+                                    name="sharedLoad"
+                                    class="av-input"
+                                >
+
+                                    <option value="Any">
+                                        Any
+                                    </option>
+
+                                    <option value="Compatible Only">
+                                        Compatible Only
+                                    </option>
+
+                                    <option value="Standalone Only">
+                                        Standalone Only
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div
+                                style="
+                                    display:flex;
+                                    align-items:flex-end;
+                                "
+                            >
+
+                                <button
+                                    type="submit"
+                                    class="av-button av-button-primary"
+                                    style="width:100%;"
+                                >
+
+                                    SEARCH DELIVERIES
+
+                                    <span>
+                                        🔎
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DELIVERY OPPORTUNITIES
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                AVAILABLE OPPORTUNITIES
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Deliveries waiting for the right
+                <span class="av-gradient-text">
+                    driver.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Only suitable opportunities should ultimately be
+                presented to the driver.
+
+                Each delivery remains connected to the original
+                order and the logistics system.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="driver-available-deliveries">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                📦
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No delivery opportunities yet
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Suitable delivery opportunities will
+                                appear here when matching logistics
+                                records are available.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DELIVERY EVALUATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                BEFORE YOU ACCEPT
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Understand the movement before committing to
+                <span class="av-gradient-text">
+                    it.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                A driver should be able to understand the practical
+                requirements of a delivery before accepting it.
+
+            </p>
+
+
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📍
+                        </div>
+
+                        <div class="av-page-kicker">
+                            ROUTE
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Origin → Destination
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Understand where the cargo starts,
+                            where it must go and what intermediate
+                            movement may be required.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📦
+                        </div>
+
+                        <div class="av-page-kicker">
+                            CARGO
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Capacity Match
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            The delivery must fit the available
+                            vehicle capacity and cargo requirements.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            💰
+                        </div>
+
+                        <div class="av-page-kicker">
+                            ECONOMICS
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Expected Earning
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Understand the offered movement value
+                            and whether Smart Route may improve
+                            vehicle utilization.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SHARED LOAD EXPLANATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                SHARED-LOAD OPPORTUNITY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                One journey can potentially serve multiple
+                <span class="av-gradient-text">
+                    compatible orders.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                This is a central AgriVision logistics concept.
+
+                If your accepted movement has unused capacity and
+                another order can reasonably fit the route, the
+                Smart Route system can propose a shared movement.
+
+                The participating orders can then receive an
+                optimized transportation allocation instead of
+                requiring completely independent journeys.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:42px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-grid av-grid-3">
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                YOUR MOVEMENT
+                            </div>
+
+                            <h3
+                                class="av-card-title"
+                                data-delivery-current-route
+                            >
+                                —
+                            </h3>
+
+                            <p class="av-card-description">
+
+                                Your accepted delivery becomes
+                                the starting point for Smart Route
+                                compatibility analysis.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                REMAINING CAPACITY
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-delivery-remaining-capacity
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+
+                                Capacity that may be available for
+                                another compatible order.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                COMPATIBLE ORDERS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-delivery-compatible-count
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+
+                                Potential shared-load opportunities
+                                identified by the system.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div
+                        style="
+                            display:flex;
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="driver-smart-route.html"
+                            class="av-button av-button-primary"
+                        >
+                            CHECK SMART ROUTE
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACCEPT DELIVERY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                ACCEPT DELIVERY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Ready to move?
+                <span class="av-gradient-text">
+                    Confirm the assignment.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Acceptance creates the operational connection
+                between the Driver, shipment, vehicle and original
+                order.
+
+                Once accepted, the movement can proceed into Smart
+                Route planning and trip execution.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-delivery-accept"
+                    >
+
+
+                        <div class="av-grid av-grid-3">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="acceptOrderId"
+                                    class="av-label"
+                                >
+                                    Order ID
+                                </label>
+
+                                <input
+                                    id="acceptOrderId"
+                                    name="orderId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="ORD-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="acceptShipmentId"
+                                    class="av-label"
+                                >
+                                    Shipment ID
+                                </label>
+
+                                <input
+                                    id="acceptShipmentId"
+                                    name="shipmentId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="SHP-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="acceptVehicleId"
+                                    class="av-label"
+                                >
+                                    Vehicle ID
+                                </label>
+
+                                <input
+                                    id="acceptVehicleId"
+                                    name="vehicleId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="VEH-..."
+                                    required
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-grid av-grid-2"
+                            style="margin-top:25px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="acceptDriverNote"
+                                    class="av-label"
+                                >
+                                    Driver Note
+                                </label>
+
+                                <textarea
+                                    id="acceptDriverNote"
+                                    name="driverNote"
+                                    class="av-input"
+                                    rows="4"
+                                    placeholder="Optional note before accepting..."
+                                ></textarea>
+
+                            </div>
+
+
+
+                            <div
+                                style="
+                                    display:flex;
+                                    align-items:flex-end;
+                                "
+                            >
+
+                                <button
+                                    type="submit"
+                                    class="av-button av-button-primary"
+                                    style="width:100%;"
+                                >
+
+                                    ACCEPT DELIVERY
+
+                                    <span>
+                                        ✓
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         REJECT DELIVERY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                DELIVERY DECISION
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Not suitable?
+                <span class="av-gradient-text">
+                    Record the decision.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                A rejected delivery should not silently disappear.
+                Recording a reason helps the system understand
+                availability and improve future matching.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-delivery-reject"
+                    >
+
+
+                        <div class="av-grid av-grid-3">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="rejectOrderId"
+                                    class="av-label"
+                                >
+                                    Order ID
+                                </label>
+
+                                <input
+                                    id="rejectOrderId"
+                                    name="orderId"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="ORD-..."
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="rejectReason"
+                                    class="av-label"
+                                >
+                                    Reason
+                                </label>
+
+                                <select
+                                    id="rejectReason"
+                                    name="reason"
+                                    class="av-input"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select reason
+                                    </option>
+
+                                    <option value="Capacity mismatch">
+                                        Capacity mismatch
+                                    </option>
+
+                                    <option value="Vehicle mismatch">
+                                        Vehicle mismatch
+                                    </option>
+
+                                    <option value="Too far">
+                                        Too far
+                                    </option>
+
+                                    <option value="Timing conflict">
+                                        Timing conflict
+                                    </option>
+
+                                    <option value="Outside operating area">
+                                        Outside operating area
+                                    </option>
+
+                                    <option value="Currently unavailable">
+                                        Currently unavailable
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div
+                                style="
+                                    display:flex;
+                                    align-items:flex-end;
+                                "
+                            >
+
+                                <button
+                                    type="submit"
+                                    class="av-button av-button-secondary"
+                                    style="width:100%;"
+                                >
+
+                                    RECORD DECISION
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACCEPTED DELIVERIES
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                MY DELIVERIES
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Accepted work,
+                <span class="av-gradient-text">
+                    ready for execution.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Once a delivery is accepted, it becomes part of
+                the Driver's operational workload.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="driver-accepted-deliveries">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                🚚
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No accepted deliveries
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Your accepted delivery assignments
+                                will appear here.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DELIVERY INFORMATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                WHAT THE DRIVER SHOULD SEE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                No surprises after
+                <span class="av-gradient-text">
+                    acceptance.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🌾
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Cargo
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Crop/product, quantity and relevant
+                            cargo requirements.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📍
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Locations
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Pickup, destination and any approved
+                            intermediate stops.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⏰
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Timing
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Pickup windows, delivery deadlines and
+                            estimated journey timing.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            💰
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Economics
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Movement value and potential
+                            Smart Route/shared-load benefit.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DELIVERY WORKFLOW
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                DELIVERY WORKFLOW
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Accepting a delivery is the beginning,
+                <span class="av-gradient-text">
+                    not the end.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:42px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-flow">
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                🔎
+                            </strong>
+
+                            <span>
+                                Find
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                📋
+                            </strong>
+
+                            <span>
+                                Review
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                ✓
+                            </strong>
+
+                            <span>
+                                Accept
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                🧭
+                            </strong>
+
+                            <span>
+                                Optimize
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                📦
+                            </strong>
+
+                            <span>
+                                Pickup
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                🚚
+                            </strong>
+
+                            <span>
+                                Move
+                            </span>
+
+                        </div>
+
+
+                        <span>
+                            →
+                        </span>
+
+
+                        <div class="av-flow-item">
+
+                            <strong>
+                                📍
+                            </strong>
+
+                            <span>
+                                Deliver
+                            </span>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NAVIGATION TO SMART ROUTE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:70px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        NEXT STEP
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        Accepted a delivery?
+                        <span class="av-gradient-text">
+                            Let's optimize the journey.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="av-section-description"
+                        style="
+                            max-width:820px;
+                            margin-left:auto;
+                            margin-right:auto;
+                        "
+                    >
+
+                        Smart Route can examine the accepted
+                        movement, available vehicle capacity and
+                        compatible orders.
+
+                        If a second order can share the journey
+                        without creating an impractical route, the
+                        system can present the opportunity and its
+                        expected economic effect.
+
+                    </p>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="driver-smart-route.html"
+                            class="av-button av-button-primary"
+                        >
+                            OPEN SMART ROUTE
+                        </a>
+
+
+                        <a
+                            href="driver-trip.html"
+                            class="av-button av-button-secondary"
+                        >
+                            CURRENT TRIP
+                        </a>
+
+
+                        <a
+                            href="driver-portal.html"
+                            class="av-button av-button-secondary"
+                        >
+                            DRIVER PORTAL
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIVITY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                DELIVERY ACTIVITY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Every decision remains part of the
+                <span class="av-gradient-text">
+                    operational history.
+                </span>
+
+            </h2>
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:35px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-activity>
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                🕘
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No delivery activity yet
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Successful acceptance, rejection,
+                                optimization and delivery operations
+                                will appear here.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DRIVER PRINCIPLE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:70px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        AGRIVISION DRIVER PRINCIPLE
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        The best delivery is one that makes sense
+                        for the
+                        <span class="av-gradient-text">
+                            whole network.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="av-section-description"
+                        style="
+                            max-width:850px;
+                            margin-left:auto;
+                            margin-right:auto;
+                        "
+                    >
+
+                        A driver should be able to earn from useful
+                        work while farmers get dependable movement,
+                        buyers receive their orders, vehicles use
+                        their capacity effectively and the logistics
+                        network avoids unnecessary journeys.
+
+                        That is why delivery matching, Smart Route,
+                        tracking and completion are designed as one
+                        connected workflow.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="av-footer">
+
+    <div class="av-footer-inner">
+
+
+        <div class="av-footer-brand">
+            AGRIVISION KARNATAKA
+        </div>
+
+
+        <div class="av-footer-note">
+
+            DRIVER DELIVERIES
+
+            <span>
+                •
+            </span>
+
+            SMART LOGISTICS
+
+            <span>
+                •
+            </span>
+
+            AGRICULTURAL MOVEMENT
+
+            <span>
+                •
+            </span>
+
+            <span data-year>
+                2026
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     DRIVER PROFILE MODAL
+     ========================================================= -->
+
+<div
+    class="av-modal-backdrop"
+    id="driverDeliveriesProfileModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="av-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="driverDeliveriesProfileTitle"
+    >
+
+
+        <div class="av-modal-header">
+
+
+            <div>
+
+                <div class="av-page-kicker">
+                    DRIVER ACCOUNT
+                </div>
+
+                <h2
+                    id="driverDeliveriesProfileTitle"
+                    class="av-title"
+                >
+                    Driver Profile
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="av-icon-button"
+                data-modal-close
+                aria-label="Close profile"
+            >
+                ×
+            </button>
+
+
+        </div>
+
+
+
+        <div class="av-modal-body">
+
+
+            <div class="av-chip-row">
+
+
+                <span class="av-chip">
+
+                    Name:
+
+                    <strong
+                        data-user-name
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    Driver ID:
+
+                    <strong
+                        data-user-id
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    Role:
+
+                    <strong
+                        data-user-role
+                        style="margin-left:5px;"
+                    >
+                        Driver
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    District:
+
+                    <strong
+                        data-user-district
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="av-modal-footer">
+
+            <a
+                href="driver-portal.html"
+                class="av-button av-button-secondary"
+            >
+                PORTAL
+            </a>
+
+
+            <a
+                href="driver-performance.html"
+                class="av-button av-button-primary"
+            >
+                PERFORMANCE
+            </a>
+
+
+            <button
+                type="button"
+                class="av-button av-button-secondary"
+                data-modal-close
+            >
+                CLOSE
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     SHARED CORE JAVASCRIPT
+     ========================================================= -->
+
+<script
+    src="core.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

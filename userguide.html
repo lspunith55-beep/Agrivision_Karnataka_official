@@ -1,0 +1,5204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- =========================================================
+         AGRIVISION KARNATAKA
+         USER GUIDE
+         ========================================================= -->
+
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka User Guide — understand the ecosystem, choose your role, connect with agricultural participants and learn how the system works."
+    >
+
+    <title>User Guide | AgriVision Karnataka</title>
+
+
+    <!-- =========================================================
+         SHARED PROJECT STYLES
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+
+    <!-- =========================================================
+         ICONS
+         ========================================================= -->
+
+    <link
+        rel="preconnect"
+        href="https://cdnjs.cloudflare.com"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         PAGE-SPECIFIC USER GUIDE STYLES
+         Scoped ONLY to .user-guide-page
+         ========================================================= -->
+
+    <style>
+
+        /* =====================================================
+           ROOT
+           ===================================================== */
+
+        .user-guide-page{
+            --guide-green:#00ff87;
+            --guide-emerald:#00c878;
+            --guide-cyan:#00e5ff;
+            --guide-blue:#48a8ff;
+            --guide-violet:#a970ff;
+            --guide-purple:#d66bff;
+            --guide-pink:#ff5fcf;
+            --guide-coral:#ff6b5f;
+            --guide-orange:#ff7a35;
+            --guide-lime:#b8ff3d;
+
+            --guide-white:#f7fff9;
+            --guide-soft:#d7eee1;
+            --guide-muted:#a8c8b6;
+
+            --guide-line:rgba(168,255,210,.18);
+            --guide-panel:rgba(2,30,20,.34);
+            --guide-panel-strong:rgba(1,25,17,.55);
+
+            overflow-x:hidden;
+        }
+
+
+        /* =====================================================
+           GLOBAL GUIDE RESET
+           ===================================================== */
+
+        .user-guide-page *,
+        .user-guide-page *::before,
+        .user-guide-page *::after{
+            box-sizing:border-box;
+        }
+
+        .user-guide-page a{
+            text-decoration:none;
+        }
+
+        .user-guide-page button,
+        .user-guide-page a{
+            -webkit-tap-highlight-color:transparent;
+        }
+
+
+        /* =====================================================
+           PAGE CONTAINER
+           ===================================================== */
+
+        .user-guide-page .guide-container{
+            width:min(1380px, calc(100% - 64px));
+            margin:0 auto;
+        }
+
+
+        /* =====================================================
+           HEADER
+           ===================================================== */
+
+        .user-guide-page .guide-header{
+            position:fixed;
+            inset:0 0 auto 0;
+            z-index:500;
+            padding:20px 0;
+            pointer-events:none;
+        }
+
+        .user-guide-page .guide-header-inner{
+            width:min(1440px, calc(100% - 48px));
+            margin:auto;
+
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+
+            padding:12px 16px 12px 22px;
+
+            border:1px solid rgba(157,255,201,.18);
+            border-radius:999px;
+
+            background:rgba(0,20,13,.35);
+            backdrop-filter:blur(18px);
+            -webkit-backdrop-filter:blur(18px);
+
+            box-shadow:
+                0 15px 50px rgba(0,0,0,.18),
+                inset 0 1px 0 rgba(255,255,255,.05);
+
+            pointer-events:auto;
+        }
+
+        .user-guide-page .guide-brand{
+            display:flex;
+            align-items:center;
+            gap:12px;
+            color:var(--guide-white);
+        }
+
+        .user-guide-page .guide-brand-mark{
+            width:38px;
+            height:38px;
+            border-radius:50%;
+
+            display:grid;
+            place-items:center;
+
+            color:#001d12;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--guide-green),
+                    var(--guide-cyan)
+                );
+
+            box-shadow:
+                0 0 24px rgba(0,255,135,.28);
+        }
+
+        .user-guide-page .guide-brand-text{
+            display:flex;
+            flex-direction:column;
+            line-height:1.05;
+        }
+
+        .user-guide-page .guide-brand-name{
+            font-size:.86rem;
+            font-weight:800;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+        }
+
+        .user-guide-page .guide-brand-sub{
+            margin-top:4px;
+            font-size:.6rem;
+            letter-spacing:.18em;
+            color:var(--guide-muted);
+            text-transform:uppercase;
+        }
+
+        .user-guide-page .guide-nav{
+            display:flex;
+            align-items:center;
+            gap:7px;
+        }
+
+        .user-guide-page .guide-nav a{
+            padding:9px 12px;
+            border-radius:999px;
+            color:rgba(247,255,249,.72);
+            font-size:.67rem;
+            letter-spacing:.1em;
+            text-transform:uppercase;
+            transition:.25s ease;
+        }
+
+        .user-guide-page .guide-nav a:hover{
+            color:var(--guide-white);
+            background:rgba(0,255,135,.08);
+        }
+
+        .user-guide-page .guide-menu{
+            width:42px;
+            height:42px;
+            border-radius:50%;
+
+            display:grid;
+            place-items:center;
+
+            border:1px solid rgba(0,229,255,.35);
+            color:var(--guide-cyan);
+            background:rgba(0,229,255,.06);
+
+            cursor:pointer;
+            transition:.25s ease;
+        }
+
+        .user-guide-page .guide-menu:hover{
+            transform:rotate(8deg) scale(1.04);
+            box-shadow:0 0 25px rgba(0,229,255,.2);
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .user-guide-page .guide-hero{
+            min-height:100vh;
+            min-height:100svh;
+
+            display:flex;
+            align-items:center;
+
+            position:relative;
+
+            padding:
+                150px
+                0
+                100px;
+        }
+
+        .user-guide-page .guide-hero-grid{
+            display:grid;
+            grid-template-columns:
+                minmax(0,1.15fr)
+                minmax(360px,.85fr);
+
+            gap:70px;
+            align-items:center;
+        }
+
+        .user-guide-page .guide-eyebrow{
+            display:inline-flex;
+            align-items:center;
+            gap:9px;
+
+            color:var(--guide-cyan);
+
+            font-size:.68rem;
+            font-weight:800;
+            letter-spacing:.22em;
+            text-transform:uppercase;
+
+            margin-bottom:22px;
+        }
+
+        .user-guide-page .guide-eyebrow::before{
+            content:"";
+            width:34px;
+            height:1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--guide-green),
+                    var(--guide-cyan)
+                );
+        }
+
+        .user-guide-page .guide-hero-title{
+            max-width:920px;
+
+            margin:0;
+
+            font-size:
+                clamp(
+                    3.3rem,
+                    7.4vw,
+                    7.6rem
+                );
+
+            line-height:.91;
+            letter-spacing:-.055em;
+            font-weight:900;
+
+            color:var(--guide-white);
+        }
+
+        .user-guide-page .guide-gradient-text{
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--guide-green),
+                    var(--guide-cyan),
+                    var(--guide-blue),
+                    var(--guide-violet),
+                    var(--guide-pink),
+                    var(--guide-coral),
+                    var(--guide-lime)
+                );
+
+            background-size:300% auto;
+
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+
+            animation:
+                guideSpectrum 9s linear infinite;
+        }
+
+        @keyframes guideSpectrum{
+            0%{background-position:0% center;}
+            50%{background-position:100% center;}
+            100%{background-position:0% center;}
+        }
+
+        .user-guide-page .guide-hero-copy{
+            max-width:720px;
+            margin-top:28px;
+
+            color:var(--guide-soft);
+
+            font-size:
+                clamp(
+                    1rem,
+                    1.45vw,
+                    1.25rem
+                );
+
+            line-height:1.8;
+        }
+
+        .user-guide-page .guide-hero-actions{
+            display:flex;
+            flex-wrap:wrap;
+            gap:14px;
+            margin-top:34px;
+        }
+
+        .user-guide-page .guide-button{
+            min-height:48px;
+            padding:13px 20px;
+
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:10px;
+
+            border-radius:999px;
+
+            font-size:.68rem;
+            font-weight:800;
+            letter-spacing:.12em;
+            text-transform:uppercase;
+
+            transition:
+                transform .3s ease,
+                box-shadow .3s ease,
+                border-color .3s ease;
+        }
+
+        .user-guide-page .guide-button:hover{
+            transform:translateY(-3px);
+        }
+
+        .user-guide-page .guide-button-primary{
+            color:#001b11;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    var(--guide-green),
+                    var(--guide-cyan)
+                );
+
+            box-shadow:
+                0 0 30px rgba(0,255,135,.16);
+        }
+
+        .user-guide-page .guide-button-secondary{
+            color:var(--guide-white);
+
+            border:1px solid rgba(0,229,255,.32);
+            background:rgba(0,229,255,.05);
+        }
+
+
+        /* =====================================================
+           HERO SYSTEM VISUAL
+           ===================================================== */
+
+        .user-guide-page .guide-hero-visual{
+            position:relative;
+            min-height:510px;
+
+            display:grid;
+            place-items:center;
+        }
+
+        .user-guide-page .guide-orbit{
+            position:absolute;
+
+            width:
+                min(
+                    430px,
+                    75vw
+                );
+
+            aspect-ratio:1;
+
+            border:
+                1px solid
+                rgba(0,229,255,.18);
+
+            border-radius:50%;
+
+            animation:
+                guideOrbit 20s linear infinite;
+        }
+
+        .user-guide-page .guide-orbit::before,
+        .user-guide-page .guide-orbit::after{
+            content:"";
+            position:absolute;
+            inset:10%;
+
+            border-radius:50%;
+            border:1px dashed rgba(0,255,135,.13);
+        }
+
+        .user-guide-page .guide-orbit::after{
+            inset:22%;
+            border-color:rgba(214,107,255,.15);
+        }
+
+        @keyframes guideOrbit{
+            to{
+                transform:rotate(360deg);
+            }
+        }
+
+        .user-guide-page .guide-core{
+            position:relative;
+            z-index:2;
+
+            width:190px;
+            height:190px;
+
+            border-radius:50%;
+
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+
+            text-align:center;
+
+            background:
+                radial-gradient(
+                    circle at 35% 30%,
+                    rgba(0,255,135,.2),
+                    rgba(0,30,20,.76) 60%
+                );
+
+            border:
+                1px solid
+                rgba(0,255,135,.42);
+
+            box-shadow:
+                0 0 70px rgba(0,255,135,.14),
+                inset 0 0 40px rgba(0,255,135,.05);
+        }
+
+        .user-guide-page .guide-core strong{
+            font-size:1.7rem;
+            font-weight:900;
+            letter-spacing:-.04em;
+        }
+
+        .user-guide-page .guide-core span{
+            margin-top:7px;
+            color:var(--guide-muted);
+            font-size:.62rem;
+            letter-spacing:.16em;
+            text-transform:uppercase;
+        }
+
+        .user-guide-page .guide-orbit-node{
+            position:absolute;
+            z-index:4;
+
+            width:82px;
+            height:82px;
+
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+            justify-content:center;
+
+            border-radius:50%;
+
+            border:1px solid rgba(255,255,255,.18);
+            background:rgba(0,25,17,.78);
+            backdrop-filter:blur(10px);
+
+            color:var(--guide-white);
+
+            box-shadow:0 15px 40px rgba(0,0,0,.2);
+
+            font-size:.55rem;
+            font-weight:800;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+
+            animation:
+                guideFloat 4s ease-in-out infinite;
+        }
+
+        .user-guide-page .guide-orbit-node i{
+            font-size:1.15rem;
+            margin-bottom:6px;
+        }
+
+        .user-guide-page .node-farmer{
+            top:5%;
+            left:13%;
+            color:var(--guide-green);
+        }
+
+        .user-guide-page .node-buyer{
+            top:13%;
+            right:7%;
+            color:var(--guide-cyan);
+            animation-delay:-1s;
+        }
+
+        .user-guide-page .node-labour{
+            bottom:12%;
+            right:10%;
+            color:var(--guide-violet);
+            animation-delay:-2s;
+        }
+
+        .user-guide-page .node-logistics{
+            bottom:3%;
+            left:24%;
+            color:var(--guide-coral);
+            animation-delay:-3s;
+        }
+
+        .user-guide-page .node-equipment{
+            top:44%;
+            left:0;
+            color:var(--guide-lime);
+            animation-delay:-1.5s;
+        }
+
+        @keyframes guideFloat{
+            0%,100%{transform:translateY(0);}
+            50%{transform:translateY(-10px);}
+        }
+
+
+        /* =====================================================
+           ARCHITECTURE NUMBERS
+           ===================================================== */
+
+        .user-guide-page .guide-facts{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+
+            border-top:1px solid var(--guide-line);
+            border-bottom:1px solid var(--guide-line);
+        }
+
+        .user-guide-page .guide-fact{
+            padding:32px 25px;
+            text-align:center;
+            position:relative;
+        }
+
+        .user-guide-page .guide-fact:not(:last-child)::after{
+            content:"";
+            position:absolute;
+            right:0;
+            top:25%;
+            height:50%;
+            width:1px;
+            background:var(--guide-line);
+        }
+
+        .user-guide-page .guide-fact-number{
+            display:block;
+
+            font-size:
+                clamp(
+                    2.2rem,
+                    4vw,
+                    4rem
+                );
+
+            font-weight:900;
+            letter-spacing:-.06em;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--guide-green),
+                    var(--guide-cyan),
+                    var(--guide-violet)
+                );
+
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+        }
+
+        .user-guide-page .guide-fact-label{
+            display:block;
+            margin-top:7px;
+
+            color:var(--guide-muted);
+
+            font-size:.63rem;
+            font-weight:700;
+            letter-spacing:.16em;
+            text-transform:uppercase;
+        }
+
+
+        /* =====================================================
+           GENERAL SECTION
+           ===================================================== */
+
+        .user-guide-page .guide-section{
+            padding:125px 0;
+            position:relative;
+        }
+
+        .user-guide-page .guide-section-header{
+            max-width:900px;
+            margin-bottom:55px;
+        }
+
+        .user-guide-page .guide-section-number{
+            color:var(--guide-cyan);
+
+            font-size:.65rem;
+            font-weight:800;
+            letter-spacing:.22em;
+            text-transform:uppercase;
+
+            margin-bottom:15px;
+        }
+
+        .user-guide-page .guide-section-title{
+            margin:0;
+
+            font-size:
+                clamp(
+                    2.4rem,
+                    5vw,
+                    5.4rem
+                );
+
+            line-height:.98;
+            letter-spacing:-.045em;
+            color:var(--guide-white);
+        }
+
+        .user-guide-page .guide-section-title span{
+            color:var(--guide-green);
+        }
+
+        .user-guide-page .guide-section-description{
+            max-width:760px;
+
+            margin-top:20px;
+
+            color:var(--guide-soft);
+
+            font-size:
+                clamp(
+                    .98rem,
+                    1.3vw,
+                    1.14rem
+                );
+
+            line-height:1.8;
+        }
+
+
+        /* =====================================================
+           WHAT IS AGRIVISION
+           ===================================================== */
+
+        .user-guide-page .guide-story{
+            display:grid;
+            grid-template-columns:
+                minmax(0,.9fr)
+                minmax(0,1.1fr);
+
+            gap:60px;
+            align-items:center;
+        }
+
+        .user-guide-page .guide-story-statement{
+            font-size:
+                clamp(
+                    2rem,
+                    3.6vw,
+                    4.2rem
+                );
+
+            line-height:1.04;
+            letter-spacing:-.045em;
+            font-weight:850;
+            color:var(--guide-white);
+        }
+
+        .user-guide-page .guide-story-statement em{
+            font-style:normal;
+            color:var(--guide-cyan);
+        }
+
+        .user-guide-page .guide-explanation{
+            display:grid;
+            gap:18px;
+        }
+
+        .user-guide-page .guide-explanation-row{
+            padding:23px 25px;
+
+            border-left:
+                2px solid
+                var(--guide-green);
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,255,135,.07),
+                    transparent
+                );
+        }
+
+        .user-guide-page .guide-explanation-row strong{
+            display:block;
+            color:var(--guide-white);
+            font-size:1rem;
+        }
+
+        .user-guide-page .guide-explanation-row p{
+            margin:8px 0 0;
+            color:var(--guide-muted);
+            line-height:1.7;
+            font-size:.92rem;
+        }
+
+
+        /* =====================================================
+           SIMPLE JOURNEY
+           ===================================================== */
+
+        .user-guide-page .guide-journey{
+            display:grid;
+            grid-template-columns:repeat(5,1fr);
+            gap:0;
+
+            border:
+                1px solid
+                var(--guide-line);
+
+            border-radius:24px;
+            overflow:hidden;
+            background:rgba(0,20,13,.24);
+        }
+
+        .user-guide-page .guide-journey-step{
+            min-height:210px;
+            padding:28px 24px;
+            position:relative;
+
+            border-right:1px solid var(--guide-line);
+        }
+
+        .user-guide-page .guide-journey-step:last-child{
+            border-right:0;
+        }
+
+        .user-guide-page .guide-step-number{
+            font-size:.62rem;
+            letter-spacing:.18em;
+            color:var(--guide-cyan);
+        }
+
+        .user-guide-page .guide-journey-step i{
+            display:block;
+            margin:35px 0 20px;
+
+            font-size:1.5rem;
+            color:var(--guide-green);
+        }
+
+        .user-guide-page .guide-journey-step h3{
+            margin:0;
+            font-size:1rem;
+            color:var(--guide-white);
+        }
+
+        .user-guide-page .guide-journey-step p{
+            margin:9px 0 0;
+            color:var(--guide-muted);
+            font-size:.78rem;
+            line-height:1.6;
+        }
+
+
+        /* =====================================================
+           ROLE SECTION
+           ===================================================== */
+
+        .user-guide-page .guide-role-list{
+            display:grid;
+            gap:28px;
+        }
+
+        .user-guide-page .guide-role{
+            position:relative;
+
+            display:grid;
+            grid-template-columns:
+                110px
+                minmax(260px,.75fr)
+                minmax(0,1.25fr);
+
+            gap:35px;
+
+            padding:38px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.11);
+
+            border-radius:28px;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(0,30,20,.52),
+                    rgba(0,15,10,.26)
+                );
+
+            backdrop-filter:blur(10px);
+
+            overflow:hidden;
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+        }
+
+        .user-guide-page .guide-role::before{
+            content:"";
+
+            position:absolute;
+            left:0;
+            top:0;
+            bottom:0;
+            width:3px;
+
+            background:
+                linear-gradient(
+                    180deg,
+                    var(--role-a),
+                    var(--role-b)
+                );
+
+            box-shadow:
+                0 0 30px var(--role-a);
+        }
+
+        .user-guide-page .guide-role:hover{
+            transform:translateY(-5px);
+
+            border-color:
+                color-mix(
+                    in srgb,
+                    var(--role-a) 45%,
+                    transparent
+                );
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,.2);
+        }
+
+        .user-guide-page .guide-role-number{
+            font-size:
+                clamp(
+                    2rem,
+                    3.5vw,
+                    3.8rem
+                );
+
+            line-height:1;
+            font-weight:900;
+
+            color:rgba(247,255,249,.13);
+        }
+
+        .user-guide-page .guide-role-identity{
+            display:flex;
+            flex-direction:column;
+        }
+
+        .user-guide-page .guide-role-icon{
+            width:62px;
+            height:62px;
+
+            display:grid;
+            place-items:center;
+
+            border-radius:19px;
+
+            color:var(--role-a);
+
+            border:
+                1px solid
+                color-mix(
+                    in srgb,
+                    var(--role-a) 38%,
+                    transparent
+                );
+
+            background:
+                color-mix(
+                    in srgb,
+                    var(--role-a) 7%,
+                    transparent
+                );
+
+            font-size:1.45rem;
+        }
+
+        .user-guide-page .guide-role h3{
+            margin:20px 0 8px;
+
+            color:var(--guide-white);
+
+            font-size:
+                clamp(
+                    1.4rem,
+                    2vw,
+                    2rem
+                );
+
+            letter-spacing:-.03em;
+        }
+
+        .user-guide-page .guide-role-tagline{
+            color:var(--role-a);
+            font-size:.67rem;
+            line-height:1.5;
+            letter-spacing:.13em;
+            text-transform:uppercase;
+        }
+
+        .user-guide-page .guide-role-content{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:25px;
+        }
+
+        .user-guide-page .guide-role-block{
+            min-width:0;
+        }
+
+        .user-guide-page .guide-role-block h4{
+            margin:0 0 9px;
+
+            color:var(--guide-white);
+
+            font-size:.7rem;
+            letter-spacing:.13em;
+            text-transform:uppercase;
+        }
+
+        .user-guide-page .guide-role-block p{
+            margin:0;
+
+            color:var(--guide-muted);
+
+            font-size:.82rem;
+            line-height:1.65;
+        }
+
+        .user-guide-page .guide-role-link{
+            display:inline-flex;
+            align-items:center;
+            gap:8px;
+
+            margin-top:24px;
+
+            color:var(--role-a);
+
+            font-size:.64rem;
+            font-weight:800;
+            letter-spacing:.12em;
+            text-transform:uppercase;
+        }
+
+
+        /* ROLE COLORS */
+
+        .user-guide-page .role-farmer{
+            --role-a:#00ff87;
+            --role-b:#00e5ff;
+        }
+
+        .user-guide-page .role-buyer{
+            --role-a:#00e5ff;
+            --role-b:#48a8ff;
+        }
+
+        .user-guide-page .role-labour{
+            --role-a:#a970ff;
+            --role-b:#d66bff;
+        }
+
+        .user-guide-page .role-logistics{
+            --role-a:#ff7a35;
+            --role-b:#ff5fcf;
+        }
+
+        .user-guide-page .role-driver{
+            --role-a:#ff5fcf;
+            --role-b:#ff6b5f;
+        }
+
+        .user-guide-page .role-equipment{
+            --role-a:#b8ff3d;
+            --role-b:#00ff87;
+        }
+
+        .user-guide-page .role-operator{
+            --role-a:#48a8ff;
+            --role-b:#a970ff;
+        }
+
+
+        /* =====================================================
+           ROLE CONNECTION DIAGRAM
+           ===================================================== */
+
+        .user-guide-page .guide-network{
+            position:relative;
+
+            min-height:600px;
+
+            border:
+                1px solid
+                var(--guide-line);
+
+            border-radius:34px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(0,255,135,.07),
+                    transparent 42%
+                );
+
+            overflow:hidden;
+        }
+
+        .user-guide-page .guide-network-center{
+            position:absolute;
+            left:50%;
+            top:50%;
+
+            transform:translate(-50%,-50%);
+
+            width:190px;
+            height:190px;
+
+            display:grid;
+            place-items:center;
+
+            border-radius:50%;
+
+            border:
+                1px solid
+                rgba(0,255,135,.4);
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(0,255,135,.13),
+                    rgba(0,20,13,.82)
+                );
+
+            box-shadow:
+                0 0 80px rgba(0,255,135,.12);
+        }
+
+        .user-guide-page .guide-network-center strong{
+            text-align:center;
+            color:var(--guide-white);
+            font-size:1.15rem;
+            line-height:1.25;
+            letter-spacing:-.02em;
+        }
+
+        .user-guide-page .guide-network-line{
+            position:absolute;
+            left:50%;
+            top:50%;
+
+            width:36%;
+            height:1px;
+
+            transform-origin:left center;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(0,255,135,.45),
+                    transparent
+                );
+        }
+
+        .user-guide-page .network-line-1{
+            transform:rotate(-20deg);
+        }
+
+        .user-guide-page .network-line-2{
+            transform:rotate(20deg);
+        }
+
+        .user-guide-page .network-line-3{
+            transform:rotate(75deg);
+        }
+
+        .user-guide-page .network-line-4{
+            transform:rotate(145deg);
+        }
+
+        .user-guide-page .network-line-5{
+            transform:rotate(200deg);
+        }
+
+        .user-guide-page .network-line-6{
+            transform:rotate(270deg);
+        }
+
+        .user-guide-page .guide-network-node{
+            position:absolute;
+
+            width:118px;
+            height:118px;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            align-items:center;
+
+            border-radius:50%;
+
+            border:
+                1px solid
+                rgba(255,255,255,.16);
+
+            background:rgba(0,24,16,.82);
+
+            color:var(--node-color);
+
+            backdrop-filter:blur(10px);
+
+            text-align:center;
+        }
+
+        .user-guide-page .guide-network-node i{
+            font-size:1.25rem;
+            margin-bottom:9px;
+        }
+
+        .user-guide-page .guide-network-node span{
+            font-size:.55rem;
+            font-weight:800;
+            letter-spacing:.1em;
+            text-transform:uppercase;
+        }
+
+        .user-guide-page .network-farmer{
+            --node-color:#00ff87;
+            top:8%;
+            left:18%;
+        }
+
+        .user-guide-page .network-buyer{
+            --node-color:#00e5ff;
+            top:8%;
+            right:18%;
+        }
+
+        .user-guide-page .network-labour{
+            --node-color:#a970ff;
+            top:42%;
+            left:5%;
+        }
+
+        .user-guide-page .network-logistics{
+            --node-color:#ff7a35;
+            top:42%;
+            right:5%;
+        }
+
+        .user-guide-page .network-equipment{
+            --node-color:#b8ff3d;
+            bottom:8%;
+            left:20%;
+        }
+
+        .user-guide-page .network-driver{
+            --node-color:#ff5fcf;
+            bottom:8%;
+            right:20%;
+        }
+
+
+        /* =====================================================
+           ONE RECORD / MANY PORTALS
+           ===================================================== */
+
+        .user-guide-page .guide-record-layout{
+            display:grid;
+            grid-template-columns:.8fr 1.2fr;
+            gap:60px;
+            align-items:center;
+        }
+
+        .user-guide-page .guide-record-quote{
+            font-size:
+                clamp(
+                    2rem,
+                    4vw,
+                    4.6rem
+                );
+
+            line-height:1;
+            letter-spacing:-.055em;
+            font-weight:900;
+
+            color:var(--guide-white);
+        }
+
+        .user-guide-page .guide-record-quote span{
+            color:var(--guide-cyan);
+        }
+
+        .user-guide-page .guide-record-diagram{
+            display:grid;
+            gap:14px;
+        }
+
+        .user-guide-page .guide-record-main{
+            padding:30px;
+
+            border-radius:24px;
+
+            text-align:center;
+
+            border:
+                1px solid
+                rgba(0,255,135,.32);
+
+            background:
+                rgba(0,255,135,.06);
+        }
+
+        .user-guide-page .guide-record-main strong{
+            color:var(--guide-white);
+            font-size:1.25rem;
+        }
+
+        .user-guide-page .guide-record-branches{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:12px;
+        }
+
+        .user-guide-page .guide-record-branch{
+            padding:22px 14px;
+            text-align:center;
+
+            border:
+                1px solid
+                rgba(255,255,255,.12);
+
+            border-radius:18px;
+
+            color:var(--guide-soft);
+
+            background:
+                rgba(0,20,13,.3);
+        }
+
+        .user-guide-page .guide-record-branch i{
+            display:block;
+            margin-bottom:10px;
+            color:var(--branch-color);
+        }
+
+        .user-guide-page .guide-record-branch span{
+            display:block;
+            font-size:.59rem;
+            font-weight:800;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+        }
+
+        .user-guide-page .record-farmer{
+            --branch-color:#00ff87;
+        }
+
+        .user-guide-page .record-buyer{
+            --branch-color:#00e5ff;
+        }
+
+        .user-guide-page .record-logistics{
+            --branch-color:#ff7a35;
+        }
+
+        .user-guide-page .record-driver{
+            --branch-color:#ff5fcf;
+        }
+
+
+        /* =====================================================
+           ROLE BASED ACCESS
+           ===================================================== */
+
+        .user-guide-page .guide-access{
+            display:grid;
+            gap:15px;
+        }
+
+        .user-guide-page .guide-access-row{
+            display:grid;
+            grid-template-columns:180px 1fr;
+
+            border:
+                1px solid
+                rgba(255,255,255,.1);
+
+            border-radius:18px;
+
+            overflow:hidden;
+
+            background:
+                rgba(0,20,13,.3);
+        }
+
+        .user-guide-page .guide-access-role{
+            display:flex;
+            align-items:center;
+            padding:20px;
+
+            color:var(--access-color);
+
+            background:
+                color-mix(
+                    in srgb,
+                    var(--access-color) 7%,
+                    transparent
+                );
+
+            font-size:.68rem;
+            font-weight:800;
+            letter-spacing:.1em;
+            text-transform:uppercase;
+        }
+
+        .user-guide-page .guide-access-flow{
+            display:flex;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:8px;
+
+            padding:20px;
+        }
+
+        .user-guide-page .guide-access-item{
+            padding:7px 10px;
+
+            border-radius:999px;
+
+            color:var(--guide-soft);
+
+            border:
+                1px solid
+                rgba(255,255,255,.11);
+
+            font-size:.62rem;
+        }
+
+        .user-guide-page .guide-access-arrow{
+            color:rgba(255,255,255,.3);
+        }
+
+
+        /* =====================================================
+           HOW TO START
+           ===================================================== */
+
+        .user-guide-page .guide-start-grid{
+            display:grid;
+            grid-template-columns:repeat(6,1fr);
+            gap:10px;
+        }
+
+        .user-guide-page .guide-start-step{
+            min-height:235px;
+            padding:24px 20px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.11);
+
+            border-radius:22px;
+
+            background:
+                rgba(0,20,13,.28);
+
+            transition:.3s ease;
+        }
+
+        .user-guide-page .guide-start-step:hover{
+            transform:translateY(-6px);
+            border-color:rgba(0,229,255,.35);
+        }
+
+        .user-guide-page .guide-start-step-number{
+            font-size:.62rem;
+            letter-spacing:.16em;
+            color:var(--guide-cyan);
+        }
+
+        .user-guide-page .guide-start-step i{
+            display:block;
+            margin:35px 0 22px;
+
+            color:var(--guide-green);
+            font-size:1.35rem;
+        }
+
+        .user-guide-page .guide-start-step h3{
+            margin:0;
+            color:var(--guide-white);
+            font-size:.95rem;
+        }
+
+        .user-guide-page .guide-start-step p{
+            margin:9px 0 0;
+            color:var(--guide-muted);
+            font-size:.75rem;
+            line-height:1.6;
+        }
+
+
+        /* =====================================================
+           ADVANTAGE MODULES
+           ===================================================== */
+
+        .user-guide-page .guide-advantages{
+            display:grid;
+            grid-template-columns:repeat(2,1fr);
+            gap:18px;
+        }
+
+        .user-guide-page .guide-advantage{
+            padding:28px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.1);
+
+            border-radius:24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,255,135,.055),
+                    rgba(72,168,255,.025)
+                );
+        }
+
+        .user-guide-page .guide-advantage-top{
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:20px;
+        }
+
+        .user-guide-page .guide-advantage-icon{
+            width:46px;
+            height:46px;
+
+            display:grid;
+            place-items:center;
+
+            border-radius:14px;
+
+            color:var(--advantage-color);
+
+            border:
+                1px solid
+                color-mix(
+                    in srgb,
+                    var(--advantage-color) 32%,
+                    transparent
+                );
+
+            background:
+                color-mix(
+                    in srgb,
+                    var(--advantage-color) 7%,
+                    transparent
+                );
+        }
+
+        .user-guide-page .guide-advantage h3{
+            margin:0;
+
+            color:var(--guide-white);
+            font-size:1rem;
+        }
+
+        .user-guide-page .guide-advantage p{
+            margin:18px 0 0;
+
+            color:var(--guide-muted);
+            font-size:.84rem;
+            line-height:1.7;
+        }
+
+        .user-guide-page .advantage-1{
+            --advantage-color:#00ff87;
+        }
+
+        .user-guide-page .advantage-2{
+            --advantage-color:#00e5ff;
+        }
+
+        .user-guide-page .advantage-3{
+            --advantage-color:#a970ff;
+        }
+
+        .user-guide-page .advantage-4{
+            --advantage-color:#ff5fcf;
+        }
+
+        .user-guide-page .advantage-5{
+            --advantage-color:#ff7a35;
+        }
+
+        .user-guide-page .advantage-6{
+            --advantage-color:#b8ff3d;
+        }
+
+
+        /* =====================================================
+           SUPPORTING MODULES
+           ===================================================== */
+
+        .user-guide-page .guide-support-grid{
+            display:grid;
+            grid-template-columns:repeat(5,1fr);
+            gap:14px;
+        }
+
+        .user-guide-page .guide-support{
+            min-height:270px;
+            padding:27px 22px;
+
+            position:relative;
+            overflow:hidden;
+
+            border:
+                1px solid
+                rgba(255,255,255,.1);
+
+            border-radius:24px;
+
+            background:
+                rgba(0,20,13,.3);
+        }
+
+        .user-guide-page .guide-support::after{
+            content:"";
+
+            position:absolute;
+            width:130px;
+            height:130px;
+
+            right:-60px;
+            bottom:-60px;
+
+            border-radius:50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    var(--support-color),
+                    transparent 68%
+                );
+
+            opacity:.15;
+        }
+
+        .user-guide-page .guide-support-icon{
+            width:48px;
+            height:48px;
+
+            display:grid;
+            place-items:center;
+
+            border-radius:15px;
+
+            color:var(--support-color);
+
+            border:
+                1px solid
+                color-mix(
+                    in srgb,
+                    var(--support-color) 35%,
+                    transparent
+                );
+        }
+
+        .user-guide-page .guide-support h3{
+            margin:25px 0 9px;
+            color:var(--guide-white);
+            font-size:1rem;
+        }
+
+        .user-guide-page .guide-support p{
+            margin:0;
+            color:var(--guide-muted);
+            font-size:.76rem;
+            line-height:1.65;
+        }
+
+        .user-guide-page .support-impact{
+            --support-color:#00ff87;
+        }
+
+        .user-guide-page .support-sustainability{
+            --support-color:#b8ff3d;
+        }
+
+        .user-guide-page .support-guide{
+            --support-color:#00e5ff;
+        }
+
+        .user-guide-page .support-research{
+            --support-color:#a970ff;
+        }
+
+        .user-guide-page .support-future{
+            --support-color:#ff5fcf;
+        }
+
+
+        /* =====================================================
+           UNIQUE DIFFERENCE
+           ===================================================== */
+
+        .user-guide-page .guide-difference{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:20px;
+        }
+
+        .user-guide-page .guide-difference-panel{
+            min-height:430px;
+            padding:42px;
+
+            border-radius:30px;
+
+            border:1px solid rgba(255,255,255,.1);
+        }
+
+        .user-guide-page .difference-before{
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(255,95,207,.045),
+                    rgba(255,107,95,.025)
+                );
+        }
+
+        .user-guide-page .difference-after{
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,255,135,.075),
+                    rgba(0,229,255,.035)
+                );
+
+            border-color:
+                rgba(0,255,135,.24);
+        }
+
+        .user-guide-page .guide-difference-label{
+            font-size:.63rem;
+            font-weight:800;
+            letter-spacing:.2em;
+            text-transform:uppercase;
+            color:var(--guide-muted);
+        }
+
+        .user-guide-page .guide-difference-title{
+            margin:22px 0 35px;
+
+            font-size:
+                clamp(
+                    1.8rem,
+                    3vw,
+                    3rem
+                );
+
+            line-height:1;
+            letter-spacing:-.04em;
+            color:var(--guide-white);
+        }
+
+        .user-guide-page .guide-difference-list{
+            display:grid;
+            gap:15px;
+        }
+
+        .user-guide-page .guide-difference-item{
+            display:flex;
+            align-items:flex-start;
+            gap:13px;
+
+            color:var(--guide-soft);
+
+            font-size:.88rem;
+            line-height:1.5;
+        }
+
+        .user-guide-page .difference-before
+        .guide-difference-item i{
+            color:var(--guide-coral);
+            margin-top:3px;
+        }
+
+        .user-guide-page .difference-after
+        .guide-difference-item i{
+            color:var(--guide-green);
+            margin-top:3px;
+        }
+
+
+        /* =====================================================
+           FINAL JOURNEY
+           ===================================================== */
+
+        .user-guide-page .guide-final-journey{
+            display:flex;
+            flex-wrap:wrap;
+            align-items:center;
+            justify-content:center;
+            gap:8px;
+
+            padding:45px 25px;
+
+            border:
+                1px solid
+                rgba(0,255,135,.2);
+
+            border-radius:30px;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(0,255,135,.07),
+                    transparent 65%
+                );
+        }
+
+        .user-guide-page .guide-final-node{
+            padding:12px 15px;
+
+            border-radius:999px;
+
+            color:var(--guide-white);
+
+            background:
+                rgba(0,25,17,.62);
+
+            border:
+                1px solid
+                var(--node-border);
+
+            font-size:.61rem;
+            font-weight:800;
+            letter-spacing:.1em;
+            text-transform:uppercase;
+        }
+
+        .user-guide-page .guide-final-arrow{
+            color:rgba(255,255,255,.3);
+        }
+
+
+        /* =====================================================
+           FINAL CTA
+           ===================================================== */
+
+        .user-guide-page .guide-final{
+            padding:
+                150px
+                0
+                130px;
+
+            text-align:center;
+        }
+
+        .user-guide-page .guide-final-title{
+            max-width:1100px;
+            margin:0 auto;
+
+            font-size:
+                clamp(
+                    3rem,
+                    7vw,
+                    7rem
+                );
+
+            line-height:.92;
+            letter-spacing:-.06em;
+            font-weight:900;
+
+            color:var(--guide-white);
+        }
+
+        .user-guide-page .guide-final-copy{
+            max-width:650px;
+            margin:25px auto 0;
+
+            color:var(--guide-soft);
+            font-size:1rem;
+            line-height:1.75;
+        }
+
+        .user-guide-page .guide-final-actions{
+            margin-top:32px;
+
+            display:flex;
+            justify-content:center;
+            flex-wrap:wrap;
+            gap:12px;
+        }
+
+
+        /* =====================================================
+           FOOTER
+           ===================================================== */
+
+        .user-guide-page .guide-footer{
+            border-top:1px solid var(--guide-line);
+            padding:40px 0;
+        }
+
+        .user-guide-page .guide-footer-inner{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            gap:25px;
+        }
+
+        .user-guide-page .guide-footer-brand{
+            color:var(--guide-white);
+            font-weight:800;
+            letter-spacing:.08em;
+            text-transform:uppercase;
+            font-size:.7rem;
+        }
+
+        .user-guide-page .guide-footer-links{
+            display:flex;
+            flex-wrap:wrap;
+            gap:18px;
+        }
+
+        .user-guide-page .guide-footer-links a{
+            color:var(--guide-muted);
+            font-size:.62rem;
+            letter-spacing:.1em;
+            text-transform:uppercase;
+        }
+
+        .user-guide-page .guide-footer-links a:hover{
+            color:var(--guide-green);
+        }
+
+
+        /* =====================================================
+           SCROLL REVEAL
+           ===================================================== */
+
+        .user-guide-page .guide-reveal{
+            opacity:0;
+            transform:translateY(28px);
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+        }
+
+        .user-guide-page .guide-reveal.guide-visible{
+            opacity:1;
+            transform:translateY(0);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media(max-width:1150px){
+
+            .user-guide-page .guide-hero-grid{
+                grid-template-columns:1fr;
+                gap:35px;
+            }
+
+            .user-guide-page .guide-hero-visual{
+                min-height:420px;
+            }
+
+            .user-guide-page .guide-journey{
+                grid-template-columns:repeat(2,1fr);
+            }
+
+            .user-guide-page .guide-journey-step:nth-child(2){
+                border-right:0;
+            }
+
+            .user-guide-page .guide-journey-step{
+                border-bottom:1px solid var(--guide-line);
+            }
+
+            .user-guide-page .guide-role{
+                grid-template-columns:80px 1fr;
+            }
+
+            .user-guide-page .guide-role-content{
+                grid-column:2;
+            }
+
+            .user-guide-page .guide-support-grid{
+                grid-template-columns:repeat(3,1fr);
+            }
+
+            .user-guide-page .guide-start-grid{
+                grid-template-columns:repeat(3,1fr);
+            }
+
+            .user-guide-page .guide-record-layout{
+                grid-template-columns:1fr;
+            }
+        }
+
+
+        @media(max-width:800px){
+
+            .user-guide-page .guide-container{
+                width:min(
+                    100% - 34px,
+                    680px
+                );
+            }
+
+            .user-guide-page .guide-nav{
+                display:none;
+            }
+
+            .user-guide-page .guide-header-inner{
+                width:calc(100% - 24px);
+            }
+
+            .user-guide-page .guide-facts{
+                grid-template-columns:repeat(2,1fr);
+            }
+
+            .user-guide-page .guide-fact:nth-child(2)::after{
+                display:none;
+            }
+
+            .user-guide-page .guide-story{
+                grid-template-columns:1fr;
+            }
+
+            .user-guide-page .guide-role{
+                grid-template-columns:1fr;
+                padding:28px;
+            }
+
+            .user-guide-page .guide-role-content{
+                grid-column:auto;
+                grid-template-columns:1fr;
+                gap:20px;
+            }
+
+            .user-guide-page .guide-network{
+                min-height:650px;
+            }
+
+            .user-guide-page .guide-network-node{
+                width:88px;
+                height:88px;
+            }
+
+            .user-guide-page .guide-network-center{
+                width:145px;
+                height:145px;
+            }
+
+            .user-guide-page .guide-record-branches{
+                grid-template-columns:repeat(2,1fr);
+            }
+
+            .user-guide-page .guide-access-row{
+                grid-template-columns:1fr;
+            }
+
+            .user-guide-page .guide-start-grid{
+                grid-template-columns:repeat(2,1fr);
+            }
+
+            .user-guide-page .guide-advantages{
+                grid-template-columns:1fr;
+            }
+
+            .user-guide-page .guide-support-grid{
+                grid-template-columns:repeat(2,1fr);
+            }
+
+            .user-guide-page .guide-difference{
+                grid-template-columns:1fr;
+            }
+
+            .user-guide-page .guide-footer-inner{
+                flex-direction:column;
+                align-items:flex-start;
+            }
+        }
+
+
+        @media(max-width:520px){
+
+            .user-guide-page .guide-hero{
+                padding-top:125px;
+            }
+
+            .user-guide-page .guide-hero-title{
+                font-size:3.2rem;
+            }
+
+            .user-guide-page .guide-hero-visual{
+                min-height:350px;
+            }
+
+            .user-guide-page .guide-orbit{
+                width:300px;
+            }
+
+            .user-guide-page .guide-core{
+                width:135px;
+                height:135px;
+            }
+
+            .user-guide-page .guide-core strong{
+                font-size:1.2rem;
+            }
+
+            .user-guide-page .guide-orbit-node{
+                width:65px;
+                height:65px;
+                font-size:.43rem;
+            }
+
+            .user-guide-page .guide-orbit-node i{
+                font-size:.9rem;
+            }
+
+            .user-guide-page .guide-facts{
+                grid-template-columns:1fr 1fr;
+            }
+
+            .user-guide-page .guide-fact{
+                padding:25px 10px;
+            }
+
+            .user-guide-page .guide-journey{
+                grid-template-columns:1fr;
+            }
+
+            .user-guide-page .guide-journey-step{
+                border-right:0 !important;
+            }
+
+            .user-guide-page .guide-start-grid{
+                grid-template-columns:1fr;
+            }
+
+            .user-guide-page .guide-support-grid{
+                grid-template-columns:1fr;
+            }
+
+            .user-guide-page .guide-record-branches{
+                grid-template-columns:1fr 1fr;
+            }
+
+            .user-guide-page .guide-difference-panel{
+                min-height:auto;
+                padding:30px;
+            }
+
+            .user-guide-page .guide-section{
+                padding:90px 0;
+            }
+
+            .user-guide-page .guide-final{
+                padding:100px 0;
+            }
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+           ===================================================== */
+
+        @media(prefers-reduced-motion:reduce){
+
+            .user-guide-page *,
+            .user-guide-page *::before,
+            .user-guide-page *::after{
+                animation-duration:.001ms !important;
+                animation-iteration-count:1 !important;
+                scroll-behavior:auto !important;
+                transition-duration:.001ms !important;
+            }
+
+            .user-guide-page .guide-reveal{
+                opacity:1;
+                transform:none;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body class="user-guide-page">
+
+
+    <!-- =========================================================
+         SHARED BACKGROUND EFFECTS
+         These are intentionally compatible with script.js
+         ========================================================= -->
+
+    <div class="background-image"></div>
+
+    <div class="particles"></div>
+
+    <div class="floating-leaves"></div>
+
+    <div class="fireflies"></div>
+
+    <div class="light-trails"></div>
+
+    <div class="mouse-glow"></div>
+
+    <div class="fm-cursor-orb"></div>
+
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header class="guide-header">
+
+        <div class="guide-header-inner">
+
+            <a
+                href="index.html"
+                class="guide-brand"
+                aria-label="AgriVision Karnataka Home"
+            >
+
+                <span class="guide-brand-mark">
+                    <i class="fa-solid fa-leaf"></i>
+                </span>
+
+                <span class="guide-brand-text">
+
+                    <span class="guide-brand-name">
+                        AgriVision Karnataka
+                    </span>
+
+                    <span class="guide-brand-sub">
+                        User Guide
+                    </span>
+
+                </span>
+
+            </a>
+
+
+            <nav class="guide-nav">
+
+                <a href="ecosystem.html">
+                    Ecosystem
+                </a>
+
+                <a href="impact.html">
+                    Impact
+                </a>
+
+                <a href="sustainability.html">
+                    Sustainability
+                </a>
+
+                <a href="research.html">
+                    Research
+                </a>
+
+                <a href="future.html">
+                    Future
+                </a>
+
+            </nav>
+
+
+            <a
+                href="ecosystem.html"
+                class="guide-menu"
+                aria-label="Enter Ecosystem"
+                title="Enter Ecosystem"
+            >
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================================
+         01 — START HERE
+         ========================================================= -->
+
+    <main>
+
+        <section
+            class="guide-hero"
+            id="guide-start"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-hero-grid">
+
+                    <div class="guide-reveal">
+
+                        <div class="guide-eyebrow">
+                            USER GUIDE / 01
+                        </div>
+
+                        <h1 class="guide-hero-title">
+
+                            UNDERSTAND THE
+                            <span class="guide-gradient-text">
+                                ECOSYSTEM.
+                            </span>
+
+                            <br>
+
+                            USE YOUR
+                            <span class="guide-gradient-text">
+                                ROLE.
+                            </span>
+
+                        </h1>
+
+                        <p class="guide-hero-copy">
+
+                            Welcome to the AgriVision Karnataka User Guide.
+                            This page explains what the ecosystem is, how the
+                            seven agricultural roles work, how they connect,
+                            how information moves through the system, and how
+                            you can make the most of your role.
+
+                        </p>
+
+
+                        <div class="guide-hero-actions">
+
+                            <a
+                                href="#guide-roles"
+                                class="guide-button guide-button-primary"
+                            >
+                                Explore Your Role
+
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+
+                            <a
+                                href="#guide-ecosystem"
+                                class="guide-button guide-button-secondary"
+                            >
+                                Understand The System
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="guide-hero-visual guide-reveal">
+
+                        <div class="guide-orbit"></div>
+
+                        <div class="guide-core">
+
+                            <strong>
+                                AGRIVISION
+                            </strong>
+
+                            <span>
+                                One connected ecosystem
+                            </span>
+
+                        </div>
+
+
+                        <div class="guide-orbit-node node-farmer">
+
+                            <i class="fa-solid fa-seedling"></i>
+
+                            Farmer
+
+                        </div>
+
+
+                        <div class="guide-orbit-node node-buyer">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            Buyer
+
+                        </div>
+
+
+                        <div class="guide-orbit-node node-labour">
+
+                            <i class="fa-solid fa-people-group"></i>
+
+                            Labour
+
+                        </div>
+
+
+                        <div class="guide-orbit-node node-logistics">
+
+                            <i class="fa-solid fa-truck-fast"></i>
+
+                            Logistics
+
+                        </div>
+
+
+                        <div class="guide-orbit-node node-equipment">
+
+                            <i class="fa-solid fa-tractor"></i>
+
+                            Equipment
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================================
+             ARCHITECTURE FACTS
+             ===================================================== -->
+
+        <section class="guide-container">
+
+            <div class="guide-facts guide-reveal">
+
+                <div class="guide-fact">
+
+                    <span class="guide-fact-number">
+                        7
+                    </span>
+
+                    <span class="guide-fact-label">
+                        Operational Roles
+                    </span>
+
+                </div>
+
+
+                <div class="guide-fact">
+
+                    <span class="guide-fact-number">
+                        5
+                    </span>
+
+                    <span class="guide-fact-label">
+                        Supporting Modules
+                    </span>
+
+                </div>
+
+
+                <div class="guide-fact">
+
+                    <span class="guide-fact-number">
+                        1
+                    </span>
+
+                    <span class="guide-fact-label">
+                        Shared Ecosystem
+                    </span>
+
+                </div>
+
+
+                <div class="guide-fact">
+
+                    <span class="guide-fact-number">
+                        1
+                    </span>
+
+                    <span class="guide-fact-label">
+                        Shared Identity
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             02 — WHAT IS AGRIVISION?
+             ========================================================= -->
+
+        <section
+            class="guide-section"
+            id="guide-ecosystem"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        02 / UNDERSTAND
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        What exactly is
+                        <span>AgriVision?</span>
+
+                    </h2>
+
+                    <p class="guide-section-description">
+
+                        AgriVision Karnataka is designed as a connected
+                        agricultural ecosystem. Instead of treating farming,
+                        market access, labour, machinery and transportation
+                        as completely isolated services, the system is
+                        structured around the relationships between them.
+
+                    </p>
+
+                </div>
+
+
+                <div class="guide-story">
+
+                    <div class="guide-story-statement guide-reveal">
+
+                        Agriculture
+                        is not a
+                        single
+                        activity.
+
+                        <br><br>
+
+                        It is a
+                        <em>connected journey.</em>
+
+                    </div>
+
+
+                    <div class="guide-explanation guide-reveal">
+
+                        <div class="guide-explanation-row">
+
+                            <strong>
+                                A farmer may need a buyer.
+                            </strong>
+
+                            <p>
+                                A crop can create a market requirement and
+                                connect the farmer with procurement activity.
+                            </p>
+
+                        </div>
+
+
+                        <div class="guide-explanation-row">
+
+                            <strong>
+                                A farm may need people.
+                            </strong>
+
+                            <p>
+                                Agricultural work can create requirements for
+                                labour and machine operators.
+                            </p>
+
+                        </div>
+
+
+                        <div class="guide-explanation-row">
+
+                            <strong>
+                                A farm may need resources.
+                            </strong>
+
+                            <p>
+                                Equipment and machinery can become part of the
+                                agricultural workflow.
+                            </p>
+
+                        </div>
+
+
+                        <div class="guide-explanation-row">
+
+                            <strong>
+                                A crop may need transportation.
+                            </strong>
+
+                            <p>
+                                Logistics providers, vehicles and drivers can
+                                become part of the journey from farm to buyer.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             03 — HOW THE SYSTEM WORKS
+             ========================================================= -->
+
+        <section class="guide-section">
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        03 / SYSTEM
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        One ecosystem.
+                        <span>Many perspectives.</span>
+
+                    </h2>
+
+                    <p class="guide-section-description">
+
+                        The seven operational roles are not seven unrelated
+                        applications. They are different role-based
+                        perspectives inside the same agricultural ecosystem.
+
+                    </p>
+
+                </div>
+
+
+                <div class="guide-journey guide-reveal">
+
+                    <div class="guide-journey-step">
+
+                        <span class="guide-step-number">
+                            01
+                        </span>
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        <h3>
+                            Create Your Identity
+                        </h3>
+
+                        <p>
+                            Begin with one AgriVision account.
+                        </p>
+
+                    </div>
+
+
+                    <div class="guide-journey-step">
+
+                        <span class="guide-step-number">
+                            02
+                        </span>
+
+                        <i class="fa-solid fa-user-tag"></i>
+
+                        <h3>
+                            Select Your Role
+                        </h3>
+
+                        <p>
+                            Participate according to your agricultural role.
+                        </p>
+
+                    </div>
+
+
+                    <div class="guide-journey-step">
+
+                        <span class="guide-step-number">
+                            03
+                        </span>
+
+                        <i class="fa-solid fa-gauge-high"></i>
+
+                        <h3>
+                            Enter Dashboard
+                        </h3>
+
+                        <p>
+                            Your dashboard becomes your starting point.
+                        </p>
+
+                    </div>
+
+
+                    <div class="guide-journey-step">
+
+                        <span class="guide-step-number">
+                            04
+                        </span>
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        <h3>
+                            Enter Your Portal
+                        </h3>
+
+                        <p>
+                            Move into the operational environment for your
+                            role.
+                        </p>
+
+                    </div>
+
+
+                    <div class="guide-journey-step">
+
+                        <span class="guide-step-number">
+                            05
+                        </span>
+
+                        <i class="fa-solid fa-network-wired"></i>
+
+                        <h3>
+                            Connect
+                        </h3>
+
+                        <p>
+                            Participate in the wider agricultural ecosystem.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             04 — CHOOSE YOUR ROLE
+             ========================================================= -->
+
+        <section
+            class="guide-section"
+            id="guide-roles"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        04 / YOUR ROLE
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        Choose where
+                        <span>you participate.</span>
+
+                    </h2>
+
+                    <p class="guide-section-description">
+
+                        Every role has a different responsibility, a
+                        different view of the ecosystem and different
+                        connections. Select the role that best represents
+                        how you participate in agriculture.
+
+                    </p>
+
+                </div>
+
+
+                <div class="guide-role-list">
+
+
+                    <!-- FARMER -->
+
+                    <article
+                        class="guide-role role-farmer guide-reveal"
+                    >
+
+                        <div class="guide-role-number">
+                            01
+                        </div>
+
+
+                        <div class="guide-role-identity">
+
+                            <div class="guide-role-icon">
+
+                                <i class="fa-solid fa-seedling"></i>
+
+                            </div>
+
+                            <h3>
+                                Farmer
+                            </h3>
+
+                            <span class="guide-role-tagline">
+                                Agricultural production
+                            </span>
+
+                            <a
+                                href="farmer.html"
+                                class="guide-role-link"
+                            >
+                                Read Farmer Guide
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="guide-role-content">
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    What it is
+                                </h4>
+
+                                <p>
+                                    The Farmer module is centred around
+                                    agricultural production and farm
+                                    management.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    How to use it
+                                </h4>
+
+                                <p>
+                                    Connect farm information, crops,
+                                    listings, buyers, labour, equipment,
+                                    operators and logistics around your
+                                    agricultural requirements.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    Your advantage
+                                </h4>
+
+                                <p>
+                                    A farmer-centred workspace can bring
+                                    different parts of the agricultural
+                                    journey into one connected environment.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- BUYER -->
+
+                    <article
+                        class="guide-role role-buyer guide-reveal"
+                    >
+
+                        <div class="guide-role-number">
+                            02
+                        </div>
+
+
+                        <div class="guide-role-identity">
+
+                            <div class="guide-role-icon">
+
+                                <i class="fa-solid fa-cart-shopping"></i>
+
+                            </div>
+
+                            <h3>
+                                Buyer
+                            </h3>
+
+                            <span class="guide-role-tagline">
+                                Agricultural procurement
+                            </span>
+
+                            <a
+                                href="buyer.html"
+                                class="guide-role-link"
+                            >
+                                Read Buyer Guide
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="guide-role-content">
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    What it is
+                                </h4>
+
+                                <p>
+                                    The Buyer module represents agricultural
+                                    demand and procurement requirements.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    How to use it
+                                </h4>
+
+                                <p>
+                                    Discover relevant crops, create
+                                    requirements, connect with farmers,
+                                    coordinate orders and follow delivery.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    Your advantage
+                                </h4>
+
+                                <p>
+                                    Procurement can be connected with the
+                                    agricultural source and the delivery
+                                    journey instead of remaining isolated.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- LABOUR -->
+
+                    <article
+                        class="guide-role role-labour guide-reveal"
+                    >
+
+                        <div class="guide-role-number">
+                            03
+                        </div>
+
+
+                        <div class="guide-role-identity">
+
+                            <div class="guide-role-icon">
+
+                                <i class="fa-solid fa-people-group"></i>
+
+                            </div>
+
+                            <h3>
+                                Labour Worker
+                            </h3>
+
+                            <span class="guide-role-tagline">
+                                Agricultural workforce
+                            </span>
+
+                            <a
+                                href="labour.html"
+                                class="guide-role-link"
+                            >
+                                Read Labour Guide
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="guide-role-content">
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    What it is
+                                </h4>
+
+                                <p>
+                                    The Labour module focuses on agricultural
+                                    workforce coordination.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    How to use it
+                                </h4>
+
+                                <p>
+                                    Maintain relevant information,
+                                    availability and connections with
+                                    agricultural work requirements.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    Your advantage
+                                </h4>
+
+                                <p>
+                                    Agricultural work requirements can be
+                                    connected with available workforce
+                                    participation.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- LOGISTICS -->
+
+                    <article
+                        class="guide-role role-logistics guide-reveal"
+                    >
+
+                        <div class="guide-role-number">
+                            04
+                        </div>
+
+
+                        <div class="guide-role-identity">
+
+                            <div class="guide-role-icon">
+
+                                <i class="fa-solid fa-truck-fast"></i>
+
+                            </div>
+
+                            <h3>
+                                Logistics Provider
+                            </h3>
+
+                            <span class="guide-role-tagline">
+                                Transportation coordination
+                            </span>
+
+                            <a
+                                href="logistics-provider.html"
+                                class="guide-role-link"
+                            >
+                                Read Logistics Guide
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="guide-role-content">
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    What it is
+                                </h4>
+
+                                <p>
+                                    The Logistics module coordinates
+                                    agricultural transportation and fleet
+                                    operations.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    How to use it
+                                </h4>
+
+                                <p>
+                                    Coordinate farmer, buyer, vehicle,
+                                    driver, route and delivery requirements.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    Your advantage
+                                </h4>
+
+                                <p>
+                                    Transportation becomes part of the
+                                    agricultural workflow instead of an
+                                    unrelated external step.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- DRIVER -->
+
+                    <article
+                        class="guide-role role-driver guide-reveal"
+                    >
+
+                        <div class="guide-role-number">
+                            05
+                        </div>
+
+
+                        <div class="guide-role-identity">
+
+                            <div class="guide-role-icon">
+
+                                <i class="fa-solid fa-truck"></i>
+
+                            </div>
+
+                            <h3>
+                                Driver
+                            </h3>
+
+                            <span class="guide-role-tagline">
+                                Agricultural transportation
+                            </span>
+
+                            <a
+                                href="driver.html"
+                                class="guide-role-link"
+                            >
+                                Read Driver Guide
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="guide-role-content">
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    What it is
+                                </h4>
+
+                                <p>
+                                    The Driver module focuses on the actual
+                                    movement of agricultural deliveries.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    How to use it
+                                </h4>
+
+                                <p>
+                                    Review delivery information, respond to
+                                    assignments and follow the delivery
+                                    journey through completion.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    Your advantage
+                                </h4>
+
+                                <p>
+                                    You receive information relevant to the
+                                    delivery you are responsible for rather
+                                    than the entire ecosystem.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- EQUIPMENT -->
+
+                    <article
+                        class="guide-role role-equipment guide-reveal"
+                    >
+
+                        <div class="guide-role-number">
+                            06
+                        </div>
+
+
+                        <div class="guide-role-identity">
+
+                            <div class="guide-role-icon">
+
+                                <i class="fa-solid fa-tractor"></i>
+
+                            </div>
+
+                            <h3>
+                                Equipment Owner
+                            </h3>
+
+                            <span class="guide-role-tagline">
+                                Agricultural machinery
+                            </span>
+
+                            <a
+                                href="equipment-owner.html"
+                                class="guide-role-link"
+                            >
+                                Read Equipment Guide
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="guide-role-content">
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    What it is
+                                </h4>
+
+                                <p>
+                                    The Equipment Owner module manages
+                                    agricultural machinery availability and
+                                    coordination.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    How to use it
+                                </h4>
+
+                                <p>
+                                    Maintain equipment information and
+                                    coordinate availability around relevant
+                                    agricultural requirements.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    Your advantage
+                                </h4>
+
+                                <p>
+                                    Agricultural equipment can become more
+                                    visible within the ecosystem when it is
+                                    available for coordination.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- OPERATOR -->
+
+                    <article
+                        class="guide-role role-operator guide-reveal"
+                    >
+
+                        <div class="guide-role-number">
+                            07
+                        </div>
+
+
+                        <div class="guide-role-identity">
+
+                            <div class="guide-role-icon">
+
+                                <i class="fa-solid fa-gears"></i>
+
+                            </div>
+
+                            <h3>
+                                Machine Operator
+                            </h3>
+
+                            <span class="guide-role-tagline">
+                                Machinery operation
+                            </span>
+
+                            <a
+                                href="machine-operator.html"
+                                class="guide-role-link"
+                            >
+                                Read Operator Guide
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+
+                        <div class="guide-role-content">
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    What it is
+                                </h4>
+
+                                <p>
+                                    The Machine Operator role represents
+                                    people who operate agricultural machinery.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    How to use it
+                                </h4>
+
+                                <p>
+                                    Represent your capabilities and connect
+                                    them with relevant machinery and
+                                    agricultural requirements.
+                                </p>
+
+                            </div>
+
+
+                            <div class="guide-role-block">
+
+                                <h4>
+                                    Your advantage
+                                </h4>
+
+                                <p>
+                                    Equipment ownership and machine
+                                    operation remain separate roles while
+                                    still being connected.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             05 — HOW ROLES CONNECT
+             ========================================================= -->
+
+        <section
+            class="guide-section"
+            id="guide-connect"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        05 / CONNECTION
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        Your role is part of
+                        <span>a larger journey.</span>
+
+                    </h2>
+
+                    <p class="guide-section-description">
+
+                        The value of an ecosystem appears when the different
+                        participants can be understood as connected parts of
+                        agricultural activity.
+
+                    </p>
+
+                </div>
+
+
+                <div class="guide-network guide-reveal">
+
+                    <div class="guide-network-line network-line-1"></div>
+                    <div class="guide-network-line network-line-2"></div>
+                    <div class="guide-network-line network-line-3"></div>
+                    <div class="guide-network-line network-line-4"></div>
+                    <div class="guide-network-line network-line-5"></div>
+                    <div class="guide-network-line network-line-6"></div>
+
+
+                    <div class="guide-network-center">
+
+                        <strong>
+                            AGRIVISION<br>
+                            ECOSYSTEM
+                        </strong>
+
+                    </div>
+
+
+                    <div class="guide-network-node network-farmer">
+
+                        <i class="fa-solid fa-seedling"></i>
+
+                        <span>
+                            Farmer
+                        </span>
+
+                    </div>
+
+
+                    <div class="guide-network-node network-buyer">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        <span>
+                            Buyer
+                        </span>
+
+                    </div>
+
+
+                    <div class="guide-network-node network-labour">
+
+                        <i class="fa-solid fa-people-group"></i>
+
+                        <span>
+                            Labour
+                        </span>
+
+                    </div>
+
+
+                    <div class="guide-network-node network-logistics">
+
+                        <i class="fa-solid fa-truck-fast"></i>
+
+                        <span>
+                            Logistics
+                        </span>
+
+                    </div>
+
+
+                    <div class="guide-network-node network-equipment">
+
+                        <i class="fa-solid fa-tractor"></i>
+
+                        <span>
+                            Equipment
+                        </span>
+
+                    </div>
+
+
+                    <div class="guide-network-node network-driver">
+
+                        <i class="fa-solid fa-truck"></i>
+
+                        <span>
+                            Driver
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             06 — ONE RECORD, MANY PORTALS
+             ========================================================= -->
+
+        <section
+            class="guide-section"
+            id="guide-record"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-record-layout">
+
+                    <div class="guide-record-quote guide-reveal">
+
+                        One record.
+
+                        <br>
+
+                        <span>
+                            Many portals.
+                        </span>
+
+                    </div>
+
+
+                    <div class="guide-record-diagram guide-reveal">
+
+                        <div class="guide-record-main">
+
+                            <strong>
+                                ONE AGRICULTURAL ORDER
+                            </strong>
+
+                        </div>
+
+
+                        <div class="guide-record-branches">
+
+                            <div
+                                class="guide-record-branch record-farmer"
+                            >
+
+                                <i class="fa-solid fa-seedling"></i>
+
+                                <span>
+                                    Farmer View
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="guide-record-branch record-buyer"
+                            >
+
+                                <i class="fa-solid fa-cart-shopping"></i>
+
+                                <span>
+                                    Buyer View
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="guide-record-branch record-logistics"
+                            >
+
+                                <i class="fa-solid fa-route"></i>
+
+                                <span>
+                                    Logistics View
+                                </span>
+
+                            </div>
+
+
+                            <div
+                                class="guide-record-branch record-driver"
+                            >
+
+                                <i class="fa-solid fa-truck"></i>
+
+                                <span>
+                                    Driver View
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="guide-section-header guide-reveal"
+                    style="margin-top:70px;margin-bottom:0;"
+                >
+
+                    <p class="guide-section-description">
+
+                        The same agricultural activity can matter to several
+                        participants. Each participant can interact with the
+                        relevant perspective without turning the ecosystem
+                        into unrelated duplicate records.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             07 — ROLE BASED ACCESS
+             ========================================================= -->
+
+        <section
+            class="guide-section"
+            id="guide-access"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        07 / VISIBILITY
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        Connected does not mean
+                        <span>everyone sees everything.</span>
+
+                    </h2>
+
+                    <p class="guide-section-description">
+
+                        AgriVision is designed around role-based access.
+                        Participants can remain connected while seeing the
+                        information that is relevant to their responsibility.
+
+                    </p>
+
+                </div>
+
+
+                <div class="guide-access guide-reveal">
+
+
+                    <div
+                        class="guide-access-row"
+                        style="--access-color:#00ff87;"
+                    >
+
+                        <div class="guide-access-role">
+                            Farmer
+                        </div>
+
+                        <div class="guide-access-flow">
+
+                            <span class="guide-access-item">
+                                Crop
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Buyer
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Logistics
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Delivery
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="guide-access-row"
+                        style="--access-color:#00e5ff;"
+                    >
+
+                        <div class="guide-access-role">
+                            Buyer
+                        </div>
+
+                        <div class="guide-access-flow">
+
+                            <span class="guide-access-item">
+                                Crop
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Farmer
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Order
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Delivery
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="guide-access-row"
+                        style="--access-color:#ff7a35;"
+                    >
+
+                        <div class="guide-access-role">
+                            Logistics
+                        </div>
+
+                        <div class="guide-access-flow">
+
+                            <span class="guide-access-item">
+                                Farmer
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Buyer
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Driver
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Route
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Delivery
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="guide-access-row"
+                        style="--access-color:#ff5fcf;"
+                    >
+
+                        <div class="guide-access-role">
+                            Driver
+                        </div>
+
+                        <div class="guide-access-flow">
+
+                            <span class="guide-access-item">
+                                Pickup
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Crop
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Destination
+                            </span>
+
+                            <span class="guide-access-arrow">
+                                →
+                            </span>
+
+                            <span class="guide-access-item">
+                                Delivery
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             08 — HOW TO START
+             ========================================================= -->
+
+        <section
+            class="guide-section"
+            id="guide-start-using"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        08 / GET STARTED
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        Your first journey
+                        <span>is simple.</span>
+
+                    </h2>
+
+                    <p class="guide-section-description">
+
+                        You do not need to understand every part of the
+                        ecosystem before you begin. Start with your role and
+                        let the ecosystem guide the rest of the journey.
+
+                    </p>
+
+                </div>
+
+
+                <div class="guide-start-grid">
+
+
+                    <div class="guide-start-step guide-reveal">
+
+                        <span class="guide-start-step-number">
+                            STEP 01
+                        </span>
+
+                        <i class="fa-solid fa-book-open"></i>
+
+                        <h3>
+                            Understand
+                        </h3>
+
+                        <p>
+                            Learn what AgriVision is and identify the role
+                            through which you participate.
+                        </p>
+
+                    </div>
+
+
+                    <div class="guide-start-step guide-reveal">
+
+                        <span class="guide-start-step-number">
+                            STEP 02
+                        </span>
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        <h3>
+                            Create Account
+                        </h3>
+
+                        <p>
+                            Create your AgriVision identity.
+                        </p>
+
+                    </div>
+
+
+                    <div class="guide-start-step guide-reveal">
+
+                        <span class="guide-start-step-number">
+                            STEP 03
+                        </span>
+
+                        <i class="fa-solid fa-id-card"></i>
+
+                        <h3>
+                            Select Role
+                        </h3>
+
+                        <p>
+                            Select one or more roles that represent your
+                            participation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="guide-start-step guide-reveal">
+
+                        <span class="guide-start-step-number">
+                            STEP 04
+                        </span>
+
+                        <i class="fa-solid fa-user-check"></i>
+
+                        <h3>
+                            Complete Profile
+                        </h3>
+
+                        <p>
+                            Add information relevant to your participation.
+                        </p>
+
+                    </div>
+
+
+                    <div class="guide-start-step guide-reveal">
+
+                        <span class="guide-start-step-number">
+                            STEP 05
+                        </span>
+
+                        <i class="fa-solid fa-gauge-high"></i>
+
+                        <h3>
+                            Open Dashboard
+                        </h3>
+
+                        <p>
+                            Use your dashboard as the central starting point.
+                        </p>
+
+                    </div>
+
+
+                    <div class="guide-start-step guide-reveal">
+
+                        <span class="guide-start-step-number">
+                            STEP 06
+                        </span>
+
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+
+                        <h3>
+                            Enter Portal
+                        </h3>
+
+                        <p>
+                            Move into the operational portal designed for
+                            your role.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             09 — HOW TO GET THE MOST FROM EACH MODULE
+             ========================================================= -->
+
+        <section
+            class="guide-section"
+            id="guide-advantages"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        09 / USE IT WELL
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        Don't just enter the system.
+                        <span>Use the connections.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="guide-advantages">
+
+
+                    <article
+                        class="guide-advantage advantage-1 guide-reveal"
+                    >
+
+                        <div class="guide-advantage-top">
+
+                            <div class="guide-advantage-icon">
+                                <i class="fa-solid fa-seedling"></i>
+                            </div>
+
+                            <h3>
+                                Farmer
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            Think beyond crop listing. Connect your
+                            agricultural journey with buyers, labour,
+                            equipment, operators, logistics and delivery
+                            wherever relevant.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="guide-advantage advantage-2 guide-reveal"
+                    >
+
+                        <div class="guide-advantage-top">
+
+                            <div class="guide-advantage-icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+
+                            <h3>
+                                Buyer
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            Move beyond crop discovery and understand the
+                            connected procurement journey from requirement to
+                            delivery.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="guide-advantage advantage-3 guide-reveal"
+                    >
+
+                        <div class="guide-advantage-top">
+
+                            <div class="guide-advantage-icon">
+                                <i class="fa-solid fa-people-group"></i>
+                            </div>
+
+                            <h3>
+                                Labour Worker
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            Keep your relevant participation information
+                            useful so agricultural work requirements can be
+                            connected with available workforce.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="guide-advantage advantage-4 guide-reveal"
+                    >
+
+                        <div class="guide-advantage-top">
+
+                            <div class="guide-advantage-icon">
+                                <i class="fa-solid fa-truck-fast"></i>
+                            </div>
+
+                            <h3>
+                                Logistics Provider
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            Think about the complete movement requirement:
+                            farmer, buyer, vehicle, driver, route and delivery.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="guide-advantage advantage-5 guide-reveal"
+                    >
+
+                        <div class="guide-advantage-top">
+
+                            <div class="guide-advantage-icon">
+                                <i class="fa-solid fa-truck"></i>
+                            </div>
+
+                            <h3>
+                                Driver
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            Keep the delivery journey clear and accurately
+                            reflect the stages relevant to the assignment.
+                        </p>
+
+                    </article>
+
+
+                    <article
+                        class="guide-advantage advantage-6 guide-reveal"
+                    >
+
+                        <div class="guide-advantage-top">
+
+                            <div class="guide-advantage-icon">
+                                <i class="fa-solid fa-tractor"></i>
+                            </div>
+
+                            <h3>
+                                Equipment + Operator
+                            </h3>
+
+                        </div>
+
+                        <p>
+                            Keep ownership and operation distinct while
+                            connecting equipment availability and operator
+                            capability with agricultural requirements.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             10 — SUPPORTING MODULES
+             ========================================================= -->
+
+        <section
+            class="guide-section"
+            id="guide-support"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        10 / SUPPORTING MODULES
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        There is more to AgriVision
+                        <span>than the seven roles.</span>
+
+                    </h2>
+
+                    <p class="guide-section-description">
+
+                        Five supporting modules explain the project's impact,
+                        sustainability thinking, research journey, usage
+                        guidance and future direction.
+
+                    </p>
+
+                </div>
+
+
+                <div class="guide-support-grid">
+
+
+                    <a
+                        href="impact.html"
+                        class="guide-support support-impact guide-reveal"
+                    >
+
+                        <div class="guide-support-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <h3>
+                            Impact
+                        </h3>
+
+                        <p>
+                            Understand what AgriVision has actually achieved.
+                            Real measurements and system data should be used
+                            rather than invented statistics.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="sustainability.html"
+                        class="guide-support support-sustainability guide-reveal"
+                    >
+
+                        <div class="guide-support-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+
+                        <h3>
+                            Sustainability
+                        </h3>
+
+                        <p>
+                            Explore how agricultural coordination can connect
+                            with responsible resource and transportation
+                            thinking.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="user-guide.html"
+                        class="guide-support support-guide guide-reveal"
+                    >
+
+                        <div class="guide-support-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+
+                        <h3>
+                            User Guide
+                        </h3>
+
+                        <p>
+                            Learn how the ecosystem is structured and how
+                            participants can use their role.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="research.html"
+                        class="guide-support support-research guide-reveal"
+                    >
+
+                        <div class="guide-support-icon">
+                            <i class="fa-solid fa-flask"></i>
+                        </div>
+
+                        <h3>
+                            Research
+                        </h3>
+
+                        <p>
+                            Explore the problem, research journey, design
+                            evolution and thinking behind AgriVision.
+                        </p>
+
+                    </a>
+
+
+                    <a
+                        href="future.html"
+                        class="guide-support support-future guide-reveal"
+                    >
+
+                        <div class="guide-support-icon">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
+
+                        <h3>
+                            Future
+                        </h3>
+
+                        <p>
+                            Explore possible future directions while keeping
+                            planned concepts clearly separate from the
+                            current implementation.
+                        </p>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             11 — WHAT MAKES AGRIVISION DIFFERENT
+             ========================================================= -->
+
+        <section
+            class="guide-section"
+            id="guide-unique"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        11 / THE DIFFERENCE
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        From disconnected services
+                        <span>to connected agriculture.</span>
+
+                    </h2>
+
+                </div>
+
+
+                <div class="guide-difference">
+
+
+                    <div
+                        class="guide-difference-panel difference-before guide-reveal"
+                    >
+
+                        <div class="guide-difference-label">
+                            Fragmented approach
+                        </div>
+
+                        <h3 class="guide-difference-title">
+                            Different needs.
+                            Different places.
+                        </h3>
+
+
+                        <div class="guide-difference-list">
+
+                            <div class="guide-difference-item">
+
+                                <i class="fa-solid fa-minus"></i>
+
+                                <span>
+                                    Farmer and buyer may operate separately.
+                                </span>
+
+                            </div>
+
+
+                            <div class="guide-difference-item">
+
+                                <i class="fa-solid fa-minus"></i>
+
+                                <span>
+                                    Labour requirements can remain separate
+                                    from workforce information.
+                                </span>
+
+                            </div>
+
+
+                            <div class="guide-difference-item">
+
+                                <i class="fa-solid fa-minus"></i>
+
+                                <span>
+                                    Equipment and operators can remain
+                                    disconnected.
+                                </span>
+
+                            </div>
+
+
+                            <div class="guide-difference-item">
+
+                                <i class="fa-solid fa-minus"></i>
+
+                                <span>
+                                    Transportation can sit outside the
+                                    agricultural workflow.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div
+                        class="guide-difference-panel difference-after guide-reveal"
+                    >
+
+                        <div class="guide-difference-label">
+                            Ecosystem approach
+                        </div>
+
+                        <h3 class="guide-difference-title">
+                            Different roles.
+                            One connected journey.
+                        </h3>
+
+
+                        <div class="guide-difference-list">
+
+                            <div class="guide-difference-item">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                <span>
+                                    Seven roles participate inside one
+                                    ecosystem.
+                                </span>
+
+                            </div>
+
+
+                            <div class="guide-difference-item">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                <span>
+                                    Agricultural activities can connect
+                                    relevant participants.
+                                </span>
+
+                            </div>
+
+
+                            <div class="guide-difference-item">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                <span>
+                                    Shared records can be represented through
+                                    different role perspectives.
+                                </span>
+
+                            </div>
+
+
+                            <div class="guide-difference-item">
+
+                                <i class="fa-solid fa-check"></i>
+
+                                <span>
+                                    Market, resources and logistics can form
+                                    part of one agricultural journey.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             12 — TRUST + RECORDS
+             ========================================================= -->
+
+        <section class="guide-section">
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        12 / CONTINUITY
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        Every completed interaction can contribute to
+                        <span>history.</span>
+
+                    </h2>
+
+                    <p class="guide-section-description">
+
+                        AgriVision's architecture allows completed
+                        interactions, delivery history, work history,
+                        reliability and related information to become part
+                        of an ongoing relationship layer.
+
+                    </p>
+
+                </div>
+
+
+                <div class="guide-final-journey guide-reveal">
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(0,255,135,.3);"
+                    >
+                        Interaction
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(0,229,255,.3);"
+                    >
+                        Completion
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(72,168,255,.3);"
+                    >
+                        Record
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(169,112,255,.3);"
+                    >
+                        History
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(255,95,207,.3);"
+                    >
+                        Future Understanding
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             13 — COMPLETE AGRICULTURAL JOURNEY
+             ========================================================= -->
+
+        <section class="guide-section">
+
+            <div class="guide-container">
+
+                <div class="guide-section-header guide-reveal">
+
+                    <div class="guide-section-number">
+                        13 / COMPLETE JOURNEY
+                    </div>
+
+                    <h2 class="guide-section-title">
+
+                        See the entire system
+                        <span>in one journey.</span>
+
+                    </h2>
+
+                    <p class="guide-section-description">
+
+                        A single agricultural requirement can involve several
+                        connected participants. The exact path depends on the
+                        activity, but the ecosystem is designed to make these
+                        relationships understandable and coordinatable.
+
+                    </p>
+
+                </div>
+
+
+                <div class="guide-final-journey guide-reveal">
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(0,255,135,.35);"
+                    >
+                        Farm
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(0,255,135,.35);"
+                    >
+                        Crop
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(0,229,255,.35);"
+                    >
+                        Listing
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(0,229,255,.35);"
+                    >
+                        Buyer
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(72,168,255,.35);"
+                    >
+                        Order
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(169,112,255,.35);"
+                    >
+                        Resources
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(255,122,53,.35);"
+                    >
+                        Logistics
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(255,95,207,.35);"
+                    >
+                        Driver
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(255,107,95,.35);"
+                    >
+                        Delivery
+                    </span>
+
+                    <span class="guide-final-arrow">
+                        →
+                    </span>
+
+                    <span
+                        class="guide-final-node"
+                        style="--node-border:rgba(184,255,61,.35);"
+                    >
+                        History
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================================
+             14 — FINAL CTA
+             ========================================================= -->
+
+        <section
+            class="guide-final"
+            id="guide-final"
+        >
+
+            <div class="guide-container">
+
+                <div class="guide-reveal">
+
+                    <div class="guide-eyebrow">
+                        USER GUIDE / COMPLETE
+                    </div>
+
+                    <h2 class="guide-final-title">
+
+                        NOW YOU KNOW
+                        <span class="guide-gradient-text">
+                            WHERE YOU BELONG.
+                        </span>
+
+                    </h2>
+
+                    <p class="guide-final-copy">
+
+                        Agriculture is an ecosystem.
+                        AgriVision Karnataka is designed to help its
+                        participants become connected within that ecosystem.
+
+                    </p>
+
+
+                    <div class="guide-final-actions">
+
+                        <a
+                            href="ecosystem.html"
+                            class="guide-button guide-button-primary"
+                        >
+                            Enter Ecosystem
+
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+
+                        <a
+                            href="register.html"
+                            class="guide-button guide-button-secondary"
+                        >
+                            Create Account
+
+                            <i class="fa-solid fa-user-plus"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+
+    <footer class="guide-footer">
+
+        <div class="guide-container">
+
+            <div class="guide-footer-inner">
+
+                <div class="guide-footer-brand">
+
+                    AgriVision Karnataka
+                    <span style="opacity:.4;">
+                        ·
+                    </span>
+                    <span id="year">
+                        2026
+                    </span>
+
+                </div>
+
+
+                <div class="guide-footer-links">
+
+                    <a href="ecosystem.html">
+                        Ecosystem
+                    </a>
+
+                    <a href="impact.html">
+                        Impact
+                    </a>
+
+                    <a href="sustainability.html">
+                        Sustainability
+                    </a>
+
+                    <a href="research.html">
+                        Research
+                    </a>
+
+                    <a href="future.html">
+                        Future
+                    </a>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================================
+         SHARED PROJECT JAVASCRIPT
+         ========================================================= -->
+
+    <script
+        defer
+        src="script.js"
+    ></script>
+
+
+    <!-- =========================================================
+         USER GUIDE PAGE JAVASCRIPT
+         Only page-specific behaviour.
+         The complete shared script.js remains loaded above.
+         ========================================================= -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            () => {
+
+                /* =================================================
+                   YEAR
+                   ================================================= */
+
+                const year =
+                    document.getElementById("year");
+
+                if(year){
+                    year.textContent =
+                        new Date().getFullYear();
+                }
+
+
+                /* =================================================
+                   SCROLL REVEAL
+                   ================================================= */
+
+                const revealItems =
+                    document.querySelectorAll(
+                        ".user-guide-page .guide-reveal"
+                    );
+
+
+                if(
+                    "IntersectionObserver" in window
+                ){
+
+                    const observer =
+                        new IntersectionObserver(
+                            entries => {
+
+                                entries.forEach(
+                                    entry => {
+
+                                        if(
+                                            !entry.isIntersecting
+                                        ){
+                                            return;
+                                        }
+
+                                        entry.target.classList.add(
+                                            "guide-visible"
+                                        );
+
+                                        observer.unobserve(
+                                            entry.target
+                                        );
+
+                                    }
+                                );
+
+                            },
+                            {
+                                threshold:.08
+                            }
+                        );
+
+
+                    revealItems.forEach(
+                        item =>
+                            observer.observe(item)
+                    );
+
+                }else{
+
+                    revealItems.forEach(
+                        item =>
+                            item.classList.add(
+                                "guide-visible"
+                            )
+                    );
+
+                }
+
+
+                /* =================================================
+                   SMOOTH INTERNAL NAVIGATION
+                   ================================================= */
+
+                document
+                    .querySelectorAll(
+                        '.user-guide-page a[href^="#"]'
+                    )
+                    .forEach(
+                        link => {
+
+                            link.addEventListener(
+                                "click",
+                                event => {
+
+                                    const targetId =
+                                        link.getAttribute(
+                                            "href"
+                                        );
+
+                                    const target =
+                                        document.querySelector(
+                                            targetId
+                                        );
+
+                                    if(!target){
+                                        return;
+                                    }
+
+                                    event.preventDefault();
+
+                                    target.scrollIntoView({
+                                        behavior:
+                                            window.matchMedia(
+                                                "(prefers-reduced-motion: reduce)"
+                                            ).matches
+                                                ? "auto"
+                                                : "smooth",
+                                        block:"start"
+                                    });
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+                /* =================================================
+                   ROLE CARD POINTER LIGHT
+                   ================================================= */
+
+                document
+                    .querySelectorAll(
+                        ".user-guide-page .guide-role"
+                    )
+                    .forEach(
+                        card => {
+
+                            card.addEventListener(
+                                "pointermove",
+                                event => {
+
+                                    const rect =
+                                        card.getBoundingClientRect();
+
+                                    const x =
+                                        event.clientX -
+                                        rect.left;
+
+                                    const y =
+                                        event.clientY -
+                                        rect.top;
+
+                                    card.style.background =
+                                        `
+                                        radial-gradient(
+                                            500px circle at
+                                            ${x}px ${y}px,
+                                            rgba(0,255,135,.055),
+                                            rgba(0,20,13,.36) 55%
+                                        )
+                                        `;
+
+                                }
+                            );
+
+
+                            card.addEventListener(
+                                "pointerleave",
+                                () => {
+
+                                    card.style.background =
+                                        "";
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+                /* =================================================
+                   FINAL JOURNEY NODE ANIMATION
+                   ================================================= */
+
+                const journeyNodes =
+                    document.querySelectorAll(
+                        ".user-guide-page .guide-final-node"
+                    );
+
+
+                journeyNodes.forEach(
+                    (node,index) => {
+
+                        node.style.transition =
+                            "transform .3s ease, box-shadow .3s ease";
+
+                        node.addEventListener(
+                            "mouseenter",
+                            () => {
+
+                                node.style.transform =
+                                    "translateY(-4px)";
+
+                                node.style.boxShadow =
+                                    "0 0 24px rgba(0,255,135,.08)";
+
+                            }
+                        );
+
+
+                        node.addEventListener(
+                            "mouseleave",
+                            () => {
+
+                                node.style.transform =
+                                    "";
+
+                                node.style.boxShadow =
+                                    "";
+
+                            }
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+</html>

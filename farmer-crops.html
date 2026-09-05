@@ -1,0 +1,3870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#03150e"
+    >
+
+    <title>
+        Farm & Crop Management | AgriVision Karnataka
+    </title>
+
+    <!-- =========================================================
+         SHARED CORE CSS
+         ========================================================= -->
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+    <!-- Existing agriculture styles -->
+    <link
+        rel="stylesheet"
+        href="agriculture.css"
+    >
+
+    <!-- =========================================================
+         PAGE-SPECIFIC CSS
+         ========================================================= -->
+
+    <style>
+
+        /* =====================================================
+           GLOBAL PAGE
+           ===================================================== */
+
+        *{
+            box-sizing:border-box;
+        }
+
+        html{
+            scroll-behavior:smooth;
+        }
+
+        body{
+            margin:0;
+            min-height:100vh;
+            color:#ffffff;
+            background:#03150e
+                url("background.jpg")
+                center center /
+                cover fixed no-repeat;
+            font-family:
+                Inter,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+            overflow-x:hidden;
+        }
+
+        body::before{
+            content:"";
+            position:fixed;
+            inset:0;
+            z-index:-5;
+            pointer-events:none;
+
+            background:
+                radial-gradient(
+                    circle at 15% 15%,
+                    rgba(22,243,154,.11),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(0,234,255,.09),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 50% 90%,
+                    rgba(173,140,255,.08),
+                    transparent 30%
+                );
+
+            animation:
+                ambientGlow 12s ease-in-out infinite alternate;
+        }
+
+        @keyframes ambientGlow{
+            from{
+                opacity:.65;
+                transform:scale(1);
+            }
+
+            to{
+                opacity:1;
+                transform:scale(1.04);
+            }
+        }
+
+
+        /* =====================================================
+           PAGE WRAPPER
+           ===================================================== */
+
+        .farmer-crops-page{
+            min-height:100vh;
+            position:relative;
+            padding:
+                24px
+                0
+                100px;
+            overflow:hidden;
+        }
+
+
+        .farmer-crops-container{
+            width:min(
+                1450px,
+                92%
+            );
+            margin:0 auto;
+            position:relative;
+            z-index:5;
+        }
+
+
+        /* =====================================================
+           BACKGROUND LIGHT ORBS
+           ===================================================== */
+
+        .fc-bg-orb{
+            position:fixed;
+            border-radius:50%;
+            pointer-events:none;
+            z-index:-2;
+            filter:blur(2px);
+            opacity:.55;
+            animation:
+                fcOrbFloat
+                14s
+                ease-in-out
+                infinite
+                alternate;
+        }
+
+        .fc-bg-orb.one{
+            width:320px;
+            height:320px;
+            top:8%;
+            left:-140px;
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(22,243,154,.18),
+                    transparent 68%
+                );
+        }
+
+        .fc-bg-orb.two{
+            width:400px;
+            height:400px;
+            right:-190px;
+            top:32%;
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(0,234,255,.13),
+                    transparent 70%
+                );
+            animation-delay:-4s;
+        }
+
+        .fc-bg-orb.three{
+            width:350px;
+            height:350px;
+            left:35%;
+            bottom:-180px;
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(173,140,255,.12),
+                    transparent 70%
+                );
+            animation-delay:-8s;
+        }
+
+        @keyframes fcOrbFloat{
+            from{
+                transform:
+                    translate3d(0,0,0)
+                    scale(1);
+            }
+
+            to{
+                transform:
+                    translate3d(
+                        30px,
+                        -25px,
+                        0
+                    )
+                    scale(1.1);
+            }
+        }
+
+
+        /* =====================================================
+           TOP NAVIGATION
+           ===================================================== */
+
+        .fc-topbar{
+            min-height:72px;
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:25px;
+
+            padding:
+                13px
+                17px;
+
+            margin-bottom:38px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.10);
+
+            border-radius:24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(2,28,18,.76),
+                    rgba(2,14,11,.54)
+                );
+
+            backdrop-filter:
+                blur(22px);
+
+            -webkit-backdrop-filter:
+                blur(22px);
+
+            box-shadow:
+                0 20px 60px
+                rgba(0,0,0,.25),
+                inset 0 1px 0
+                rgba(255,255,255,.06);
+
+            position:relative;
+            overflow:hidden;
+        }
+
+        .fc-topbar::before{
+            content:"";
+            position:absolute;
+            inset:0;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    transparent 20%,
+                    rgba(22,243,154,.06),
+                    transparent 70%
+                );
+
+            transform:
+                translateX(-100%);
+
+            animation:
+                topbarSweep
+                8s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes topbarSweep{
+            0%,55%{
+                transform:
+                    translateX(-100%);
+            }
+
+            75%,100%{
+                transform:
+                    translateX(100%);
+            }
+        }
+
+
+        .fc-brand{
+            display:flex;
+            align-items:center;
+            gap:13px;
+            text-decoration:none;
+            color:#ffffff;
+            position:relative;
+            z-index:2;
+        }
+
+        .fc-brand-mark{
+            width:45px;
+            height:45px;
+
+            display:grid;
+            place-items:center;
+
+            border-radius:15px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #16f39a,
+                    #00eaff
+                );
+
+            color:#03150e;
+
+            font-size:1.25rem;
+
+            box-shadow:
+                0 0 30px
+                rgba(22,243,154,.30);
+
+            animation:
+                brandPulse
+                3s
+                ease-in-out
+                infinite;
+        }
+
+        @keyframes brandPulse{
+            0%,100%{
+                box-shadow:
+                    0 0 20px
+                    rgba(22,243,154,.20);
+            }
+
+            50%{
+                box-shadow:
+                    0 0 38px
+                    rgba(0,234,255,.32);
+            }
+        }
+
+        .fc-brand-text{
+            font-size:.92rem;
+            font-weight:950;
+            letter-spacing:.13em;
+        }
+
+        .fc-brand-sub{
+            margin-top:2px;
+            color:rgba(255,255,255,.40);
+            font-size:.58rem;
+            letter-spacing:.15em;
+        }
+
+
+        .fc-nav{
+            display:flex;
+            flex-wrap:wrap;
+            justify-content:flex-end;
+            gap:6px;
+            position:relative;
+            z-index:2;
+        }
+
+        .fc-nav a{
+            position:relative;
+            padding:
+                10px
+                13px;
+
+            color:
+                rgba(255,255,255,.62);
+
+            text-decoration:none;
+
+            border:
+                1px solid
+                transparent;
+
+            border-radius:12px;
+
+            font-size:.73rem;
+            font-weight:800;
+
+            transition:
+                color .25s ease,
+                background .25s ease,
+                border-color .25s ease,
+                transform .25s ease;
+        }
+
+        .fc-nav a:hover{
+            color:#ffffff;
+            background:
+                rgba(22,243,154,.06);
+
+            border-color:
+                rgba(22,243,154,.12);
+
+            transform:
+                translateY(-2px);
+        }
+
+        .fc-nav a.active{
+            color:#16f39a;
+
+            background:
+                rgba(22,243,154,.08);
+
+            border-color:
+                rgba(22,243,154,.20);
+
+            box-shadow:
+                0 0 25px
+                rgba(22,243,154,.06);
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .fc-hero{
+            display:grid;
+            grid-template-columns:
+                minmax(0,1.45fr)
+                minmax(310px,.55fr);
+
+            gap:24px;
+            margin-bottom:25px;
+        }
+
+        .fc-hero-main{
+            min-height:360px;
+            position:relative;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+
+            padding:
+                48px;
+
+            border:
+                1px solid
+                rgba(22,243,154,.17);
+
+            border-radius:32px;
+
+            overflow:hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(3,36,24,.80),
+                    rgba(1,17,12,.57)
+                );
+
+            backdrop-filter:
+                blur(18px);
+
+            -webkit-backdrop-filter:
+                blur(18px);
+
+            box-shadow:
+                0 35px 90px
+                rgba(0,0,0,.28),
+                inset 0 1px 0
+                rgba(255,255,255,.06);
+
+            animation:
+                heroEntrance
+                .8s
+                ease both;
+        }
+
+        @keyframes heroEntrance{
+            from{
+                opacity:0;
+                transform:
+                    translateY(25px);
+            }
+
+            to{
+                opacity:1;
+                transform:
+                    translateY(0);
+            }
+        }
+
+        .fc-hero-main::before{
+            content:"";
+            position:absolute;
+            width:520px;
+            height:520px;
+            right:-230px;
+            top:-250px;
+
+            border-radius:50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(0,234,255,.15),
+                    transparent 67%
+                );
+
+            pointer-events:none;
+        }
+
+        .fc-hero-main::after{
+            content:"";
+            position:absolute;
+            left:-10%;
+            right:-10%;
+            bottom:0;
+            height:1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(22,243,154,.45),
+                    rgba(0,234,255,.40),
+                    transparent
+                );
+
+            box-shadow:
+                0 0 20px
+                rgba(22,243,154,.22);
+        }
+
+
+        .fc-kicker{
+            position:relative;
+            z-index:2;
+
+            color:#16f39a;
+
+            font-size:.72rem;
+            font-weight:950;
+            letter-spacing:.22em;
+        }
+
+
+        .fc-title{
+            position:relative;
+            z-index:2;
+
+            margin:
+                12px
+                0
+                18px;
+
+            max-width:850px;
+
+            font-size:
+                clamp(
+                    2.35rem,
+                    5vw,
+                    4.7rem
+                );
+
+            line-height:.98;
+            font-weight:950;
+            letter-spacing:-.045em;
+        }
+
+        .fc-title span{
+            display:block;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #16f39a,
+                    #00eaff,
+                    #ad8cff,
+                    #ff6fb5
+                );
+
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+
+            background-size:
+                250% auto;
+
+            animation:
+                gradientText
+                7s
+                ease
+                infinite;
+        }
+
+        @keyframes gradientText{
+            0%,100%{
+                background-position:0% 50%;
+            }
+
+            50%{
+                background-position:100% 50%;
+            }
+        }
+
+
+        .fc-description{
+            position:relative;
+            z-index:2;
+
+            max-width:780px;
+
+            color:
+                rgba(225,255,242,.72);
+
+            font-size:
+                clamp(
+                    .94rem,
+                    1.5vw,
+                    1.06rem
+                );
+
+            line-height:1.8;
+        }
+
+
+        /* =====================================================
+           USER CARD
+           ===================================================== */
+
+        .fc-user-card{
+            height:100%;
+            min-height:360px;
+
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+
+            padding:32px;
+
+            border:
+                1px solid
+                rgba(0,234,255,.17);
+
+            border-radius:30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(3,27,28,.78),
+                    rgba(2,15,13,.58)
+                );
+
+            backdrop-filter:
+                blur(20px);
+
+            -webkit-backdrop-filter:
+                blur(20px);
+
+            box-shadow:
+                0 30px 80px
+                rgba(0,0,0,.25),
+                inset 0 1px 0
+                rgba(255,255,255,.06);
+
+            position:relative;
+            overflow:hidden;
+
+            animation:
+                heroEntrance
+                .9s
+                .1s
+                ease both;
+        }
+
+        .fc-user-card::before{
+            content:"";
+            position:absolute;
+            width:180px;
+            height:180px;
+            right:-80px;
+            top:-80px;
+            border-radius:50%;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(0,234,255,.18),
+                    transparent 68%
+                );
+        }
+
+        .fc-user-label{
+            color:
+                rgba(255,255,255,.40);
+
+            font-size:.66rem;
+            font-weight:900;
+            letter-spacing:.18em;
+        }
+
+        .fc-user-name{
+            margin-top:10px;
+
+            font-size:
+                clamp(
+                    1.4rem,
+                    3vw,
+                    2rem
+                );
+
+            font-weight:950;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #9fffe1
+                );
+
+            -webkit-background-clip:text;
+            background-clip:text;
+            color:transparent;
+        }
+
+        .fc-user-id{
+            margin-top:8px;
+
+            color:#00eaff;
+
+            font-size:.75rem;
+            font-weight:800;
+            letter-spacing:.10em;
+        }
+
+        .fc-location{
+            margin-top:22px;
+
+            padding-top:18px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,.07);
+
+            color:
+                rgba(220,255,241,.62);
+
+            font-size:.86rem;
+            line-height:1.8;
+        }
+
+
+        /* =====================================================
+           METRICS
+           ===================================================== */
+
+        .fc-metrics{
+            display:grid;
+
+            grid-template-columns:
+                repeat(
+                    4,
+                    minmax(0,1fr)
+                );
+
+            gap:14px;
+
+            margin:
+                25px
+                0
+                38px;
+        }
+
+        .fc-metric{
+            position:relative;
+
+            padding:
+                23px
+                24px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.08);
+
+            border-radius:21px;
+
+            background:
+                rgba(2,23,15,.57);
+
+            backdrop-filter:
+                blur(17px);
+
+            -webkit-backdrop-filter:
+                blur(17px);
+
+            overflow:hidden;
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease;
+        }
+
+        .fc-metric::before{
+            content:"";
+            position:absolute;
+            inset:0;
+
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(22,243,154,.05),
+                    transparent 60%
+                );
+
+            pointer-events:none;
+        }
+
+        .fc-metric:hover{
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(22,243,154,.20);
+
+            box-shadow:
+                0 18px 45px
+                rgba(0,0,0,.18),
+                0 0 25px
+                rgba(22,243,154,.05);
+        }
+
+        .fc-metric-label{
+            position:relative;
+            z-index:1;
+
+            color:
+                rgba(255,255,255,.43);
+
+            font-size:.65rem;
+            font-weight:900;
+            letter-spacing:.14em;
+        }
+
+        .fc-metric-value{
+            position:relative;
+            z-index:1;
+
+            margin-top:8px;
+
+            color:#16f39a;
+
+            font-size:
+                clamp(
+                    1.65rem,
+                    3vw,
+                    2.25rem
+                );
+
+            font-weight:950;
+        }
+
+
+        /* =====================================================
+           SECTION HEADINGS
+           ===================================================== */
+
+        .fc-section-heading{
+            margin-bottom:17px;
+        }
+
+        .fc-section-kicker{
+            color:#00eaff;
+            font-size:.66rem;
+            font-weight:900;
+            letter-spacing:.18em;
+        }
+
+        .fc-section-title{
+            margin:5px 0 0;
+            color:#ffffff;
+            font-size:
+                clamp(
+                    1.45rem,
+                    3vw,
+                    2rem
+                );
+            font-weight:950;
+        }
+
+
+        /* =====================================================
+           OPERATION GRID
+           ===================================================== */
+
+        .fc-operation-grid{
+            display:grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(0,1fr)
+                );
+
+            gap:22px;
+
+            margin-bottom:48px;
+        }
+
+        .fc-operation-card{
+            position:relative;
+
+            padding:
+                31px;
+
+            border:
+                1px solid
+                rgba(22,243,154,.13);
+
+            border-radius:27px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(4,32,22,.76),
+                    rgba(2,15,11,.62)
+                );
+
+            backdrop-filter:
+                blur(20px);
+
+            -webkit-backdrop-filter:
+                blur(20px);
+
+            overflow:hidden;
+
+            box-shadow:
+                0 25px 70px
+                rgba(0,0,0,.20),
+                inset 0 1px 0
+                rgba(255,255,255,.045);
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+        }
+
+        .fc-operation-card:hover{
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(22,243,154,.25);
+
+            box-shadow:
+                0 35px 85px
+                rgba(0,0,0,.27),
+                0 0 40px
+                rgba(22,243,154,.05);
+        }
+
+        .fc-operation-card.cyan{
+            border-color:
+                rgba(0,234,255,.14);
+        }
+
+        .fc-operation-card.cyan:hover{
+            border-color:
+                rgba(0,234,255,.27);
+        }
+
+
+        .fc-operation-icon{
+            width:56px;
+            height:56px;
+
+            display:grid;
+            place-items:center;
+
+            margin-bottom:18px;
+
+            border-radius:18px;
+
+            font-size:1.55rem;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(22,243,154,.13),
+                    rgba(22,243,154,.03)
+                );
+
+            border:
+                1px solid
+                rgba(22,243,154,.16);
+
+            box-shadow:
+                0 0 25px
+                rgba(22,243,154,.06);
+        }
+
+        .fc-operation-card.cyan
+        .fc-operation-icon{
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,234,255,.13),
+                    rgba(0,234,255,.03)
+                );
+
+            border-color:
+                rgba(0,234,255,.16);
+
+            box-shadow:
+                0 0 25px
+                rgba(0,234,255,.06);
+        }
+
+        .fc-operation-title{
+            margin:0;
+
+            color:#ffffff;
+
+            font-size:
+                clamp(
+                    1.25rem,
+                    2vw,
+                    1.55rem
+                );
+
+            font-weight:950;
+        }
+
+        .fc-operation-text{
+            margin:
+                9px
+                0
+                26px;
+
+            color:
+                rgba(220,255,241,.62);
+
+            line-height:1.7;
+        }
+
+
+        /* =====================================================
+           FORM
+           ===================================================== */
+
+        .ag-core-form{
+            position:relative;
+            z-index:2;
+        }
+
+        .ag-core-form-grid{
+            display:grid;
+
+            grid-template-columns:
+                repeat(
+                    2,
+                    minmax(0,1fr)
+                );
+
+            gap:15px;
+        }
+
+        .ag-core-field{
+            min-width:0;
+        }
+
+        .ag-core-field.full{
+            grid-column:
+                1 / -1;
+        }
+
+        .ag-core-label{
+            display:block;
+
+            margin-bottom:7px;
+
+            color:
+                rgba(255,255,255,.62);
+
+            font-size:.70rem;
+            font-weight:850;
+            letter-spacing:.04em;
+        }
+
+        .ag-core-required{
+            color:#ff6f9e;
+        }
+
+        .ag-core-input,
+        .ag-core-select,
+        .ag-core-textarea{
+            width:100%;
+
+            border:
+                1px solid
+                rgba(255,255,255,.10);
+
+            outline:none;
+
+            border-radius:13px;
+
+            padding:
+                12px
+                13px;
+
+            color:#ffffff;
+
+            background:
+                rgba(0,0,0,.24);
+
+            font:
+                inherit;
+
+            font-size:.82rem;
+
+            transition:
+                border-color .25s ease,
+                box-shadow .25s ease,
+                background .25s ease;
+        }
+
+        .ag-core-input::placeholder,
+        .ag-core-textarea::placeholder{
+            color:
+                rgba(255,255,255,.27);
+        }
+
+        .ag-core-input:focus,
+        .ag-core-select:focus,
+        .ag-core-textarea:focus{
+            border-color:
+                rgba(22,243,154,.48);
+
+            background:
+                rgba(22,243,154,.025);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(22,243,154,.06),
+                0 0 25px
+                rgba(22,243,154,.05);
+        }
+
+        .ag-core-select{
+            appearance:auto;
+        }
+
+        .ag-core-select option{
+            color:#ffffff;
+            background:#061b12;
+        }
+
+        .ag-core-textarea{
+            min-height:95px;
+            resize:vertical;
+        }
+
+        .ag-core-button-group{
+            display:flex;
+            justify-content:flex-end;
+            gap:10px;
+
+            margin-top:20px;
+        }
+
+        .ag-core-button{
+            position:relative;
+
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:12px;
+
+            min-height:48px;
+
+            padding:
+                0
+                20px;
+
+            border:
+                1px solid
+                rgba(22,243,154,.38);
+
+            border-radius:13px;
+
+            color:#03150e;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #16f39a,
+                    #71ffc4
+                );
+
+            font-size:.74rem;
+            font-weight:950;
+            letter-spacing:.08em;
+
+            cursor:pointer;
+
+            overflow:hidden;
+
+            box-shadow:
+                0 10px 35px
+                rgba(22,243,154,.13);
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease,
+                filter .25s ease;
+        }
+
+        .ag-core-button::before{
+            content:"";
+
+            position:absolute;
+            top:0;
+            left:-100%;
+
+            width:70%;
+            height:100%;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    rgba(255,255,255,.45),
+                    transparent
+                );
+
+            transform:
+                skewX(-20deg);
+
+            transition:
+                left .55s ease;
+        }
+
+        .ag-core-button:hover{
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 15px 45px
+                rgba(22,243,154,.23);
+
+            filter:
+                brightness(1.08);
+        }
+
+        .ag-core-button:hover::before{
+            left:130%;
+        }
+
+        .ag-core-button.cyan{
+            border-color:
+                rgba(0,234,255,.38);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #00eaff,
+                    #7defff
+                );
+
+            box-shadow:
+                0 10px 35px
+                rgba(0,234,255,.12);
+        }
+
+
+        /* =====================================================
+           RECORDS
+           ===================================================== */
+
+        .fc-record-section{
+            margin-top:50px;
+        }
+
+        .fc-record-header{
+            display:flex;
+            align-items:flex-end;
+            justify-content:space-between;
+            gap:20px;
+            margin-bottom:18px;
+        }
+
+        .fc-record-title{
+            margin:0;
+            color:#ffffff;
+            font-size:1.8rem;
+            font-weight:950;
+        }
+
+        .fc-record-subtitle{
+            margin:
+                5px
+                0
+                0;
+
+            color:
+                rgba(220,255,241,.54);
+
+            line-height:1.6;
+        }
+
+        .fc-record-list{
+            display:grid;
+            gap:11px;
+        }
+
+        .ag-core-linked-record{
+            position:relative;
+
+            display:flex;
+            align-items:center;
+            justify-content:space-between;
+            gap:20px;
+
+            padding:
+                19px
+                21px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.075);
+
+            border-radius:18px;
+
+            background:
+                rgba(2,20,14,.58);
+
+            backdrop-filter:
+                blur(16px);
+
+            -webkit-backdrop-filter:
+                blur(16px);
+
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                background .25s ease;
+        }
+
+        .ag-core-linked-record:hover{
+            transform:
+                translateX(5px);
+
+            border-color:
+                rgba(22,243,154,.18);
+
+            background:
+                rgba(5,30,21,.68);
+        }
+
+        .ag-core-linked-title{
+            color:#ffffff;
+            font-size:.98rem;
+            font-weight:900;
+        }
+
+        .ag-core-linked-detail{
+            display:block;
+
+            margin-top:5px;
+
+            color:
+                rgba(220,255,241,.51);
+
+            font-size:.76rem;
+            line-height:1.6;
+        }
+
+        .ag-core-state{
+            flex:0 0 auto;
+
+            padding:
+                7px
+                10px;
+
+            border:
+                1px solid
+                rgba(22,243,154,.20);
+
+            border-radius:999px;
+
+            color:#16f39a;
+
+            background:
+                rgba(22,243,154,.055);
+
+            font-size:.62rem;
+            font-weight:900;
+            letter-spacing:.08em;
+        }
+
+        .ag-core-state.cyan{
+            color:#00eaff;
+
+            border-color:
+                rgba(0,234,255,.20);
+
+            background:
+                rgba(0,234,255,.05);
+        }
+
+
+        .fc-record-extra{
+            display:flex;
+            flex-wrap:wrap;
+            gap:7px;
+            margin-top:8px;
+        }
+
+        .fc-mini-tag{
+            padding:
+                5px
+                9px;
+
+            border:
+                1px solid
+                rgba(255,255,255,.07);
+
+            border-radius:999px;
+
+            color:
+                rgba(255,255,255,.50);
+
+            background:
+                rgba(255,255,255,.025);
+
+            font-size:.63rem;
+        }
+
+
+        /* =====================================================
+           EMPTY STATE
+           ===================================================== */
+
+        .ag-core-empty{
+            padding:
+                45px
+                25px;
+
+            text-align:center;
+
+            border:
+                1px dashed
+                rgba(255,255,255,.10);
+
+            border-radius:22px;
+
+            background:
+                rgba(2,20,14,.42);
+        }
+
+        .ag-core-empty-icon{
+            width:60px;
+            height:60px;
+
+            margin:
+                0
+                auto
+                15px;
+
+            display:grid;
+            place-items:center;
+
+            border-radius:20px;
+
+            background:
+                rgba(22,243,154,.07);
+
+            border:
+                1px solid
+                rgba(22,243,154,.13);
+
+            font-size:1.5rem;
+        }
+
+        .ag-core-empty h3{
+            margin:
+                0
+                0
+                8px;
+
+            color:#ffffff;
+        }
+
+        .ag-core-empty p{
+            max-width:560px;
+            margin:auto;
+
+            color:
+                rgba(220,255,241,.51);
+
+            line-height:1.7;
+        }
+
+
+        /* =====================================================
+           ACTIVITY CARD
+           ===================================================== */
+
+        .fc-activity{
+            margin-top:55px;
+        }
+
+        .fc-activity-card{
+            padding:8px;
+
+            border:
+                1px solid
+                rgba(22,243,154,.11);
+
+            border-radius:25px;
+
+            background:
+                rgba(2,20,14,.48);
+
+            backdrop-filter:
+                blur(18px);
+
+            -webkit-backdrop-filter:
+                blur(18px);
+        }
+
+
+        /* =====================================================
+           LEAVES
+           ===================================================== */
+
+        .ag-page-leaf{
+            position:fixed;
+            top:-80px;
+
+            z-index:2;
+
+            pointer-events:none;
+
+            opacity:0;
+
+            font-size:
+                clamp(
+                    15px,
+                    1.8vw,
+                    27px
+                );
+
+            filter:
+                drop-shadow(
+                    0 0 7px
+                    rgba(22,243,154,.25)
+                );
+
+            animation:
+                pageLeafFall
+                var(--leaf-duration)
+                linear
+                forwards;
+        }
+
+        @keyframes pageLeafFall{
+
+            0%{
+                opacity:0;
+                transform:
+                    translate3d(
+                        0,
+                        -70px,
+                        0
+                    )
+                    rotate(0deg);
+            }
+
+            8%{
+                opacity:.68;
+            }
+
+            45%{
+                transform:
+                    translate3d(
+                        var(--leaf-drift),
+                        48vh,
+                        0
+                    )
+                    rotate(
+                        150deg
+                    );
+            }
+
+            100%{
+                opacity:0;
+
+                transform:
+                    translate3d(
+                        calc(
+                            var(--leaf-drift) * -1
+                        ),
+                        115vh,
+                        0
+                    )
+                    rotate(
+                        330deg
+                    );
+            }
+        }
+
+
+        /* =====================================================
+           FIRELIES
+           ===================================================== */
+
+        .ag-firefly{
+            position:fixed;
+
+            width:
+                var(--fly-size);
+
+            height:
+                var(--fly-size);
+
+            border-radius:50%;
+
+            background:
+                #b8ffd8;
+
+            box-shadow:
+                0 0 6px
+                #16f39a,
+                0 0 17px
+                rgba(22,243,154,.8),
+                0 0 30px
+                rgba(0,234,255,.35);
+
+            pointer-events:none;
+            z-index:1;
+
+            opacity:0;
+
+            animation:
+                fireflyMove
+                var(--fly-duration)
+                ease-in-out
+                infinite;
+
+            animation-delay:
+                var(--fly-delay);
+        }
+
+        @keyframes fireflyMove{
+
+            0%{
+                opacity:0;
+                transform:
+                    translate3d(
+                        0,
+                        0,
+                        0
+                    )
+                    scale(.55);
+            }
+
+            20%{
+                opacity:.9;
+            }
+
+            50%{
+                opacity:.45;
+                transform:
+                    translate3d(
+                        var(--fly-x),
+                        var(--fly-y),
+                        0
+                    )
+                    scale(1);
+            }
+
+            75%{
+                opacity:.8;
+            }
+
+            100%{
+                opacity:0;
+
+                transform:
+                    translate3d(
+                        var(--fly-x2),
+                        var(--fly-y2),
+                        0
+                    )
+                    scale(.5);
+            }
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media(max-width:1100px){
+
+            .fc-hero{
+                grid-template-columns:1fr;
+            }
+
+            .fc-user-card{
+                min-height:auto;
+            }
+
+            .fc-metrics{
+                grid-template-columns:
+                    repeat(
+                        2,
+                        minmax(0,1fr)
+                    );
+            }
+
+        }
+
+
+        @media(max-width:850px){
+
+            .fc-topbar{
+                flex-direction:column;
+                align-items:flex-start;
+            }
+
+            .fc-nav{
+                width:100%;
+                justify-content:flex-start;
+            }
+
+            .fc-operation-grid{
+                grid-template-columns:1fr;
+            }
+
+            .fc-hero-main{
+                padding:35px 27px;
+            }
+
+        }
+
+
+        @media(max-width:620px){
+
+            .farmer-crops-page{
+                padding-top:12px;
+            }
+
+            .farmer-crops-container{
+                width:94%;
+            }
+
+            .fc-topbar{
+                padding:13px;
+                border-radius:19px;
+            }
+
+            .fc-nav a{
+                padding:
+                    8px
+                    9px;
+
+                font-size:.65rem;
+            }
+
+            .fc-title{
+                font-size:2.45rem;
+            }
+
+            .fc-description{
+                font-size:.88rem;
+            }
+
+            .fc-operation-card{
+                padding:23px 18px;
+            }
+
+            .ag-core-form-grid{
+                grid-template-columns:1fr;
+            }
+
+            .ag-core-field.full{
+                grid-column:auto;
+            }
+
+            .fc-metrics{
+                grid-template-columns:1fr;
+            }
+
+            .ag-core-linked-record{
+                align-items:flex-start;
+                flex-direction:column;
+            }
+
+            .fc-record-header{
+                align-items:flex-start;
+                flex-direction:column;
+            }
+
+            .ag-core-button-group{
+                justify-content:stretch;
+            }
+
+            .ag-core-button{
+                width:100%;
+            }
+
+        }
+
+
+        /* =====================================================
+           ACCESSIBILITY
+           ===================================================== */
+
+        @media(prefers-reduced-motion:reduce){
+
+            *,
+            *::before,
+            *::after{
+                animation-duration:.001ms !important;
+                animation-iteration-count:1 !important;
+                scroll-behavior:auto !important;
+                transition-duration:.001ms !important;
+            }
+
+            .ag-page-leaf,
+            .ag-firefly{
+                display:none;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         DECORATIVE BACKGROUND
+         ===================================================== -->
+
+    <div class="fc-bg-orb one"></div>
+    <div class="fc-bg-orb two"></div>
+    <div class="fc-bg-orb three"></div>
+
+
+    <!-- =====================================================
+         MAIN PAGE
+         ===================================================== -->
+
+    <main class="farmer-crops-page">
+
+
+        <div class="farmer-crops-container">
+
+
+            <!-- =================================================
+                 NAVIGATION
+                 ================================================= -->
+
+            <header class="fc-topbar">
+
+                <a
+                    href="dashboard.html"
+                    class="fc-brand"
+                >
+
+                    <span class="fc-brand-mark">
+                        🌱
+                    </span>
+
+                    <span>
+
+                        <div class="fc-brand-text">
+                            AGRIVISION
+                        </div>
+
+                        <div class="fc-brand-sub">
+                            KARNATAKA · FARMER ECOSYSTEM
+                        </div>
+
+                    </span>
+
+                </a>
+
+
+                <nav class="fc-nav">
+
+                    <a
+                        href="dashboard.html"
+                    >
+                        Dashboard
+                    </a>
+
+                    <a
+                        href="farmer-portal.html"
+                    >
+                        Farmer Portal
+                    </a>
+
+                    <a
+                        href="farmer-crops.html"
+                        class="active"
+                    >
+                        Crops
+                    </a>
+
+                    <a
+                        href="farmer-market.html"
+                    >
+                        Market
+                    </a>
+
+                    <a
+                        href="farmer-services.html"
+                    >
+                        Services
+                    </a>
+
+                    <a
+                        href="farmer-logistics.html"
+                    >
+                        Logistics
+                    </a>
+
+                    <a
+                        href="farmer-finance.html"
+                    >
+                        Finance
+                    </a>
+
+                </nav>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 HERO
+                 ================================================= -->
+
+            <section class="fc-hero">
+
+
+                <div class="fc-hero-main">
+
+                    <div class="fc-kicker">
+                        FARMER MODULE · CORE OPERATION 01
+                    </div>
+
+
+                    <h1 class="fc-title">
+
+                        Farm &
+
+                        <span>
+                            Crop Management
+                        </span>
+
+                    </h1>
+
+
+                    <p class="fc-description">
+
+                        Create your digital farm identity,
+                        register individual farms and maintain
+                        structured crop records.
+
+                        Your crop information becomes the
+                        foundation for the connected AgriVision
+                        ecosystem — from production and
+                        marketplace discovery to buyer requests,
+                        logistics and financial records.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     USER INFORMATION
+                     ================================================= -->
+
+                <aside class="fc-user-card">
+
+                    <div class="fc-user-label">
+                        AUTHENTICATED FARMER
+                    </div>
+
+
+                    <div
+                        class="fc-user-name"
+                        data-farmer-name
+                    >
+                        Farmer
+                    </div>
+
+
+                    <div
+                        class="fc-user-id"
+                        data-farmer-id
+                    >
+                        —
+                    </div>
+
+
+                    <div class="fc-location">
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <br>
+
+                        <span
+                            data-farmer-village
+                        >
+                            Village
+                        </span>
+
+                        <br>
+
+                        <span
+                            data-farmer-taluk
+                        >
+                            Taluk
+                        </span>
+
+                        ·
+
+                        <span
+                            data-farmer-district
+                        >
+                            District
+                        </span>
+
+                        <br>
+
+                        Karnataka
+
+                    </div>
+
+                </aside>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 QUICK METRICS
+                 ================================================= -->
+
+            <section class="fc-metrics">
+
+
+                <div class="fc-metric">
+
+                    <div class="fc-metric-label">
+                        REGISTERED FARMS
+                    </div>
+
+                    <div
+                        class="fc-metric-value"
+                        data-farm-count
+                    >
+                        0
+                    </div>
+
+                </div>
+
+
+                <div class="fc-metric">
+
+                    <div class="fc-metric-label">
+                        ACTIVE CROPS
+                    </div>
+
+                    <div
+                        class="fc-metric-value"
+                        data-crop-count
+                    >
+                        0
+                    </div>
+
+                </div>
+
+
+                <div class="fc-metric">
+
+                    <div class="fc-metric-label">
+                        MARKET LISTINGS
+                    </div>
+
+                    <div
+                        class="fc-metric-value"
+                        data-listing-count
+                    >
+                        0
+                    </div>
+
+                </div>
+
+
+                <div class="fc-metric">
+
+                    <div class="fc-metric-label">
+                        CONNECTED ORDERS
+                    </div>
+
+                    <div
+                        class="fc-metric-value"
+                        data-order-count
+                    >
+                        0
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 OPERATIONS INTRO
+                 ================================================= -->
+
+            <section class="fc-section-heading">
+
+                <div class="fc-section-kicker">
+                    DIGITAL FARM RECORD
+                </div>
+
+                <h2 class="fc-section-title">
+                    Create & Manage Your Agricultural Data
+                </h2>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 OPERATIONS
+                 ================================================= -->
+
+            <section class="fc-operation-grid">
+
+
+                <!-- =============================================
+                     ADD FARM
+                     ============================================= -->
+
+                <article class="fc-operation-card">
+
+
+                    <div class="fc-operation-icon">
+                        🌾
+                    </div>
+
+
+                    <h2 class="fc-operation-title">
+                        Add a Farm
+                    </h2>
+
+
+                    <p class="fc-operation-text">
+
+                        Register an individual farm and create
+                        its structured digital record. This
+                        information can later be connected to
+                        crop production, services, marketplace
+                        and other Farmer operations.
+
+                    </p>
+
+
+                    <form
+                        class="ag-core-form"
+                        data-ag-operation-form
+                        data-operation="add-farm"
+                    >
+
+
+                        <div class="ag-core-form-grid">
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+
+                                    Farm Name
+
+                                    <span
+                                        class="ag-core-required"
+                                    >
+                                        *
+                                    </span>
+
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="text"
+                                    name="farmName"
+                                    placeholder="Example: Green Valley Farm"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+
+                                    Farm Area
+
+                                    <span
+                                        class="ag-core-required"
+                                    >
+                                        *
+                                    </span>
+
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="number"
+                                    name="area"
+                                    min="0"
+                                    step="0.01"
+                                    placeholder="Example: 4.5"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Area Unit
+                                </label>
+
+                                <select
+                                    class="ag-core-select"
+                                    name="areaUnit"
+                                >
+
+                                    <option value="acres">
+                                        Acres
+                                    </option>
+
+                                    <option value="hectares">
+                                        Hectares
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Village
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="text"
+                                    name="village"
+                                    placeholder="Village"
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Taluk
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="text"
+                                    name="taluk"
+                                    placeholder="Taluk"
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    District
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="text"
+                                    name="district"
+                                    placeholder="District"
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Soil Type
+                                </label>
+
+                                <select
+                                    class="ag-core-select"
+                                    name="soil"
+                                >
+
+                                    <option value="">
+                                        Select soil type
+                                    </option>
+
+                                    <option value="Red Soil">
+                                        Red Soil
+                                    </option>
+
+                                    <option value="Black Soil">
+                                        Black Soil
+                                    </option>
+
+                                    <option value="Alluvial Soil">
+                                        Alluvial Soil
+                                    </option>
+
+                                    <option value="Laterite Soil">
+                                        Laterite Soil
+                                    </option>
+
+                                    <option value="Sandy Soil">
+                                        Sandy Soil
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Irrigation
+                                </label>
+
+                                <select
+                                    class="ag-core-select"
+                                    name="irrigation"
+                                >
+
+                                    <option value="">
+                                        Select irrigation
+                                    </option>
+
+                                    <option value="Rainfed">
+                                        Rainfed
+                                    </option>
+
+                                    <option value="Borewell">
+                                        Borewell
+                                    </option>
+
+                                    <option value="Canal">
+                                        Canal
+                                    </option>
+
+                                    <option value="Drip">
+                                        Drip
+                                    </option>
+
+                                    <option value="Sprinkler">
+                                        Sprinkler
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="ag-core-field full">
+
+                                <label class="ag-core-label">
+                                    Farm Location / Landmark
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="text"
+                                    name="location"
+                                    placeholder="Optional farm location or landmark"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="ag-core-button-group">
+
+                            <button
+                                type="submit"
+                                class="ag-core-button"
+                            >
+
+                                ADD FARM
+
+                                <span>
+                                    →
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </article>
+
+
+
+                <!-- =============================================
+                     ADD CROP
+                     ============================================= -->
+
+                <article class="fc-operation-card cyan">
+
+
+                    <div class="fc-operation-icon">
+                        🌱
+                    </div>
+
+
+                    <h2 class="fc-operation-title">
+                        Add a Crop
+                    </h2>
+
+
+                    <p class="fc-operation-text">
+
+                        Record the crop you are cultivating,
+                        expected production, harvest period,
+                        quality and expected market value.
+
+                        This record becomes available for
+                        future marketplace and transaction
+                        workflows.
+
+                    </p>
+
+
+                    <form
+                        class="ag-core-form"
+                        data-ag-operation-form
+                        data-operation="add-crop"
+                    >
+
+
+                        <div class="ag-core-form-grid">
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+
+                                    Crop Name
+
+                                    <span
+                                        class="ag-core-required"
+                                    >
+                                        *
+                                    </span>
+
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="text"
+                                    name="cropName"
+                                    placeholder="Example: Tomato"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Category
+                                </label>
+
+                                <select
+                                    class="ag-core-select"
+                                    name="category"
+                                >
+
+                                    <option value="">
+                                        Select category
+                                    </option>
+
+                                    <option value="Vegetable">
+                                        Vegetable
+                                    </option>
+
+                                    <option value="Fruit">
+                                        Fruit
+                                    </option>
+
+                                    <option value="Cereal">
+                                        Cereal
+                                    </option>
+
+                                    <option value="Pulse">
+                                        Pulse
+                                    </option>
+
+                                    <option value="Oilseed">
+                                        Oilseed
+                                    </option>
+
+                                    <option value="Spice">
+                                        Spice
+                                    </option>
+
+                                    <option value="Commercial Crop">
+                                        Commercial Crop
+                                    </option>
+
+                                    <option value="Other">
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Variety
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="text"
+                                    name="variety"
+                                    placeholder="Crop variety"
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Season
+                                </label>
+
+                                <select
+                                    class="ag-core-select"
+                                    name="season"
+                                >
+
+                                    <option value="">
+                                        Select season
+                                    </option>
+
+                                    <option value="Kharif">
+                                        Kharif
+                                    </option>
+
+                                    <option value="Rabi">
+                                        Rabi
+                                    </option>
+
+                                    <option value="Summer">
+                                        Summer
+                                    </option>
+
+                                    <option value="Year Round">
+                                        Year Round
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Cultivated Area
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="number"
+                                    name="area"
+                                    min="0"
+                                    step="0.01"
+                                    placeholder="Cultivated area"
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Expected Quantity
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="number"
+                                    name="quantity"
+                                    min="0"
+                                    step="0.01"
+                                    placeholder="Expected quantity"
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Unit
+                                </label>
+
+                                <select
+                                    class="ag-core-select"
+                                    name="unit"
+                                >
+
+                                    <option value="kg">
+                                        Kilograms
+                                    </option>
+
+                                    <option value="quintal">
+                                        Quintal
+                                    </option>
+
+                                    <option value="tonne">
+                                        Tonne
+                                    </option>
+
+                                    <option value="bags">
+                                        Bags
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Expected Price
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="number"
+                                    name="expectedPrice"
+                                    min="0"
+                                    step="1"
+                                    placeholder="₹ per unit"
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Expected Harvest
+                                </label>
+
+                                <input
+                                    class="ag-core-input"
+                                    type="date"
+                                    name="expectedHarvest"
+                                >
+
+                            </div>
+
+
+                            <div class="ag-core-field">
+
+                                <label class="ag-core-label">
+                                    Quality
+                                </label>
+
+                                <select
+                                    class="ag-core-select"
+                                    name="quality"
+                                >
+
+                                    <option value="">
+                                        Select quality
+                                    </option>
+
+                                    <option value="Premium">
+                                        Premium
+                                    </option>
+
+                                    <option value="Grade A">
+                                        Grade A
+                                    </option>
+
+                                    <option value="Grade B">
+                                        Grade B
+                                    </option>
+
+                                    <option value="Standard">
+                                        Standard
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="ag-core-field full">
+
+                                <label class="ag-core-label">
+                                    Irrigation
+                                </label>
+
+                                <select
+                                    class="ag-core-select"
+                                    name="irrigation"
+                                >
+
+                                    <option value="">
+                                        Select irrigation
+                                    </option>
+
+                                    <option value="Rainfed">
+                                        Rainfed
+                                    </option>
+
+                                    <option value="Drip">
+                                        Drip
+                                    </option>
+
+                                    <option value="Sprinkler">
+                                        Sprinkler
+                                    </option>
+
+                                    <option value="Canal">
+                                        Canal
+                                    </option>
+
+                                    <option value="Borewell">
+                                        Borewell
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="ag-core-field full">
+
+                                <label class="ag-core-label">
+                                    Additional Notes
+                                </label>
+
+                                <textarea
+                                    class="ag-core-textarea"
+                                    name="notes"
+                                    placeholder="Additional crop information..."
+                                ></textarea>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="ag-core-button-group">
+
+                            <button
+                                type="submit"
+                                class="ag-core-button cyan"
+                            >
+
+                                ADD CROP
+
+                                <span>
+                                    →
+                                </span>
+
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </article>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FARM RECORDS
+                 ================================================= -->
+
+            <section class="fc-record-section">
+
+
+                <div class="fc-record-header">
+
+                    <div>
+
+                        <div class="fc-section-kicker">
+                            FARM DATABASE
+                        </div>
+
+                        <h2 class="fc-record-title">
+                            My Farms
+                        </h2>
+
+                        <p class="fc-record-subtitle">
+                            Your registered agricultural land
+                            records appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="fc-record-list"
+                    data-farm-records
+                >
+
+                    <div class="ag-core-empty">
+
+                        <div class="ag-core-empty-icon">
+                            🌾
+                        </div>
+
+                        <h3>
+                            No farms added yet
+                        </h3>
+
+                        <p>
+                            Add your first farm using the
+                            Farm Management form above.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CROP RECORDS
+                 ================================================= -->
+
+            <section class="fc-record-section">
+
+
+                <div class="fc-record-header">
+
+                    <div>
+
+                        <div class="fc-section-kicker">
+                            CROP DATABASE
+                        </div>
+
+                        <h2 class="fc-record-title">
+                            My Crops
+                        </h2>
+
+                        <p class="fc-record-subtitle">
+                            Your active crop records and
+                            production information appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="fc-record-list"
+                    data-crop-records
+                >
+
+                    <div class="ag-core-empty">
+
+                        <div class="ag-core-empty-icon">
+                            🌱
+                        </div>
+
+                        <h3>
+                            No crops added yet
+                        </h3>
+
+                        <p>
+                            Add your first crop using the
+                            Crop Management form above.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACTIVITY
+                 ================================================= -->
+
+            <section class="fc-activity">
+
+
+                <div class="fc-record-header">
+
+                    <div>
+
+                        <div class="fc-section-kicker">
+                            ECOSYSTEM HISTORY
+                        </div>
+
+                        <h2 class="fc-record-title">
+                            Recent Activity
+                        </h2>
+
+                        <p class="fc-record-subtitle">
+                            Successful Farmer operations are
+                            automatically recorded here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="fc-activity-card">
+
+                    <div
+                        data-ag-activity
+                    >
+
+                        <div class="ag-core-empty">
+
+                            <div class="ag-core-empty-icon">
+                                ✦
+                            </div>
+
+                            <h3>
+                                No activity yet
+                            </h3>
+
+                            <p>
+                                Your completed farm and crop
+                                operations will appear here.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================================
+         SHARED CORE JAVASCRIPT
+         ========================================================= -->
+
+    <script
+        src="assets/js/core.js"
+        defer
+    ></script>
+
+
+    <!-- Existing agriculture engine -->
+    <script
+        src="assets/js/agriculture.js"
+        defer
+    ></script>
+
+
+    <!-- =========================================================
+         PAGE ENHANCEMENT SCRIPT
+         ========================================================= -->
+
+    <script>
+
+        "use strict";
+
+
+        /* =====================================================
+           LEAF EFFECT
+           ===================================================== */
+
+        function createFarmerLeaf(){
+
+            const characters = [
+                "🍃",
+                "🌿",
+                "🍂",
+                "🌱"
+            ];
+
+
+            const leaf =
+                document.createElement(
+                    "span"
+                );
+
+
+            leaf.className =
+                "ag-page-leaf";
+
+
+            leaf.textContent =
+                characters[
+                    Math.floor(
+                        Math.random()
+                        * characters.length
+                    )
+                ];
+
+
+            leaf.style.left =
+                `${Math.random() * 100}%`;
+
+
+            leaf.style.setProperty(
+                "--leaf-duration",
+                `${10 + Math.random() * 9}s`
+            );
+
+
+            leaf.style.setProperty(
+                "--leaf-drift",
+                `${-120 + Math.random() * 240}px`
+            );
+
+
+            leaf.style.animationDelay =
+                `${Math.random() * 2}s`;
+
+
+            document.body.appendChild(
+                leaf
+            );
+
+
+            setTimeout(
+                () => {
+
+                    leaf.remove();
+
+                },
+                21000
+            );
+
+        }
+
+
+        function startFarmerLeaves(){
+
+            for(
+                let i = 0;
+                i < 5;
+                i++
+            ){
+
+                setTimeout(
+                    createFarmerLeaf,
+                    i * 800
+                );
+
+            }
+
+
+            setInterval(
+                createFarmerLeaf,
+                1800
+            );
+
+        }
+
+
+
+        /* =====================================================
+           FIREFLY EFFECT
+           ===================================================== */
+
+        function createFirefly(){
+
+            const firefly =
+                document.createElement(
+                    "span"
+                );
+
+
+            firefly.className =
+                "ag-firefly";
+
+
+            firefly.style.left =
+                `${Math.random() * 100}%`;
+
+
+            firefly.style.top =
+                `${20 + Math.random() * 75}%`;
+
+
+            firefly.style.setProperty(
+                "--fly-size",
+                `${2 + Math.random() * 3}px`
+            );
+
+
+            firefly.style.setProperty(
+                "--fly-duration",
+                `${7 + Math.random() * 9}s`
+            );
+
+
+            firefly.style.setProperty(
+                "--fly-delay",
+                `${Math.random() * 4}s`
+            );
+
+
+            firefly.style.setProperty(
+                "--fly-x",
+                `${-100 + Math.random() * 200}px`
+            );
+
+
+            firefly.style.setProperty(
+                "--fly-y",
+                `${-80 + Math.random() * 160}px`
+            );
+
+
+            firefly.style.setProperty(
+                "--fly-x2",
+                `${-160 + Math.random() * 320}px`
+            );
+
+
+            firefly.style.setProperty(
+                "--fly-y2",
+                `${-120 + Math.random() * 240}px`
+            );
+
+
+            document.body.appendChild(
+                firefly
+            );
+
+
+            setTimeout(
+                () => {
+
+                    firefly.remove();
+
+                },
+                22000
+            );
+
+        }
+
+
+        function startFireflies(){
+
+            for(
+                let i = 0;
+                i < 24;
+                i++
+            ){
+
+                setTimeout(
+                    createFirefly,
+                    i * 250
+                );
+
+            }
+
+
+            setInterval(
+                createFirefly,
+                1200
+            );
+
+        }
+
+
+
+        /* =====================================================
+           PAGE DATA
+           ===================================================== */
+
+        function renderFarmerCropPage(){
+
+            const app =
+                window.AgriVision;
+
+
+            if(
+                !app ||
+                typeof app.store !==
+                    "function"
+            ){
+
+                return;
+
+            }
+
+
+            const store =
+                app.store();
+
+
+            if(!store){
+
+                return;
+
+            }
+
+
+            const user =
+                store.user || {};
+
+
+            const farms =
+                Array.isArray(
+                    store.farms
+                )
+                    ?
+                    store.farms
+                    :
+                    [];
+
+
+            const crops =
+                Array.isArray(
+                    store.crops
+                )
+                    ?
+                    store.crops
+                    :
+                    [];
+
+
+            const listings =
+                Array.isArray(
+                    store.listings
+                )
+                    ?
+                    store.listings
+                    :
+                    [];
+
+
+            const orders =
+                Array.isArray(
+                    store.orders
+                )
+                    ?
+                    store.orders
+                    :
+                    [];
+
+
+            /* ================================================
+               USER
+               ================================================ */
+
+            const village =
+                document.querySelector(
+                    "[data-farmer-village]"
+                );
+
+
+            if(village){
+
+                village.textContent =
+                    user.village ||
+                    "Village";
+
+            }
+
+
+            /* ================================================
+               METRICS
+               ================================================ */
+
+            const farmCount =
+                document.querySelector(
+                    "[data-farm-count]"
+                );
+
+
+            const cropCount =
+                document.querySelector(
+                    "[data-crop-count]"
+                );
+
+
+            const listingCount =
+                document.querySelector(
+                    "[data-listing-count]"
+                );
+
+
+            const orderCount =
+                document.querySelector(
+                    "[data-order-count]"
+                );
+
+
+            if(farmCount){
+
+                farmCount.textContent =
+                    farms.length;
+
+            }
+
+
+            if(cropCount){
+
+                cropCount.textContent =
+                    crops.filter(
+                        crop =>
+                            crop.status !==
+                            "ARCHIVED"
+                    ).length;
+
+            }
+
+
+            if(listingCount){
+
+                listingCount.textContent =
+                    listings.filter(
+                        listing =>
+                            listing.status ===
+                            "ACTIVE"
+                    ).length;
+
+            }
+
+
+            if(orderCount){
+
+                orderCount.textContent =
+                    orders.filter(
+                        order =>
+                            order.status !==
+                            "CANCELLED"
+                    ).length;
+
+            }
+
+
+            /* ================================================
+               FARMS
+               ================================================ */
+
+            renderFarmerFarms(
+                farms
+            );
+
+
+            /* ================================================
+               CROPS
+               ================================================ */
+
+            renderFarmerCrops(
+                crops
+            );
+
+        }
+
+
+
+        /* =====================================================
+           FARM RENDER
+           ===================================================== */
+
+        function renderFarmerFarms(
+            farms
+        ){
+
+            document
+                .querySelectorAll(
+                    "[data-farm-records]"
+                )
+                .forEach(
+                    container => {
+
+                        if(
+                            !farms.length
+                        ){
+
+                            return;
+
+                        }
+
+
+                        container.innerHTML =
+                            farms
+                            .slice()
+                            .reverse()
+                            .map(
+                                farm => `
+
+                                    <article
+                                        class="ag-core-linked-record"
+                                    >
+
+                                        <div>
+
+                                            <div
+                                                class="ag-core-linked-title"
+                                            >
+                                                ${pageEscape(
+                                                    farm.farmName ||
+                                                    farm.name ||
+                                                    "Farm"
+                                                )}
+                                            </div>
+
+                                            <span
+                                                class="ag-core-linked-detail"
+                                            >
+
+                                                ${pageEscape(
+                                                    farm.area ||
+                                                    "—"
+                                                )}
+
+                                                ${pageEscape(
+                                                    farm.areaUnit ||
+                                                    "acres"
+                                                )}
+
+                                                ·
+
+                                                ${pageEscape(
+                                                    farm.village ||
+                                                    "Location not specified"
+                                                )}
+
+                                                ·
+
+                                                ${pageEscape(
+                                                    farm.district ||
+                                                    "District not specified"
+                                                )}
+
+                                            </span>
+
+
+                                            <div
+                                                class="fc-record-extra"
+                                            >
+
+                                                ${
+                                                    farm.soil
+                                                    ?
+                                                    `
+                                                        <span
+                                                            class="fc-mini-tag"
+                                                        >
+                                                            Soil:
+                                                            ${pageEscape(
+                                                                farm.soil
+                                                            )}
+                                                        </span>
+                                                    `
+                                                    :
+                                                    ""
+                                                }
+
+
+                                                ${
+                                                    farm.irrigation
+                                                    ?
+                                                    `
+                                                        <span
+                                                            class="fc-mini-tag"
+                                                        >
+                                                            Irrigation:
+                                                            ${pageEscape(
+                                                                farm.irrigation
+                                                            )}
+                                                        </span>
+                                                    `
+                                                    :
+                                                    ""
+                                                }
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <span
+                                            class="ag-core-state"
+                                        >
+                                            ${pageEscape(
+                                                farm.status ||
+                                                "ACTIVE"
+                                            )}
+                                        </span>
+
+                                    </article>
+
+                                `
+                            )
+                            .join("");
+
+                    }
+                );
+
+        }
+
+
+
+        /* =====================================================
+           CROP RENDER
+           ===================================================== */
+
+        function renderFarmerCrops(
+            crops
+        ){
+
+            document
+                .querySelectorAll(
+                    "[data-crop-records]"
+                )
+                .forEach(
+                    container => {
+
+                        if(
+                            !crops.length
+                        ){
+
+                            return;
+
+                        }
+
+
+                        container.innerHTML =
+                            crops
+                            .slice()
+                            .reverse()
+                            .map(
+                                crop => `
+
+                                    <article
+                                        class="ag-core-linked-record"
+                                    >
+
+                                        <div>
+
+                                            <div
+                                                class="ag-core-linked-title"
+                                            >
+
+                                                ${pageEscape(
+                                                    crop.name ||
+                                                    crop.cropName ||
+                                                    "Crop"
+                                                )}
+
+                                            </div>
+
+
+                                            <span
+                                                class="ag-core-linked-detail"
+                                            >
+
+                                                ${
+                                                    crop.variety
+                                                        ?
+                                                        pageEscape(
+                                                            crop.variety
+                                                        )
+                                                        + " · "
+                                                        :
+                                                        ""
+                                                }
+
+                                                ${
+                                                    crop.category
+                                                        ?
+                                                        pageEscape(
+                                                            crop.category
+                                                        )
+                                                        + " · "
+                                                        :
+                                                        ""
+                                                }
+
+                                                ${
+                                                    crop.quantity
+                                                        ?
+                                                        pageEscape(
+                                                            crop.quantity
+                                                        )
+                                                        + " "
+                                                        + pageEscape(
+                                                            crop.unit ||
+                                                            "kg"
+                                                        )
+                                                        :
+                                                        "Quantity not specified"
+                                                }
+
+                                            </span>
+
+
+                                            <div
+                                                class="fc-record-extra"
+                                            >
+
+                                                ${
+                                                    crop.area
+                                                    ?
+                                                    `
+                                                        <span
+                                                            class="fc-mini-tag"
+                                                        >
+                                                            Area:
+                                                            ${pageEscape(
+                                                                crop.area
+                                                            )}
+                                                        </span>
+                                                    `
+                                                    :
+                                                    ""
+                                                }
+
+
+                                                ${
+                                                    crop.expectedPrice
+                                                    ?
+                                                    `
+                                                        <span
+                                                            class="fc-mini-tag"
+                                                        >
+                                                            Expected:
+                                                            ₹${pageEscape(
+                                                                crop.expectedPrice
+                                                            )}
+                                                        </span>
+                                                    `
+                                                    :
+                                                    ""
+                                                }
+
+
+                                                ${
+                                                    crop.expectedHarvest
+                                                    ?
+                                                    `
+                                                        <span
+                                                            class="fc-mini-tag"
+                                                        >
+                                                            Harvest:
+                                                            ${pageEscape(
+                                                                crop.expectedHarvest
+                                                            )}
+                                                        </span>
+                                                    `
+                                                    :
+                                                    ""
+                                                }
+
+
+                                                ${
+                                                    crop.quality
+                                                    ?
+                                                    `
+                                                        <span
+                                                            class="fc-mini-tag"
+                                                        >
+                                                            ${pageEscape(
+                                                                crop.quality
+                                                            )}
+                                                        </span>
+                                                    `
+                                                    :
+                                                    ""
+                                                }
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <span
+                                            class="
+                                                ag-core-state
+                                                ${
+                                                    crop.status ===
+                                                    "LISTED"
+                                                        ?
+                                                        "cyan"
+                                                        :
+                                                        ""
+                                                }
+                                            "
+                                        >
+
+                                            ${pageEscape(
+                                                crop.status ||
+                                                "ACTIVE"
+                                            )}
+
+                                        </span>
+
+                                    </article>
+
+                                `
+                            )
+                            .join("");
+
+                    }
+                );
+
+        }
+
+
+
+        /* =====================================================
+           HTML ESCAPE
+           ===================================================== */
+
+        function pageEscape(
+            value
+        ){
+
+            return String(
+                value ?? ""
+            )
+            .replace(
+                /&/g,
+                "&amp;"
+            )
+            .replace(
+                /</g,
+                "&lt;"
+            )
+            .replace(
+                />/g,
+                "&gt;"
+            )
+            .replace(
+                /"/g,
+                "&quot;"
+            )
+            .replace(
+                /'/g,
+                "&#039;"
+            );
+
+        }
+
+
+
+        /* =====================================================
+           INITIALISE
+           ===================================================== */
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            () => {
+
+                startFarmerLeaves();
+
+                startFireflies();
+
+                setTimeout(
+                    renderFarmerCropPage,
+                    300
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>

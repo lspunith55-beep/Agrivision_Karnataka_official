@@ -1,0 +1,3516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Equipment Owner Equipment Management"
+    >
+
+    <title>
+        Equipment Management | AgriVision Karnataka
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     AGRIVISION GLOBAL ENVIRONMENT
+     ========================================================= -->
+
+<div
+    class="background-image"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-one"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-two"
+    aria-hidden="true"
+></div>
+
+<div
+    class="mouse-glow"
+    aria-hidden="true"
+></div>
+
+<div
+    class="particle-field"
+    aria-hidden="true"
+></div>
+
+<div
+    class="fireflies"
+    aria-hidden="true"
+></div>
+
+<div
+    class="floating-leaves"
+    aria-hidden="true"
+></div>
+
+<div
+    class="cursor-stars"
+    aria-hidden="true"
+></div>
+
+
+
+<!-- =========================================================
+     APPLICATION
+     ========================================================= -->
+
+<div class="av-app">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <a
+                href="equipment-owner-dashboard.html"
+                class="av-brand"
+            >
+
+                <span
+                    class="av-status-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="av-brand-name">
+                    AGRIVISION
+                </span>
+
+                <span class="av-brand-region">
+                    KARNATAKA
+                </span>
+
+            </a>
+
+
+
+            <label
+                class="av-search"
+                aria-label="Search equipment"
+            >
+
+                <span
+                    class="av-search-icon"
+                    aria-hidden="true"
+                >
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search equipment..."
+                    autocomplete="off"
+                    data-global-search
+                >
+
+            </label>
+
+
+
+            <div class="av-header-actions">
+
+                <a
+                    href="equipment-owner-profile.html#notifications"
+                    class="av-icon-button"
+                    aria-label="Notifications"
+                >
+                    🔔
+                </a>
+
+                <a
+                    href="equipment-owner-profile.html"
+                    class="av-icon-button"
+                    aria-label="Profile"
+                >
+                    👤
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         PAGE HERO
+         ===================================================== -->
+
+    <section class="av-welcome">
+
+        <div class="av-page av-welcome-content">
+
+
+            <div class="av-eyebrow">
+
+                <span>
+                    EQUIPMENT OWNER
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    EQUIPMENT CENTER
+                </span>
+
+            </div>
+
+
+
+            <h1 class="av-welcome-title">
+
+                Your equipment,
+                <span class="av-gradient-text">
+                    fully managed.
+                </span>
+
+            </h1>
+
+
+
+            <p class="av-welcome-description">
+
+                Register machinery, maintain accurate specifications,
+                control availability, manage rental pricing, track
+                documents and maintenance, and keep every piece of
+                equipment connected to its complete operational
+                history.
+
+            </p>
+
+
+
+            <div
+                class="av-chip-row"
+                style="margin-top:30px;"
+            >
+
+                <a
+                    href="#inventory"
+                    class="av-button av-button-primary"
+                >
+                    VIEW INVENTORY
+                </a>
+
+
+                <a
+                    href="#add-equipment"
+                    class="av-button av-button-secondary"
+                >
+                    + ADD EQUIPMENT
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EQUIPMENT OVERVIEW
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                EQUIPMENT OVERVIEW
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Know the status of every
+                <span class="av-gradient-text">
+                    machine.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-6"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            TOTAL
+                        </div>
+
+                        <div class="av-role-icon">
+                            🚜
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-equipment-total
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Registered equipment.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            AVAILABLE
+                        </div>
+
+                        <div class="av-role-icon">
+                            ✓
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-equipment-available
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Ready for new bookings.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            RESERVED
+                        </div>
+
+                        <div class="av-role-icon">
+                            📅
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-equipment-reserved
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Held for accepted assignments.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            IN USE
+                        </div>
+
+                        <div class="av-role-icon">
+                            🌾
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-equipment-in-use
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Performing agricultural work.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            TRANSIT
+                        </div>
+
+                        <div class="av-role-icon">
+                            🚚
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-equipment-transit
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Being transported.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            SERVICE
+                        </div>
+
+                        <div class="av-role-icon">
+                            🔧
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-equipment-maintenance
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Under maintenance.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INVENTORY
+         ===================================================== -->
+
+    <section
+        class="av-section"
+        id="inventory"
+    >
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                INVENTORY
+            </div>
+
+
+            <div
+                style="
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:flex-end;
+                    gap:25px;
+                    flex-wrap:wrap;
+                "
+            >
+
+                <div>
+
+                    <h2 class="av-section-title">
+
+                        Equipment
+                        <span class="av-gradient-text">
+                            inventory.
+                        </span>
+
+                    </h2>
+
+                    <p class="av-section-description">
+
+                        Every machine has its own availability,
+                        pricing, maintenance and rental history.
+
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="#add-equipment"
+                    class="av-button av-button-primary"
+                >
+                    + ADD EQUIPMENT
+                </a>
+
+            </div>
+
+
+
+            <!-- FILTER BAR -->
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:35px;"
+            >
+
+                <div class="av-card-body">
+
+                    <div class="av-grid av-grid-4">
+
+
+                        <div class="av-field">
+
+                            <label
+                                for="equipmentSearch"
+                                class="av-label"
+                            >
+                                Search
+                            </label>
+
+                            <input
+                                id="equipmentSearch"
+                                type="search"
+                                class="av-input"
+                                placeholder="Equipment name, ID..."
+                                data-equipment-filter-search
+                            >
+
+                        </div>
+
+
+                        <div class="av-field">
+
+                            <label
+                                for="equipmentCategory"
+                                class="av-label"
+                            >
+                                Category
+                            </label>
+
+                            <select
+                                id="equipmentCategory"
+                                class="av-input"
+                                data-equipment-filter-category
+                            >
+
+                                <option value="all">
+                                    All categories
+                                </option>
+
+                                <option value="tractor">
+                                    Tractor
+                                </option>
+
+                                <option value="harvester">
+                                    Harvester
+                                </option>
+
+                                <option value="seeder">
+                                    Seeder
+                                </option>
+
+                                <option value="sprayer">
+                                    Sprayer
+                                </option>
+
+                                <option value="tiller">
+                                    Tiller
+                                </option>
+
+                                <option value="trailer">
+                                    Trailer
+                                </option>
+
+                                <option value="irrigation">
+                                    Irrigation
+                                </option>
+
+                                <option value="processing">
+                                    Processing
+                                </option>
+
+                                <option value="other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="av-field">
+
+                            <label
+                                for="equipmentStatus"
+                                class="av-label"
+                            >
+                                Status
+                            </label>
+
+                            <select
+                                id="equipmentStatus"
+                                class="av-input"
+                                data-equipment-filter-status
+                            >
+
+                                <option value="all">
+                                    All statuses
+                                </option>
+
+                                <option value="available">
+                                    Available
+                                </option>
+
+                                <option value="reserved">
+                                    Reserved
+                                </option>
+
+                                <option value="booked">
+                                    Booked
+                                </option>
+
+                                <option value="transit">
+                                    In Transit
+                                </option>
+
+                                <option value="use">
+                                    In Use
+                                </option>
+
+                                <option value="maintenance">
+                                    Maintenance
+                                </option>
+
+                                <option value="out">
+                                    Out of Service
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="av-field">
+
+                            <label
+                                for="equipmentSort"
+                                class="av-label"
+                            >
+                                Sort
+                            </label>
+
+                            <select
+                                id="equipmentSort"
+                                class="av-input"
+                                data-equipment-filter-sort
+                            >
+
+                                <option value="recent">
+                                    Recently added
+                                </option>
+
+                                <option value="name">
+                                    Name
+                                </option>
+
+                                <option value="utilization">
+                                    Utilization
+                                </option>
+
+                                <option value="earnings">
+                                    Earnings
+                                </option>
+
+                                <option value="maintenance">
+                                    Maintenance due
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- INVENTORY LIST -->
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:30px;"
+                data-equipment-inventory
+            >
+
+
+                <!-- SAMPLE EQUIPMENT CARD -->
+
+                <article
+                    class="av-card av-reveal equipment-card"
+                    data-equipment-item
+                    data-category="tractor"
+                    data-status="available"
+                >
+
+                    <div class="av-card-body">
+
+
+                        <div
+                            style="
+                                height:180px;
+                                border-radius:18px;
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                font-size:70px;
+                                background:rgba(255,255,255,.04);
+                                border:1px solid rgba(255,255,255,.08);
+                                margin-bottom:25px;
+                            "
+                        >
+                            🚜
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="
+                                justify-content:space-between;
+                                align-items:center;
+                            "
+                        >
+
+                            <span class="av-status av-status-active">
+                                ● AVAILABLE
+                            </span>
+
+                            <span class="av-page-kicker">
+                                EQ-001
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="av-card-title">
+                            Agricultural Tractor
+                        </h3>
+
+
+                        <p class="av-card-description">
+
+                            Multi-purpose agricultural tractor
+                            available for farm operations.
+
+                        </p>
+
+
+                        <div
+                            class="av-grid av-grid-2"
+                            style="margin-top:22px;"
+                        >
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    CATEGORY
+                                </div>
+
+                                <strong>
+                                    Tractor
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    CAPACITY
+                                </div>
+
+                                <strong>
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    RATE
+                                </div>
+
+                                <strong>
+                                    ₹—
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    HOURS
+                                </div>
+
+                                <strong>
+                                    —
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="
+                                margin-top:25px;
+                            "
+                        >
+
+                            <span class="av-chip">
+                                🌾 Farming
+                            </span>
+
+                            <span class="av-chip">
+                                👷 Operator
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="
+                                margin-top:25px;
+                            "
+                        >
+
+                            <button
+                                type="button"
+                                class="av-button av-button-secondary"
+                                data-equipment-action="details"
+                                data-equipment-id="EQ-001"
+                            >
+                                DETAILS
+                            </button>
+
+                            <button
+                                type="button"
+                                class="av-button av-button-primary"
+                                data-equipment-action="edit"
+                                data-equipment-id="EQ-001"
+                            >
+                                EDIT
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- SECOND SAMPLE -->
+
+                <article
+                    class="av-card av-reveal equipment-card"
+                    data-equipment-item
+                    data-category="harvester"
+                    data-status="maintenance"
+                >
+
+                    <div class="av-card-body">
+
+
+                        <div
+                            style="
+                                height:180px;
+                                border-radius:18px;
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                font-size:70px;
+                                background:rgba(255,255,255,.04);
+                                border:1px solid rgba(255,255,255,.08);
+                                margin-bottom:25px;
+                            "
+                        >
+                            🌾
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="
+                                justify-content:space-between;
+                                align-items:center;
+                            "
+                        >
+
+                            <span class="av-status">
+                                🔧 MAINTENANCE
+                            </span>
+
+                            <span class="av-page-kicker">
+                                EQ-002
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="av-card-title">
+                            Crop Harvester
+                        </h3>
+
+
+                        <p class="av-card-description">
+
+                            Harvesting equipment currently
+                            unavailable because of scheduled service.
+
+                        </p>
+
+
+                        <div
+                            class="av-grid av-grid-2"
+                            style="margin-top:22px;"
+                        >
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    CATEGORY
+                                </div>
+
+                                <strong>
+                                    Harvester
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    STATUS
+                                </div>
+
+                                <strong>
+                                    Service
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    NEXT SERVICE
+                                </div>
+
+                                <strong>
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    HOURS
+                                </div>
+
+                                <strong>
+                                    —
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="margin-top:25px;"
+                        >
+
+                            <span class="av-chip">
+                                🔧 Service due
+                            </span>
+
+                            <span class="av-chip">
+                                📋 History
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="margin-top:25px;"
+                        >
+
+                            <button
+                                type="button"
+                                class="av-button av-button-secondary"
+                                data-equipment-action="maintenance"
+                                data-equipment-id="EQ-002"
+                            >
+                                MAINTENANCE
+                            </button>
+
+                            <button
+                                type="button"
+                                class="av-button av-button-primary"
+                                data-equipment-action="details"
+                                data-equipment-id="EQ-002"
+                            >
+                                DETAILS
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- THIRD SAMPLE -->
+
+                <article
+                    class="av-card av-reveal equipment-card"
+                    data-equipment-item
+                    data-category="sprayer"
+                    data-status="reserved"
+                >
+
+                    <div class="av-card-body">
+
+
+                        <div
+                            style="
+                                height:180px;
+                                border-radius:18px;
+                                display:flex;
+                                align-items:center;
+                                justify-content:center;
+                                font-size:70px;
+                                background:rgba(255,255,255,.04);
+                                border:1px solid rgba(255,255,255,.08);
+                                margin-bottom:25px;
+                            "
+                        >
+                            💧
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="
+                                justify-content:space-between;
+                                align-items:center;
+                            "
+                        >
+
+                            <span class="av-status av-status-info">
+                                ● RESERVED
+                            </span>
+
+                            <span class="av-page-kicker">
+                                EQ-003
+                            </span>
+
+                        </div>
+
+
+                        <h3 class="av-card-title">
+                            Agricultural Sprayer
+                        </h3>
+
+
+                        <p class="av-card-description">
+
+                            Crop spraying equipment reserved for an
+                            upcoming agricultural assignment.
+
+                        </p>
+
+
+                        <div
+                            class="av-grid av-grid-2"
+                            style="margin-top:22px;"
+                        >
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    CATEGORY
+                                </div>
+
+                                <strong>
+                                    Sprayer
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    CAPACITY
+                                </div>
+
+                                <strong>
+                                    —
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    RATE
+                                </div>
+
+                                <strong>
+                                    ₹—
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <div class="av-page-kicker">
+                                    BOOKING
+                                </div>
+
+                                <strong>
+                                    Upcoming
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="margin-top:25px;"
+                        >
+
+                            <span class="av-chip">
+                                🌱 Spraying
+                            </span>
+
+                            <span class="av-chip">
+                                📅 Reserved
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="margin-top:25px;"
+                        >
+
+                            <button
+                                type="button"
+                                class="av-button av-button-secondary"
+                                data-equipment-action="availability"
+                                data-equipment-id="EQ-003"
+                            >
+                                AVAILABILITY
+                            </button>
+
+                            <button
+                                type="button"
+                                class="av-button av-button-primary"
+                                data-equipment-action="details"
+                                data-equipment-id="EQ-003"
+                            >
+                                DETAILS
+                            </button>
+
+                        </div>
+
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ADD EQUIPMENT
+         ===================================================== -->
+
+    <section
+        class="av-section"
+        id="add-equipment"
+    >
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                REGISTER EQUIPMENT
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Add a machine to the
+                <span class="av-gradient-text">
+                    AgriVision network.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Provide complete information so Farmers can
+                discover the right equipment and the platform can
+                correctly manage availability, pricing, transport,
+                usage and maintenance.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        id="addEquipmentForm"
+                        data-equipment-form
+                    >
+
+
+                        <!-- BASIC -->
+
+                        <div class="av-page-kicker">
+                            01 • BASIC INFORMATION
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-3"
+                            style="margin-top:25px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="equipmentName"
+                                    class="av-label"
+                                >
+                                    Equipment Name *
+                                </label>
+
+                                <input
+                                    id="equipmentName"
+                                    name="equipmentName"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="e.g. Agricultural Tractor"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="equipmentType"
+                                    class="av-label"
+                                >
+                                    Equipment Type *
+                                </label>
+
+                                <select
+                                    id="equipmentType"
+                                    name="equipmentType"
+                                    class="av-input"
+                                    required
+                                >
+
+                                    <option value="">
+                                        Select type
+                                    </option>
+
+                                    <option>
+                                        Tractor
+                                    </option>
+
+                                    <option>
+                                        Harvester
+                                    </option>
+
+                                    <option>
+                                        Seeder
+                                    </option>
+
+                                    <option>
+                                        Sprayer
+                                    </option>
+
+                                    <option>
+                                        Tiller
+                                    </option>
+
+                                    <option>
+                                        Trailer
+                                    </option>
+
+                                    <option>
+                                        Irrigation Equipment
+                                    </option>
+
+                                    <option>
+                                        Processing Equipment
+                                    </option>
+
+                                    <option>
+                                        Other
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="equipmentBrand"
+                                    class="av-label"
+                                >
+                                    Brand
+                                </label>
+
+                                <input
+                                    id="equipmentBrand"
+                                    name="brand"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Brand"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="equipmentModel"
+                                    class="av-label"
+                                >
+                                    Model
+                                </label>
+
+                                <input
+                                    id="equipmentModel"
+                                    name="model"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Model"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="manufacturingYear"
+                                    class="av-label"
+                                >
+                                    Manufacturing Year
+                                </label>
+
+                                <input
+                                    id="manufacturingYear"
+                                    name="manufacturingYear"
+                                    type="number"
+                                    class="av-input"
+                                    min="1900"
+                                    max="2100"
+                                    placeholder="Year"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="serialNumber"
+                                    class="av-label"
+                                >
+                                    Serial / Registration Number
+                                </label>
+
+                                <input
+                                    id="serialNumber"
+                                    name="serialNumber"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Identifier"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- TECHNICAL -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:45px;"
+                        >
+                            02 • TECHNICAL SPECIFICATIONS
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-4"
+                            style="margin-top:25px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="power"
+                                    class="av-label"
+                                >
+                                    Power
+                                </label>
+
+                                <input
+                                    id="power"
+                                    name="power"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="e.g. 50 HP"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="capacity"
+                                    class="av-label"
+                                >
+                                    Capacity
+                                </label>
+
+                                <input
+                                    id="capacity"
+                                    name="capacity"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Capacity"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="weight"
+                                    class="av-label"
+                                >
+                                    Weight
+                                </label>
+
+                                <input
+                                    id="weight"
+                                    name="weight"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Weight"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="fuelType"
+                                    class="av-label"
+                                >
+                                    Fuel Type
+                                </label>
+
+                                <select
+                                    id="fuelType"
+                                    name="fuelType"
+                                    class="av-input"
+                                >
+
+                                    <option>
+                                        Diesel
+                                    </option>
+
+                                    <option>
+                                        Petrol
+                                    </option>
+
+                                    <option>
+                                        Electric
+                                    </option>
+
+                                    <option>
+                                        Other
+                                    </option>
+
+                                    <option>
+                                        Not Applicable
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- CAPABILITIES -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:45px;"
+                        >
+                            03 • AGRICULTURAL CAPABILITIES
+                        </div>
+
+
+                        <div
+                            class="av-chip-row"
+                            style="margin-top:25px;"
+                        >
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="capability"
+                                    value="ploughing"
+                                >
+                                Ploughing
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="capability"
+                                    value="tilling"
+                                >
+                                Tilling
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="capability"
+                                    value="sowing"
+                                >
+                                Sowing
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="capability"
+                                    value="harvesting"
+                                >
+                                Harvesting
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="capability"
+                                    value="spraying"
+                                >
+                                Spraying
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="capability"
+                                    value="transport"
+                                >
+                                Farm Transport
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="capability"
+                                    value="irrigation"
+                                >
+                                Irrigation
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="capability"
+                                    value="threshing"
+                                >
+                                Threshing
+                            </label>
+
+
+                            <label class="av-chip">
+                                <input
+                                    type="checkbox"
+                                    name="capability"
+                                    value="processing"
+                                >
+                                Processing
+                            </label>
+
+
+                        </div>
+
+
+
+                        <!-- RENTAL -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:45px;"
+                        >
+                            04 • RENTAL CONFIGURATION
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-4"
+                            style="margin-top:25px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="hourlyRate"
+                                    class="av-label"
+                                >
+                                    Hourly Rate
+                                </label>
+
+                                <input
+                                    id="hourlyRate"
+                                    name="hourlyRate"
+                                    type="number"
+                                    class="av-input"
+                                    min="0"
+                                    placeholder="₹"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="dailyRate"
+                                    class="av-label"
+                                >
+                                    Daily Rate
+                                </label>
+
+                                <input
+                                    id="dailyRate"
+                                    name="dailyRate"
+                                    type="number"
+                                    class="av-input"
+                                    min="0"
+                                    placeholder="₹"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="weeklyRate"
+                                    class="av-label"
+                                >
+                                    Weekly Rate
+                                </label>
+
+                                <input
+                                    id="weeklyRate"
+                                    name="weeklyRate"
+                                    type="number"
+                                    class="av-input"
+                                    min="0"
+                                    placeholder="₹"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="taskRate"
+                                    class="av-label"
+                                >
+                                    Task / Acre Rate
+                                </label>
+
+                                <input
+                                    id="taskRate"
+                                    name="taskRate"
+                                    type="number"
+                                    class="av-input"
+                                    min="0"
+                                    placeholder="₹"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-chip-row"
+                            style="margin-top:30px;"
+                        >
+
+
+                            <label class="av-chip">
+
+                                <input
+                                    type="checkbox"
+                                    name="operatorIncluded"
+                                >
+
+                                👷 Operator available with equipment
+
+                            </label>
+
+
+                            <label class="av-chip">
+
+                                <input
+                                    type="checkbox"
+                                    name="deliveryAvailable"
+                                >
+
+                                🚚 Delivery available
+
+                            </label>
+
+
+                            <label class="av-chip">
+
+                                <input
+                                    type="checkbox"
+                                    name="pickupAvailable"
+                                >
+
+                                📦 Pickup available
+
+                            </label>
+
+
+                        </div>
+
+
+
+                        <!-- LOCATION -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:45px;"
+                        >
+                            05 • LOCATION & SERVICE AREA
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-3"
+                            style="margin-top:25px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="baseDistrict"
+                                    class="av-label"
+                                >
+                                    District
+                                </label>
+
+                                <input
+                                    id="baseDistrict"
+                                    name="district"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="District"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="baseTaluk"
+                                    class="av-label"
+                                >
+                                    Taluk
+                                </label>
+
+                                <input
+                                    id="baseTaluk"
+                                    name="taluk"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Taluk"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="baseVillage"
+                                    class="av-label"
+                                >
+                                    Village / Locality
+                                </label>
+
+                                <input
+                                    id="baseVillage"
+                                    name="village"
+                                    type="text"
+                                    class="av-input"
+                                    placeholder="Village / locality"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- CONDITION -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:45px;"
+                        >
+                            06 • CONDITION
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-3"
+                            style="margin-top:25px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="condition"
+                                    class="av-label"
+                                >
+                                    Current Condition
+                                </label>
+
+                                <select
+                                    id="condition"
+                                    name="condition"
+                                    class="av-input"
+                                >
+
+                                    <option>
+                                        Excellent
+                                    </option>
+
+                                    <option>
+                                        Good
+                                    </option>
+
+                                    <option>
+                                        Fair
+                                    </option>
+
+                                    <option>
+                                        Needs Inspection
+                                    </option>
+
+                                    <option>
+                                        Under Maintenance
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="usageHours"
+                                    class="av-label"
+                                >
+                                    Current Usage Hours
+                                </label>
+
+                                <input
+                                    id="usageHours"
+                                    name="usageHours"
+                                    type="number"
+                                    class="av-input"
+                                    min="0"
+                                    placeholder="Hours"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="minimumRental"
+                                    class="av-label"
+                                >
+                                    Minimum Rental Period
+                                </label>
+
+                                <select
+                                    id="minimumRental"
+                                    name="minimumRental"
+                                    class="av-input"
+                                >
+
+                                    <option>
+                                        No minimum
+                                    </option>
+
+                                    <option>
+                                        1 hour
+                                    </option>
+
+                                    <option>
+                                        Half day
+                                    </option>
+
+                                    <option>
+                                        1 day
+                                    </option>
+
+                                    <option>
+                                        Multiple days
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- IMAGES -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:45px;"
+                        >
+                            07 • EQUIPMENT PHOTOS
+                        </div>
+
+
+                        <div
+                            class="av-field"
+                            style="margin-top:25px;"
+                        >
+
+                            <label
+                                for="equipmentPhotos"
+                                class="av-label"
+                            >
+                                Upload Photos
+                            </label>
+
+                            <input
+                                id="equipmentPhotos"
+                                name="photos"
+                                type="file"
+                                class="av-input"
+                                accept="image/*"
+                                multiple
+                            >
+
+                            <p class="av-card-description">
+
+                                Add clear photographs of the equipment,
+                                identification information and relevant
+                                attachments.
+
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- DOCUMENTS -->
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-top:45px;"
+                        >
+                            08 • DOCUMENTS
+                        </div>
+
+
+                        <div
+                            class="av-grid av-grid-3"
+                            style="margin-top:25px;"
+                        >
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="ownershipDocument"
+                                    class="av-label"
+                                >
+                                    Ownership Document
+                                </label>
+
+                                <input
+                                    id="ownershipDocument"
+                                    name="ownershipDocument"
+                                    type="file"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="insuranceDocument"
+                                    class="av-label"
+                                >
+                                    Insurance
+                                </label>
+
+                                <input
+                                    id="insuranceDocument"
+                                    name="insuranceDocument"
+                                    type="file"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="inspectionDocument"
+                                    class="av-label"
+                                >
+                                    Inspection / Certificate
+                                </label>
+
+                                <input
+                                    id="inspectionDocument"
+                                    name="inspectionDocument"
+                                    type="file"
+                                    class="av-input"
+                                >
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- SUBMIT -->
+
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:flex-end;
+                                gap:15px;
+                                flex-wrap:wrap;
+                                margin-top:45px;
+                            "
+                        >
+
+                            <button
+                                type="reset"
+                                class="av-button av-button-secondary"
+                            >
+                                CLEAR
+                            </button>
+
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-primary"
+                            >
+                                REGISTER EQUIPMENT
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         AVAILABILITY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                AVAILABILITY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Control when your equipment can
+                <span class="av-gradient-text">
+                    work.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-grid av-grid-4">
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                AVAILABLE
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-availability-open
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Equipment open for bookings.
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                RESERVED
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-availability-reserved
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Upcoming accepted bookings.
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                BLOCKED
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-availability-blocked
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Owner-blocked periods.
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                MAINTENANCE
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-availability-maintenance
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Service periods.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:flex-end;
+                            margin-top:30px;
+                        "
+                    >
+
+                        <button
+                            type="button"
+                            class="av-button av-button-primary"
+                            data-equipment-action="availability-calendar"
+                        >
+                            OPEN AVAILABILITY CALENDAR
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         MAINTENANCE
+         ===================================================== -->
+
+    <section
+        class="av-section"
+        id="maintenance"
+    >
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                MAINTENANCE CENTER
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Keep every machine
+                <span class="av-gradient-text">
+                    rental-ready.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⏰
+                        </div>
+
+                        <div class="av-page-kicker">
+                            SERVICE DUE
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-maintenance-due
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Machines approaching scheduled service.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🔧
+                        </div>
+
+                        <div class="av-page-kicker">
+                            ACTIVE
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-maintenance-active
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Machines currently being serviced.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📋
+                        </div>
+
+                        <div class="av-page-kicker">
+                            INSPECTION
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-pending-inspections
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Returned equipment awaiting inspection.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📊
+                        </div>
+
+                        <div class="av-page-kicker">
+                            HISTORY
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-maintenance-history
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Recorded maintenance events.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:30px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        class="av-grid av-grid-3"
+                    >
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                SERVICE MODEL
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Usage-Based
+                            </h3>
+
+                            <p class="av-card-description">
+                                Maintenance intervals can be tied to
+                                operating hours or other equipment
+                                service rules.
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                RECORD
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Complete History
+                            </h3>
+
+                            <p class="av-card-description">
+                                Repairs, service events, costs and
+                                downtime remain associated with the
+                                equipment record.
+                            </p>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                FUTURE
+                            </div>
+
+                            <h3 class="av-card-title">
+                                Predictive Maintenance
+                            </h3>
+
+                            <p class="av-card-description">
+                                Future integrations can use equipment
+                                telemetry and usage patterns to
+                                predict service requirements.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DOCUMENT STATUS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                DOCUMENTS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Keep equipment records
+                <span class="av-gradient-text">
+                    valid.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ✓
+                        </div>
+
+                        <div class="av-page-kicker">
+                            VALID
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-documents-valid
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Documents currently valid.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⏳
+                        </div>
+
+                        <div class="av-page-kicker">
+                            EXPIRING
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-documents-expiring
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Documents approaching expiry.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⚠️
+                        </div>
+
+                        <div class="av-page-kicker">
+                            EXPIRED
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-documents-expired
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+                            Documents requiring attention.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         EQUIPMENT LIFECYCLE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                LIFECYCLE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Every equipment movement remains
+                <span class="av-gradient-text">
+                    traceable.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-8"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            01
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Registered
+                        </h3>
+
+                        <p class="av-card-description">
+                            Equipment enters the owner's inventory.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            02
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Verified
+                        </h3>
+
+                        <p class="av-card-description">
+                            Relevant information and documentation
+                            are reviewed.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            03
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Available
+                        </h3>
+
+                        <p class="av-card-description">
+                            Equipment can be discovered and booked.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            04
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Reserved
+                        </h3>
+
+                        <p class="av-card-description">
+                            Capacity is held for an accepted rental.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            05
+                        </div>
+
+                        <h3 class="av-card-title">
+                            In Transit
+                        </h3>
+
+                        <p class="av-card-description">
+                            Equipment moves toward the work location.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            06
+                        </div>
+
+                        <h3 class="av-card-title">
+                            In Use
+                        </h3>
+
+                        <p class="av-card-description">
+                            Equipment performs agricultural work.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            07
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Inspection
+                        </h3>
+
+                        <p class="av-card-description">
+                            Returned equipment is checked.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            08
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Ready Again
+                        </h3>
+
+                        <p class="av-card-description">
+                            Equipment returns to available or
+                            maintenance status.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CROSS-MODULE CONNECTION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                AGRIVISION NETWORK
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Your equipment connects to the rest of the
+                <span class="av-gradient-text">
+                    agricultural ecosystem.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:42px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-grid av-grid-5">
+
+
+                        <div>
+
+                            <div class="av-role-icon">
+                                🌾
+                            </div>
+
+                            <div class="av-page-kicker">
+                                FARMER
+                            </div>
+
+                            <strong>
+                                Requirement
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-role-icon">
+                                🚜
+                            </div>
+
+                            <div class="av-page-kicker">
+                                OWNER
+                            </div>
+
+                            <strong>
+                                Equipment
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-role-icon">
+                                👷
+                            </div>
+
+                            <div class="av-page-kicker">
+                                OPERATOR
+                            </div>
+
+                            <strong>
+                                Skill
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-role-icon">
+                                🚚
+                            </div>
+
+                            <div class="av-page-kicker">
+                                LOGISTICS
+                            </div>
+
+                            <strong>
+                                Movement
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-role-icon">
+                                💰
+                            </div>
+
+                            <div class="av-page-kicker">
+                                FINANCE
+                            </div>
+
+                            <strong>
+                                Settlement
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:65px 30px;
+                    "
+                >
+
+                    <div class="av-page-kicker">
+                        EQUIPMENT OWNER
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        Equipment management is only one part
+                        of the complete
+                        <span class="av-gradient-text">
+                            rental lifecycle.
+                        </span>
+
+                    </h2>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="equipment-owner-dashboard.html"
+                            class="av-button av-button-secondary"
+                        >
+                            PORTAL
+                        </a>
+
+
+                        <a
+                            href="equipment-owner-bookings.html"
+                            class="av-button av-button-primary"
+                        >
+                            NEXT: BOOKINGS & OPERATIONS
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="av-footer">
+
+    <div class="av-footer-inner">
+
+
+        <div class="av-footer-brand">
+            AGRIVISION KARNATAKA
+        </div>
+
+
+        <div class="av-footer-note">
+
+            EQUIPMENT MANAGEMENT
+
+            <span>
+                •
+            </span>
+
+            INVENTORY
+
+            <span>
+                •
+            </span>
+
+            AVAILABILITY
+
+            <span>
+                •
+            </span>
+
+            MAINTENANCE
+
+            <span>
+                •
+            </span>
+
+            DOCUMENTS
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SHARED CORE JAVASCRIPT
+     ========================================================= -->
+
+<script
+    src="core.js"
+    defer
+></script>
+
+
+
+<!-- =========================================================
+     EQUIPMENT PAGE LOGIC
+     ========================================================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+
+    /* =====================================================
+       YEAR
+       ===================================================== */
+
+    document
+        .querySelectorAll("[data-year]")
+        .forEach(element => {
+
+            element.textContent =
+                new Date().getFullYear();
+
+        });
+
+
+
+    /* =====================================================
+       INVENTORY FILTERING
+       ===================================================== */
+
+    const searchInput =
+        document.querySelector(
+            "[data-equipment-filter-search]"
+        );
+
+    const categoryInput =
+        document.querySelector(
+            "[data-equipment-filter-category]"
+        );
+
+    const statusInput =
+        document.querySelector(
+            "[data-equipment-filter-status]"
+        );
+
+    const equipmentItems =
+        document.querySelectorAll(
+            "[data-equipment-item]"
+        );
+
+
+    function filterEquipment() {
+
+        const search =
+            (searchInput?.value || "")
+                .trim()
+                .toLowerCase();
+
+        const category =
+            categoryInput?.value || "all";
+
+        const status =
+            statusInput?.value || "all";
+
+
+        equipmentItems.forEach(item => {
+
+            const text =
+                item.textContent.toLowerCase();
+
+            const itemCategory =
+                item.dataset.category || "";
+
+            const itemStatus =
+                item.dataset.status || "";
+
+
+            const matchesSearch =
+                !search ||
+                text.includes(search);
+
+            const matchesCategory =
+                category === "all" ||
+                itemCategory === category;
+
+            const matchesStatus =
+                status === "all" ||
+                itemStatus === status;
+
+
+            item.style.display =
+                matchesSearch &&
+                matchesCategory &&
+                matchesStatus
+                    ? ""
+                    : "none";
+
+        });
+
+    }
+
+
+    searchInput?.addEventListener(
+        "input",
+        filterEquipment
+    );
+
+
+    categoryInput?.addEventListener(
+        "change",
+        filterEquipment
+    );
+
+
+    statusInput?.addEventListener(
+        "change",
+        filterEquipment
+    );
+
+
+
+    /* =====================================================
+       ADD EQUIPMENT FORM
+       ===================================================== */
+
+    const equipmentForm =
+        document.querySelector(
+            "[data-equipment-form]"
+        );
+
+
+    equipmentForm?.addEventListener(
+        "submit",
+        event => {
+
+            event.preventDefault();
+
+
+            const formData =
+                new FormData(equipmentForm);
+
+
+            const equipmentName =
+                formData.get("equipmentName");
+
+
+            if (!equipmentName) {
+
+                alert(
+                    "Please enter the equipment name."
+                );
+
+                return;
+
+            }
+
+
+            /*
+             * Prototype behaviour.
+             *
+             * Backend integration should replace this with:
+             *
+             * POST /api/equipment
+             *
+             * followed by verification,
+             * document processing and inventory creation.
+             */
+
+            alert(
+                "Equipment registration submitted successfully."
+            );
+
+
+            equipmentForm.reset();
+
+        }
+    );
+
+
+
+    /* =====================================================
+       EQUIPMENT ACTIONS
+       ===================================================== */
+
+    document
+        .querySelectorAll(
+            "[data-equipment-action]"
+        )
+        .forEach(button => {
+
+
+            button.addEventListener(
+                "click",
+                () => {
+
+
+                    const action =
+                        button.dataset.equipmentAction;
+
+                    const equipmentId =
+                        button.dataset.equipmentId || "";
+
+
+                    if (
+                        action === "details"
+                    ) {
+
+                        alert(
+                            "Opening equipment details for " +
+                            equipmentId
+                        );
+
+                    }
+
+
+                    else if (
+                        action === "edit"
+                    ) {
+
+                        alert(
+                            "Opening equipment editor for " +
+                            equipmentId
+                        );
+
+                    }
+
+
+                    else if (
+                        action === "maintenance"
+                    ) {
+
+                        document
+                            .querySelector("#maintenance")
+                            ?.scrollIntoView({
+                                behavior: "smooth"
+                            });
+
+                    }
+
+
+                    else if (
+                        action === "availability" ||
+                        action === "availability-calendar"
+                    ) {
+
+                        alert(
+                            "Opening equipment availability calendar."
+                        );
+
+                    }
+
+                }
+            );
+
+        });
+
+
+
+    /* =====================================================
+       SIMPLE DEMO METRICS
+       ===================================================== */
+
+    const demoValues = {
+
+        "[data-equipment-total]": "3",
+        "[data-equipment-available]": "1",
+        "[data-equipment-reserved]": "1",
+        "[data-equipment-in-use]": "0",
+        "[data-equipment-transit]": "0",
+        "[data-equipment-maintenance]": "1",
+
+        "[data-availability-open]": "1",
+        "[data-availability-reserved]": "1",
+        "[data-availability-blocked]": "0",
+        "[data-availability-maintenance]": "1",
+
+        "[data-maintenance-due]": "1",
+        "[data-maintenance-active]": "1",
+        "[data-pending-inspections]": "0",
+        "[data-maintenance-history]": "—",
+
+        "[data-documents-valid]": "—",
+        "[data-documents-expiring]": "—",
+        "[data-documents-expired]": "—"
+
+    };
+
+
+    Object
+        .entries(demoValues)
+        .forEach(([selector, value]) => {
+
+            document
+                .querySelectorAll(selector)
+                .forEach(element => {
+
+                    element.textContent =
+                        value;
+
+                });
+
+        });
+
+
+});
+
+</script>
+
+
+</body>
+
+</html>

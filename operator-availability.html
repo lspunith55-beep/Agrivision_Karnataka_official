@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka — Machine Operator Availability"
+    >
+
+    <title>
+        Operator Availability | AgriVision Karnataka
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+
+    <style>
+
+        body[data-page="operator-availability"] {
+            overflow-x: hidden;
+        }
+
+        body[data-page="operator-availability"] .av-page {
+            width: min(94%, 1500px);
+            margin-inline: auto;
+        }
+
+        body[data-page="operator-availability"] .av-section {
+            padding-top: clamp(70px, 8vw, 110px);
+            padding-bottom: clamp(70px, 8vw, 110px);
+        }
+
+        body[data-page="operator-availability"] .av-page-title {
+            font-size: clamp(3rem, 5.5vw, 5.8rem);
+            line-height: 1;
+            letter-spacing: -0.045em;
+        }
+
+        body[data-page="operator-availability"] .av-section-title {
+            font-size: clamp(2rem, 3.5vw, 3.8rem);
+            line-height: 1.08;
+        }
+
+        body[data-page="operator-availability"]
+        .av-section-description {
+
+            max-width: 780px;
+
+            font-size:
+                clamp(1rem, 1.12vw, 1.18rem);
+
+            line-height: 1.8;
+
+        }
+
+        body[data-page="operator-availability"] .av-card-body {
+            padding: clamp(28px, 3vw, 44px);
+        }
+
+
+        /* HERO */
+
+        .availability-hero {
+            min-height: 570px;
+            display: flex;
+            align-items: center;
+            padding-top: 120px !important;
+        }
+
+        .availability-hero-copy {
+            max-width: 820px;
+        }
+
+        .availability-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 32px;
+        }
+
+
+        /* STATUS */
+
+        .availability-status-card {
+            min-height: 460px;
+        }
+
+        .availability-status-display {
+            padding: 35px 0;
+            text-align: center;
+        }
+
+        .availability-status-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 24px;
+            display: grid;
+            place-items: center;
+            border-radius: 25px;
+            font-size: 3rem;
+        }
+
+        .availability-status-display h2 {
+            font-size: clamp(2rem, 3vw, 3.2rem);
+            margin-bottom: 18px;
+        }
+
+
+        /* STATUS OPTIONS */
+
+        .availability-options {
+            display: grid;
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .availability-option {
+            min-height: 260px;
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.10);
+            background: rgba(255,255,255,0.035);
+            text-align: left;
+            cursor: pointer;
+            color: inherit;
+            transition:
+                transform .25s ease,
+                border-color .25s ease,
+                background .25s ease;
+        }
+
+        .availability-option:hover {
+            transform: translateY(-5px);
+        }
+
+        .availability-option.active {
+            border-color: rgba(255,255,255,0.35);
+            background: rgba(255,255,255,0.08);
+        }
+
+        .availability-option-icon {
+            font-size: 2.4rem;
+            margin-bottom: 20px;
+        }
+
+        .availability-option h3 {
+            font-size: 1.35rem;
+            margin-bottom: 10px;
+        }
+
+        .availability-option p {
+            margin: 0;
+        }
+
+
+        /* CALENDAR */
+
+        .availability-calendar {
+            display: grid;
+            grid-template-columns:
+                repeat(7, minmax(0, 1fr));
+            gap: 10px;
+        }
+
+        .calendar-day {
+            min-height: 115px;
+            padding: 15px;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.09);
+            background: rgba(255,255,255,0.035);
+        }
+
+        .calendar-day strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .calendar-day small {
+            display: block;
+            line-height: 1.45;
+        }
+
+        .calendar-day.available {
+            background: rgba(255,255,255,0.08);
+        }
+
+        .calendar-day.busy {
+            opacity: .6;
+        }
+
+
+        /* INFO */
+
+        .availability-info {
+            min-height: 280px;
+        }
+
+
+        /* RESPONSIVE */
+
+        @media (max-width: 950px) {
+
+            .availability-options {
+                grid-template-columns: 1fr;
+            }
+
+            .availability-calendar {
+                grid-template-columns:
+                    repeat(4, minmax(0, 1fr));
+            }
+
+        }
+
+        @media (max-width: 700px) {
+
+            .availability-hero {
+                min-height: auto;
+                padding-top: 110px !important;
+            }
+
+            .availability-calendar {
+                grid-template-columns:
+                    repeat(2, minmax(0, 1fr));
+            }
+
+            .availability-actions {
+                flex-direction: column;
+            }
+
+            .availability-actions .av-button {
+                width: 100%;
+                justify-content: center;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+
+            body[data-page="operator-availability"]
+            .av-card-body {
+                padding: 23px;
+            }
+
+            .availability-calendar {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body
+    data-page="operator-availability"
+    data-role="machine-operator"
+>
+
+
+    <!-- BACKGROUND -->
+
+    <div class="background-image" aria-hidden="true"></div>
+    <div class="ambient-glow" aria-hidden="true"></div>
+    <div class="particle-field" aria-hidden="true"></div>
+    <div class="fireflies" aria-hidden="true"></div>
+    <div class="floating-leaves" aria-hidden="true"></div>
+    <div class="cursor-stars" aria-hidden="true"></div>
+    <div class="mouse-glow" aria-hidden="true"></div>
+
+
+
+    <!-- HEADER -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <a
+                href="dashboard.html"
+                class="av-brand"
+            >
+
+                <div class="av-brand-mark">
+                    🌾
+                </div>
+
+                <div class="av-brand-copy">
+
+                    <div class="av-brand-name">
+                        AGRIVISION
+                    </div>
+
+                    <div class="av-brand-region">
+                        KARNATAKA
+                    </div>
+
+                </div>
+
+            </a>
+
+
+            <div class="av-header-page">
+
+                <span class="av-header-divider"></span>
+
+                <div>
+
+                    <div class="av-page-kicker">
+                        MACHINE OPERATOR
+                    </div>
+
+                    <div class="av-header-page-title">
+                        AVAILABILITY
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="av-search">
+
+                <span class="av-search-icon">
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search AgriVision..."
+                    aria-label="Search AgriVision"
+                    data-global-search
+                >
+
+                <span class="av-search-key">
+                    ENTER
+                </span>
+
+            </div>
+
+
+            <div class="av-header-actions">
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    data-modal-open="notificationsModal"
+                    aria-label="Notifications"
+                >
+                    🔔
+                </button>
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    data-modal-open="profileModal"
+                    aria-label="Profile"
+                >
+                    👤
+                </button>
+
+                <a
+                    href="machine-operator-portal.html"
+                    class="av-button av-button-secondary"
+                >
+                    Operator Portal
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+
+    <main class="av-page">
+
+
+        <!-- HERO -->
+
+        <section
+            class="av-section av-reveal availability-hero"
+        >
+
+            <div class="availability-hero-copy">
+
+
+                <div class="av-page-kicker">
+
+                    <span class="av-kicker-dot"></span>
+
+                    OPERATOR AVAILABILITY
+
+                </div>
+
+
+                <h1 class="av-page-title">
+
+                    Be Ready
+
+                    <span class="av-gradient-text">
+                        When the Field Needs You
+                    </span>
+
+                </h1>
+
+
+                <p class="av-section-description">
+
+                    Your availability is an important part of
+                    the AgriVision machine-operation workflow.
+                    It helps coordinate agricultural field work
+                    with the operators and equipment required
+                    to perform it.
+
+                </p>
+
+
+                <div class="availability-actions">
+
+                    <a
+                        href="machine-operator-portal.html"
+                        class="av-button av-button-secondary"
+                    >
+                        ← Operator Portal
+                    </a>
+
+                    <a
+                        href="operator-assignments.html"
+                        class="av-button av-button-primary"
+                    >
+                        ⚙️ View Assignments
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- CURRENT STATUS -->
+
+        <section
+            class="av-section av-reveal"
+            id="current-status"
+        >
+
+            <div class="av-grid av-grid-2">
+
+
+                <div
+                    class="av-card av-3d availability-status-card"
+                >
+
+                    <div class="av-card-glow"></div>
+
+                    <div class="av-card-body">
+
+
+                        <div class="av-page-kicker">
+                            CURRENT STATUS
+                        </div>
+
+
+                        <div class="availability-status-display">
+
+                            <div class="availability-status-icon">
+                                📅
+                            </div>
+
+
+                            <h2>
+                                Your Current
+                                <span class="av-gradient-text">
+                                    Availability
+                                </span>
+                            </h2>
+
+
+                            <div
+                                id="currentStatus"
+                                class="av-status av-status-active"
+                            >
+
+                                <span></span>
+
+                                AVAILABLE
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="av-card">
+
+                    <div class="av-card-body">
+
+
+                        <div class="av-page-kicker">
+                            OPERATOR
+                        </div>
+
+
+                        <h3>
+                            Why Availability Matters
+                        </h3>
+
+
+                        <p>
+
+                            Machine operations depend on
+                            coordination between agricultural
+                            requirements, suitable equipment
+                            and available operators.
+
+                        </p>
+
+
+                        <p>
+
+                            Keeping your status accurate helps
+                            the AgriVision ecosystem understand
+                            when you can participate in field
+                            operations.
+
+                        </p>
+
+
+                        <div class="av-chip-row">
+
+                            <span class="av-chip">
+                                FIELD SERVICE
+                            </span>
+
+                            <span class="av-chip">
+                                MACHINE OPERATION
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STATUS OPTIONS -->
+
+        <section
+            class="av-section av-reveal"
+            id="status-options"
+        >
+
+            <div class="av-section-heading">
+
+                <div>
+
+                    <div class="av-page-kicker">
+                        AVAILABILITY STATUS
+                    </div>
+
+                    <h2 class="av-section-title">
+
+                        Choose Your
+
+                        <span class="av-gradient-text">
+                            Work Status
+                        </span>
+
+                    </h2>
+
+                    <p class="av-section-description">
+
+                        Select the status that best represents
+                        your current ability to participate in
+                        machine-operation work.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="availability-options">
+
+
+                <button
+                    type="button"
+                    class="availability-option"
+                    data-status="available"
+                >
+
+                    <div class="availability-option-icon">
+                        🟢
+                    </div>
+
+                    <h3>
+                        Available
+                    </h3>
+
+                    <p>
+                        Ready to receive or perform suitable
+                        agricultural machine-operation work.
+                    </p>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="availability-option"
+                    data-status="busy"
+                >
+
+                    <div class="availability-option-icon">
+                        🟡
+                    </div>
+
+                    <h3>
+                        Busy
+                    </h3>
+
+                    <p>
+                        Currently occupied with another
+                        operation or field activity.
+                    </p>
+
+                </button>
+
+
+
+                <button
+                    type="button"
+                    class="availability-option"
+                    data-status="unavailable"
+                >
+
+                    <div class="availability-option-icon">
+                        🔴
+                    </div>
+
+                    <h3>
+                        Unavailable
+                    </h3>
+
+                    <p>
+                        Not currently available for new
+                        machine-operation work.
+                    </p>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SCHEDULE -->
+
+        <section
+            class="av-section av-reveal"
+            id="schedule"
+        >
+
+            <div class="av-section-heading">
+
+                <div>
+
+                    <div class="av-page-kicker">
+                        FIELD SERVICE PLANNING
+                    </div>
+
+                    <h2 class="av-section-title">
+
+                        Availability
+
+                        <span class="av-gradient-text">
+                            Schedule
+                        </span>
+
+                    </h2>
+
+                    <p class="av-section-description">
+
+                        A simple planning view for coordinating
+                        operator availability with agricultural
+                        field operations.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="av-card">
+
+                <div class="av-card-body">
+
+                    <div
+                        id="availabilityCalendar"
+                        class="availability-calendar"
+                    >
+
+                        <!-- Filled by JavaScript -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- QUOTE -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="av-card">
+
+                <div
+                    style="
+                        min-height:280px;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        text-align:center;
+                        padding:40px;
+                    "
+                >
+
+                    <div style="max-width:900px;">
+
+                        <div
+                            class="av-page-kicker"
+                            style="margin-bottom:20px;"
+                        >
+                            AGRIVISION PRINCIPLE
+                        </div>
+
+
+                        <blockquote
+                            style="
+                                margin:0;
+                                font-size:clamp(
+                                    1.6rem,
+                                    3vw,
+                                    2.8rem
+                                );
+                                line-height:1.4;
+                                font-weight:700;
+                            "
+                        >
+
+                            “When people, machines and timing
+                            come together, agricultural work
+                            becomes more connected.”
+
+                        </blockquote>
+
+
+                        <div
+                            style="
+                                margin-top:22px;
+                                font-size:.85rem;
+                                font-weight:800;
+                                letter-spacing:.12em;
+                            "
+                        >
+                            AGRIVISION KARNATAKA
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- INFORMATION -->
+
+        <section
+            class="av-section av-reveal"
+        >
+
+            <div class="av-grid av-grid-2">
+
+
+                <article class="av-card">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            AVAILABILITY
+                        </div>
+
+                        <h3>
+                            Keep Your Status Accurate
+                        </h3>
+
+                        <p>
+
+                            Your availability is useful only
+                            when it reflects your actual ability
+                            to participate in machine-operation
+                            work.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="av-card">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            NEXT STEP
+                        </div>
+
+                        <h3>
+                            Check Your Assignments
+                        </h3>
+
+                        <p>
+
+                            When your availability allows field
+                            work, visit the assignments module to
+                            review machine-operation requests
+                            connected to your account.
+
+                        </p>
+
+
+                        <a
+                            href="operator-assignments.html"
+                            class="av-button av-button-primary"
+                            style="margin-top:20px;"
+                        >
+                            View Assignments →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- PROFILE MODAL -->
+
+    <div
+        id="profileModal"
+        class="av-modal-backdrop"
+        aria-hidden="true"
+    >
+
+        <div
+            class="av-modal"
+            role="dialog"
+            aria-modal="true"
+        >
+
+            <div class="av-modal-header">
+
+                <div>
+
+                    <div class="av-page-kicker">
+                        ACCOUNT
+                    </div>
+
+                    <h2>
+                        Operator Profile
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="av-modal-close"
+                    data-modal-close
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="av-modal-body">
+
+                <div class="av-profile-row">
+
+                    <div class="av-profile-avatar">
+                        ⚙️
+                    </div>
+
+                    <div>
+
+                        <h3 data-user-name>
+                            AgriVision Member
+                        </h3>
+
+                        <p data-user-role>
+                            Machine Operator
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="av-profile-details">
+
+                    <div class="av-profile-detail">
+
+                        <span>
+                            NAME
+                        </span>
+
+                        <strong data-user-name>
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="av-profile-detail">
+
+                        <span>
+                            EMAIL
+                        </span>
+
+                        <strong data-user-email>
+                            —
+                        </strong>
+
+                    </div>
+
+
+                    <div class="av-profile-detail">
+
+                        <span>
+                            ROLE
+                        </span>
+
+                        <strong data-user-role>
+                            Machine Operator
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="av-modal-footer">
+
+                <button
+                    type="button"
+                    class="av-button av-button-secondary"
+                    data-modal-close
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- NOTIFICATIONS -->
+
+    <div
+        id="notificationsModal"
+        class="av-modal-backdrop"
+        aria-hidden="true"
+    >
+
+        <div
+            class="av-modal"
+            role="dialog"
+            aria-modal="true"
+        >
+
+            <div class="av-modal-header">
+
+                <div>
+
+                    <div class="av-page-kicker">
+                        UPDATES
+                    </div>
+
+                    <h2>
+                        Notifications
+                    </h2>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="av-modal-close"
+                    data-modal-close
+                    aria-label="Close"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <div class="av-modal-body">
+
+                <div
+                    id="operatorNotifications"
+                    class="av-list"
+                >
+
+                    <div class="av-empty-state">
+
+                        <div class="av-empty-icon">
+                            🔔
+                        </div>
+
+                        <h3>
+                            No notifications
+                        </h3>
+
+                        <p>
+                            New AgriVision updates will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="av-modal-footer">
+
+                <button
+                    type="button"
+                    class="av-button av-button-secondary"
+                    data-modal-close
+                >
+                    Close
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="av-footer">
+
+        <div class="av-footer-inner">
+
+            <div>
+
+                <strong>
+                    AGRIVISION KARNATAKA
+                </strong>
+
+                <span>
+                    Operator Availability
+                </span>
+
+            </div>
+
+
+            <div>
+
+                ©
+                <span data-av-year>
+                    2026
+                </span>
+
+                AgriVision Karnataka
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- CORE JS -->
+
+    <script src="core.js"></script>
+
+
+
+    <!-- PAGE JS -->
+
+    <script>
+
+        "use strict";
+
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
+
+
+                /* CORE */
+
+                if (
+                    typeof AgriVisionCore !==
+                    "undefined"
+                ) {
+
+                    const methods = [
+
+                        "populateUser",
+                        "initializeModals",
+                        "initializeSearch",
+                        "initializeReveal",
+                        "initialize3D",
+                        "initializeRipple",
+                        "initializeMouseGlow",
+                        "initializeCursorStars",
+                        "createFireflies",
+                        "createLeaves",
+                        "createParticles",
+                        "initializeParallax",
+                        "initializeNotifications",
+                        "loadActivity"
+
+                    ];
+
+
+                    methods.forEach(
+                        function (method) {
+
+                            if (
+                                typeof AgriVisionCore[method] ===
+                                "function"
+                            ) {
+
+                                AgriVisionCore[method]();
+
+                            }
+
+                        }
+                    );
+
+                }
+
+
+
+                /* YEAR */
+
+                document
+                    .querySelectorAll(
+                        "[data-av-year]"
+                    )
+                    .forEach(
+                        function (element) {
+
+                            element.textContent =
+                                new Date()
+                                    .getFullYear();
+
+                        }
+                    );
+
+
+
+                /* DATA HELPERS */
+
+                function getUser() {
+
+                    if (
+                        typeof AgriVisionCore ===
+                        "undefined"
+                    ) {
+
+                        return {};
+
+                    }
+
+
+                    if (
+                        typeof AgriVisionCore.getUser !==
+                        "function"
+                    ) {
+
+                        return {};
+
+                    }
+
+
+                    return (
+                        AgriVisionCore.getUser() ||
+                        {}
+                    );
+
+                }
+
+
+
+                /* CURRENT STATUS */
+
+                function readStatus() {
+
+                    const user =
+                        getUser();
+
+
+                    let status =
+                        user.availability;
+
+
+                    if (
+                        status === undefined ||
+                        status === null ||
+                        status === ""
+                    ) {
+
+                        status =
+                            user.available;
+
+                    }
+
+
+                    if (
+                        typeof status ===
+                        "boolean"
+                    ) {
+
+                        return status
+                            ? "available"
+                            : "unavailable";
+
+                    }
+
+
+                    if (!status) {
+
+                        return "available";
+
+                    }
+
+
+                    return String(status)
+                        .trim()
+                        .toLowerCase();
+
+                }
+
+
+
+                function statusText(status) {
+
+                    if (
+                        status === "available"
+                    ) {
+
+                        return "AVAILABLE";
+
+                    }
+
+
+                    if (
+                        status === "busy"
+                    ) {
+
+                        return "BUSY";
+
+                    }
+
+
+                    if (
+                        status === "unavailable"
+                    ) {
+
+                        return "UNAVAILABLE";
+
+                    }
+
+
+                    return String(status)
+                        .toUpperCase();
+
+                }
+
+
+
+                /* STATUS DISPLAY */
+
+                function renderStatus() {
+
+                    const status =
+                        readStatus();
+
+
+                    const display =
+                        document.getElementById(
+                            "currentStatus"
+                        );
+
+
+                    if (display) {
+
+                        display.innerHTML = `
+
+                            <span></span>
+
+                            ${statusText(status)}
+
+                        `;
+
+                    }
+
+
+                    document
+                        .querySelectorAll(
+                            ".availability-option"
+                        )
+                        .forEach(
+                            function (button) {
+
+                                button.classList.toggle(
+                                    "active",
+                                    button.dataset.status ===
+                                    status
+                                );
+
+                            }
+                        );
+
+                }
+
+
+
+                /* STATUS SAVE */
+
+                function saveStatus(status) {
+
+                    if (
+                        typeof AgriVisionCore ===
+                        "undefined"
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    if (
+                        typeof AgriVisionCore.getUser !==
+                        "function"
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    const user =
+                        AgriVisionCore.getUser();
+
+
+                    if (!user) {
+
+                        return;
+
+                    }
+
+
+                    user.availability =
+                        status;
+
+
+                    try {
+
+                        localStorage.setItem(
+                            "agrivision_user",
+                            JSON.stringify(user)
+                        );
+
+                    }
+
+                    catch (error) {
+
+                        console.warn(
+                            "Unable to save availability.",
+                            error
+                        );
+
+                    }
+
+
+                    renderStatus();
+
+                }
+
+
+
+                /* BUTTONS */
+
+                document
+                    .querySelectorAll(
+                        ".availability-option"
+                    )
+                    .forEach(
+                        function (button) {
+
+                            button.addEventListener(
+                                "click",
+                                function () {
+
+                                    saveStatus(
+                                        button.dataset.status
+                                    );
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+
+                /* CALENDAR */
+
+                function renderCalendar() {
+
+                    const container =
+                        document.getElementById(
+                            "availabilityCalendar"
+                        );
+
+
+                    if (!container) {
+
+                        return;
+
+                    }
+
+
+                    const days = [
+
+                        ["MON", "Available"],
+                        ["TUE", "Available"],
+                        ["WED", "Available"],
+                        ["THU", "Available"],
+                        ["FRI", "Available"],
+                        ["SAT", "Planned"],
+                        ["SUN", "Rest"]
+
+                    ];
+
+
+                    container.innerHTML = "";
+
+
+                    days.forEach(
+                        function (day) {
+
+                            const element =
+                                document.createElement(
+                                    "div"
+                                );
+
+
+                            element.className =
+                                "calendar-day";
+
+
+                            element.innerHTML = `
+
+                                <strong>
+                                    ${day[0]}
+                                </strong>
+
+                                <small>
+                                    ${day[1]}
+                                </small>
+
+                            `;
+
+
+                            container.appendChild(
+                                element
+                            );
+
+                        }
+                    );
+
+                }
+
+
+
+                renderStatus();
+
+                renderCalendar();
+
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

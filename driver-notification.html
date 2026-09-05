@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Driver Notifications"
+    >
+
+    <title>
+        Driver Notifications | AgriVision Karnataka
+    </title>
+
+    <!-- =====================================================
+         SHARED CORE CSS
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     GLOBAL AGRIVISION VISUAL ENVIRONMENT
+     ========================================================= -->
+
+<div
+    class="background-image"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-one"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-two"
+    aria-hidden="true"
+></div>
+
+<div
+    class="mouse-glow"
+    aria-hidden="true"
+></div>
+
+<div
+    class="particle-field"
+    aria-hidden="true"
+></div>
+
+<div
+    class="fireflies"
+    aria-hidden="true"
+></div>
+
+<div
+    class="floating-leaves"
+    aria-hidden="true"
+></div>
+
+<div
+    class="cursor-stars"
+    aria-hidden="true"
+></div>
+
+
+
+<!-- =========================================================
+     APPLICATION
+     ========================================================= -->
+
+<div class="av-app">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <a
+                href="driver-portal.html"
+                class="av-brand"
+            >
+
+                <span
+                    class="av-status-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="av-brand-name">
+                    AGRIVISION
+                </span>
+
+                <span class="av-brand-region">
+                    KARNATAKA
+                </span>
+
+            </a>
+
+
+
+            <label
+                class="av-search"
+                aria-label="Search notifications"
+            >
+
+                <span
+                    class="av-search-icon"
+                    aria-hidden="true"
+                >
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search notifications, shipments, alerts..."
+                    autocomplete="off"
+                    data-global-search
+                >
+
+            </label>
+
+
+
+            <div class="av-header-actions">
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    aria-label="Notifications"
+                    data-notification
+                >
+                    🔔
+                </button>
+
+
+                <button
+                    type="button"
+                    class="av-icon-button"
+                    aria-label="Driver profile"
+                    data-modal-open="driverNotificationsProfileModal"
+                >
+                    👤
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="av-welcome">
+
+        <div class="av-page av-welcome-content">
+
+
+            <div class="av-eyebrow">
+
+                <span>
+                    DRIVER CORE
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    NOTIFICATION CENTER
+                </span>
+
+            </div>
+
+
+
+            <h1 class="av-welcome-title">
+
+                The Right Information,
+                <span class="av-gradient-text">
+                    At The Right Moment.
+                </span>
+
+            </h1>
+
+
+
+            <p class="av-welcome-description">
+
+                Agricultural logistics is a connected system.
+
+                A Buyer accepts an order.
+
+                A Farmer prepares produce.
+
+                Logistics creates a movement.
+
+                A Driver accepts the shipment.
+
+                Smart Route may identify another compatible
+                movement.
+
+                A payment may change status.
+
+                A document may approach expiry.
+
+                Notifications keep the Driver connected to these
+                changes so important information does not remain
+                hidden inside another part of the platform.
+
+            </p>
+
+
+
+            <div
+                class="av-chip-row"
+                style="margin-top:32px;"
+            >
+
+                <span
+                    class="av-status av-status-active"
+                    data-notification-status
+                >
+                    ● NOTIFICATIONS ACTIVE
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    DRIVER:
+
+                    <strong
+                        data-user-name
+                        style="margin-left:5px;"
+                    >
+                        Driver
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    DRIVER ID:
+
+                    <strong
+                        data-user-id
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NOTIFICATION SUMMARY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                NOTIFICATION OVERVIEW
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                See what needs your attention
+                <span class="av-gradient-text">
+                    first.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-4"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            UNREAD
+                        </div>
+
+                        <div class="av-role-icon">
+                            🔔
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-unread-notifications
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+
+                            Notifications waiting for your
+                            attention.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            SHIPMENTS
+                        </div>
+
+                        <div class="av-role-icon">
+                            🚚
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-shipment-notifications
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+
+                            Updates connected to transportation
+                            movements.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            SMART ROUTE
+                        </div>
+
+                        <div class="av-role-icon">
+                            🧭
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-smart-route-notifications
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+
+                            Compatible route and shared-load
+                            opportunities.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-page-kicker">
+                            IMPORTANT
+                        </div>
+
+                        <div class="av-role-icon">
+                            ⚠️
+                        </div>
+
+                        <div
+                            class="av-metric"
+                            data-important-notifications
+                        >
+                            —
+                        </div>
+
+                        <p class="av-card-description">
+
+                            Alerts that may require an action.
+
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PRIORITY ALERT
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                PRIORITY ALERTS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Some messages deserve attention
+                <span class="av-gradient-text">
+                    immediately.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="driver-priority-notifications">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                ⚡
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No priority alerts
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Important Driver alerts will appear
+                                here when available.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SHIPMENT NOTIFICATIONS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                SHIPMENT UPDATES
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Stay connected to the movement from
+                <span class="av-gradient-text">
+                    pickup to delivery.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Shipment notifications can connect operational
+                changes to the Driver's current work.
+
+                This may include new assignment information,
+                acceptance changes, pickup updates, delivery
+                changes, exceptions or completion events.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="driver-shipment-notifications">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                🚚
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No shipment notifications
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Shipment-related updates will appear
+                                here.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SMART ROUTE NOTIFICATIONS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                SMART ROUTE OPPORTUNITIES
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                An available vehicle can become an available
+                <span class="av-gradient-text">
+                    opportunity.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                When Smart Route identifies a potentially compatible
+                movement, the Driver should receive enough
+                information to evaluate it responsibly.
+
+                The notification should not simply say
+                "new order."
+
+                It should communicate the relevant operational
+                context, such as the compatible corridor,
+                available capacity, timing, additional movement
+                information and the proposed economic allocation.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="driver-smart-route-notifications">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                🧭
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No Smart Route opportunities
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Compatible shared-load opportunities
+                                will appear here when available.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SMART ROUTE EXAMPLE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div class="av-card-body">
+
+
+                    <div class="av-page-kicker">
+                        SMART ROUTE EXAMPLE
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        One vehicle.
+                        Two compatible orders.
+                        <span class="av-gradient-text">
+                            One optimized movement.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="av-section-description">
+
+                        Consider a vehicle already moving on a
+                        Bangalore → Chitradurga corridor with an
+                        original transportation value of ₹100.
+
+                        Suppose another compatible order exists
+                        from Tumkur → Hiriyur with a value of ₹50,
+                        and the vehicle has suitable remaining
+                        capacity.
+
+                        If Smart Route determines that the two
+                        movements can responsibly share the vehicle,
+                        the platform can calculate a transparent
+                        allocation according to its pricing rules.
+
+                        For example, if the resulting agreed
+                        allocation is ₹65 for one movement and ₹35
+                        for the other, the Driver should see the
+                        proposed allocation before accepting the
+                        additional movement.
+
+                    </p>
+
+
+
+                    <div
+                        class="av-grid av-grid-3"
+                        style="margin-top:35px;"
+                    >
+
+
+                        <div class="av-chip">
+
+                            📍 Bangalore → Chitradurga
+
+                            <strong
+                                style="margin-left:8px;"
+                            >
+                                ₹100
+
+                            </strong>
+
+                        </div>
+
+
+                        <div class="av-chip">
+
+                            📍 Tumkur → Hiriyur
+
+                            <strong
+                                style="margin-left:8px;"
+                            >
+                                ₹50
+
+                            </strong>
+
+                        </div>
+
+
+                        <div class="av-chip">
+
+                            🧭 Proposed Allocation
+
+                            <strong
+                                style="margin-left:8px;"
+                            >
+                                ₹65 + ₹35
+
+                            </strong>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="driver-smart-route.html"
+                            class="av-button av-button-primary"
+                        >
+                            OPEN SMART ROUTE
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PAYMENT NOTIFICATIONS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                PAYMENT ALERTS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Know when your work changes the
+                <span class="av-gradient-text">
+                    financial record.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="driver-payment-notifications">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                💰
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No payment notifications
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Payment status changes and important
+                                earning updates will appear here.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         DOCUMENT NOTIFICATIONS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                DOCUMENT ALERTS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Don't let paperwork become an unexpected
+                <span class="av-gradient-text">
+                    roadblock.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="driver-document-notifications">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                📄
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No document alerts
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Verification, document and expiry
+                                notifications will appear here.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SYSTEM NOTIFICATIONS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                SYSTEM UPDATES
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Platform changes should never feel
+                <span class="av-gradient-text">
+                    invisible.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="driver-system-notifications">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                ⚙️
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No system updates
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Important platform announcements and
+                                system updates will appear here.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FILTERS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                NOTIFICATION FILTERS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Focus only on what you need
+                <span class="av-gradient-text">
+                    right now.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="driver-notification-filter"
+                    >
+
+
+                        <div class="av-grid av-grid-4">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="notificationType"
+                                    class="av-label"
+                                >
+                                    Type
+                                </label>
+
+                                <select
+                                    id="notificationType"
+                                    name="type"
+                                    class="av-input"
+                                >
+
+                                    <option value="All">
+                                        All
+                                    </option>
+
+                                    <option value="Shipment">
+                                        Shipment
+                                    </option>
+
+                                    <option value="Smart Route">
+                                        Smart Route
+                                    </option>
+
+                                    <option value="Payment">
+                                        Payment
+                                    </option>
+
+                                    <option value="Document">
+                                        Document
+                                    </option>
+
+                                    <option value="System">
+                                        System
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="notificationRead"
+                                    class="av-label"
+                                >
+                                    Status
+                                </label>
+
+                                <select
+                                    id="notificationRead"
+                                    name="status"
+                                    class="av-input"
+                                >
+
+                                    <option value="All">
+                                        All
+                                    </option>
+
+                                    <option value="Unread">
+                                        Unread
+                                    </option>
+
+                                    <option value="Read">
+                                        Read
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="notificationPriority"
+                                    class="av-label"
+                                >
+                                    Priority
+                                </label>
+
+                                <select
+                                    id="notificationPriority"
+                                    name="priority"
+                                    class="av-input"
+                                >
+
+                                    <option value="All">
+                                        All
+                                    </option>
+
+                                    <option value="Normal">
+                                        Normal
+                                    </option>
+
+                                    <option value="Important">
+                                        Important
+                                    </option>
+
+                                    <option value="Urgent">
+                                        Urgent
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <div
+                                style="
+                                    display:flex;
+                                    align-items:flex-end;
+                                "
+                            >
+
+                                <button
+                                    type="submit"
+                                    class="av-button av-button-primary"
+                                    style="width:100%;"
+                                >
+
+                                    APPLY FILTER
+
+                                    <span>
+                                        🔎
+                                    </span>
+
+                                </button>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NOTIFICATION HISTORY
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                NOTIFICATION HISTORY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Keep the full trail of what the platform has
+                <span class="av-gradient-text">
+                    communicated.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="driver-notification-history">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                🕘
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                Notification history is empty
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Your notification history will appear
+                                here.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NOTIFICATION PRINCIPLE
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:75px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        AGRIVISION PRINCIPLE
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        Information is useful only when it reaches
+                        the right person at the
+                        <span class="av-gradient-text">
+                            right time.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="av-section-description"
+                        style="
+                            max-width:850px;
+                            margin-left:auto;
+                            margin-right:auto;
+                        "
+                    >
+
+                        Notifications are therefore not just
+                        decorative messages.
+
+                        They are part of the operational workflow.
+
+                        A new shipment can create an opportunity.
+
+                        A route change can require a decision.
+
+                        A payment update can provide clarity.
+
+                        A document warning can prevent a future
+                        interruption.
+
+                        A completed delivery can close a movement.
+
+                        The notification center keeps those events
+                        visible without forcing the Driver to
+                        constantly search through every module.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:65px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        DRIVER WORKSPACE
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        Notification checked.
+                        <span class="av-gradient-text">
+                            What's next?
+                        </span>
+
+                    </h2>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="driver-deliveries.html"
+                            class="av-button av-button-primary"
+                        >
+                            FIND DELIVERIES
+                        </a>
+
+
+                        <a
+                            href="driver-smart-route.html"
+                            class="av-button av-button-secondary"
+                        >
+                            SMART ROUTE
+                        </a>
+
+
+                        <a
+                            href="driver-trip.html"
+                            class="av-button av-button-secondary"
+                        >
+                            CURRENT TRIP
+                        </a>
+
+
+                        <a
+                            href="driver-earnings.html"
+                            class="av-button av-button-secondary"
+                        >
+                            EARNINGS
+                        </a>
+
+
+                        <a
+                            href="driver-support.html"
+                            class="av-button av-button-secondary"
+                        >
+                            SUPPORT
+                        </a>
+
+
+                        <a
+                            href="driver-portal.html"
+                            class="av-button av-button-secondary"
+                        >
+                            DRIVER PORTAL
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="av-footer">
+
+    <div class="av-footer-inner">
+
+
+        <div class="av-footer-brand">
+            AGRIVISION KARNATAKA
+        </div>
+
+
+        <div class="av-footer-note">
+
+            DRIVER NOTIFICATIONS
+
+            <span>
+                •
+            </span>
+
+            SMART LOGISTICS
+
+            <span>
+                •
+            </span>
+
+            REAL-TIME AWARENESS
+
+            <span>
+                •
+            </span>
+
+            <span data-year>
+                2026
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     DRIVER PROFILE MODAL
+     ========================================================= -->
+
+<div
+    class="av-modal-backdrop"
+    id="driverNotificationsProfileModal"
+    aria-hidden="true"
+>
+
+    <div
+        class="av-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="driverNotificationsProfileTitle"
+    >
+
+
+        <div class="av-modal-header">
+
+
+            <div>
+
+                <div class="av-page-kicker">
+                    DRIVER ACCOUNT
+                </div>
+
+                <h2
+                    id="driverNotificationsProfileTitle"
+                    class="av-title"
+                >
+                    Driver Profile
+                </h2>
+
+            </div>
+
+
+            <button
+                type="button"
+                class="av-icon-button"
+                data-modal-close
+                aria-label="Close profile"
+            >
+                ×
+            </button>
+
+
+        </div>
+
+
+
+        <div class="av-modal-body">
+
+
+            <div class="av-chip-row">
+
+
+                <span class="av-chip">
+
+                    Name:
+
+                    <strong
+                        data-user-name
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    Driver ID:
+
+                    <strong
+                        data-user-id
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    Role:
+
+                    <strong
+                        data-user-role
+                        style="margin-left:5px;"
+                    >
+                        Driver
+                    </strong>
+
+                </span>
+
+
+
+                <span class="av-chip">
+
+                    Unread:
+
+                    <strong
+                        data-unread-notifications
+                        style="margin-left:5px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="av-modal-footer">
+
+            <a
+                href="driver-deliveries.html"
+                class="av-button av-button-primary"
+            >
+                DELIVERIES
+            </a>
+
+
+            <button
+                type="button"
+                class="av-button av-button-secondary"
+                data-modal-close
+            >
+                CLOSE
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================================
+     SHARED CORE JAVASCRIPT
+     ========================================================= -->
+
+<script
+    src="core.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

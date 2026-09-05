@@ -1,0 +1,1825 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka Labour Attendance and Work Progress"
+    >
+
+    <title>
+        Labour Attendance | AgriVision Karnataka
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="core.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     GLOBAL AGRIVISION ENVIRONMENT
+     ========================================================= -->
+
+<div class="background-image" aria-hidden="true"></div>
+
+<div
+    class="ambient-glow ambient-glow-one"
+    aria-hidden="true"
+></div>
+
+<div
+    class="ambient-glow ambient-glow-two"
+    aria-hidden="true"
+></div>
+
+<div
+    class="mouse-glow"
+    aria-hidden="true"
+></div>
+
+<div
+    class="particle-field"
+    aria-hidden="true"
+></div>
+
+<div
+    class="fireflies"
+    aria-hidden="true"
+></div>
+
+<div
+    class="floating-leaves"
+    aria-hidden="true"
+></div>
+
+<div
+    class="cursor-stars"
+    aria-hidden="true"
+></div>
+
+
+
+<!-- =========================================================
+     APPLICATION
+     ========================================================= -->
+
+<div class="av-app">
+
+
+    <!-- =====================================================
+         HEADER
+         ===================================================== -->
+
+    <header class="av-header">
+
+        <div class="av-header-inner">
+
+
+            <a
+                href="labour-dashboard.html"
+                class="av-brand"
+            >
+
+                <span
+                    class="av-status-dot"
+                    aria-hidden="true"
+                ></span>
+
+                <span class="av-brand-name">
+                    AGRIVISION
+                </span>
+
+                <span class="av-brand-region">
+                    KARNATAKA
+                </span>
+
+            </a>
+
+
+
+            <label
+                class="av-search"
+                aria-label="Search work"
+            >
+
+                <span
+                    class="av-search-icon"
+                    aria-hidden="true"
+                >
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    placeholder="Search jobs, farms, work..."
+                    autocomplete="off"
+                    data-global-search
+                >
+
+            </label>
+
+
+
+            <div class="av-header-actions">
+
+                <a
+                    href="labour-notifications.html"
+                    class="av-icon-button"
+                    aria-label="Notifications"
+                >
+                    🔔
+                </a>
+
+                <a
+                    href="labour-profile.html"
+                    class="av-icon-button"
+                    aria-label="Profile"
+                >
+                    👤
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+         ===================================================== -->
+
+    <section class="av-welcome">
+
+        <div class="av-page av-welcome-content">
+
+
+            <div class="av-eyebrow">
+
+                <span>
+                    LABOUR
+                </span>
+
+                <span>
+                    •
+                </span>
+
+                <span>
+                    ATTENDANCE & WORK PROGRESS
+                </span>
+
+            </div>
+
+
+
+            <h1 class="av-welcome-title">
+
+                Show up.
+                <span class="av-gradient-text">
+                    Do the work.
+                </span>
+                Record the result.
+
+            </h1>
+
+
+
+            <p class="av-welcome-description">
+
+                Attendance is the bridge between an accepted job and
+                completed agricultural work.
+
+                This workspace brings your confirmed assignment,
+                arrival, check-in, work progress, quantity completed,
+                breaks, check-out and completion confirmation into
+                one workflow.
+
+                The objective is simple:
+
+                create a clear record of what was agreed, what
+                actually happened and what should move into the
+                earnings system.
+
+            </p>
+
+
+
+            <div
+                class="av-chip-row"
+                style="margin-top:30px;"
+            >
+
+                <span class="av-status av-status-info">
+
+                    JOB:
+
+                    <strong
+                        data-active-job-id
+                        style="margin-left:6px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-info">
+
+                    STATUS:
+
+                    <strong
+                        data-work-status
+                        style="margin-left:6px;"
+                    >
+                        —
+                    </strong>
+
+                </span>
+
+
+                <span class="av-status av-status-active">
+
+                    ● LIVE WORK RECORD
+
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ACTIVE ASSIGNMENT
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                ACTIVE ASSIGNMENT
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Your current work,
+                <span class="av-gradient-text">
+                    at a glance.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-grid av-grid-3">
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                WORK
+                            </div>
+
+                            <h3
+                                class="av-card-title"
+                                data-active-job-title
+                            >
+                                Agricultural Assignment
+                            </h3>
+
+                            <p
+                                class="av-card-description"
+                                data-active-job-description
+                            >
+                                Your confirmed work assignment will
+                                appear here.
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                FARM
+                            </div>
+
+                            <h3
+                                class="av-card-title"
+                                data-active-farm-name
+                            >
+                                —
+                            </h3>
+
+                            <p
+                                class="av-card-description"
+                                data-active-farm-location
+                            >
+                                —
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                AGREED PAYMENT
+                            </div>
+
+                            <h3
+                                class="av-card-title"
+                                data-active-job-payment
+                            >
+                                —
+                            </h3>
+
+                            <p
+                                class="av-card-description"
+                                data-active-job-payment-model
+                            >
+                                —
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="margin-top:30px;"
+                    >
+
+                        <span class="av-chip">
+                            📅
+                            <strong data-active-job-date>
+                                —
+                            </strong>
+                        </span>
+
+                        <span class="av-chip">
+                            ⏰
+                            <strong data-active-job-time>
+                                —
+                            </strong>
+                        </span>
+
+                        <span class="av-chip">
+                            👥
+                            <strong data-active-job-workers>
+                                —
+                            </strong>
+                        </span>
+
+                        <span class="av-chip">
+                            📍
+                            <strong data-active-job-distance>
+                                —
+                            </strong>
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WORKFLOW STATUS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                WORKFLOW STATUS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Every stage leaves a clear
+                <span class="av-gradient-text">
+                    record.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-6"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ✓
+                        </div>
+
+                        <div class="av-page-kicker">
+                            01
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Accepted
+                        </h3>
+
+                        <p class="av-card-description">
+                            Job accepted by Labour.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📍
+                        </div>
+
+                        <div class="av-page-kicker">
+                            02
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Arrived
+                        </h3>
+
+                        <p class="av-card-description">
+                            Labour reaches the work location.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🟢
+                        </div>
+
+                        <div class="av-page-kicker">
+                            03
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Checked In
+                        </h3>
+
+                        <p class="av-card-description">
+                            Attendance begins.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🌾
+                        </div>
+
+                        <div class="av-page-kicker">
+                            04
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Working
+                        </h3>
+
+                        <p class="av-card-description">
+                            Agricultural operation is underway.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📊
+                        </div>
+
+                        <div class="av-page-kicker">
+                            05
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Progress
+                        </h3>
+
+                        <p class="av-card-description">
+                            Work quantity or progress is recorded.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            🏁
+                        </div>
+
+                        <div class="av-page-kicker">
+                            06
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Completed
+                        </h3>
+
+                        <p class="av-card-description">
+                            Work is submitted for confirmation.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CHECK-IN
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                ATTENDANCE
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Start the workday with a
+                <span class="av-gradient-text">
+                    clear check-in.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-grid av-grid-3">
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                ARRIVAL
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-arrival-status
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Arrival status.
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                CHECK-IN
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-checkin-time
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Recorded check-in time.
+                            </p>
+
+                        </div>
+
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                DURATION
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-work-duration
+                            >
+                                —
+                            </div>
+
+                            <p class="av-card-description">
+                                Current recorded work duration.
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <button
+                            type="button"
+                            class="av-button av-button-primary"
+                            data-attendance-action="check-in"
+                        >
+                            📍 CHECK IN
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-attendance-action="arrival"
+                        >
+                            ARRIVED AT LOCATION
+                        </button>
+
+                    </div>
+
+
+                    <p
+                        class="av-card-description"
+                        style="
+                            text-align:center;
+                            margin-top:20px;
+                        "
+                    >
+
+                        Attendance records should only be created
+                        through the platform's supported check-in
+                        process.
+
+                    </p>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         LIVE WORK STATUS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                LIVE WORK
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Record what is happening while the work is
+                <span class="av-gradient-text">
+                    happening.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-grid av-grid-4">
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                STATUS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-live-work-status
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                STARTED
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-work-start-time
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                PROGRESS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-work-progress
+                            >
+                                0%
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                WORKERS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-active-worker-count
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <button
+                            type="button"
+                            class="av-button av-button-primary"
+                            data-attendance-action="start-work"
+                        >
+                            ▶ START WORK
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-attendance-action="pause-work"
+                        >
+                            ⏸ PAUSE
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-attendance-action="resume-work"
+                        >
+                            ▶ RESUME
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WORK PROGRESS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                WORK PROGRESS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Turn work completed into a measurable
+                <span class="av-gradient-text">
+                    record.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                Different agricultural jobs need different ways of
+                measuring progress.
+
+                A daily job may depend primarily on attendance and
+                completion.
+
+                A quantity-based job may depend on kilograms,
+                crates, bags, rows, acres or another agreed unit.
+
+                The record should follow the payment model agreed
+                when the job was created.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <form
+                        data-ag-operation-form
+                        data-operation="labour-work-progress"
+                    >
+
+
+                        <div class="av-grid av-grid-3">
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="progressPercent"
+                                    class="av-label"
+                                >
+                                    Overall Progress
+                                </label>
+
+                                <input
+                                    id="progressPercent"
+                                    name="progress"
+                                    type="number"
+                                    min="0"
+                                    max="100"
+                                    class="av-input"
+                                    placeholder="0 - 100"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="completedQuantity"
+                                    class="av-label"
+                                >
+                                    Completed Quantity
+                                </label>
+
+                                <input
+                                    id="completedQuantity"
+                                    name="quantity"
+                                    type="number"
+                                    min="0"
+                                    step="0.01"
+                                    class="av-input"
+                                    placeholder="Enter quantity"
+                                >
+
+                            </div>
+
+
+
+                            <div class="av-field">
+
+                                <label
+                                    for="quantityUnit"
+                                    class="av-label"
+                                >
+                                    Unit
+                                </label>
+
+                                <select
+                                    id="quantityUnit"
+                                    name="unit"
+                                    class="av-input"
+                                >
+
+                                    <option value="">
+                                        Select Unit
+                                    </option>
+
+                                    <option value="kg">
+                                        Kilograms
+                                    </option>
+
+                                    <option value="quintal">
+                                        Quintals
+                                    </option>
+
+                                    <option value="bags">
+                                        Bags
+                                    </option>
+
+                                    <option value="crates">
+                                        Crates
+                                    </option>
+
+                                    <option value="acres">
+                                        Acres
+                                    </option>
+
+                                    <option value="rows">
+                                        Rows
+                                    </option>
+
+                                    <option value="tasks">
+                                        Tasks
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div
+                            class="av-field"
+                            style="margin-top:25px;"
+                        >
+
+                            <label
+                                for="progressNotes"
+                                class="av-label"
+                            >
+                                Work Notes
+                            </label>
+
+                            <textarea
+                                id="progressNotes"
+                                name="notes"
+                                class="av-input"
+                                rows="4"
+                                placeholder="Describe completed work or important observations..."
+                            ></textarea>
+
+                        </div>
+
+
+
+                        <div
+                            style="
+                                display:flex;
+                                justify-content:flex-end;
+                                margin-top:28px;
+                            "
+                        >
+
+                            <button
+                                type="submit"
+                                class="av-button av-button-primary"
+                            >
+                                SAVE WORK PROGRESS
+                            </button>
+
+                        </div>
+
+
+                    </form>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         BREAK / INTERRUPTION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                WORKDAY EVENTS
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Keep interruptions visible instead of leaving
+                <span class="av-gradient-text">
+                    unexplained gaps.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-grid av-grid-3"
+                style="margin-top:42px;"
+            >
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ☕
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Break
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Record a normal work break where the
+                            workflow requires it.
+
+                        </p>
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-attendance-action="break"
+                            style="margin-top:22px;"
+                        >
+                            RECORD BREAK
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            ⚠️
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Issue
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Record an operational issue affecting
+                            the work.
+
+                        </p>
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-attendance-action="issue"
+                            style="margin-top:22px;"
+                        >
+                            REPORT ISSUE
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <article class="av-card av-reveal">
+
+                    <div class="av-card-body">
+
+                        <div class="av-role-icon">
+                            📩
+                        </div>
+
+                        <h3 class="av-card-title">
+                            Request Help
+                        </h3>
+
+                        <p class="av-card-description">
+
+                            Escalate a work or coordination problem
+                            to the appropriate party.
+
+                        </p>
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-attendance-action="support"
+                            style="margin-top:22px;"
+                        >
+                            REQUEST SUPPORT
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CHECK-OUT
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                END OF WORK
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Finish the workday with a complete
+                <span class="av-gradient-text">
+                    record.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div class="av-grid av-grid-4">
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                CHECK-IN
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-checkin-time
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                CHECK-OUT
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-checkout-time
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                DURATION
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-final-duration
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                PROGRESS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-final-progress
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div
+                        class="av-field"
+                        style="margin-top:30px;"
+                    >
+
+                        <label
+                            for="completionNotes"
+                            class="av-label"
+                        >
+                            Completion Notes
+                        </label>
+
+                        <textarea
+                            id="completionNotes"
+                            class="av-input"
+                            rows="4"
+                            placeholder="Add any final work notes..."
+                        ></textarea>
+
+                    </div>
+
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:30px;
+                        "
+                    >
+
+                        <button
+                            type="button"
+                            class="av-button av-button-primary"
+                            data-attendance-action="check-out"
+                        >
+                            CHECK OUT
+                        </button>
+
+
+                        <button
+                            type="button"
+                            class="av-button av-button-secondary"
+                            data-attendance-action="submit-completion"
+                        >
+                            SUBMIT COMPLETION
+                        </button>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FARMER CONFIRMATION
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                COMPLETION CONFIRMATION
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Completed work moves to the Farmer for
+                <span class="av-gradient-text">
+                    confirmation.
+                </span>
+
+            </h2>
+
+
+            <p class="av-section-description">
+
+                The completion record can contain the assignment,
+                attendance, progress, agreed payment model and
+                submitted work information.
+
+                The Farmer-side confirmation step provides an
+                opportunity to identify discrepancies before the
+                record proceeds into the earnings workflow.
+
+            </p>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div
+                        class="av-grid av-grid-4"
+                    >
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                SUBMITTED
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-completion-submitted
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                FARMER REVIEW
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-farmer-confirmation-status
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                PAYMENT STATUS
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-payment-status
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="av-page-kicker">
+                                RECORD
+                            </div>
+
+                            <div
+                                class="av-metric"
+                                data-work-record-id
+                            >
+                                —
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         WORK HISTORY EVENTS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-page-kicker">
+                ATTENDANCE HISTORY
+            </div>
+
+
+            <h2 class="av-section-title">
+
+                Every workday becomes part of your
+                <span class="av-gradient-text">
+                    professional record.
+                </span>
+
+            </h2>
+
+
+
+            <div
+                class="av-card av-reveal"
+                style="margin-top:40px;"
+            >
+
+                <div class="av-card-body">
+
+
+                    <div data-ag-list="labour-attendance-history">
+
+
+                        <div class="av-empty">
+
+                            <div class="av-empty-icon">
+                                📋
+                            </div>
+
+                            <h3 class="av-empty-title">
+                                No attendance history yet
+                            </h3>
+
+                            <p class="av-empty-text">
+
+                                Completed workdays and attendance
+                                records will appear here.
+
+                            </p>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         INTEGRATION WITH EARNINGS
+         ===================================================== -->
+
+    <section class="av-section">
+
+        <div class="av-page">
+
+
+            <div class="av-card av-reveal">
+
+                <div
+                    class="av-card-body"
+                    style="
+                        text-align:center;
+                        padding:75px 35px;
+                    "
+                >
+
+
+                    <div class="av-page-kicker">
+                        WORK → EARNINGS
+                    </div>
+
+
+                    <h2 class="av-section-title">
+
+                        A completed job should create a clear path
+                        to your
+                        <span class="av-gradient-text">
+                            earnings record.
+                        </span>
+
+                    </h2>
+
+
+                    <p
+                        class="av-section-description"
+                        style="
+                            max-width:850px;
+                            margin-left:auto;
+                            margin-right:auto;
+                        "
+                    >
+
+                        Attendance establishes participation.
+
+                        Work progress records what was completed.
+
+                        Farmer confirmation validates the completion
+                        record.
+
+                        The agreed payment model then determines what
+                        should move into the earnings and payment
+                        workflow.
+
+                        This keeps the operational record connected
+                        to the financial record rather than treating
+                        them as unrelated systems.
+
+                    </p>
+
+
+                    <div
+                        class="av-chip-row"
+                        style="
+                            justify-content:center;
+                            margin-top:35px;
+                        "
+                    >
+
+                        <a
+                            href="labour-earnings.html"
+                            class="av-button av-button-primary"
+                        >
+                            OPEN EARNINGS
+                        </a>
+
+
+                        <a
+                            href="labour-jobs.html"
+                            class="av-button av-button-secondary"
+                        >
+                            FIND MORE WORK
+                        </a>
+
+
+                        <a
+                            href="labour-dashboard.html"
+                            class="av-button av-button-secondary"
+                        >
+                            BACK TO PORTAL
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+</div>
+
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="av-footer">
+
+    <div class="av-footer-inner">
+
+
+        <div class="av-footer-brand">
+            AGRIVISION KARNATAKA
+        </div>
+
+
+        <div class="av-footer-note">
+
+            LABOUR ATTENDANCE
+
+            <span>
+                •
+            </span>
+
+            WORK PROGRESS
+
+            <span>
+                •
+            </span>
+
+            COMPLETION
+
+            <span>
+                •
+            </span>
+
+            <span data-year>
+                2026
+            </span>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     SHARED CORE JAVASCRIPT
+     ========================================================= -->
+
+<script
+    src="core.js"
+    defer
+></script>
+
+
+</body>
+
+</html>

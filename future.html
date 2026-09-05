@@ -1,0 +1,6703 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="AgriVision Karnataka — Future Systems"
+    >
+
+    <title>Future Systems | AgriVision Karnataka</title>
+
+    <!-- =========================================================
+         SHARED PROJECT FONT
+         ========================================================= -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- =========================================================
+         FONT AWESOME
+         ========================================================= -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <!-- =========================================================
+         SHARED AGRIVISION CSS
+         ========================================================= -->
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <!-- =========================================================
+         PAGE-SPECIFIC FUTURE SYSTEMS DESIGN
+         ========================================================= -->
+    <style>
+
+        /* =====================================================
+           FUTURE PAGE — DESIGN TOKENS
+           No background overlay is used anywhere.
+           ===================================================== */
+
+        body.future-page {
+
+            --future-green: #00ff87;
+            --future-green-2: #00c878;
+
+            --future-cyan: #00e5ff;
+            --future-blue: #48a8ff;
+
+            --future-violet: #a970ff;
+            --future-purple: #d66bff;
+
+            --future-pink: #ff5fcf;
+            --future-coral: #ff6b5f;
+            --future-orange: #ff873d;
+
+            --future-lime: #b8ff3d;
+            --future-red: #ff526f;
+
+            --future-white: #ffffff;
+            --future-ivory: #f7fff9;
+
+            --future-soft: #d7eee1;
+            --future-muted: #b9d8c6;
+
+            --future-panel:
+                rgba(3, 25, 17, 0.46);
+
+            --future-panel-light:
+                rgba(6, 39, 26, 0.34);
+
+            --future-border:
+                rgba(125, 255, 194, 0.34);
+
+            --future-border-strong:
+                rgba(0, 255, 135, 0.72);
+
+            --future-radius:
+                26px;
+
+            --future-shadow:
+                0 24px 80px rgba(0, 0, 0, .25);
+
+            --future-glow-green:
+                0 0 12px rgba(0,255,135,.55),
+                0 0 35px rgba(0,255,135,.18);
+
+            --future-glow-cyan:
+                0 0 12px rgba(0,229,255,.55),
+                0 0 35px rgba(0,229,255,.18);
+
+            --future-glow-violet:
+                0 0 12px rgba(169,112,255,.55),
+                0 0 35px rgba(169,112,255,.18);
+
+            --future-glow-pink:
+                0 0 12px rgba(255,95,207,.55),
+                0 0 35px rgba(255,95,207,.18);
+
+            overflow-x: hidden;
+        }
+
+
+        /* =====================================================
+           CRITICAL:
+           REMOVE ANY FUTURE PAGE OVERLAY
+           ===================================================== */
+
+        body.future-page .background-overlay,
+        body.future-page .hero-overlay,
+        body.future-page .future-overlay,
+        body.future-page::before,
+        body.future-page::after {
+
+            background: transparent !important;
+            background-color: transparent !important;
+        }
+
+
+        /* =====================================================
+           PAGE ROOT
+           ===================================================== */
+
+        .future-page-main {
+
+            position: relative;
+
+            width: 100%;
+
+            overflow: hidden;
+        }
+
+
+        /* =====================================================
+           KEEP SHARED BACKGROUND VISIBLE
+           ===================================================== */
+
+        .future-page .background-image {
+
+            opacity: 1 !important;
+
+            filter:
+                saturate(1.12)
+                contrast(1.02)
+                brightness(1.02) !important;
+
+            z-index: -10 !important;
+        }
+
+
+        /* =====================================================
+           DECORATIVE LIGHT — DOES NOT COVER CONTENT
+           ===================================================== */
+
+        .future-light-orb {
+
+            position: absolute;
+
+            width: 280px;
+            height: 280px;
+
+            border-radius: 50%;
+
+            pointer-events: none;
+
+            filter: blur(75px);
+
+            opacity: .13;
+
+            z-index: -2;
+
+            animation:
+                futureOrbFloat
+                11s
+                ease-in-out
+                infinite;
+        }
+
+        .future-light-orb.green {
+
+            background: var(--future-green);
+
+            top: 8%;
+            left: -120px;
+        }
+
+        .future-light-orb.cyan {
+
+            background: var(--future-cyan);
+
+            top: 30%;
+            right: -130px;
+
+            animation-delay: -3s;
+        }
+
+        .future-light-orb.violet {
+
+            background: var(--future-violet);
+
+            top: 64%;
+            left: -130px;
+
+            animation-delay: -6s;
+        }
+
+        .future-light-orb.pink {
+
+            background: var(--future-pink);
+
+            bottom: 4%;
+            right: -120px;
+
+            animation-delay: -8s;
+        }
+
+
+        @keyframes futureOrbFloat {
+
+            0%,
+            100% {
+                transform:
+                    translate3d(0,0,0)
+                    scale(1);
+            }
+
+            50% {
+                transform:
+                    translate3d(25px,-35px,0)
+                    scale(1.12);
+            }
+        }
+
+
+        /* =====================================================
+           CONTAINER
+           ===================================================== */
+
+        .future-container {
+
+            width: min(1240px, calc(100% - 40px));
+
+            margin-inline: auto;
+
+            position: relative;
+        }
+
+
+        /* =====================================================
+           HERO
+           ===================================================== */
+
+        .future-hero {
+
+            position: relative;
+
+            min-height: 94vh;
+
+            display: grid;
+
+            align-items: center;
+
+            padding:
+                150px
+                0
+                100px;
+        }
+
+
+        .future-hero-layout {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.1fr)
+                minmax(360px, .9fr);
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+
+        .future-kicker {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 10px;
+
+            padding:
+                10px
+                15px;
+
+            border:
+                1px solid
+                rgba(0,255,135,.58);
+
+            border-radius: 999px;
+
+            background:
+                rgba(2,25,16,.35);
+
+            color:
+                var(--future-green);
+
+            font-size:
+                .72rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                .18em;
+
+            text-transform:
+                uppercase;
+
+            box-shadow:
+                var(--future-glow-green);
+
+            backdrop-filter:
+                blur(10px);
+        }
+
+
+        .future-kicker i {
+
+            animation:
+                futurePulse
+                2s
+                ease-in-out
+                infinite;
+        }
+
+
+        @keyframes futurePulse {
+
+            0%,
+            100% {
+                transform:
+                    scale(1);
+
+                opacity:
+                    .7;
+            }
+
+            50% {
+                transform:
+                    scale(1.25);
+
+                opacity:
+                    1;
+            }
+        }
+
+
+        .future-hero h1 {
+
+            margin:
+                22px
+                0
+                22px;
+
+            font-family:
+                "Manrope",
+                sans-serif;
+
+            font-size:
+                clamp(3.5rem, 8vw, 8.7rem);
+
+            line-height:
+                .87;
+
+            letter-spacing:
+                -.075em;
+
+            font-weight:
+                800;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    var(--future-green),
+                    var(--future-cyan),
+                    var(--future-blue),
+                    var(--future-violet),
+                    var(--future-pink),
+                    var(--future-coral),
+                    var(--future-lime)
+                );
+
+            background-size:
+                300% 300%;
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+
+            animation:
+                futureSpectrum
+                9s
+                ease
+                infinite;
+
+            filter:
+                drop-shadow(
+                    0 0 20px
+                    rgba(0,255,135,.18)
+                );
+        }
+
+
+        @keyframes futureSpectrum {
+
+            0% {
+                background-position:
+                    0% 50%;
+            }
+
+            50% {
+                background-position:
+                    100% 50%;
+            }
+
+            100% {
+                background-position:
+                    0% 50%;
+            }
+        }
+
+
+        .future-hero-description {
+
+            max-width:
+                700px;
+
+            color:
+                var(--future-ivory);
+
+            font-size:
+                clamp(1rem, 1.45vw, 1.22rem);
+
+            line-height:
+                1.85;
+
+            font-weight:
+                500;
+
+            text-shadow:
+                0 2px 18px rgba(0,0,0,.8);
+        }
+
+
+        .future-hero-description strong {
+
+            color:
+                var(--future-cyan);
+
+            text-shadow:
+                0 0 12px
+                rgba(0,229,255,.55);
+        }
+
+
+        /* =====================================================
+           HERO ACTIONS
+           ===================================================== */
+
+        .future-actions {
+
+            display:
+                flex;
+
+            flex-wrap:
+                wrap;
+
+            gap:
+                14px;
+
+            margin-top:
+                32px;
+        }
+
+
+        .future-button {
+
+            display:
+                inline-flex;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            gap:
+                11px;
+
+            min-height:
+                52px;
+
+            padding:
+                0 22px;
+
+            border:
+                1px solid
+                rgba(0,255,135,.68);
+
+            border-radius:
+                14px;
+
+            color:
+                var(--future-white);
+
+            text-decoration:
+                none;
+
+            background:
+                rgba(3,28,18,.42);
+
+            backdrop-filter:
+                blur(12px);
+
+            box-shadow:
+                var(--future-glow-green);
+
+            transition:
+                transform .3s ease,
+                border-color .3s ease,
+                box-shadow .3s ease,
+                background .3s ease;
+        }
+
+
+        .future-button:hover {
+
+            transform:
+                translateY(-4px);
+
+            border-color:
+                var(--future-cyan);
+
+            box-shadow:
+                var(--future-glow-cyan);
+
+            background:
+                rgba(0,229,255,.08);
+        }
+
+
+        .future-button.secondary {
+
+            border-color:
+                rgba(169,112,255,.7);
+
+            box-shadow:
+                var(--future-glow-violet);
+        }
+
+
+        /* =====================================================
+           HERO SYSTEM ORBIT
+           ===================================================== */
+
+        .future-orbit {
+
+            position:
+                relative;
+
+            width:
+                min(430px, 80vw);
+
+            aspect-ratio:
+                1;
+
+            margin:
+                auto;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+        }
+
+
+        .future-orbit-ring {
+
+            position:
+                absolute;
+
+            inset:
+                8%;
+
+            border:
+                1px
+                solid
+                rgba(0,255,135,.34);
+
+            border-radius:
+                50%;
+
+            box-shadow:
+                0 0 40px rgba(0,255,135,.1);
+
+            animation:
+                orbitSpin
+                24s
+                linear
+                infinite;
+        }
+
+
+        .future-orbit-ring.two {
+
+            inset:
+                19%;
+
+            border-color:
+                rgba(0,229,255,.38);
+
+            animation-duration:
+                17s;
+
+            animation-direction:
+                reverse;
+        }
+
+
+        .future-orbit-ring.three {
+
+            inset:
+                31%;
+
+            border-color:
+                rgba(214,107,255,.38);
+
+            animation-duration:
+                12s;
+        }
+
+
+        @keyframes orbitSpin {
+
+            from {
+                transform:
+                    rotate(0deg);
+            }
+
+            to {
+                transform:
+                    rotate(360deg);
+            }
+        }
+
+
+        .future-orbit-core {
+
+            position:
+                relative;
+
+            width:
+                155px;
+
+            aspect-ratio:
+                1;
+
+            border-radius:
+                50%;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            text-align:
+                center;
+
+            border:
+                2px
+                solid
+                rgba(0,255,135,.8);
+
+            background:
+                rgba(2,26,17,.48);
+
+            backdrop-filter:
+                blur(15px);
+
+            box-shadow:
+                0 0 22px rgba(0,255,135,.5),
+                0 0 70px rgba(0,229,255,.14);
+
+            z-index:
+                4;
+        }
+
+
+        .future-orbit-core strong {
+
+            display:
+                block;
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                3.8rem;
+
+            line-height:
+                .8;
+
+            color:
+                var(--future-green);
+
+            text-shadow:
+                0 0 18px
+                rgba(0,255,135,.7);
+        }
+
+
+        .future-orbit-core span {
+
+            margin-top:
+                10px;
+
+            color:
+                var(--future-ivory);
+
+            font-size:
+                .68rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                .16em;
+
+            text-transform:
+                uppercase;
+        }
+
+
+        .future-orbit-node {
+
+            position:
+                absolute;
+
+            width:
+                92px;
+
+            height:
+                92px;
+
+            border-radius:
+                22px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            text-align:
+                center;
+
+            padding:
+                8px;
+
+            border:
+                1px
+                solid
+                var(--future-border);
+
+            background:
+                rgba(3,28,19,.4);
+
+            backdrop-filter:
+                blur(12px);
+
+            color:
+                var(--future-ivory);
+
+            font-size:
+                .68rem;
+
+            font-weight:
+                800;
+
+            box-shadow:
+                0 0 20px
+                rgba(0,255,135,.12);
+
+            animation:
+                nodeFloat
+                5s
+                ease-in-out
+                infinite;
+        }
+
+
+        .future-orbit-node i {
+
+            display:
+                block;
+
+            font-size:
+                1.25rem;
+
+            margin-bottom:
+                5px;
+
+            color:
+                var(--future-cyan);
+
+            text-shadow:
+                var(--future-glow-cyan);
+        }
+
+
+        .future-orbit-node.n1 {
+            top: 1%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .future-orbit-node.n2 {
+            top: 26%;
+            right: 1%;
+            animation-delay: -.8s;
+        }
+
+        .future-orbit-node.n3 {
+            bottom: 5%;
+            right: 13%;
+            animation-delay: -1.5s;
+        }
+
+        .future-orbit-node.n4 {
+            bottom: 5%;
+            left: 13%;
+            animation-delay: -2.2s;
+        }
+
+        .future-orbit-node.n5 {
+            top: 26%;
+            left: 1%;
+            animation-delay: -3s;
+        }
+
+
+        @keyframes nodeFloat {
+
+            0%,
+            100% {
+                margin-top:
+                    0;
+            }
+
+            50% {
+                margin-top:
+                    -10px;
+            }
+        }
+
+
+        /* =====================================================
+           INTRO HIGHLIGHT
+           ===================================================== */
+
+        .future-highlight {
+
+            position:
+                relative;
+
+            margin:
+                20px 0 90px;
+
+            padding:
+                38px 42px;
+
+            border:
+                1px
+                solid
+                rgba(0,229,255,.52);
+
+            border-left:
+                4px
+                solid
+                var(--future-cyan);
+
+            border-radius:
+                22px;
+
+            background:
+                rgba(2,30,22,.36);
+
+            backdrop-filter:
+                blur(12px);
+
+            box-shadow:
+                0 0 35px
+                rgba(0,229,255,.1);
+
+            overflow:
+                hidden;
+        }
+
+
+        .future-highlight::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            top:
+                0;
+
+            left:
+                -30%;
+
+            width:
+                30%;
+
+            height:
+                1px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--future-cyan),
+                    transparent
+                );
+
+            animation:
+                borderSweep
+                4s
+                linear
+                infinite;
+        }
+
+
+        @keyframes borderSweep {
+
+            from {
+                left:
+                    -30%;
+            }
+
+            to {
+                left:
+                    130%;
+            }
+        }
+
+
+        .future-highlight-label {
+
+            color:
+                var(--future-cyan);
+
+            font-size:
+                .7rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                .18em;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom:
+                10px;
+
+            text-shadow:
+                0 0 12px
+                rgba(0,229,255,.55);
+        }
+
+
+        .future-highlight h2 {
+
+            margin:
+                0 0 12px;
+
+            color:
+                var(--future-white);
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                clamp(1.7rem, 3vw, 3rem);
+
+            letter-spacing:
+                -.045em;
+
+            text-shadow:
+                0 0 20px
+                rgba(255,255,255,.13);
+        }
+
+
+        .future-highlight p {
+
+            margin:
+                0;
+
+            color:
+                var(--future-soft);
+
+            font-size:
+                1rem;
+
+            line-height:
+                1.85;
+
+            max-width:
+                980px;
+
+            text-shadow:
+                0 2px 14px rgba(0,0,0,.72);
+        }
+
+
+        /* =====================================================
+           SECTION HEADING
+           ===================================================== */
+
+        .future-section {
+
+            padding:
+                80px 0;
+        }
+
+
+        .future-section-heading {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(0, .72fr)
+                minmax(0, 1.28fr);
+
+            gap:
+                55px;
+
+            align-items:
+                end;
+
+            margin-bottom:
+                36px;
+        }
+
+
+        .future-index {
+
+            color:
+                var(--future-green);
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                .72rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                .2em;
+
+            text-transform:
+                uppercase;
+
+            text-shadow:
+                var(--future-glow-green);
+        }
+
+
+        .future-section-heading h2 {
+
+            margin:
+                8px 0 0;
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                clamp(2.1rem, 4vw, 4.5rem);
+
+            line-height:
+                .98;
+
+            letter-spacing:
+                -.065em;
+
+            color:
+                var(--future-white);
+
+            text-shadow:
+                0 0 22px
+                rgba(255,255,255,.1);
+        }
+
+
+        .future-section-heading h2 .accent {
+
+            color:
+                var(--future-cyan);
+
+            text-shadow:
+                0 0 15px
+                rgba(0,229,255,.65);
+        }
+
+
+        .future-section-heading > p {
+
+            margin:
+                0;
+
+            color:
+                var(--future-soft);
+
+            font-size:
+                1rem;
+
+            line-height:
+                1.9;
+
+            font-weight:
+                500;
+
+            text-shadow:
+                0 2px 15px rgba(0,0,0,.78);
+        }
+
+
+        /* =====================================================
+           SYSTEM CARDS
+           ===================================================== */
+
+        .future-system-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0, 1fr));
+
+            gap:
+                18px;
+        }
+
+
+        .future-system-card {
+
+            position:
+                relative;
+
+            min-height:
+                255px;
+
+            padding:
+                25px;
+
+            border:
+                1px
+                solid
+                var(--future-border);
+
+            border-radius:
+                var(--future-radius);
+
+            background:
+                var(--future-panel);
+
+            backdrop-filter:
+                blur(13px);
+
+            box-shadow:
+                var(--future-shadow);
+
+            overflow:
+                hidden;
+
+            transform:
+                translateY(0);
+
+            transition:
+                transform .38s ease,
+                border-color .38s ease,
+                box-shadow .38s ease,
+                background .38s ease;
+        }
+
+
+        .future-system-card::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            border-radius:
+                inherit;
+
+            padding:
+                1px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,255,135,.65),
+                    transparent 35%,
+                    rgba(0,229,255,.38),
+                    transparent 70%,
+                    rgba(214,107,255,.45)
+                );
+
+            -webkit-mask:
+                linear-gradient(#000 0 0) content-box,
+                linear-gradient(#000 0 0);
+
+            -webkit-mask-composite:
+                xor;
+
+            mask-composite:
+                exclude;
+
+            opacity:
+                .8;
+
+            pointer-events:
+                none;
+        }
+
+
+        .future-system-card::after {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                150px;
+
+            height:
+                150px;
+
+            border-radius:
+                50%;
+
+            right:
+                -90px;
+
+            bottom:
+                -90px;
+
+            background:
+                var(--future-green);
+
+            filter:
+                blur(65px);
+
+            opacity:
+                .07;
+
+            transition:
+                opacity .4s ease;
+        }
+
+
+        .future-system-card:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                rgba(0,255,135,.8);
+
+            box-shadow:
+                0 0 0 1px
+                rgba(0,255,135,.18),
+                0 20px 55px
+                rgba(0,0,0,.3),
+                0 0 30px
+                rgba(0,255,135,.14);
+
+            background:
+                rgba(4,37,24,.5);
+        }
+
+
+        .future-system-card:hover::after {
+
+            opacity:
+                .2;
+        }
+
+
+        .future-card-top {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+
+            margin-bottom:
+                24px;
+        }
+
+
+        .future-number {
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                .68rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                .18em;
+
+            color:
+                var(--future-green);
+
+            text-shadow:
+                var(--future-glow-green);
+        }
+
+
+        .future-icon {
+
+            width:
+                43px;
+
+            height:
+                43px;
+
+            border-radius:
+                13px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                1px
+                solid
+                rgba(0,229,255,.5);
+
+            color:
+                var(--future-cyan);
+
+            background:
+                rgba(0,229,255,.07);
+
+            box-shadow:
+                var(--future-glow-cyan);
+        }
+
+
+        .future-system-card h3 {
+
+            margin:
+                0 0 12px;
+
+            color:
+                var(--future-white);
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                1.08rem;
+
+            line-height:
+                1.25;
+
+            letter-spacing:
+                -.025em;
+
+            text-shadow:
+                0 0 12px
+                rgba(255,255,255,.1);
+        }
+
+
+        .future-system-card p {
+
+            margin:
+                0;
+
+            color:
+                var(--future-soft);
+
+            font-size:
+                .91rem;
+
+            line-height:
+                1.72;
+
+            font-weight:
+                500;
+
+            text-shadow:
+                0 2px 11px
+                rgba(0,0,0,.78);
+        }
+
+
+        .future-system-card .future-tag {
+
+            display:
+                inline-flex;
+
+            margin-top:
+                20px;
+
+            padding:
+                6px
+                9px;
+
+            border:
+                1px
+                solid
+                rgba(184,255,61,.48);
+
+            border-radius:
+                999px;
+
+            color:
+                var(--future-lime);
+
+            font-size:
+                .61rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                .12em;
+
+            text-transform:
+                uppercase;
+
+            background:
+                rgba(184,255,61,.055);
+
+            text-shadow:
+                0 0 9px
+                rgba(184,255,61,.6);
+        }
+
+
+        /* =====================================================
+           FAMILY COLOR VARIATIONS
+           ===================================================== */
+
+        .future-family-cyan .future-index,
+        .future-family-cyan .future-number {
+            color: var(--future-cyan);
+            text-shadow: var(--future-glow-cyan);
+        }
+
+        .future-family-cyan .future-system-card:hover {
+            border-color: rgba(0,229,255,.8);
+            box-shadow:
+                0 0 35px rgba(0,229,255,.15),
+                0 20px 55px rgba(0,0,0,.28);
+        }
+
+        .future-family-violet .future-index,
+        .future-family-violet .future-number {
+            color: var(--future-violet);
+            text-shadow: var(--future-glow-violet);
+        }
+
+        .future-family-violet .future-system-card:hover {
+            border-color: rgba(169,112,255,.8);
+            box-shadow:
+                0 0 35px rgba(169,112,255,.16),
+                0 20px 55px rgba(0,0,0,.28);
+        }
+
+        .future-family-pink .future-index,
+        .future-family-pink .future-number {
+            color: var(--future-pink);
+            text-shadow: var(--future-glow-pink);
+        }
+
+        .future-family-pink .future-system-card:hover {
+            border-color: rgba(255,95,207,.8);
+            box-shadow:
+                0 0 35px rgba(255,95,207,.16),
+                0 20px 55px rgba(0,0,0,.28);
+        }
+
+        .future-family-coral .future-index,
+        .future-family-coral .future-number {
+            color: var(--future-coral);
+            text-shadow:
+                0 0 12px rgba(255,107,95,.6),
+                0 0 30px rgba(255,107,95,.18);
+        }
+
+        .future-family-lime .future-index,
+        .future-family-lime .future-number {
+            color: var(--future-lime);
+            text-shadow:
+                0 0 12px rgba(184,255,61,.6),
+                0 0 30px rgba(184,255,61,.18);
+        }
+
+
+        /* =====================================================
+           FEATURED SYSTEM BLOCK
+           ===================================================== */
+
+        .future-featured {
+
+            margin-top:
+                34px;
+
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(260px, .72fr)
+                minmax(0, 1.28fr);
+
+            border:
+                1px
+                solid
+                rgba(0,255,135,.55);
+
+            border-radius:
+                28px;
+
+            background:
+                rgba(3,30,19,.38);
+
+            backdrop-filter:
+                blur(14px);
+
+            overflow:
+                hidden;
+
+            box-shadow:
+                0 0 45px
+                rgba(0,255,135,.08);
+        }
+
+
+        .future-featured-label {
+
+            padding:
+                34px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                space-between;
+
+            min-height:
+                245px;
+
+            border-right:
+                1px
+                solid
+                rgba(0,255,135,.24);
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(0,255,135,.08),
+                    transparent
+                );
+        }
+
+
+        .future-featured-label span {
+
+            color:
+                var(--future-green);
+
+            font-size:
+                .67rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                .18em;
+
+            text-transform:
+                uppercase;
+
+            text-shadow:
+                var(--future-glow-green);
+        }
+
+
+        .future-featured-label strong {
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                clamp(1.7rem, 3vw, 3rem);
+
+            line-height:
+                1;
+
+            color:
+                var(--future-white);
+
+            text-shadow:
+                0 0 20px
+                rgba(255,255,255,.13);
+        }
+
+
+        .future-featured-content {
+
+            padding:
+                34px;
+        }
+
+
+        .future-featured-content h3 {
+
+            margin:
+                0 0 12px;
+
+            color:
+                var(--future-cyan);
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                1.4rem;
+
+            text-shadow:
+                var(--future-glow-cyan);
+        }
+
+
+        .future-featured-content p {
+
+            margin:
+                0;
+
+            color:
+                var(--future-soft);
+
+            line-height:
+                1.9;
+
+            text-shadow:
+                0 2px 13px
+                rgba(0,0,0,.8);
+        }
+
+
+        /* =====================================================
+           REAL VISUAL GRAPH
+           ===================================================== */
+
+        .future-graph {
+
+            margin-top:
+                38px;
+
+            padding:
+                30px;
+
+            border:
+                1px
+                solid
+                rgba(0,229,255,.42);
+
+            border-radius:
+                26px;
+
+            background:
+                rgba(2,25,22,.36);
+
+            backdrop-filter:
+                blur(13px);
+        }
+
+
+        .future-graph-heading {
+
+            display:
+                flex;
+
+            justify-content:
+                space-between;
+
+            gap:
+                20px;
+
+            align-items:
+                end;
+
+            margin-bottom:
+                25px;
+        }
+
+
+        .future-graph-heading h3 {
+
+            margin:
+                0;
+
+            color:
+                var(--future-white);
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                1.2rem;
+        }
+
+
+        .future-graph-heading span {
+
+            color:
+                var(--future-cyan);
+
+            font-size:
+                .68rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                .12em;
+
+            text-transform:
+                uppercase;
+
+            text-shadow:
+                var(--future-glow-cyan);
+        }
+
+
+        .future-bars {
+
+            display:
+                grid;
+
+            gap:
+                15px;
+        }
+
+
+        .future-bar-row {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(140px, .42fr)
+                minmax(0, 1fr)
+                50px;
+
+            align-items:
+                center;
+
+            gap:
+                15px;
+        }
+
+
+        .future-bar-label {
+
+            color:
+                var(--future-soft);
+
+            font-size:
+                .78rem;
+
+            font-weight:
+                700;
+        }
+
+
+        .future-bar-track {
+
+            height:
+                10px;
+
+            border:
+                1px
+                solid
+                rgba(255,255,255,.12);
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(255,255,255,.045);
+
+            overflow:
+                hidden;
+        }
+
+
+        .future-bar-fill {
+
+            height:
+                100%;
+
+            width:
+                var(--bar);
+
+            border-radius:
+                inherit;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--future-green),
+                    var(--future-cyan),
+                    var(--future-violet)
+                );
+
+            box-shadow:
+                0 0 15px
+                rgba(0,229,255,.4);
+
+            transform:
+                scaleX(0);
+
+            transform-origin:
+                left;
+
+            transition:
+                transform
+                1.4s
+                cubic-bezier(.2,.8,.2,1);
+        }
+
+
+        .future-bar-row.visible
+        .future-bar-fill {
+
+            transform:
+                scaleX(1);
+        }
+
+
+        .future-bar-value {
+
+            color:
+                var(--future-white);
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                .76rem;
+
+            font-weight:
+                800;
+
+            text-align:
+                right;
+        }
+
+
+        /* =====================================================
+           ARCHITECTURE MAP
+           ===================================================== */
+
+        .future-architecture {
+
+            margin:
+                25px 0 0;
+
+            padding:
+                40px 20px;
+
+            border:
+                1px
+                solid
+                rgba(169,112,255,.45);
+
+            border-radius:
+                28px;
+
+            background:
+                rgba(4,25,27,.32);
+
+            overflow:
+                hidden;
+
+            position:
+                relative;
+        }
+
+
+        .future-map {
+
+            position:
+                relative;
+
+            width:
+                min(900px, 100%);
+
+            min-height:
+                470px;
+
+            margin:
+                auto;
+        }
+
+
+        .future-map svg {
+
+            position:
+                absolute;
+
+            inset:
+                0;
+
+            width:
+                100%;
+
+            height:
+                100%;
+
+            overflow:
+                visible;
+
+            pointer-events:
+                none;
+        }
+
+
+        .future-map-line {
+
+            fill:
+                none;
+
+            stroke:
+                rgba(0,229,255,.42);
+
+            stroke-width:
+                1.4;
+
+            stroke-dasharray:
+                7 9;
+
+            animation:
+                dashMove
+                8s
+                linear
+                infinite;
+        }
+
+
+        @keyframes dashMove {
+
+            to {
+                stroke-dashoffset:
+                    -160;
+            }
+        }
+
+
+        .future-map-node {
+
+            position:
+                absolute;
+
+            width:
+                150px;
+
+            min-height:
+                90px;
+
+            padding:
+                14px;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            text-align:
+                center;
+
+            border:
+                1px
+                solid
+                rgba(255,255,255,.25);
+
+            border-radius:
+                18px;
+
+            background:
+                rgba(2,28,20,.62);
+
+            backdrop-filter:
+                blur(14px);
+
+            box-shadow:
+                0 12px 30px
+                rgba(0,0,0,.2);
+
+            color:
+                var(--future-soft);
+
+            font-size:
+                .72rem;
+
+            font-weight:
+                800;
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+        }
+
+
+        .future-map-node:hover {
+
+            transform:
+                translateY(-7px)
+                scale(1.03);
+
+            border-color:
+                var(--future-cyan);
+
+            box-shadow:
+                var(--future-glow-cyan);
+        }
+
+
+        .future-map-node i {
+
+            font-size:
+                1.2rem;
+
+            margin-bottom:
+                7px;
+
+            color:
+                var(--future-cyan);
+
+            text-shadow:
+                var(--future-glow-cyan);
+        }
+
+
+        .future-map-node.center {
+
+            width:
+                190px;
+
+            min-height:
+                110px;
+
+            left:
+                50%;
+
+            top:
+                50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            border-color:
+                rgba(0,255,135,.75);
+
+            box-shadow:
+                var(--future-glow-green);
+
+            z-index:
+                3;
+        }
+
+
+        .future-map-node.center:hover {
+
+            transform:
+                translate(-50%, -57%)
+                scale(1.03);
+        }
+
+
+        .future-map-node.top {
+
+            left:
+                50%;
+
+            top:
+                4%;
+
+            transform:
+                translateX(-50%);
+        }
+
+
+        .future-map-node.left {
+
+            left:
+                4%;
+
+            top:
+                50%;
+
+            transform:
+                translateY(-50%);
+        }
+
+
+        .future-map-node.right {
+
+            right:
+                4%;
+
+            top:
+                50%;
+
+            transform:
+                translateY(-50%);
+        }
+
+
+        .future-map-node.bottom-left {
+
+            left:
+                17%;
+
+            bottom:
+                3%;
+        }
+
+
+        .future-map-node.bottom-right {
+
+            right:
+                17%;
+
+            bottom:
+                3%;
+        }
+
+
+        /* =====================================================
+           FARMER JOURNEY
+           ===================================================== */
+
+        .future-journey {
+
+            display:
+                grid;
+
+            gap:
+                0;
+
+            position:
+                relative;
+
+            margin-top:
+                30px;
+        }
+
+
+        .future-journey-line {
+
+            position:
+                absolute;
+
+            left:
+                31px;
+
+            top:
+                32px;
+
+            bottom:
+                32px;
+
+            width:
+                1px;
+
+            background:
+                linear-gradient(
+                    to bottom,
+                    var(--future-green),
+                    var(--future-cyan),
+                    var(--future-violet),
+                    var(--future-pink)
+                );
+
+            box-shadow:
+                0 0 12px
+                rgba(0,229,255,.45);
+        }
+
+
+        .future-journey-step {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                64px
+                minmax(0,1fr);
+
+            gap:
+                24px;
+
+            position:
+                relative;
+
+            padding:
+                20px 0;
+        }
+
+
+        .future-journey-marker {
+
+            width:
+                64px;
+
+            height:
+                64px;
+
+            display:
+                grid;
+
+            place-items:
+                center;
+
+            border:
+                1px
+                solid
+                rgba(0,255,135,.65);
+
+            border-radius:
+                50%;
+
+            background:
+                rgba(2,28,18,.62);
+
+            backdrop-filter:
+                blur(10px);
+
+            color:
+                var(--future-green);
+
+            font-family:
+                "Manrope";
+
+            font-weight:
+                800;
+
+            box-shadow:
+                var(--future-glow-green);
+
+            z-index:
+                2;
+        }
+
+
+        .future-journey-content {
+
+            padding:
+                22px 25px;
+
+            border:
+                1px
+                solid
+                rgba(255,255,255,.17);
+
+            border-radius:
+                20px;
+
+            background:
+                rgba(3,27,19,.42);
+
+            backdrop-filter:
+                blur(12px);
+
+            transition:
+                border-color .3s ease,
+                transform .3s ease,
+                box-shadow .3s ease;
+        }
+
+
+        .future-journey-content:hover {
+
+            transform:
+                translateX(7px);
+
+            border-color:
+                rgba(0,229,255,.58);
+
+            box-shadow:
+                var(--future-glow-cyan);
+        }
+
+
+        .future-journey-content h3 {
+
+            margin:
+                0 0 7px;
+
+            color:
+                var(--future-white);
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                1.1rem;
+        }
+
+
+        .future-journey-content p {
+
+            margin:
+                0;
+
+            color:
+                var(--future-soft);
+
+            line-height:
+                1.75;
+
+            font-size:
+                .92rem;
+
+            text-shadow:
+                0 2px 10px
+                rgba(0,0,0,.8);
+        }
+
+
+        /* =====================================================
+           HUMAN-CENTRIC TECHNOLOGY
+           ===================================================== */
+
+        .future-human-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(3, minmax(0,1fr));
+
+            gap:
+                18px;
+        }
+
+
+        .future-human-card {
+
+            padding:
+                30px;
+
+            min-height:
+                210px;
+
+            border:
+                1px
+                solid
+                rgba(255,95,207,.36);
+
+            border-radius:
+                24px;
+
+            background:
+                rgba(4,26,22,.4);
+
+            backdrop-filter:
+                blur(13px);
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+        }
+
+
+        .future-human-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(255,95,207,.8);
+
+            box-shadow:
+                var(--future-glow-pink);
+        }
+
+
+        .future-human-card i {
+
+            color:
+                var(--future-pink);
+
+            font-size:
+                1.6rem;
+
+            margin-bottom:
+                22px;
+
+            text-shadow:
+                var(--future-glow-pink);
+        }
+
+
+        .future-human-card h3 {
+
+            margin:
+                0 0 10px;
+
+            color:
+                var(--future-white);
+
+            font-family:
+                "Manrope";
+        }
+
+
+        .future-human-card p {
+
+            margin:
+                0;
+
+            color:
+                var(--future-soft);
+
+            line-height:
+                1.75;
+
+            text-shadow:
+                0 2px 11px
+                rgba(0,0,0,.78);
+        }
+
+
+        /* =====================================================
+           EMPLOYABILITY
+           ===================================================== */
+
+        .future-opportunity {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                minmax(0,.8fr)
+                minmax(0,1.2fr);
+
+            gap:
+                30px;
+
+            padding:
+                35px;
+
+            border:
+                1px
+                solid
+                rgba(184,255,61,.42);
+
+            border-radius:
+                28px;
+
+            background:
+                rgba(6,30,19,.38);
+
+            backdrop-filter:
+                blur(13px);
+        }
+
+
+        .future-opportunity-copy h3 {
+
+            margin:
+                0 0 14px;
+
+            color:
+                var(--future-lime);
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                clamp(1.7rem,3vw,3rem);
+
+            text-shadow:
+                0 0 16px
+                rgba(184,255,61,.45);
+        }
+
+
+        .future-opportunity-copy p {
+
+            margin:
+                0;
+
+            color:
+                var(--future-soft);
+
+            line-height:
+                1.85;
+
+            text-shadow:
+                0 2px 12px
+                rgba(0,0,0,.8);
+        }
+
+
+        .future-opportunity-grid {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(2,minmax(0,1fr));
+
+            gap:
+                12px;
+        }
+
+
+        .future-opportunity-item {
+
+            padding:
+                17px;
+
+            border:
+                1px
+                solid
+                rgba(255,255,255,.17);
+
+            border-radius:
+                17px;
+
+            background:
+                rgba(255,255,255,.025);
+
+            color:
+                var(--future-ivory);
+
+            font-size:
+                .84rem;
+
+            font-weight:
+                700;
+
+            transition:
+                border-color .3s ease,
+                box-shadow .3s ease,
+                transform .3s ease;
+        }
+
+
+        .future-opportunity-item:hover {
+
+            transform:
+                translateY(-4px);
+
+            border-color:
+                rgba(184,255,61,.65);
+
+            box-shadow:
+                0 0 20px
+                rgba(184,255,61,.12);
+        }
+
+
+        .future-opportunity-item i {
+
+            margin-right:
+                8px;
+
+            color:
+                var(--future-lime);
+
+            text-shadow:
+                0 0 10px
+                rgba(184,255,61,.55);
+        }
+
+
+        /* =====================================================
+           NATIONAL PROGRESSION
+           ===================================================== */
+
+        .future-nation {
+
+            padding:
+                60px 0 120px;
+        }
+
+
+        .future-nation-panel {
+
+            position:
+                relative;
+
+            padding:
+                60px 45px;
+
+            border:
+                1px
+                solid
+                rgba(0,229,255,.45);
+
+            border-radius:
+                34px;
+
+            background:
+                rgba(3,27,24,.4);
+
+            backdrop-filter:
+                blur(14px);
+
+            overflow:
+                hidden;
+        }
+
+
+        .future-nation-panel::before {
+
+            content:
+                "";
+
+            position:
+                absolute;
+
+            width:
+                420px;
+
+            height:
+                420px;
+
+            border-radius:
+                50%;
+
+            right:
+                -230px;
+
+            top:
+                -230px;
+
+            background:
+                var(--future-violet);
+
+            filter:
+                blur(100px);
+
+            opacity:
+                .08;
+        }
+
+
+        .future-nation-heading {
+
+            max-width:
+                800px;
+
+            margin-bottom:
+                45px;
+        }
+
+
+        .future-nation-heading span {
+
+            color:
+                var(--future-cyan);
+
+            font-size:
+                .7rem;
+
+            font-weight:
+                800;
+
+            letter-spacing:
+                .18em;
+
+            text-transform:
+                uppercase;
+
+            text-shadow:
+                var(--future-glow-cyan);
+        }
+
+
+        .future-nation-heading h2 {
+
+            margin:
+                12px 0;
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                clamp(2.3rem,5vw,5.5rem);
+
+            line-height:
+                .95;
+
+            letter-spacing:
+                -.07em;
+
+            color:
+                var(--future-white);
+        }
+
+
+        .future-nation-heading p {
+
+            margin:
+                0;
+
+            color:
+                var(--future-soft);
+
+            line-height:
+                1.85;
+
+            text-shadow:
+                0 2px 14px
+                rgba(0,0,0,.8);
+        }
+
+
+        .future-progression {
+
+            display:
+                grid;
+
+            grid-template-columns:
+                repeat(5,minmax(0,1fr));
+
+            gap:
+                12px;
+        }
+
+
+        .future-progress-item {
+
+            position:
+                relative;
+
+            padding:
+                23px 18px;
+
+            border:
+                1px
+                solid
+                rgba(255,255,255,.18);
+
+            border-radius:
+                18px;
+
+            background:
+                rgba(255,255,255,.025);
+
+            min-height:
+                145px;
+
+            transition:
+                transform .35s ease,
+                border-color .35s ease,
+                box-shadow .35s ease;
+        }
+
+
+        .future-progress-item:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                var(--future-cyan);
+
+            box-shadow:
+                var(--future-glow-cyan);
+        }
+
+
+        .future-progress-item b {
+
+            color:
+                var(--future-green);
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                .72rem;
+
+            text-shadow:
+                var(--future-glow-green);
+        }
+
+
+        .future-progress-item h3 {
+
+            margin:
+                16px 0 7px;
+
+            color:
+                var(--future-white);
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                1rem;
+        }
+
+
+        .future-progress-item p {
+
+            margin:
+                0;
+
+            color:
+                var(--future-soft);
+
+            font-size:
+                .79rem;
+
+            line-height:
+                1.6;
+
+            text-shadow:
+                0 2px 9px
+                rgba(0,0,0,.78);
+        }
+
+
+        /* =====================================================
+           FINAL CTA
+           ===================================================== */
+
+        .future-final {
+
+            padding:
+                90px 0 130px;
+
+            text-align:
+                center;
+        }
+
+
+        .future-final h2 {
+
+            max-width:
+                1000px;
+
+            margin:
+                0 auto 22px;
+
+            font-family:
+                "Manrope";
+
+            font-size:
+                clamp(2.6rem,6vw,6.7rem);
+
+            line-height:
+                .92;
+
+            letter-spacing:
+                -.07em;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    var(--future-green),
+                    var(--future-cyan),
+                    var(--future-violet),
+                    var(--future-pink),
+                    var(--future-lime)
+                );
+
+            background-size:
+                250% 250%;
+
+            -webkit-background-clip:
+                text;
+
+            background-clip:
+                text;
+
+            color:
+                transparent;
+
+            animation:
+                futureSpectrum
+                8s
+                ease
+                infinite;
+        }
+
+
+        .future-final p {
+
+            max-width:
+                760px;
+
+            margin:
+                0 auto;
+
+            color:
+                var(--future-soft);
+
+            font-size:
+                1rem;
+
+            line-height:
+                1.85;
+
+            text-shadow:
+                0 2px 14px
+                rgba(0,0,0,.8);
+        }
+
+
+        .future-final .future-button {
+
+            margin-top:
+                30px;
+        }
+
+
+        /* =====================================================
+           REVEAL
+           ===================================================== */
+
+        .future-reveal {
+
+            opacity:
+                0;
+
+            transform:
+                translateY(32px);
+
+            transition:
+                opacity .8s ease,
+                transform .8s ease;
+        }
+
+
+        .future-reveal.visible {
+
+            opacity:
+                1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =====================================================
+           RESPONSIVE
+           ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .future-hero-layout {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    55px;
+            }
+
+            .future-orbit {
+
+                width:
+                    min(390px,80vw);
+            }
+
+            .future-section-heading {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    18px;
+            }
+
+            .future-system-grid {
+
+                grid-template-columns:
+                    repeat(2,minmax(0,1fr));
+            }
+
+            .future-opportunity {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .future-progression {
+
+                grid-template-columns:
+                    repeat(2,minmax(0,1fr));
+            }
+        }
+
+
+        @media (max-width: 760px) {
+
+            .future-container {
+
+                width:
+                    min(100% - 26px, 680px);
+            }
+
+            .future-hero {
+
+                min-height:
+                    auto;
+
+                padding:
+                    130px
+                    0
+                    70px;
+            }
+
+            .future-hero h1 {
+
+                font-size:
+                    clamp(3.2rem,16vw,6rem);
+            }
+
+            .future-highlight {
+
+                padding:
+                    28px;
+            }
+
+            .future-section {
+
+                padding:
+                    55px 0;
+            }
+
+            .future-system-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .future-featured {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .future-featured-label {
+
+                border-right:
+                    0;
+
+                border-bottom:
+                    1px
+                    solid
+                    rgba(0,255,135,.24);
+            }
+
+            .future-human-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .future-architecture {
+
+                padding:
+                    18px;
+            }
+
+            .future-map {
+
+                min-height:
+                    560px;
+            }
+
+            .future-map-node {
+
+                width:
+                    125px;
+
+                min-height:
+                    82px;
+
+                font-size:
+                    .63rem;
+            }
+
+            .future-map-node.center {
+
+                width:
+                    155px;
+            }
+
+            .future-map-node.left {
+                left: 0;
+            }
+
+            .future-map-node.right {
+                right: 0;
+            }
+
+            .future-map-node.bottom-left {
+                left: 2%;
+                bottom: 1%;
+            }
+
+            .future-map-node.bottom-right {
+                right: 2%;
+                bottom: 1%;
+            }
+
+            .future-bar-row {
+
+                grid-template-columns:
+                    105px
+                    minmax(0,1fr)
+                    38px;
+
+                gap:
+                    9px;
+            }
+
+            .future-nation-panel {
+
+                padding:
+                    35px 22px;
+            }
+
+            .future-progression {
+
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+
+        @media (max-width: 500px) {
+
+            .future-actions {
+
+                flex-direction:
+                    column;
+            }
+
+            .future-button {
+
+                width:
+                    100%;
+            }
+
+            .future-orbit {
+
+                width:
+                    320px;
+            }
+
+            .future-orbit-node {
+
+                width:
+                    76px;
+
+                height:
+                    76px;
+
+                font-size:
+                    .56rem;
+
+                border-radius:
+                    17px;
+            }
+
+            .future-orbit-node i {
+
+                font-size:
+                    1rem;
+            }
+
+            .future-orbit-core {
+
+                width:
+                    125px;
+            }
+
+            .future-orbit-core strong {
+
+                font-size:
+                    3rem;
+            }
+
+            .future-highlight {
+
+                padding:
+                    24px;
+            }
+
+            .future-featured-label,
+            .future-featured-content {
+
+                padding:
+                    25px;
+            }
+
+            .future-opportunity {
+
+                padding:
+                    24px;
+            }
+
+            .future-opportunity-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .future-graph {
+
+                padding:
+                    20px 14px;
+            }
+
+            .future-bar-row {
+
+                grid-template-columns:
+                    1fr;
+
+                gap:
+                    7px;
+            }
+
+            .future-bar-value {
+
+                text-align:
+                    left;
+            }
+
+            .future-journey-line {
+
+                left:
+                    27px;
+            }
+
+            .future-journey-step {
+
+                grid-template-columns:
+                    54px
+                    minmax(0,1fr);
+
+                gap:
+                    15px;
+            }
+
+            .future-journey-marker {
+
+                width:
+                    54px;
+
+                height:
+                    54px;
+            }
+        }
+
+
+        /* =====================================================
+           REDUCED MOTION
+           ===================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            .future-light-orb,
+            .future-orbit-ring,
+            .future-orbit-node,
+            .future-spectrum,
+            .future-kicker i,
+            .future-highlight::before,
+            .future-map-line {
+
+                animation:
+                    none !important;
+            }
+
+            .future-reveal {
+
+                opacity:
+                    1;
+
+                transform:
+                    none;
+
+                transition:
+                    none;
+            }
+
+            .future-bar-fill {
+
+                transform:
+                    scaleX(1);
+
+                transition:
+                    none;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body class="future-page">
+
+
+    <!-- =========================================================
+         SHARED AGRIVISION EFFECT SYSTEM
+         These hooks allow style.css / script.js to control
+         particles, leaves, fireflies, cursor lighting, etc.
+         ========================================================= -->
+
+    <div class="background-image"></div>
+
+    <div class="particles"></div>
+
+    <div class="floating-leaves"></div>
+
+    <div class="fireflies"></div>
+
+    <div class="light-trails"></div>
+
+    <div class="mouse-glow"></div>
+
+    <div class="fm-cursor-orb"></div>
+
+
+    <!-- =========================================================
+         PAGE LIGHTS
+         Decorative only — NO overlay.
+         ========================================================= -->
+
+    <div
+        class="future-light-orb green"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="future-light-orb cyan"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="future-light-orb violet"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        class="future-light-orb pink"
+        aria-hidden="true"
+    ></div>
+
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+
+    <header
+        id="header"
+        class="research-header future-header"
+    >
+
+        <div class="future-container">
+
+            <div class="research-navigation">
+
+                <a
+                    href="index.html"
+                    class="research-brand"
+                >
+                    <strong>AGRIVISION</strong>
+                    <span>KARNATAKA</span>
+                </a>
+
+
+                <nav
+                    aria-label="Future Systems navigation"
+                >
+
+                    <a href="#future-start">
+                        Future
+                    </a>
+
+                    <a href="#systems">
+                        Systems
+                    </a>
+
+                    <a href="#architecture">
+                        Architecture
+                    </a>
+
+                    <a href="#employment">
+                        Opportunity
+                    </a>
+
+                    <a href="#india">
+                        India
+                    </a>
+
+                </nav>
+
+
+                <button
+                    class="mobile-menu research-menu"
+                    type="button"
+                    aria-label="Open navigation"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         MAIN
+         ========================================================= -->
+
+    <main class="future-page-main">
+
+
+        <!-- =====================================================
+             HERO
+             ===================================================== -->
+
+        <section
+            id="future-start"
+            class="future-hero"
+        >
+
+            <div class="future-container">
+
+                <div class="future-hero-layout">
+
+
+                    <div class="future-hero-copy future-reveal">
+
+                        <div class="future-kicker">
+
+                            <i class="fa-solid fa-atom"></i>
+
+                            FUTURE SYSTEMS
+
+                        </div>
+
+
+                        <h1>
+                            THE FUTURE
+                            <br>
+                            IS A SYSTEM.
+                        </h1>
+
+
+                        <p class="future-hero-description">
+
+                            AgriVision's future is not one isolated
+                            feature. It is a connected agricultural
+                            direction where
+                            <strong>
+                                intelligence, markets, climate,
+                                logistics, technology, research
+                                and human opportunity
+                            </strong>
+                            can work together.
+
+                        </p>
+
+
+                        <div class="future-actions">
+
+                            <a
+                                href="#systems"
+                                class="future-button"
+                            >
+
+                                Explore Future Systems
+
+                                <i class="fa-solid fa-arrow-down"></i>
+
+                            </a>
+
+
+                            <a
+                                href="#india"
+                                class="future-button secondary"
+                            >
+
+                                Think Beyond the Platform
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         ORBIT VISUAL
+                         ================================================= -->
+
+                    <div
+                        class="future-orbit future-reveal"
+                        aria-label="AgriVision future ecosystem visualization"
+                    >
+
+                        <div class="future-orbit-ring"></div>
+
+                        <div class="future-orbit-ring two"></div>
+
+                        <div class="future-orbit-ring three"></div>
+
+
+                        <div class="future-orbit-node n1">
+
+                            <i class="fa-solid fa-seedling"></i>
+
+                            FARM
+
+                        </div>
+
+
+                        <div class="future-orbit-node n2">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            MARKET
+
+                        </div>
+
+
+                        <div class="future-orbit-node n3">
+
+                            <i class="fa-solid fa-truck-fast"></i>
+
+                            LOGISTICS
+
+                        </div>
+
+
+                        <div class="future-orbit-node n4">
+
+                            <i class="fa-solid fa-cloud-sun"></i>
+
+                            CLIMATE
+
+                        </div>
+
+
+                        <div class="future-orbit-node n5">
+
+                            <i class="fa-solid fa-microchip"></i>
+
+                            AI
+
+                        </div>
+
+
+                        <div class="future-orbit-core">
+
+                            <div>
+
+                                <strong>70</strong>
+
+                                <span>
+                                    Future Directions
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HIGHLIGHTED INTRODUCTION
+             ===================================================== -->
+
+        <div class="future-container">
+
+            <div class="future-highlight future-reveal">
+
+                <div class="future-highlight-label">
+                    THE IDEA
+                </div>
+
+                <h2>
+                    From individual tools to an agricultural ecosystem.
+                </h2>
+
+                <p>
+                    The future catalogue brings together agricultural
+                    intelligence, market awareness, climate and
+                    sustainability thinking, logistics coordination,
+                    analytics, emerging technology and research-oriented
+                    expansion. The systems are presented as future
+                    directions and concepts rather than claiming that
+                    every capability is already deployed.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =====================================================
+             SYSTEM FAMILY 01
+             CORE ECOSYSTEM
+             ===================================================== -->
+
+        <section
+            id="systems"
+            class="future-section"
+        >
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            01 / CORE ECOSYSTEM
+                        </div>
+
+                        <h2>
+                            The
+                            <span class="accent">
+                                foundation
+                            </span>
+                            layer.
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+                        The experience layer establishes how the
+                        agricultural ecosystem can be presented,
+                        navigated and understood — with an
+                        eco-tech identity designed around Karnataka.
+                    </p>
+
+                </div>
+
+
+                <div class="future-system-grid">
+
+
+                    <!-- 01 -->
+
+                    <article class="future-system-card future-reveal">
+
+                        <div class="future-card-top">
+
+                            <span class="future-number">
+                                SYSTEM 01
+                            </span>
+
+                            <span class="future-icon">
+                                <i class="fa-solid fa-mountain-sun"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Cinematic Western Ghats Landing Experience
+                        </h3>
+
+                        <p>
+                            A Karnataka-inspired visual introduction
+                            that connects agriculture, landscape and
+                            technology through a cinematic experience.
+                        </p>
+
+                        <span class="future-tag">
+                            EXPERIENCE
+                        </span>
+
+                    </article>
+
+
+                    <!-- 02 -->
+
+                    <article class="future-system-card future-reveal">
+
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 02</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-images"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            Image-Based Cinematic UI Architecture
+                        </h3>
+
+                        <p>
+                            A visual interface approach where imagery
+                            remains an actual part of the experience
+                            instead of being hidden behind heavy layers.
+                        </p>
+
+                        <span class="future-tag">
+                            VISUAL SYSTEM
+                        </span>
+
+                    </article>
+
+
+                    <!-- 03 -->
+
+                    <article class="future-system-card future-reveal">
+
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 03</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-mobile-screen"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            Responsive Laptop + Mobile Ecosystem
+                        </h3>
+
+                        <p>
+                            A future interface direction that remains
+                            usable across large screens, laptops,
+                            tablets and mobile devices.
+                        </p>
+
+                        <span class="future-tag">
+                            ACCESS
+                        </span>
+
+                    </article>
+
+
+                    <!-- 04 -->
+
+                    <article class="future-system-card future-reveal">
+
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 04</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-smog"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            Environmental Fog Atmosphere
+                        </h3>
+
+                        <p>
+                            Atmospheric environmental effects can create
+                            depth while keeping the underlying visual
+                            scene visible.
+                        </p>
+
+                        <span class="future-tag">
+                            ATMOSPHERE
+                        </span>
+
+                    </article>
+
+
+                    <!-- 05 -->
+
+                    <article class="future-system-card future-reveal">
+
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 05</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            Eco-Tech Design Language
+                        </h3>
+
+                        <p>
+                            A visual language combining agriculture,
+                            nature, technology, luminous borders and
+                            modern interaction.
+                        </p>
+
+                        <span class="future-tag">
+                            DESIGN
+                        </span>
+
+                    </article>
+
+
+                    <!-- 06 -->
+
+                    <article class="future-system-card future-reveal">
+
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 06</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            Invisible Hotspot Navigation System
+                        </h3>
+
+                        <p>
+                            Contextual navigation can connect visual
+                            environments to deeper parts of the
+                            ecosystem without cluttering the page.
+                        </p>
+
+                        <span class="future-tag">
+                            NAVIGATION
+                        </span>
+
+                    </article>
+
+
+                    <!-- 07 -->
+
+                    <article class="future-system-card future-reveal">
+
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 07</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </span>
+                        </div>
+
+                        <h3>
+                            Glassmorphism Ecosystem Styling
+                        </h3>
+
+                        <p>
+                            Translucent panels, luminous borders and
+                            depth effects can create a premium visual
+                            hierarchy without hiding the environment.
+                        </p>
+
+                        <span class="future-tag">
+                            INTERFACE
+                        </span>
+
+                    </article>
+
+
+                    <!-- 08 -->
+
+                    <article class="future-system-card future-reveal">
+
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 08</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-sitemap"></i>
+                            </span>
+
+                        </div>
+
+                        <h3>
+                            Ecosystem-Based Navigation Architecture
+                        </h3>
+
+                        <p>
+                            Navigation can follow agricultural
+                            relationships rather than forcing every
+                            capability into isolated pages.
+                        </p>
+
+                        <span class="future-tag">
+                            ARCHITECTURE
+                        </span>
+
+                    </article>
+
+                </div>
+
+
+                <div class="future-featured future-reveal">
+
+                    <div class="future-featured-label">
+
+                        <span>
+                            HIGHLIGHT
+                        </span>
+
+                        <strong>
+                            Design should
+                            reveal the system.
+                        </strong>
+
+                    </div>
+
+                    <div class="future-featured-content">
+
+                        <h3>
+                            An ecosystem interface, not a generic dashboard.
+                        </h3>
+
+                        <p>
+                            The future experience should make relationships
+                            visible: farm to market, market to logistics,
+                            agriculture to climate, intelligence to
+                            decisions and research to future capability.
+                            Visual polish supports that understanding rather
+                            than replacing it.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAMILY 02 — FARMER INTELLIGENCE
+             ===================================================== -->
+
+        <section class="future-section future-family-cyan">
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            02 / FARMER INTELLIGENCE
+                        </div>
+
+                        <h2>
+                            Turn information
+                            into
+                            <span class="accent">
+                                insight.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        The source catalogue describes future crop
+                        intelligence around analysis, freshness,
+                        spoilage, quality, harvest, productivity,
+                        sustainability and categorisation.
+                    </p>
+
+                </div>
+
+
+                <div class="future-system-grid">
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 09</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </span>
+                        </div>
+                        <h3>AI Crop Analysis System</h3>
+                        <p>
+                            Future AI-assisted analysis of crop-related
+                            information for clearer agricultural understanding.
+                        </p>
+                        <span class="future-tag">AI</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 10</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-camera"></i>
+                            </span>
+                        </div>
+                        <h3>Crop Image Upload Interface</h3>
+                        <p>
+                            A future visual input pathway for bringing
+                            crop imagery into agricultural analysis workflows.
+                        </p>
+                        <span class="future-tag">VISION</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 11</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </span>
+                        </div>
+                        <h3>Freshness Analysis Workflow</h3>
+                        <p>
+                            Future analysis concepts for understanding
+                            freshness information associated with crops.
+                        </p>
+                        <span class="future-tag">QUALITY</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 12</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-triangle-exclamation"></i>
+                            </span>
+                        </div>
+                        <h3>Spoilage Prediction Intelligence</h3>
+                        <p>
+                            Future predictive workflows focused on
+                            recognising potential spoilage conditions.
+                        </p>
+                        <span class="future-tag">PREDICTIVE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 13</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-ranking-star"></i>
+                            </span>
+                        </div>
+                        <h3>Crop Quality Grading System</h3>
+                        <p>
+                            A future direction for structured agricultural
+                            quality assessment.
+                        </p>
+                        <span class="future-tag">QUALITY</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 14</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-calendar-check"></i>
+                            </span>
+                        </div>
+                        <h3>Harvest Optimization Insights</h3>
+                        <p>
+                            Future intelligence that can help organise
+                            harvest-related decisions and timing.
+                        </p>
+                        <span class="future-tag">HARVEST</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 15</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </span>
+                        </div>
+                        <h3>Smart Agricultural Recommendations</h3>
+                        <p>
+                            AI-assisted recommendations designed to turn
+                            available agricultural information into useful
+                            guidance.
+                        </p>
+                        <span class="future-tag">DECISION</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 16</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </span>
+                        </div>
+                        <h3>Agricultural Productivity Insights</h3>
+                        <p>
+                            Future productivity-oriented summaries and
+                            intelligence views.
+                        </p>
+                        <span class="future-tag">ANALYTICS</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 17</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-seedling"></i>
+                            </span>
+                        </div>
+                        <h3>Sustainable Farming Indicators</h3>
+                        <p>
+                            Indicators designed to make sustainable
+                            agricultural practices easier to understand.
+                        </p>
+                        <span class="future-tag">SUSTAINABILITY</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 18</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                            </span>
+                        </div>
+                        <h3>Crop Lifecycle Management</h3>
+                        <p>
+                            A future system direction for following a crop
+                            across its production journey.
+                        </p>
+                        <span class="future-tag">LIFECYCLE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 19</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </span>
+                        </div>
+                        <h3>Agricultural Inventory Concepts</h3>
+                        <p>
+                            Future organisation of crop and agricultural
+                            inventory information.
+                        </p>
+                        <span class="future-tag">INVENTORY</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 20</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-filter"></i>
+                            </span>
+                        </div>
+                        <h3>Smart Crop Categorization</h3>
+                        <p>
+                            Future classification approaches for organising
+                            agricultural information intelligently.
+                        </p>
+                        <span class="future-tag">INTELLIGENCE</span>
+                    </article>
+
+                </div>
+
+
+                <div class="future-graph future-reveal">
+
+                    <div class="future-graph-heading">
+
+                        <h3>
+                            Farmer intelligence capability map
+                        </h3>
+
+                        <span>
+                            Conceptual system coverage
+                        </span>
+
+                    </div>
+
+
+                    <div class="future-bars">
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Crop Intelligence
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:94%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">01</span>
+                        </div>
+
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Crop Quality
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:82%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">02</span>
+                        </div>
+
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Harvest
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:76%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">03</span>
+                        </div>
+
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Decisions
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:88%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">04</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAMILY 03 — MARKET INTELLIGENCE
+             ===================================================== -->
+
+        <section class="future-section future-family-violet">
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            03 / MARKET INTELLIGENCE
+                        </div>
+
+                        <h2>
+                            Better market
+                            <span class="accent">
+                                awareness.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Future market systems can connect demand,
+                        price awareness, district-level intelligence,
+                        seasonality, selling recommendations and
+                        procurement coordination.
+                    </p>
+
+                </div>
+
+
+                <div class="future-system-grid">
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 21</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            </span>
+                        </div>
+                        <h3>Market Demand Prediction</h3>
+                        <p>
+                            District-level agricultural demand concepts
+                            for future market intelligence.
+                        </p>
+                        <span class="future-tag">DEMAND</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 22</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-tags"></i>
+                            </span>
+                        </div>
+                        <h3>Smart Pricing Intelligence</h3>
+                        <p>
+                            Agricultural price awareness systems designed
+                            as a future intelligence direction.
+                        </p>
+                        <span class="future-tag">PRICE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 23</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </span>
+                        </div>
+                        <h3>District Market Analysis</h3>
+                        <p>
+                            Karnataka agricultural market insights
+                            organised around district-level context.
+                        </p>
+                        <span class="future-tag">DISTRICTS</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 24</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </span>
+                        </div>
+                        <h3>Seasonal Crop Intelligence</h3>
+                        <p>
+                            Season-based agricultural recommendations
+                            and future planning concepts.
+                        </p>
+                        <span class="future-tag">SEASON</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 25</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </span>
+                        </div>
+                        <h3>Smart Selling Recommendations</h3>
+                        <p>
+                            AI-assisted crop selling workflows for future
+                            market decision support.
+                        </p>
+                        <span class="future-tag">SELLING</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 26</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </span>
+                        </div>
+                        <h3>Agricultural Trend Visualization</h3>
+                        <p>
+                            Future crop demand awareness through
+                            understandable trend visualisation.
+                        </p>
+                        <span class="future-tag">TRENDS</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 27</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </span>
+                        </div>
+                        <h3>Procurement Intelligence Concepts</h3>
+                        <p>
+                            Smart buyer coordination systems designed
+                            as a future market capability.
+                        </p>
+                        <span class="future-tag">PROCUREMENT</span>
+                    </article>
+
+                </div>
+
+
+                <div class="future-featured future-reveal">
+
+                    <div class="future-featured-label">
+
+                        <span>
+                            MARKET IDEA
+                        </span>
+
+                        <strong>
+                            Information
+                            before
+                            decisions.
+                        </strong>
+
+                    </div>
+
+                    <div class="future-featured-content">
+
+                        <h3>
+                            Market intelligence should make the path clearer.
+                        </h3>
+
+                        <p>
+                            The goal is not simply to display numbers.
+                            Future market intelligence should help connect
+                            agricultural information with timing, demand,
+                            selling decisions and procurement relationships.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAMILY 04 — CLIMATE & ENVIRONMENT
+             ===================================================== -->
+
+        <section class="future-section future-family-cyan">
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            04 / CLIMATE & ENVIRONMENT
+                        </div>
+
+                        <h2>
+                            Agriculture inside
+                            the
+                            <span class="accent">
+                                environment.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Climate intelligence, rainfall awareness,
+                        irrigation recommendations, sustainability,
+                        water conservation and ecological indicators
+                        form a future environmental layer.
+                    </p>
+
+                </div>
+
+
+                <div class="future-system-grid">
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 28</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-cloud-sun"></i>
+                            </span>
+                        </div>
+                        <h3>Climate Intelligence System</h3>
+                        <p>
+                            Environmental agricultural awareness
+                            workflows for future decision support.
+                        </p>
+                        <span class="future-tag">CLIMATE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 29</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-cloud-rain"></i>
+                            </span>
+                        </div>
+                        <h3>Rainfall Awareness System</h3>
+                        <p>
+                            Rainfall-based agricultural insights for
+                            future environmental planning.
+                        </p>
+                        <span class="future-tag">RAIN</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 30</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-droplet"></i>
+                            </span>
+                        </div>
+                        <h3>Irrigation Recommendation Concepts</h3>
+                        <p>
+                            Smart water optimisation ideas for
+                            future agricultural systems.
+                        </p>
+                        <span class="future-tag">WATER</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 31</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </span>
+                        </div>
+                        <h3>Environmental Sustainability Awareness</h3>
+                        <p>
+                            Eco-focused agricultural workflows and
+                            environmental awareness concepts.
+                        </p>
+                        <span class="future-tag">ECOLOGY</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 32</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-temperature-half"></i>
+                            </span>
+                        </div>
+                        <h3>Seasonal Climate Insights</h3>
+                        <p>
+                            Future seasonal intelligence systems
+                            connected to agricultural context.
+                        </p>
+                        <span class="future-tag">SEASONS</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 33</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-water"></i>
+                            </span>
+                        </div>
+                        <h3>Water Conservation Systems</h3>
+                        <p>
+                            Green farming sustainability architecture
+                            focused on water conservation.
+                        </p>
+                        <span class="future-tag">CONSERVATION</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 34</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-earth-asia"></i>
+                            </span>
+                        </div>
+                        <h3>Eco Agriculture Indicators</h3>
+                        <p>
+                            Environmental farming efficiency concepts
+                            for future visibility.
+                        </p>
+                        <span class="future-tag">INDICATORS</span>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAMILY 05 — LOGISTICS
+             ===================================================== -->
+
+        <section class="future-section future-family-coral">
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            05 / LOGISTICS INTELLIGENCE
+                        </div>
+
+                        <h2>
+                            Make movement
+                            <span class="accent">
+                                visible.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Future logistics systems connect milestone
+                        tracking, driver coordination, cooperative
+                        transport, routes, shipment visibility,
+                        status synchronisation and sustainable
+                        transportation thinking.
+                    </p>
+
+                </div>
+
+
+                <div class="future-system-grid">
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 35</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-route"></i>
+                            </span>
+                        </div>
+                        <h3>Milestone-Based Logistics Tracking</h3>
+                        <p>
+                            Driver checkpoint update workflow for
+                            future agricultural logistics visibility.
+                        </p>
+                        <span class="future-tag">TRACKING</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 36</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-user-gear"></i>
+                            </span>
+                        </div>
+                        <h3>Driver Delivery Coordination</h3>
+                        <p>
+                            Agricultural logistics management concepts
+                            connecting drivers and delivery workflows.
+                        </p>
+                        <span class="future-tag">DRIVER</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 37</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-people-arrows"></i>
+                            </span>
+                        </div>
+                        <h3>Cooperative Logistics System</h3>
+                        <p>
+                            Shared transportation ecosystem thinking
+                            for future coordination.
+                        </p>
+                        <span class="future-tag">COOPERATIVE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 38</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-truck-moving"></i>
+                            </span>
+                        </div>
+                        <h3>Smart Transportation Workflow</h3>
+                        <p>
+                            Future route coordination architecture
+                            for agricultural movement.
+                        </p>
+                        <span class="future-tag">TRANSPORT</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 39</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-map"></i>
+                            </span>
+                        </div>
+                        <h3>Agricultural Route Intelligence</h3>
+                        <p>
+                            Karnataka transportation ecosystem
+                            planning concepts.
+                        </p>
+                        <span class="future-tag">ROUTES</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 40</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-eye"></i>
+                            </span>
+                        </div>
+                        <h3>Buyer Shipment Visibility</h3>
+                        <p>
+                            Shipment milestone awareness for buyers
+                            within future logistics workflows.
+                        </p>
+                        <span class="future-tag">VISIBILITY</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 41</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-arrows-rotate"></i>
+                            </span>
+                        </div>
+                        <h3>Transportation Status Synchronization</h3>
+                        <p>
+                            Driver-to-buyer logistics communication
+                            and status coordination.
+                        </p>
+                        <span class="future-tag">SYNC</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 42</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </span>
+                        </div>
+                        <h3>Delivery Workflow Visualization</h3>
+                        <p>
+                            Agricultural transportation flow systems
+                            represented in a more understandable form.
+                        </p>
+                        <span class="future-tag">WORKFLOW</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 43</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </span>
+                        </div>
+                        <h3>ETA Coordination Concepts</h3>
+                        <p>
+                            Estimated delivery workflow concepts
+                            for future coordination.
+                        </p>
+                        <span class="future-tag">ETA</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 44</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </span>
+                        </div>
+                        <h3>Sustainable Logistics Awareness</h3>
+                        <p>
+                            Eco-friendly transportation thinking
+                            within agricultural logistics.
+                        </p>
+                        <span class="future-tag">GREEN MOBILITY</span>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAMILY 06 — ANALYTICS
+             ===================================================== -->
+
+        <section class="future-section future-family-violet">
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            06 / ANALYTICS
+                        </div>
+
+                        <h2>
+                            See the ecosystem
+                            <span class="accent">
+                                together.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Future analytics can organise agricultural,
+                        sustainability and ecosystem information into
+                        understandable progress and intelligence views.
+                    </p>
+
+                </div>
+
+
+                <div class="future-system-grid">
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 45</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </span>
+                        </div>
+                        <h3>Agricultural Ecosystem Analytics</h3>
+                        <p>
+                            Future agricultural intelligence dashboards
+                            and ecosystem analysis.
+                        </p>
+                        <span class="future-tag">ANALYTICS</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 46</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-leaf"></i>
+                            </span>
+                        </div>
+                        <h3>Sustainability Performance Visualization</h3>
+                        <p>
+                            Green ecosystem analysis concepts for
+                            understanding sustainability progress.
+                        </p>
+                        <span class="future-tag">SUSTAINABILITY</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 47</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-gauge-high"></i>
+                            </span>
+                        </div>
+                        <h3>Smart Progress Indicators</h3>
+                        <p>
+                            Agricultural efficiency progress systems
+                            for future visibility.
+                        </p>
+                        <span class="future-tag">PROGRESS</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 48</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-chart-column"></i>
+                            </span>
+                        </div>
+                        <h3>Ecosystem Metrics Visualization</h3>
+                        <p>
+                            Future agricultural coordination insights
+                            through visual metrics.
+                        </p>
+                        <span class="future-tag">METRICS</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 49</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-display"></i>
+                            </span>
+                        </div>
+                        <h3>Agricultural Intelligence Dashboard</h3>
+                        <p>
+                            AI ecosystem performance overview as a
+                            future analytical capability.
+                        </p>
+                        <span class="future-tag">INTELLIGENCE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 50</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-table-cells-large"></i>
+                            </span>
+                        </div>
+                        <h3>Smart Analytics Cards</h3>
+                        <p>
+                            Future agricultural data visualisation
+                            presented through focused analytical modules.
+                        </p>
+                        <span class="future-tag">VISUAL DATA</span>
+                    </article>
+
+                </div>
+
+
+                <div class="future-graph future-reveal">
+
+                    <div class="future-graph-heading">
+
+                        <h3>
+                            Future catalogue distribution
+                        </h3>
+
+                        <span>
+                            Systems represented by family
+                        </span>
+
+                    </div>
+
+
+                    <div class="future-bars">
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Core Ecosystem
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:80%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">08</span>
+                        </div>
+
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Farmer Intelligence
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:100%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">12</span>
+                        </div>
+
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Market
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:58%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">07</span>
+                        </div>
+
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Climate
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:58%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">07</span>
+                        </div>
+
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Logistics
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:84%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">10</span>
+                        </div>
+
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Analytics
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:50%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">06</span>
+                        </div>
+
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Future AI
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:84%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">10</span>
+                        </div>
+
+
+                        <div class="future-bar-row">
+                            <span class="future-bar-label">
+                                Research
+                            </span>
+                            <span class="future-bar-track">
+                                <span
+                                    class="future-bar-fill"
+                                    style="--bar:84%"
+                                ></span>
+                            </span>
+                            <span class="future-bar-value">10</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAMILY 07 — FUTURE AI
+             ===================================================== -->
+
+        <section class="future-section future-family-pink">
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            07 / FUTURE AI
+                        </div>
+
+                        <h2>
+                            Emerging technology,
+                            <span class="accent">
+                                responsibly.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        The future catalogue includes AI disease
+                        detection, drones, satellite monitoring,
+                        IoT, autonomous agriculture, climate prediction,
+                        computer vision, irrigation automation,
+                        blockchain concepts and an expansion roadmap.
+                    </p>
+
+                </div>
+
+
+                <div class="future-system-grid">
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 51</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-virus-slash"></i>
+                            </span>
+                        </div>
+                        <h3>AI Disease Detection Concept</h3>
+                        <p>
+                            A future TensorFlow-oriented crop analysis
+                            concept for recognising agricultural conditions.
+                        </p>
+                        <span class="future-tag">AI VISION</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 52</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-helicopter"></i>
+                            </span>
+                        </div>
+                        <h3>Drone Agriculture System</h3>
+                        <p>
+                            Future aerial farming assistance and
+                            agricultural observation.
+                        </p>
+                        <span class="future-tag">AERIAL</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 53</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-satellite"></i>
+                            </span>
+                        </div>
+                        <h3>Satellite Crop Monitoring</h3>
+                        <p>
+                            Future agricultural satellite integration
+                            for broader crop observation.
+                        </p>
+                        <span class="future-tag">SATELLITE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 54</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-wifi"></i>
+                            </span>
+                        </div>
+                        <h3>IoT Farming Concepts</h3>
+                        <p>
+                            Smart agriculture sensor ecosystems
+                            as a future technology direction.
+                        </p>
+                        <span class="future-tag">IOT</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 55</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-robot"></i>
+                            </span>
+                        </div>
+                        <h3>Autonomous Agriculture Vision</h3>
+                        <p>
+                            A future vision for self-operating
+                            agricultural systems.
+                        </p>
+                        <span class="future-tag">AUTONOMY</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 56</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-temperature-arrow-up"></i>
+                            </span>
+                        </div>
+                        <h3>AI Climate Prediction Systems</h3>
+                        <p>
+                            Future environmental intelligence
+                            integration using AI-based prediction concepts.
+                        </p>
+                        <span class="future-tag">CLIMATE AI</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 57</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-eye"></i>
+                            </span>
+                        </div>
+                        <h3>Computer Vision Agriculture</h3>
+                        <p>
+                            Future AI crop recognition systems using
+                            computer vision concepts.
+                        </p>
+                        <span class="future-tag">COMPUTER VISION</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 58</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-faucet-drip"></i>
+                            </span>
+                        </div>
+                        <h3>Smart Irrigation Automation</h3>
+                        <p>
+                            Future intelligent water management and
+                            irrigation automation.
+                        </p>
+                        <span class="future-tag">AUTOMATION</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 59</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-link"></i>
+                            </span>
+                        </div>
+                        <h3>Blockchain Agriculture Concepts</h3>
+                        <p>
+                            Transparent agricultural ecosystem
+                            architecture as a future concept.
+                        </p>
+                        <span class="future-tag">TRUST TECH</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 60</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-rocket"></i>
+                            </span>
+                        </div>
+                        <h3>AI-Powered Future Expansion Roadmap</h3>
+                        <p>
+                            A long-term scalable innovation vision
+                            for extending the ecosystem.
+                        </p>
+                        <span class="future-tag">ROADMAP</span>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ARCHITECTURE
+             ===================================================== -->
+
+        <section
+            id="architecture"
+            class="future-section"
+        >
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            SYSTEM ARCHITECTURE
+                        </div>
+
+                        <h2>
+                            Everything
+                            <span class="accent">
+                                connects.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Future capability becomes more meaningful when
+                        agricultural systems are connected rather than
+                        developed as isolated features.
+                    </p>
+
+                </div>
+
+
+                <div class="future-architecture future-reveal">
+
+                    <div class="future-map">
+
+                        <svg
+                            viewBox="0 0 900 470"
+                            preserveAspectRatio="none"
+                            aria-hidden="true"
+                        >
+
+                            <path
+                                class="future-map-line"
+                                d="M450 235 L450 80"
+                            />
+
+                            <path
+                                class="future-map-line"
+                                d="M450 235 L110 235"
+                            />
+
+                            <path
+                                class="future-map-line"
+                                d="M450 235 L790 235"
+                            />
+
+                            <path
+                                class="future-map-line"
+                                d="M450 235 L220 420"
+                            />
+
+                            <path
+                                class="future-map-line"
+                                d="M450 235 L680 420"
+                            />
+
+                        </svg>
+
+
+                        <div class="future-map-node top">
+
+                            <i class="fa-solid fa-seedling"></i>
+
+                            FARM INTELLIGENCE
+
+                        </div>
+
+
+                        <div class="future-map-node left">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            MARKET INTELLIGENCE
+
+                        </div>
+
+
+                        <div class="future-map-node right">
+
+                            <i class="fa-solid fa-truck-fast"></i>
+
+                            LOGISTICS
+
+                        </div>
+
+
+                        <div class="future-map-node bottom-left">
+
+                            <i class="fa-solid fa-cloud-sun"></i>
+
+                            CLIMATE
+
+                        </div>
+
+
+                        <div class="future-map-node bottom-right">
+
+                            <i class="fa-solid fa-microchip"></i>
+
+                            AI + RESEARCH
+
+                        </div>
+
+
+                        <div class="future-map-node center">
+
+                            <i class="fa-solid fa-circle-nodes"></i>
+
+                            AGRIVISION
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="future-highlight future-reveal">
+
+                    <div class="future-highlight-label">
+                        SYSTEM PRINCIPLE
+                    </div>
+
+                    <h2>
+                        A future system should make relationships visible.
+                    </h2>
+
+                    <p>
+                        A crop can have agricultural information.
+                        That information can connect to market awareness.
+                        Market activity can connect to logistics.
+                        Logistics can connect to sustainability.
+                        Research and emerging technology can then extend
+                        what the ecosystem is capable of doing.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FAMILY 08 — RESEARCH & ECOSYSTEM
+             ===================================================== -->
+
+        <section class="future-section future-family-lime">
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            08 / RESEARCH & ECOSYSTEM
+                        </div>
+
+                        <h2>
+                            Keep
+                            <span class="accent">
+                                evolving.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Research-oriented structure, Karnataka-inspired
+                        architecture, startup scalability, innovation,
+                        sustainability and long-term ecosystem thinking
+                        provide the final expansion layer.
+                    </p>
+
+                </div>
+
+
+                <div class="future-system-grid">
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 61</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-map"></i>
+                            </span>
+                        </div>
+                        <h3>Karnataka-Inspired Ecosystem Architecture</h3>
+                        <p>
+                            Regionally inspired agricultural intelligence
+                            and ecosystem structure.
+                        </p>
+                        <span class="future-tag">KARNATAKA</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 62</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-microscope"></i>
+                            </span>
+                        </div>
+                        <h3>Research-Oriented Platform Structure</h3>
+                        <p>
+                            University-grade innovation presentation
+                            and research-oriented platform thinking.
+                        </p>
+                        <span class="future-tag">RESEARCH</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 63</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-expand"></i>
+                            </span>
+                        </div>
+                        <h3>Startup Scalability Vision</h3>
+                        <p>
+                            Future startup ecosystem architecture
+                            designed for long-term expansion.
+                        </p>
+                        <span class="future-tag">SCALE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 64</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-lightbulb"></i>
+                            </span>
+                        </div>
+                        <h3>Innovation Showcase Design</h3>
+                        <p>
+                            Innovation presentation for university,
+                            hackathon and research-oriented contexts.
+                        </p>
+                        <span class="future-tag">INNOVATION</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 65</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-recycle"></i>
+                            </span>
+                        </div>
+                        <h3>Sustainable Ecosystem Philosophy</h3>
+                        <p>
+                            Environmental-first agricultural vision
+                            for long-term ecosystem development.
+                        </p>
+                        <span class="future-tag">SUSTAINABLE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 66</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </span>
+                        </div>
+                        <h3>Future Expansion Architecture</h3>
+                        <p>
+                            Scalable modular ecosystem planning for
+                            future capabilities.
+                        </p>
+                        <span class="future-tag">ARCHITECTURE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 67</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </span>
+                        </div>
+                        <h3>AI-Assisted Ecosystem Thinking</h3>
+                        <p>
+                            Future intelligence coordination philosophy
+                            across agricultural systems.
+                        </p>
+                        <span class="future-tag">AI</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 68</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-link"></i>
+                            </span>
+                        </div>
+                        <h3>Smart Ecosystem Workflow Integration</h3>
+                        <p>
+                            Connected agriculture, logistics and market
+                            systems working as an integrated ecosystem.
+                        </p>
+                        <span class="future-tag">INTEGRATION</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 69</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-film"></i>
+                            </span>
+                        </div>
+                        <h3>Cinematic Eco-Tech Presentation System</h3>
+                        <p>
+                            Emotion-driven innovation presentation
+                            combining agricultural context and technology.
+                        </p>
+                        <span class="future-tag">EXPERIENCE</span>
+                    </article>
+
+
+                    <article class="future-system-card future-reveal">
+                        <div class="future-card-top">
+                            <span class="future-number">SYSTEM 70</span>
+                            <span class="future-icon">
+                                <i class="fa-solid fa-network-wired"></i>
+                            </span>
+                        </div>
+                        <h3>Agricultural Operating System Vision</h3>
+                        <p>
+                            A future OS-style vision for connecting
+                            Karnataka agriculture through intelligent
+                            ecosystem coordination.
+                        </p>
+                        <span class="future-tag">FUTURE OS</span>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FARMER JOURNEY
+             ===================================================== -->
+
+        <section class="future-section">
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            FARMER WORKFLOW GUIDE
+                        </div>
+
+                        <h2>
+                            One journey.
+                            <span class="accent">
+                                Many systems.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        The future ecosystem becomes understandable
+                        when the farmer's journey is viewed as one
+                        connected sequence rather than separate tools.
+                    </p>
+
+                </div>
+
+
+                <div class="future-journey future-reveal">
+
+                    <div class="future-journey-line"></div>
+
+
+                    <div class="future-journey-step">
+
+                        <div class="future-journey-marker">
+                            01
+                        </div>
+
+                        <div class="future-journey-content">
+
+                            <h3>
+                                Farmer Registration
+                            </h3>
+
+                            <p>
+                                Establish the farmer's identity and
+                                connection to the ecosystem.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="future-journey-step">
+
+                        <div class="future-journey-marker">
+                            02
+                        </div>
+
+                        <div class="future-journey-content">
+
+                            <h3>
+                                Crop Information & Listing
+                            </h3>
+
+                            <p>
+                                Bring crop-related information into
+                                the connected agricultural environment.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="future-journey-step">
+
+                        <div class="future-journey-marker">
+                            03
+                        </div>
+
+                        <div class="future-journey-content">
+
+                            <h3>
+                                Buyer Coordination & Marketplace
+                            </h3>
+
+                            <p>
+                                Connect agricultural information with
+                                future market and procurement intelligence.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="future-journey-step">
+
+                        <div class="future-journey-marker">
+                            04
+                        </div>
+
+                        <div class="future-journey-content">
+
+                            <h3>
+                                Smart Logistics & Delivery
+                            </h3>
+
+                            <p>
+                                Extend the crop journey into transport,
+                                delivery coordination and shipment visibility.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="future-journey-step">
+
+                        <div class="future-journey-marker">
+                            05
+                        </div>
+
+                        <div class="future-journey-content">
+
+                            <h3>
+                                Sustainability & Trust Ecosystem
+                            </h3>
+
+                            <p>
+                                Bring environmental responsibility and
+                                stronger ecosystem relationships into the journey.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="future-journey-step">
+
+                        <div class="future-journey-marker">
+                            06
+                        </div>
+
+                        <div class="future-journey-content">
+
+                            <h3>
+                                Future Farming Intelligence
+                            </h3>
+
+                            <p>
+                                Extend the journey toward AI, research,
+                                emerging technology and long-term innovation.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             HUMAN-CENTRIC TECHNOLOGY
+             ===================================================== -->
+
+        <section class="future-section">
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            HUMAN-CENTRIC TECHNOLOGY
+                        </div>
+
+                        <h2>
+                            Technology should
+                            <span class="accent">
+                                adapt.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        Future technology is useful only when people
+                        can understand and use it. Accessibility is
+                        therefore part of the system itself.
+                    </p>
+
+                </div>
+
+
+                <div class="future-human-grid">
+
+
+                    <article class="future-human-card future-reveal">
+
+                        <i class="fa-solid fa-language"></i>
+
+                        <h3>
+                            Multilingual Access
+                        </h3>
+
+                        <p>
+                            Agricultural technology should be able
+                            to communicate across languages and
+                            reduce unnecessary barriers.
+                        </p>
+
+                    </article>
+
+
+                    <article class="future-human-card future-reveal">
+
+                        <i class="fa-solid fa-microphone"></i>
+
+                        <h3>
+                            Voice Interaction
+                        </h3>
+
+                        <p>
+                            Voice can become an important future
+                            interaction layer for users who prefer
+                            speaking over navigating complex interfaces.
+                        </p>
+
+                    </article>
+
+
+                    <article class="future-human-card future-reveal">
+
+                        <i class="fa-solid fa-book-open-reader"></i>
+
+                        <h3>
+                            Simpler Understanding
+                        </h3>
+
+                        <p>
+                            Complex agricultural information should
+                            be translated into clearer explanations
+                            and useful decision support.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EMPLOYABILITY / OPPORTUNITY
+             ===================================================== -->
+
+        <section
+            id="employment"
+            class="future-section"
+        >
+
+            <div class="future-container">
+
+                <div class="future-section-heading future-reveal">
+
+                    <div>
+
+                        <div class="future-index">
+                            PEOPLE + EMPLOYABILITY
+                        </div>
+
+                        <h2>
+                            Future agriculture
+                            needs
+                            <span class="accent">
+                                future skills.
+                            </span>
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        As agricultural technology expands, opportunity
+                        can extend beyond farming itself — into technology,
+                        research, logistics, services, skills and
+                        entrepreneurship.
+                    </p>
+
+                </div>
+
+
+                <div class="future-opportunity future-reveal">
+
+
+                    <div class="future-opportunity-copy">
+
+                        <h3>
+                            Build capability.
+                            Create opportunity.
+                        </h3>
+
+                        <p>
+                            A stronger agricultural ecosystem can create
+                            space for people with different skills.
+                            The future is not only about automation;
+                            it is also about creating new roles around
+                            technology, coordination, research and
+                            rural services.
+                        </p>
+
+                    </div>
+
+
+                    <div class="future-opportunity-grid">
+
+
+                        <div class="future-opportunity-item">
+                            <i class="fa-solid fa-microchip"></i>
+                            Agricultural Technology
+                        </div>
+
+
+                        <div class="future-opportunity-item">
+                            <i class="fa-solid fa-database"></i>
+                            Data & Intelligence
+                        </div>
+
+
+                        <div class="future-opportunity-item">
+                            <i class="fa-solid fa-truck"></i>
+                            Logistics & Mobility
+                        </div>
+
+
+                        <div class="future-opportunity-item">
+                            <i class="fa-solid fa-gears"></i>
+                            Machinery & Operations
+                        </div>
+
+
+                        <div class="future-opportunity-item">
+                            <i class="fa-solid fa-flask"></i>
+                            Research & Innovation
+                        </div>
+
+
+                        <div class="future-opportunity-item">
+                            <i class="fa-solid fa-handshake"></i>
+                            Rural Service Economy
+                        </div>
+
+
+                        <div class="future-opportunity-item">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            New Skills
+                        </div>
+
+
+                        <div class="future-opportunity-item">
+                            <i class="fa-solid fa-rocket"></i>
+                            New Enterprises
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="future-highlight future-reveal">
+
+                    <div class="future-highlight-label">
+                        THE HUMAN OUTCOME
+                    </div>
+
+                    <h2>
+                        Technology should expand human capability.
+                    </h2>
+
+                    <p>
+                        Farmers remain at the centre, while new
+                        opportunities can emerge for researchers,
+                        technologists, logistics workers, service
+                        providers, operators, entrepreneurs and
+                        future agricultural professionals.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             INDIA / NATIONAL VISION
+             ===================================================== -->
+
+        <section
+            id="india"
+            class="future-nation"
+        >
+
+            <div class="future-container">
+
+                <div class="future-nation-panel future-reveal">
+
+
+                    <div class="future-nation-heading">
+
+                        <span>
+                            BUILD IN KARNATAKA · THINK FOR INDIA
+                        </span>
+
+                        <h2>
+                            From a farming platform
+                            to a national capability.
+                        </h2>
+
+                        <p>
+                            Karnataka can be the starting point for a
+                            technology ecosystem deeply connected to
+                            agriculture, but the larger opportunity is
+                            to develop ideas that can contribute to
+                            India's agricultural and rural future.
+                        </p>
+
+                    </div>
+
+
+                    <div class="future-progression">
+
+
+                        <article class="future-progress-item">
+
+                            <b>01</b>
+
+                            <h3>
+                                Understand
+                            </h3>
+
+                            <p>
+                                Understand real agricultural problems
+                                and local context.
+                            </p>
+
+                        </article>
+
+
+                        <article class="future-progress-item">
+
+                            <b>02</b>
+
+                            <h3>
+                                Connect
+                            </h3>
+
+                            <p>
+                                Connect people, information,
+                                services and systems.
+                            </p>
+
+                        </article>
+
+
+                        <article class="future-progress-item">
+
+                            <b>03</b>
+
+                            <h3>
+                                Innovate
+                            </h3>
+
+                            <p>
+                                Apply research, technology and
+                                responsible intelligence.
+                            </p>
+
+                        </article>
+
+
+                        <article class="future-progress-item">
+
+                            <b>04</b>
+
+                            <h3>
+                                Create Opportunity
+                            </h3>
+
+                            <p>
+                                Build skills, services, employment
+                                and entrepreneurship pathways.
+                            </p>
+
+                        </article>
+
+
+                        <article class="future-progress-item">
+
+                            <b>05</b>
+
+                            <h3>
+                                Scale Responsibly
+                            </h3>
+
+                            <p>
+                                Expand the ecosystem while preserving
+                                people, agriculture and environment.
+                            </p>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="future-featured future-reveal">
+
+                        <div class="future-featured-label">
+
+                            <span>
+                                NATIONAL DIRECTION
+                            </span>
+
+                            <strong>
+                                Agriculture can
+                                become a
+                                technology
+                                frontier.
+                            </strong>
+
+                        </div>
+
+
+                        <div class="future-featured-content">
+
+                            <h3>
+                                Think beyond the platform.
+                            </h3>
+
+                            <p>
+                                The long-term vision is larger than
+                                individual features. It is about creating
+                                a connected agricultural capability where
+                                farmers, markets, logistics, technology,
+                                research, skills and entrepreneurship can
+                                reinforce one another.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             FINAL VISION
+             ===================================================== -->
+
+        <section class="future-final">
+
+            <div class="future-container">
+
+                <div class="future-reveal">
+
+                    <div class="future-kicker">
+
+                        <i class="fa-solid fa-earth-asia"></i>
+
+                        THE LONG-TERM VISION
+
+                    </div>
+
+
+                    <h2>
+                        FROM THE FARM
+                        <br>
+                        TO THE ECOSYSTEM
+                        <br>
+                        TO THE NATION.
+                    </h2>
+
+
+                    <p>
+                        AgriVision's future is a direction:
+                        more connected agriculture,
+                        clearer information,
+                        responsible technology,
+                        stronger human capability,
+                        new opportunities and an ecosystem
+                        designed to keep evolving.
+                    </p>
+
+
+                    <a
+                        href="ecosystem.html"
+                        class="future-button"
+                    >
+
+                        Explore the AgriVision Ecosystem
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- =========================================================
+         SCROLL TOP
+         ========================================================= -->
+
+    <button
+        class="scroll-top research-top"
+        type="button"
+        aria-label="Scroll to top"
+    >
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <!-- =========================================================
+         SHARED JAVASCRIPT
+         ========================================================= -->
+
+    <script src="script.js"></script>
+
+
+    <!-- =========================================================
+         FUTURE PAGE ENHANCEMENT
+         Uses existing shared JS where available.
+         ========================================================= -->
+
+    <script>
+
+        document.addEventListener(
+            "DOMContentLoaded",
+            () => {
+
+                /* =================================================
+                   SCROLL REVEAL
+                   ================================================= */
+
+                const revealItems =
+                    document.querySelectorAll(
+                        ".future-reveal"
+                    );
+
+
+                if (
+                    "IntersectionObserver"
+                    in window
+                ) {
+
+                    const revealObserver =
+                        new IntersectionObserver(
+                            entries => {
+
+                                entries.forEach(
+                                    entry => {
+
+                                        if (
+                                            entry.isIntersecting
+                                        ) {
+
+                                            entry.target.classList.add(
+                                                "visible"
+                                            );
+
+                                            revealObserver.unobserve(
+                                                entry.target
+                                            );
+
+                                        }
+
+                                    }
+                                );
+
+                            },
+                            {
+                                threshold: .08
+                            }
+                        );
+
+
+                    revealItems.forEach(
+                        item =>
+                            revealObserver.observe(item)
+                    );
+
+                } else {
+
+                    revealItems.forEach(
+                        item =>
+                            item.classList.add("visible")
+                    );
+
+                }
+
+
+                /* =================================================
+                   BAR GRAPH REVEAL
+                   ================================================= */
+
+                const barRows =
+                    document.querySelectorAll(
+                        ".future-bar-row"
+                    );
+
+
+                if (
+                    "IntersectionObserver"
+                    in window
+                ) {
+
+                    const barObserver =
+                        new IntersectionObserver(
+                            entries => {
+
+                                entries.forEach(
+                                    entry => {
+
+                                        if (
+                                            entry.isIntersecting
+                                        ) {
+
+                                            entry.target.classList.add(
+                                                "visible"
+                                            );
+
+                                            barObserver.unobserve(
+                                                entry.target
+                                            );
+
+                                        }
+
+                                    }
+                                );
+
+                            },
+                            {
+                                threshold: .25
+                            }
+                        );
+
+
+                    barRows.forEach(
+                        row =>
+                            barObserver.observe(row)
+                    );
+
+                } else {
+
+                    barRows.forEach(
+                        row =>
+                            row.classList.add("visible")
+                    );
+
+                }
+
+
+                /* =================================================
+                   SMOOTH ANCHOR SCROLLING
+                   ================================================= */
+
+                document
+                    .querySelectorAll(
+                        'a[href^="#"]'
+                    )
+                    .forEach(
+                        link => {
+
+                            link.addEventListener(
+                                "click",
+                                event => {
+
+                                    const id =
+                                        link.getAttribute(
+                                            "href"
+                                        );
+
+                                    if (
+                                        !id ||
+                                        id === "#"
+                                    ) {
+                                        return;
+                                    }
+
+                                    const target =
+                                        document.querySelector(
+                                            id
+                                        );
+
+                                    if (!target) {
+                                        return;
+                                    }
+
+                                    event.preventDefault();
+
+                                    target.scrollIntoView(
+                                        {
+                                            behavior:
+                                                "smooth",
+                                            block:
+                                                "start"
+                                        }
+                                    );
+
+                                }
+                            );
+
+                        }
+                    );
+
+
+                /* =================================================
+                   MAGNETIC / POINTER CARD EFFECT
+                   ================================================= */
+
+                const cards =
+                    document.querySelectorAll(
+                        ".future-system-card, .future-human-card, .future-progress-item"
+                    );
+
+
+                cards.forEach(
+                    card => {
+
+                        card.addEventListener(
+                            "pointermove",
+                            event => {
+
+                                if (
+                                    window.matchMedia(
+                                        "(prefers-reduced-motion: reduce)"
+                                    ).matches
+                                ) {
+                                    return;
+                                }
+
+                                const rect =
+                                    card.getBoundingClientRect();
+
+                                const x =
+                                    event.clientX -
+                                    rect.left;
+
+                                const y =
+                                    event.clientY -
+                                    rect.top;
+
+                                const rx =
+                                    ((y / rect.height) - .5)
+                                    * -3;
+
+                                const ry =
+                                    ((x / rect.width) - .5)
+                                    * 3;
+
+                                card.style.transform =
+                                    `
+                                    translateY(-7px)
+                                    perspective(900px)
+                                    rotateX(${rx}deg)
+                                    rotateY(${ry}deg)
+                                    `;
+                            }
+                        );
+
+
+                        card.addEventListener(
+                            "pointerleave",
+                            () => {
+
+                                card.style.transform =
+                                    "";
+
+                            }
+                        );
+
+                    }
+                );
+
+
+                /* =================================================
+                   DYNAMIC YEAR
+                   ================================================= */
+
+                const year =
+                    document.getElementById(
+                        "year"
+                    );
+
+                if (year) {
+
+                    year.textContent =
+                        new Date().getFullYear();
+
+                }
+
+
+                /* =================================================
+                   REDUCED MOTION SAFETY
+                   ================================================= */
+
+                if (
+                    window.matchMedia(
+                        "(prefers-reduced-motion: reduce)"
+                    ).matches
+                ) {
+
+                    document
+                        .querySelectorAll(
+                            ".future-reveal"
+                        )
+                        .forEach(
+                            item =>
+                                item.classList.add(
+                                    "visible"
+                                )
+                        );
+
+                    document
+                        .querySelectorAll(
+                            ".future-bar-row"
+                        )
+                        .forEach(
+                            item =>
+                                item.classList.add(
+                                    "visible"
+                                )
+                        );
+
+                }
+
+            }
+        );
+
+    </script>
+
+</body>
+</html>
